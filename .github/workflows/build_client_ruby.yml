@@ -59,4 +59,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           owner: borisko123
-          working-directory:  $GITHUB_WORKSPACE/generated/ruby
+          working-directory:  generated/ruby
