@@ -30,7 +30,15 @@ jobs:
       
       - name: Create local changes
         run: |
-          touch xyz.yaml
+          docker run \
+          -v $WORKSPACE:/local \
+          -v $WORKSPACE/generated:/local_out \
+          --env GEM_NAME=autosde_openapi_client \
+          --env MODULE_NAME=OpenapiClient \
+          --name ruby-oas-generator \
+          --rm \
+          openapitools/openapi-generator-cli generate -i /local/site_manager_oas.json -g ruby -o /local_out/generated/ruby --skip-validate-spec --additional-properties=gemName=autosde_openapi_client --additional-properties=moduleName=OpenapiClient --additional-properties=gemVersion=1.0.2
+
       - name: Commit files
         run: |
           git config --local user.email "inner-autosde@users.noreply.github.com"
