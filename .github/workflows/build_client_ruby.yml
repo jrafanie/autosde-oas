@@ -51,5 +51,8 @@ jobs:
       - name: build gem
         run: |
          pwd 
-         ls `pwd`
-         gem build generated/ruby/autosde_openapi_client.gemspec 
+     
+         cd  generated/ruby
+         ls -al .
+         gem build autosde_openapi_client.gemspec
+         ls -al .
