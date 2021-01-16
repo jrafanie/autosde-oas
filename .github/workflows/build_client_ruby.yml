@@ -30,12 +30,13 @@ jobs:
       - name: prepare
         run: |
           echo 'workspace:'
-          echo $WORKSPACE
+          echo $GITHUB_WORKSPACE
           printenv
       - name: Create local changes
         run: |
-          ls -al $WORKSPACE
-          docker run -v $WORKSPACE:/local -v $WORKSPACE/generated:/local_out --env GEM_NAME=autosde_openapi_client --env MODULE_NAME=OpenapiClient --name ruby-oas-generator --rm openapitools/openapi-generator-cli generate -i /local/site_manager_oas.json -g ruby -o /local_out/generated/ruby --skip-validate-spec --additional-properties=gemName=autosde_openapi_client --additional-properties=moduleName=OpenapiClient
+          echo $GITHUB_WORKSPACE
+          ls -al $GITHUB_WORKSPACE
+          docker run -v $GITHUB_WORKSPACE:/local -v $GITHUB_WORKSPACE/generated:/local_out --env GEM_NAME=autosde_openapi_client --env MODULE_NAME=OpenapiClient --name ruby-oas-generator --rm openapitools/openapi-generator-cli generate -i /local/site_manager_oas.json -g ruby -o /local_out/generated/ruby --skip-validate-spec --additional-properties=gemName=autosde_openapi_client --additional-properties=moduleName=OpenapiClient
 
       - name: Commit files
         run: |
