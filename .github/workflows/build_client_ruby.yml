@@ -52,4 +52,4 @@ jobs:
         run: |
          pwd 
          ls `pwd`
-         gem build autosde_openapi_client.gemspec 
+         gem build generated/ruby/autosde_openapi_client.gemspec 
