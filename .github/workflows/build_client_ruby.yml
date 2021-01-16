@@ -24,18 +24,21 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a set of commands using the runners shell
-      - name: prepare
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+      
+      - name: Create local changes
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-          docker run hello-world
-      - name: build cliebt
+          touch xyz.yaml
+      - name: Commit files
         run: |
-          ls -al $GITHUB_WORKSPACE
-          touch xyz.yml
-      # make the changes between checkout and push
-      - name: push
-        uses: actions-x/commit@v2     
-          
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Add changes" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}      
+          force: true
