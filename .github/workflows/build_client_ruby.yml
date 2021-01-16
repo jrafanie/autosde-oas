@@ -51,8 +51,12 @@ jobs:
       - name: build gem
         run: |
          pwd 
-     
          cd  generated/ruby
          ls -al .
-         gem build autosde_openapi_client.gemspec
-         ls -al .
+        
+      - name: Build and publish gem
+        uses: jstastny/publish-gem-to-github@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          owner: borisko123
+          working-directory:  $GITHUB_WORKSPACE/generated/ruby
