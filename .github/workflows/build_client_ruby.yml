@@ -31,14 +31,7 @@ jobs:
       - name: Create local changes
         run: |
           ls -al $WORKSPACE
-          docker run \
-          -v $WORKSPACE:/local \
-          -v $WORKSPACE/generated:/local_out \
-          --env GEM_NAME=autosde_openapi_client \
-          --env MODULE_NAME=OpenapiClient \
-          --name ruby-oas-generator \
-          --rm \
-          openapitools/openapi-generator-cli generate -i /local/site_manager_oas.json -g ruby -o /local_out/generated/ruby --skip-validate-spec --additional-properties=gemName=autosde_openapi_client --additional-properties=moduleName=OpenapiClient --additional-properties=gemVersion=1.0.2
+          docker run -v $WORKSPACE:/local -v $WORKSPACE/generated:/local_out --env GEM_NAME=autosde_openapi_client --env MODULE_NAME=OpenapiClient --name ruby-oas-generator --rm openapitools/openapi-generator-cli generate -i /local/site_manager_oas.json -g ruby -o /local_out/generated/ruby --skip-validate-spec --additional-properties=gemName=autosde_openapi_client --additional-properties=moduleName=OpenapiClient
 
       - name: Commit files
         run: |
