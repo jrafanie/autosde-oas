@@ -34,7 +34,7 @@ jobs:
           pwd
           cd  generated/ruby
           ls -al .
-          gem install bump
+          sudo gem install bump
           bump  patch --replace-in lib/autosde_openapi_client/version.rb
       - name: Commit files
         run: |
