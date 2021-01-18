@@ -51,7 +51,7 @@ jobs:
           git config --local user.name "Autosde"
           git add --all
           git commit --allow-empty -m "update"
-#       - name: Push changes
+      - name: Push changes
 #         uses: ad-m/github-push-action@master
 #         with:
 #           github_token: ${{ secrets.GITHUB_TOKEN }}
