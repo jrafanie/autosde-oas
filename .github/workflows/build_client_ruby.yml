@@ -31,7 +31,7 @@ jobs:
         run: |
           sudo gem install bump
           cd generated/ruby
-          next_version = $(bump show-next patch)
+          next_version=$(bump show-next patch)
           echo "::set-env name=NEXT_VERSION::$next_version"
       - name: generate ruby oas client
         run: |
