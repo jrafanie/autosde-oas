@@ -68,6 +68,7 @@ jobs:
            force: true
       - name: build gem
         run: |
+          cd  generated/ruby
           pwd
           ls -al
           gem build
