@@ -71,6 +71,7 @@ jobs:
           cd  generated/ruby
           pwd
           ls -al
-          gem build
+          gem build autosde_openapi_client
+          
 
           
