@@ -28,7 +28,7 @@ jobs:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
       - name: extract version
-        run:
+        run: |
           sudo gem install bump
           cd generated/ruby
           next_version = $(bump show-next patch)
