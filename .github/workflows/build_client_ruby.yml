@@ -44,6 +44,7 @@ jobs:
           ls -al .
       - name: bump version 
         run: |
+          cd  generated/ruby
           sudo gem install bump
           bump  patch --replace-in lib/autosde_openapi_client/version.rb
       - name: Commit files
