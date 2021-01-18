@@ -27,9 +27,12 @@ jobs:
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-      - name: generate client
+      - name: generate ruby oas client
         run: |
-          docker run -v $GITHUB_WORKSPACE:/local -v $GITHUB_WORKSPACE/generated:/local_out --env GEM_NAME=autosde_openapi_client --env MODULE_NAME=OpenapiClient --name ruby-oas-generator --rm openapitools/openapi-generator-cli generate -i /local/site_manager_oas.json -g ruby -o /local_out/ruby --skip-validate-spec --additional-properties=gemName=autosde_openapi_client --additional-properties=moduleName=OpenapiClient
+          docker run \
+          -v $GITHUB_WORKSPACE:/local \
+          -v $GITHUB_WORKSPACE/generated:/local_out \
+          --env GEM_NAME=autosde_openapi_client --env MODULE_NAME=OpenapiClient --name ruby-oas-generator --rm openapitools/openapi-generator-cli generate -i /local/site_manager_oas.json -g ruby -o /local_out/ruby --skip-validate-spec --additional-properties=gemName=autosde_openapi_client --additional-properties=moduleName=OpenapiClient
           ls -al $GITHUB_WORKSPACE
           pwd
           cd  generated/ruby
