@@ -52,19 +52,14 @@ jobs:
           git add --all
           git commit --allow-empty -m "update"
       - name: Push changes
-#         uses: ad-m/github-push-action@master
-#         with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           branch: ${{ github.ref }}      
-#           force: true
+        uses: ad-m/github-push-action@master
+        with:
+           github_token: ${{ secrets.GITHUB_TOKEN }}
+           branch: ${{ github.ref }}      
+           force: true
       - name: build gem
         run: |
           pwd
           ls -al
-          gem build
-          ls -al 
-#         uses: cadwallion/publish-rubygems-action@master
-#         env:
-#           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-#           RUBYGEMS_API_KEY: 'rubygems_7f7d5739c2fab88b57eb6bac014928827e6cbc4ee0ce1411'
-#           RELEASE_COMMAND: rake release
+
+          
