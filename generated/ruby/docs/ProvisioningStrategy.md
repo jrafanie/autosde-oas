@@ -1,4 +1,4 @@
-# OpenapiClient::ProvisioningStrategy
+# AutosdeOpenapiClient::ProvisioningStrategy
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::ProvisioningStrategy.new(
+instance = AutosdeOpenapiClient::ProvisioningStrategy.new(
   name: null,
   uuid: null
 )

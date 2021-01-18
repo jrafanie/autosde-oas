@@ -1,4 +1,4 @@
-# OpenapiClient::JobApi
+# AutosdeOpenapiClient::JobApi
 
 All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
@@ -20,18 +20,18 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::JobApi.new
+api_instance = AutosdeOpenapiClient::JobApi.new
 
 begin
   
   result = api_instance.jobs_get
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling JobApi->jobs_get: #{e}"
 end
 ```
@@ -49,7 +49,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Job>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling JobApi->jobs_get_with_http_info: #{e}"
 end
 ```
@@ -84,19 +84,19 @@ This endpoint does not need any parameter.
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::JobApi.new
-job_create = OpenapiClient::JobCreate.new # JobCreate | 
+api_instance = AutosdeOpenapiClient::JobApi.new
+job_create = AutosdeOpenapiClient::JobCreate.new # JobCreate | 
 
 begin
   
   result = api_instance.jobs_post(job_create)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling JobApi->jobs_post: #{e}"
 end
 ```
@@ -114,7 +114,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Job>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling JobApi->jobs_post_with_http_info: #{e}"
 end
 ```

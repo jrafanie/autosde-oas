@@ -1,4 +1,4 @@
-# OpenapiClient::ServiceCreate
+# AutosdeOpenapiClient::ServiceCreate
 
 ## Properties
 
@@ -19,7 +19,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::ServiceCreate.new(
+instance = AutosdeOpenapiClient::ServiceCreate.new(
   capability_values: null,
   component_state: null,
   description: null,

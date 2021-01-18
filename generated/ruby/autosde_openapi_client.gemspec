@@ -17,7 +17,7 @@ require "autosde_openapi_client/version"
 
 Gem::Specification.new do |s|
   s.name        = "autosde_openapi_client"
-  s.version     = OpenapiClient::VERSION
+  s.version     = AutosdeOpenapiClient::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["OpenAPI-Generator"]
   s.email       = ["autosde@il.ibm.com"]

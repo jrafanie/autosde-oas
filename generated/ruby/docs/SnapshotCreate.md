@@ -1,4 +1,4 @@
-# OpenapiClient::SnapshotCreate
+# AutosdeOpenapiClient::SnapshotCreate
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::SnapshotCreate.new(
+instance = AutosdeOpenapiClient::SnapshotCreate.new(
   component_state: null,
   description: null,
   name: null,

@@ -1,4 +1,4 @@
-# OpenapiClient::CapabilityTranslation
+# AutosdeOpenapiClient::CapabilityTranslation
 
 ## Properties
 
@@ -20,7 +20,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::CapabilityTranslation.new(
+instance = AutosdeOpenapiClient::CapabilityTranslation.new(
   abstract_capability: null,
   abstract_capability_name: null,
   default_value: null,

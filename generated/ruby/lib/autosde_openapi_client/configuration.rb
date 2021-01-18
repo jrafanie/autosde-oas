@@ -10,7 +10,7 @@ OpenAPI Generator version: 5.0.1-SNAPSHOT
 
 =end
 
-module OpenapiClient
+module AutosdeOpenapiClient
   class Configuration
     # Defines url scheme
     attr_accessor :scheme

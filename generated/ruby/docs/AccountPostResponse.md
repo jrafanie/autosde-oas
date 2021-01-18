@@ -1,4 +1,4 @@
-# OpenapiClient::AccountPostResponse
+# AutosdeOpenapiClient::AccountPostResponse
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::AccountPostResponse.new(
+instance = AutosdeOpenapiClient::AccountPostResponse.new(
   description: null,
   id: null,
   name: null,

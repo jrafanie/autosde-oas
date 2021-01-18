@@ -1,4 +1,4 @@
-# OpenapiClient::NativeCapability
+# AutosdeOpenapiClient::NativeCapability
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::NativeCapability.new(
+instance = AutosdeOpenapiClient::NativeCapability.new(
   name: null,
   published: null,
   system_type: null,

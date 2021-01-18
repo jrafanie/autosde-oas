@@ -1,6 +1,6 @@
 # autosde_openapi_client
 
-OpenapiClient - the Ruby gem for the Site Manager API
+AutosdeOpenapiClient - the Ruby gem for the Site Manager API
 
 Site Manager API
 
@@ -57,17 +57,17 @@ Please follow the [installation](#installation) procedure and then run the follo
 require 'autosde_openapi_client'
 
 # Setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::AbstractCapabilityApi.new
+api_instance = AutosdeOpenapiClient::AbstractCapabilityApi.new
 
 begin
   result = api_instance.abstract_capabilities_get
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Exception when calling AbstractCapabilityApi->abstract_capabilities_get: #{e}"
 end
 
@@ -79,148 +79,148 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*OpenapiClient::AbstractCapabilityApi* | [**abstract_capabilities_get**](docs/AbstractCapabilityApi.md#abstract_capabilities_get) | **GET** /abstract-capabilities/ | 
-*OpenapiClient::AbstractCapabilityApi* | [**abstract_capabilities_pk_delete**](docs/AbstractCapabilityApi.md#abstract_capabilities_pk_delete) | **DELETE** /abstract-capabilities/{pk}/ | 
-*OpenapiClient::AbstractCapabilityApi* | [**abstract_capabilities_pk_get**](docs/AbstractCapabilityApi.md#abstract_capabilities_pk_get) | **GET** /abstract-capabilities/{pk}/ | 
-*OpenapiClient::AbstractCapabilityApi* | [**abstract_capabilities_post**](docs/AbstractCapabilityApi.md#abstract_capabilities_post) | **POST** /abstract-capabilities/ | 
-*OpenapiClient::AccountApi* | [**accounts_get**](docs/AccountApi.md#accounts_get) | **GET** /accounts/ | 
-*OpenapiClient::AccountApi* | [**accounts_pk_delete**](docs/AccountApi.md#accounts_pk_delete) | **DELETE** /accounts/{pk} | 
-*OpenapiClient::AccountApi* | [**accounts_pk_get**](docs/AccountApi.md#accounts_pk_get) | **GET** /accounts/{pk} | 
-*OpenapiClient::AccountApi* | [**accounts_pk_put**](docs/AccountApi.md#accounts_pk_put) | **PUT** /accounts/{pk} | 
-*OpenapiClient::AccountApi* | [**accounts_post**](docs/AccountApi.md#accounts_post) | **POST** /accounts/ | 
-*OpenapiClient::AddressApi* | [**addresses_get**](docs/AddressApi.md#addresses_get) | **GET** /addresses/ | 
-*OpenapiClient::AddressApi* | [**addresses_pk_delete**](docs/AddressApi.md#addresses_pk_delete) | **DELETE** /addresses/{pk} | 
-*OpenapiClient::AddressApi* | [**addresses_pk_get**](docs/AddressApi.md#addresses_pk_get) | **GET** /addresses/{pk} | 
-*OpenapiClient::AddressApi* | [**addresses_post**](docs/AddressApi.md#addresses_post) | **POST** /addresses/ | 
-*OpenapiClient::AuthenticationApi* | [**token_auth_post**](docs/AuthenticationApi.md#token_auth_post) | **POST** /token-auth | 
-*OpenapiClient::AutoSDEProjectApi* | [**autosde_projects_get**](docs/AutoSDEProjectApi.md#autosde_projects_get) | **GET** /autosde-projects/ | 
-*OpenapiClient::AutoSDEProjectApi* | [**autosde_projects_pk_delete**](docs/AutoSDEProjectApi.md#autosde_projects_pk_delete) | **DELETE** /autosde-projects/{pk}/ | 
-*OpenapiClient::AutoSDEProjectApi* | [**autosde_projects_pk_get**](docs/AutoSDEProjectApi.md#autosde_projects_pk_get) | **GET** /autosde-projects/{pk}/ | 
-*OpenapiClient::AutoSDEProjectApi* | [**autosde_projects_post**](docs/AutoSDEProjectApi.md#autosde_projects_post) | **POST** /autosde-projects/ | 
-*OpenapiClient::AutoSDERoleApi* | [**autosde_roles_get**](docs/AutoSDERoleApi.md#autosde_roles_get) | **GET** /autosde-roles/ | 
-*OpenapiClient::AutoSDERoleApi* | [**autosde_roles_pk_delete**](docs/AutoSDERoleApi.md#autosde_roles_pk_delete) | **DELETE** /autosde-roles/{pk}/ | 
-*OpenapiClient::AutoSDERoleApi* | [**autosde_roles_pk_get**](docs/AutoSDERoleApi.md#autosde_roles_pk_get) | **GET** /autosde-roles/{pk}/ | 
-*OpenapiClient::AutoSDERoleApi* | [**autosde_roles_post**](docs/AutoSDERoleApi.md#autosde_roles_post) | **POST** /autosde-roles/ | 
-*OpenapiClient::CapabilityTranslationApi* | [**capability_translations_get**](docs/CapabilityTranslationApi.md#capability_translations_get) | **GET** /capability-translations/ | 
-*OpenapiClient::CapabilityTranslationApi* | [**capability_translations_pk_delete**](docs/CapabilityTranslationApi.md#capability_translations_pk_delete) | **DELETE** /capability-translations/{pk} | 
-*OpenapiClient::CapabilityTranslationApi* | [**capability_translations_pk_get**](docs/CapabilityTranslationApi.md#capability_translations_pk_get) | **GET** /capability-translations/{pk} | 
-*OpenapiClient::CapabilityTranslationApi* | [**capability_translations_post**](docs/CapabilityTranslationApi.md#capability_translations_post) | **POST** /capability-translations/ | 
-*OpenapiClient::HostApi* | [**hosts_get**](docs/HostApi.md#hosts_get) | **GET** /hosts/ | 
-*OpenapiClient::HostApi* | [**hosts_pk_delete**](docs/HostApi.md#hosts_pk_delete) | **DELETE** /hosts/{pk} | 
-*OpenapiClient::HostApi* | [**hosts_pk_get**](docs/HostApi.md#hosts_pk_get) | **GET** /hosts/{pk} | 
-*OpenapiClient::HostApi* | [**hosts_post**](docs/HostApi.md#hosts_post) | **POST** /hosts/ | 
-*OpenapiClient::HostVolumeConnectionApi* | [**host_volume_connection_get**](docs/HostVolumeConnectionApi.md#host_volume_connection_get) | **GET** /host-volume-connection/ | 
-*OpenapiClient::HostVolumeConnectionApi* | [**host_volume_connection_pk_delete**](docs/HostVolumeConnectionApi.md#host_volume_connection_pk_delete) | **DELETE** /host-volume-connection/{pk} | 
-*OpenapiClient::HostVolumeConnectionApi* | [**host_volume_connection_pk_get**](docs/HostVolumeConnectionApi.md#host_volume_connection_pk_get) | **GET** /host-volume-connection/{pk} | 
-*OpenapiClient::HostVolumeConnectionApi* | [**host_volume_connection_post**](docs/HostVolumeConnectionApi.md#host_volume_connection_post) | **POST** /host-volume-connection/ | 
-*OpenapiClient::JobApi* | [**jobs_get**](docs/JobApi.md#jobs_get) | **GET** /jobs | 
-*OpenapiClient::JobApi* | [**jobs_post**](docs/JobApi.md#jobs_post) | **POST** /jobs | 
-*OpenapiClient::NativeCapabilityApi* | [**native_capabilities_get**](docs/NativeCapabilityApi.md#native_capabilities_get) | **GET** /native-capabilities/ | 
-*OpenapiClient::NativeCapabilityApi* | [**native_capabilities_pk_delete**](docs/NativeCapabilityApi.md#native_capabilities_pk_delete) | **DELETE** /native-capabilities/{pk} | 
-*OpenapiClient::NativeCapabilityApi* | [**native_capabilities_pk_get**](docs/NativeCapabilityApi.md#native_capabilities_pk_get) | **GET** /native-capabilities/{pk} | 
-*OpenapiClient::NativeCapabilityApi* | [**native_capabilities_post**](docs/NativeCapabilityApi.md#native_capabilities_post) | **POST** /native-capabilities/ | 
-*OpenapiClient::ProfileApi* | [**profiles_get**](docs/ProfileApi.md#profiles_get) | **GET** /profiles/ | 
-*OpenapiClient::ProfileApi* | [**profiles_pk_delete**](docs/ProfileApi.md#profiles_pk_delete) | **DELETE** /profiles/{pk}/ | 
-*OpenapiClient::ProfileApi* | [**profiles_pk_get**](docs/ProfileApi.md#profiles_pk_get) | **GET** /profiles/{pk}/ | 
-*OpenapiClient::ProfileApi* | [**profiles_post**](docs/ProfileApi.md#profiles_post) | **POST** /profiles/ | 
-*OpenapiClient::ProvisioningStrategyApi* | [**provisioning_strategy_get**](docs/ProvisioningStrategyApi.md#provisioning_strategy_get) | **GET** /provisioning-strategy/ | 
-*OpenapiClient::ProvisioningStrategyApi* | [**provisioning_strategy_pk_delete**](docs/ProvisioningStrategyApi.md#provisioning_strategy_pk_delete) | **DELETE** /provisioning-strategy/{pk} | 
-*OpenapiClient::ProvisioningStrategyApi* | [**provisioning_strategy_pk_get**](docs/ProvisioningStrategyApi.md#provisioning_strategy_pk_get) | **GET** /provisioning-strategy/{pk} | 
-*OpenapiClient::ProvisioningStrategyApi* | [**provisioning_strategy_post**](docs/ProvisioningStrategyApi.md#provisioning_strategy_post) | **POST** /provisioning-strategy/ | 
-*OpenapiClient::ServiceApi* | [**services_get**](docs/ServiceApi.md#services_get) | **GET** /services/ | 
-*OpenapiClient::ServiceApi* | [**services_pk_delete**](docs/ServiceApi.md#services_pk_delete) | **DELETE** /services/{pk} | 
-*OpenapiClient::ServiceApi* | [**services_pk_get**](docs/ServiceApi.md#services_pk_get) | **GET** /services/{pk} | 
-*OpenapiClient::ServiceApi* | [**services_pk_put**](docs/ServiceApi.md#services_pk_put) | **PUT** /services/{pk} | 
-*OpenapiClient::ServiceApi* | [**services_post**](docs/ServiceApi.md#services_post) | **POST** /services/ | 
-*OpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attchment_get**](docs/ServiceResourceAttachmentApi.md#service_resource_attchment_get) | **GET** /service-resource-attchment/ | 
-*OpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attchment_pk_delete**](docs/ServiceResourceAttachmentApi.md#service_resource_attchment_pk_delete) | **DELETE** /service-resource-attchment/{pk} | 
-*OpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attchment_pk_get**](docs/ServiceResourceAttachmentApi.md#service_resource_attchment_pk_get) | **GET** /service-resource-attchment/{pk} | 
-*OpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attchment_post**](docs/ServiceResourceAttachmentApi.md#service_resource_attchment_post) | **POST** /service-resource-attchment/ | 
-*OpenapiClient::SnapshotApi* | [**snapshots_get**](docs/SnapshotApi.md#snapshots_get) | **GET** /snapshots/ | 
-*OpenapiClient::SnapshotApi* | [**snapshots_pk_delete**](docs/SnapshotApi.md#snapshots_pk_delete) | **DELETE** /snapshots/{pk} | 
-*OpenapiClient::SnapshotApi* | [**snapshots_pk_get**](docs/SnapshotApi.md#snapshots_pk_get) | **GET** /snapshots/{pk} | 
-*OpenapiClient::SnapshotApi* | [**snapshots_post**](docs/SnapshotApi.md#snapshots_post) | **POST** /snapshots/ | 
-*OpenapiClient::StorageHostApi* | [**storage_hosts_get**](docs/StorageHostApi.md#storage_hosts_get) | **GET** /storage-hosts | 
-*OpenapiClient::StorageHostApi* | [**storage_hosts_pk_delete**](docs/StorageHostApi.md#storage_hosts_pk_delete) | **DELETE** /storage-hosts/{pk} | 
-*OpenapiClient::StorageHostApi* | [**storage_hosts_pk_get**](docs/StorageHostApi.md#storage_hosts_pk_get) | **GET** /storage-hosts/{pk} | 
-*OpenapiClient::StorageHostApi* | [**storage_hosts_pk_put**](docs/StorageHostApi.md#storage_hosts_pk_put) | **PUT** /storage-hosts/{pk} | 
-*OpenapiClient::StorageHostApi* | [**storage_hosts_post**](docs/StorageHostApi.md#storage_hosts_post) | **POST** /storage-hosts | 
-*OpenapiClient::StorageHostVolumeMappingApi* | [**storage_hosts_mapping_get**](docs/StorageHostVolumeMappingApi.md#storage_hosts_mapping_get) | **GET** /storage-hosts-mapping | 
-*OpenapiClient::StorageHostVolumeMappingApi* | [**storage_hosts_mapping_pk_delete**](docs/StorageHostVolumeMappingApi.md#storage_hosts_mapping_pk_delete) | **DELETE** /storage-hosts-mapping/{pk} | 
-*OpenapiClient::StorageHostVolumeMappingApi* | [**storage_hosts_mapping_pk_get**](docs/StorageHostVolumeMappingApi.md#storage_hosts_mapping_pk_get) | **GET** /storage-hosts-mapping/{pk} | 
-*OpenapiClient::StorageHostVolumeMappingApi* | [**storage_hosts_mapping_post**](docs/StorageHostVolumeMappingApi.md#storage_hosts_mapping_post) | **POST** /storage-hosts-mapping | 
-*OpenapiClient::StorageResourceApi* | [**storage_resources_get**](docs/StorageResourceApi.md#storage_resources_get) | **GET** /storage-resources/ | 
-*OpenapiClient::StorageResourceApi* | [**storage_resources_pk_delete**](docs/StorageResourceApi.md#storage_resources_pk_delete) | **DELETE** /storage-resources/{pk} | 
-*OpenapiClient::StorageResourceApi* | [**storage_resources_pk_get**](docs/StorageResourceApi.md#storage_resources_pk_get) | **GET** /storage-resources/{pk} | 
-*OpenapiClient::StorageResourceApi* | [**storage_resources_pk_put**](docs/StorageResourceApi.md#storage_resources_pk_put) | **PUT** /storage-resources/{pk} | 
-*OpenapiClient::StorageResourceApi* | [**storage_resources_post**](docs/StorageResourceApi.md#storage_resources_post) | **POST** /storage-resources/ | 
-*OpenapiClient::StorageSystemApi* | [**storage_systems_get**](docs/StorageSystemApi.md#storage_systems_get) | **GET** /storage-systems/ | 
-*OpenapiClient::StorageSystemApi* | [**storage_systems_pk_delete**](docs/StorageSystemApi.md#storage_systems_pk_delete) | **DELETE** /storage-systems/{pk} | 
-*OpenapiClient::StorageSystemApi* | [**storage_systems_pk_get**](docs/StorageSystemApi.md#storage_systems_pk_get) | **GET** /storage-systems/{pk} | 
-*OpenapiClient::StorageSystemApi* | [**storage_systems_post**](docs/StorageSystemApi.md#storage_systems_post) | **POST** /storage-systems/ | 
-*OpenapiClient::SystemTypeApi* | [**system_types_get**](docs/SystemTypeApi.md#system_types_get) | **GET** /system-types/ | 
-*OpenapiClient::SystemTypeApi* | [**system_types_pk_delete**](docs/SystemTypeApi.md#system_types_pk_delete) | **DELETE** /system-types/{pk} | 
-*OpenapiClient::SystemTypeApi* | [**system_types_pk_get**](docs/SystemTypeApi.md#system_types_pk_get) | **GET** /system-types/{pk} | 
-*OpenapiClient::SystemTypeApi* | [**system_types_post**](docs/SystemTypeApi.md#system_types_post) | **POST** /system-types/ | 
-*OpenapiClient::VolumeApi* | [**volumes_get**](docs/VolumeApi.md#volumes_get) | **GET** /volumes/ | 
-*OpenapiClient::VolumeApi* | [**volumes_pk_delete**](docs/VolumeApi.md#volumes_pk_delete) | **DELETE** /volumes/{pk} | 
-*OpenapiClient::VolumeApi* | [**volumes_pk_get**](docs/VolumeApi.md#volumes_pk_get) | **GET** /volumes/{pk} | 
-*OpenapiClient::VolumeApi* | [**volumes_pk_put**](docs/VolumeApi.md#volumes_pk_put) | **PUT** /volumes/{pk} | 
-*OpenapiClient::VolumeApi* | [**volumes_post**](docs/VolumeApi.md#volumes_post) | **POST** /volumes/ | 
-*OpenapiClient::VolumeSafeDeleteApi* | [**safe_deletes_get**](docs/VolumeSafeDeleteApi.md#safe_deletes_get) | **GET** /safe-deletes/ | 
-*OpenapiClient::VolumeSafeDeleteApi* | [**safe_deletes_pk_delete**](docs/VolumeSafeDeleteApi.md#safe_deletes_pk_delete) | **DELETE** /safe-deletes/{pk} | 
-*OpenapiClient::VolumeSafeDeleteApi* | [**safe_deletes_pk_get**](docs/VolumeSafeDeleteApi.md#safe_deletes_pk_get) | **GET** /safe-deletes/{pk} | 
-*OpenapiClient::VolumeSafeDeleteApi* | [**safe_deletes_post**](docs/VolumeSafeDeleteApi.md#safe_deletes_post) | **POST** /safe-deletes/ | 
+*AutosdeOpenapiClient::AbstractCapabilityApi* | [**abstract_capabilities_get**](docs/AbstractCapabilityApi.md#abstract_capabilities_get) | **GET** /abstract-capabilities/ | 
+*AutosdeOpenapiClient::AbstractCapabilityApi* | [**abstract_capabilities_pk_delete**](docs/AbstractCapabilityApi.md#abstract_capabilities_pk_delete) | **DELETE** /abstract-capabilities/{pk}/ | 
+*AutosdeOpenapiClient::AbstractCapabilityApi* | [**abstract_capabilities_pk_get**](docs/AbstractCapabilityApi.md#abstract_capabilities_pk_get) | **GET** /abstract-capabilities/{pk}/ | 
+*AutosdeOpenapiClient::AbstractCapabilityApi* | [**abstract_capabilities_post**](docs/AbstractCapabilityApi.md#abstract_capabilities_post) | **POST** /abstract-capabilities/ | 
+*AutosdeOpenapiClient::AccountApi* | [**accounts_get**](docs/AccountApi.md#accounts_get) | **GET** /accounts/ | 
+*AutosdeOpenapiClient::AccountApi* | [**accounts_pk_delete**](docs/AccountApi.md#accounts_pk_delete) | **DELETE** /accounts/{pk} | 
+*AutosdeOpenapiClient::AccountApi* | [**accounts_pk_get**](docs/AccountApi.md#accounts_pk_get) | **GET** /accounts/{pk} | 
+*AutosdeOpenapiClient::AccountApi* | [**accounts_pk_put**](docs/AccountApi.md#accounts_pk_put) | **PUT** /accounts/{pk} | 
+*AutosdeOpenapiClient::AccountApi* | [**accounts_post**](docs/AccountApi.md#accounts_post) | **POST** /accounts/ | 
+*AutosdeOpenapiClient::AddressApi* | [**addresses_get**](docs/AddressApi.md#addresses_get) | **GET** /addresses/ | 
+*AutosdeOpenapiClient::AddressApi* | [**addresses_pk_delete**](docs/AddressApi.md#addresses_pk_delete) | **DELETE** /addresses/{pk} | 
+*AutosdeOpenapiClient::AddressApi* | [**addresses_pk_get**](docs/AddressApi.md#addresses_pk_get) | **GET** /addresses/{pk} | 
+*AutosdeOpenapiClient::AddressApi* | [**addresses_post**](docs/AddressApi.md#addresses_post) | **POST** /addresses/ | 
+*AutosdeOpenapiClient::AuthenticationApi* | [**token_auth_post**](docs/AuthenticationApi.md#token_auth_post) | **POST** /token-auth | 
+*AutosdeOpenapiClient::AutoSDEProjectApi* | [**autosde_projects_get**](docs/AutoSDEProjectApi.md#autosde_projects_get) | **GET** /autosde-projects/ | 
+*AutosdeOpenapiClient::AutoSDEProjectApi* | [**autosde_projects_pk_delete**](docs/AutoSDEProjectApi.md#autosde_projects_pk_delete) | **DELETE** /autosde-projects/{pk}/ | 
+*AutosdeOpenapiClient::AutoSDEProjectApi* | [**autosde_projects_pk_get**](docs/AutoSDEProjectApi.md#autosde_projects_pk_get) | **GET** /autosde-projects/{pk}/ | 
+*AutosdeOpenapiClient::AutoSDEProjectApi* | [**autosde_projects_post**](docs/AutoSDEProjectApi.md#autosde_projects_post) | **POST** /autosde-projects/ | 
+*AutosdeOpenapiClient::AutoSDERoleApi* | [**autosde_roles_get**](docs/AutoSDERoleApi.md#autosde_roles_get) | **GET** /autosde-roles/ | 
+*AutosdeOpenapiClient::AutoSDERoleApi* | [**autosde_roles_pk_delete**](docs/AutoSDERoleApi.md#autosde_roles_pk_delete) | **DELETE** /autosde-roles/{pk}/ | 
+*AutosdeOpenapiClient::AutoSDERoleApi* | [**autosde_roles_pk_get**](docs/AutoSDERoleApi.md#autosde_roles_pk_get) | **GET** /autosde-roles/{pk}/ | 
+*AutosdeOpenapiClient::AutoSDERoleApi* | [**autosde_roles_post**](docs/AutoSDERoleApi.md#autosde_roles_post) | **POST** /autosde-roles/ | 
+*AutosdeOpenapiClient::CapabilityTranslationApi* | [**capability_translations_get**](docs/CapabilityTranslationApi.md#capability_translations_get) | **GET** /capability-translations/ | 
+*AutosdeOpenapiClient::CapabilityTranslationApi* | [**capability_translations_pk_delete**](docs/CapabilityTranslationApi.md#capability_translations_pk_delete) | **DELETE** /capability-translations/{pk} | 
+*AutosdeOpenapiClient::CapabilityTranslationApi* | [**capability_translations_pk_get**](docs/CapabilityTranslationApi.md#capability_translations_pk_get) | **GET** /capability-translations/{pk} | 
+*AutosdeOpenapiClient::CapabilityTranslationApi* | [**capability_translations_post**](docs/CapabilityTranslationApi.md#capability_translations_post) | **POST** /capability-translations/ | 
+*AutosdeOpenapiClient::HostApi* | [**hosts_get**](docs/HostApi.md#hosts_get) | **GET** /hosts/ | 
+*AutosdeOpenapiClient::HostApi* | [**hosts_pk_delete**](docs/HostApi.md#hosts_pk_delete) | **DELETE** /hosts/{pk} | 
+*AutosdeOpenapiClient::HostApi* | [**hosts_pk_get**](docs/HostApi.md#hosts_pk_get) | **GET** /hosts/{pk} | 
+*AutosdeOpenapiClient::HostApi* | [**hosts_post**](docs/HostApi.md#hosts_post) | **POST** /hosts/ | 
+*AutosdeOpenapiClient::HostVolumeConnectionApi* | [**host_volume_connection_get**](docs/HostVolumeConnectionApi.md#host_volume_connection_get) | **GET** /host-volume-connection/ | 
+*AutosdeOpenapiClient::HostVolumeConnectionApi* | [**host_volume_connection_pk_delete**](docs/HostVolumeConnectionApi.md#host_volume_connection_pk_delete) | **DELETE** /host-volume-connection/{pk} | 
+*AutosdeOpenapiClient::HostVolumeConnectionApi* | [**host_volume_connection_pk_get**](docs/HostVolumeConnectionApi.md#host_volume_connection_pk_get) | **GET** /host-volume-connection/{pk} | 
+*AutosdeOpenapiClient::HostVolumeConnectionApi* | [**host_volume_connection_post**](docs/HostVolumeConnectionApi.md#host_volume_connection_post) | **POST** /host-volume-connection/ | 
+*AutosdeOpenapiClient::JobApi* | [**jobs_get**](docs/JobApi.md#jobs_get) | **GET** /jobs | 
+*AutosdeOpenapiClient::JobApi* | [**jobs_post**](docs/JobApi.md#jobs_post) | **POST** /jobs | 
+*AutosdeOpenapiClient::NativeCapabilityApi* | [**native_capabilities_get**](docs/NativeCapabilityApi.md#native_capabilities_get) | **GET** /native-capabilities/ | 
+*AutosdeOpenapiClient::NativeCapabilityApi* | [**native_capabilities_pk_delete**](docs/NativeCapabilityApi.md#native_capabilities_pk_delete) | **DELETE** /native-capabilities/{pk} | 
+*AutosdeOpenapiClient::NativeCapabilityApi* | [**native_capabilities_pk_get**](docs/NativeCapabilityApi.md#native_capabilities_pk_get) | **GET** /native-capabilities/{pk} | 
+*AutosdeOpenapiClient::NativeCapabilityApi* | [**native_capabilities_post**](docs/NativeCapabilityApi.md#native_capabilities_post) | **POST** /native-capabilities/ | 
+*AutosdeOpenapiClient::ProfileApi* | [**profiles_get**](docs/ProfileApi.md#profiles_get) | **GET** /profiles/ | 
+*AutosdeOpenapiClient::ProfileApi* | [**profiles_pk_delete**](docs/ProfileApi.md#profiles_pk_delete) | **DELETE** /profiles/{pk}/ | 
+*AutosdeOpenapiClient::ProfileApi* | [**profiles_pk_get**](docs/ProfileApi.md#profiles_pk_get) | **GET** /profiles/{pk}/ | 
+*AutosdeOpenapiClient::ProfileApi* | [**profiles_post**](docs/ProfileApi.md#profiles_post) | **POST** /profiles/ | 
+*AutosdeOpenapiClient::ProvisioningStrategyApi* | [**provisioning_strategy_get**](docs/ProvisioningStrategyApi.md#provisioning_strategy_get) | **GET** /provisioning-strategy/ | 
+*AutosdeOpenapiClient::ProvisioningStrategyApi* | [**provisioning_strategy_pk_delete**](docs/ProvisioningStrategyApi.md#provisioning_strategy_pk_delete) | **DELETE** /provisioning-strategy/{pk} | 
+*AutosdeOpenapiClient::ProvisioningStrategyApi* | [**provisioning_strategy_pk_get**](docs/ProvisioningStrategyApi.md#provisioning_strategy_pk_get) | **GET** /provisioning-strategy/{pk} | 
+*AutosdeOpenapiClient::ProvisioningStrategyApi* | [**provisioning_strategy_post**](docs/ProvisioningStrategyApi.md#provisioning_strategy_post) | **POST** /provisioning-strategy/ | 
+*AutosdeOpenapiClient::ServiceApi* | [**services_get**](docs/ServiceApi.md#services_get) | **GET** /services/ | 
+*AutosdeOpenapiClient::ServiceApi* | [**services_pk_delete**](docs/ServiceApi.md#services_pk_delete) | **DELETE** /services/{pk} | 
+*AutosdeOpenapiClient::ServiceApi* | [**services_pk_get**](docs/ServiceApi.md#services_pk_get) | **GET** /services/{pk} | 
+*AutosdeOpenapiClient::ServiceApi* | [**services_pk_put**](docs/ServiceApi.md#services_pk_put) | **PUT** /services/{pk} | 
+*AutosdeOpenapiClient::ServiceApi* | [**services_post**](docs/ServiceApi.md#services_post) | **POST** /services/ | 
+*AutosdeOpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attchment_get**](docs/ServiceResourceAttachmentApi.md#service_resource_attchment_get) | **GET** /service-resource-attchment/ | 
+*AutosdeOpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attchment_pk_delete**](docs/ServiceResourceAttachmentApi.md#service_resource_attchment_pk_delete) | **DELETE** /service-resource-attchment/{pk} | 
+*AutosdeOpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attchment_pk_get**](docs/ServiceResourceAttachmentApi.md#service_resource_attchment_pk_get) | **GET** /service-resource-attchment/{pk} | 
+*AutosdeOpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attchment_post**](docs/ServiceResourceAttachmentApi.md#service_resource_attchment_post) | **POST** /service-resource-attchment/ | 
+*AutosdeOpenapiClient::SnapshotApi* | [**snapshots_get**](docs/SnapshotApi.md#snapshots_get) | **GET** /snapshots/ | 
+*AutosdeOpenapiClient::SnapshotApi* | [**snapshots_pk_delete**](docs/SnapshotApi.md#snapshots_pk_delete) | **DELETE** /snapshots/{pk} | 
+*AutosdeOpenapiClient::SnapshotApi* | [**snapshots_pk_get**](docs/SnapshotApi.md#snapshots_pk_get) | **GET** /snapshots/{pk} | 
+*AutosdeOpenapiClient::SnapshotApi* | [**snapshots_post**](docs/SnapshotApi.md#snapshots_post) | **POST** /snapshots/ | 
+*AutosdeOpenapiClient::StorageHostApi* | [**storage_hosts_get**](docs/StorageHostApi.md#storage_hosts_get) | **GET** /storage-hosts | 
+*AutosdeOpenapiClient::StorageHostApi* | [**storage_hosts_pk_delete**](docs/StorageHostApi.md#storage_hosts_pk_delete) | **DELETE** /storage-hosts/{pk} | 
+*AutosdeOpenapiClient::StorageHostApi* | [**storage_hosts_pk_get**](docs/StorageHostApi.md#storage_hosts_pk_get) | **GET** /storage-hosts/{pk} | 
+*AutosdeOpenapiClient::StorageHostApi* | [**storage_hosts_pk_put**](docs/StorageHostApi.md#storage_hosts_pk_put) | **PUT** /storage-hosts/{pk} | 
+*AutosdeOpenapiClient::StorageHostApi* | [**storage_hosts_post**](docs/StorageHostApi.md#storage_hosts_post) | **POST** /storage-hosts | 
+*AutosdeOpenapiClient::StorageHostVolumeMappingApi* | [**storage_hosts_mapping_get**](docs/StorageHostVolumeMappingApi.md#storage_hosts_mapping_get) | **GET** /storage-hosts-mapping | 
+*AutosdeOpenapiClient::StorageHostVolumeMappingApi* | [**storage_hosts_mapping_pk_delete**](docs/StorageHostVolumeMappingApi.md#storage_hosts_mapping_pk_delete) | **DELETE** /storage-hosts-mapping/{pk} | 
+*AutosdeOpenapiClient::StorageHostVolumeMappingApi* | [**storage_hosts_mapping_pk_get**](docs/StorageHostVolumeMappingApi.md#storage_hosts_mapping_pk_get) | **GET** /storage-hosts-mapping/{pk} | 
+*AutosdeOpenapiClient::StorageHostVolumeMappingApi* | [**storage_hosts_mapping_post**](docs/StorageHostVolumeMappingApi.md#storage_hosts_mapping_post) | **POST** /storage-hosts-mapping | 
+*AutosdeOpenapiClient::StorageResourceApi* | [**storage_resources_get**](docs/StorageResourceApi.md#storage_resources_get) | **GET** /storage-resources/ | 
+*AutosdeOpenapiClient::StorageResourceApi* | [**storage_resources_pk_delete**](docs/StorageResourceApi.md#storage_resources_pk_delete) | **DELETE** /storage-resources/{pk} | 
+*AutosdeOpenapiClient::StorageResourceApi* | [**storage_resources_pk_get**](docs/StorageResourceApi.md#storage_resources_pk_get) | **GET** /storage-resources/{pk} | 
+*AutosdeOpenapiClient::StorageResourceApi* | [**storage_resources_pk_put**](docs/StorageResourceApi.md#storage_resources_pk_put) | **PUT** /storage-resources/{pk} | 
+*AutosdeOpenapiClient::StorageResourceApi* | [**storage_resources_post**](docs/StorageResourceApi.md#storage_resources_post) | **POST** /storage-resources/ | 
+*AutosdeOpenapiClient::StorageSystemApi* | [**storage_systems_get**](docs/StorageSystemApi.md#storage_systems_get) | **GET** /storage-systems/ | 
+*AutosdeOpenapiClient::StorageSystemApi* | [**storage_systems_pk_delete**](docs/StorageSystemApi.md#storage_systems_pk_delete) | **DELETE** /storage-systems/{pk} | 
+*AutosdeOpenapiClient::StorageSystemApi* | [**storage_systems_pk_get**](docs/StorageSystemApi.md#storage_systems_pk_get) | **GET** /storage-systems/{pk} | 
+*AutosdeOpenapiClient::StorageSystemApi* | [**storage_systems_post**](docs/StorageSystemApi.md#storage_systems_post) | **POST** /storage-systems/ | 
+*AutosdeOpenapiClient::SystemTypeApi* | [**system_types_get**](docs/SystemTypeApi.md#system_types_get) | **GET** /system-types/ | 
+*AutosdeOpenapiClient::SystemTypeApi* | [**system_types_pk_delete**](docs/SystemTypeApi.md#system_types_pk_delete) | **DELETE** /system-types/{pk} | 
+*AutosdeOpenapiClient::SystemTypeApi* | [**system_types_pk_get**](docs/SystemTypeApi.md#system_types_pk_get) | **GET** /system-types/{pk} | 
+*AutosdeOpenapiClient::SystemTypeApi* | [**system_types_post**](docs/SystemTypeApi.md#system_types_post) | **POST** /system-types/ | 
+*AutosdeOpenapiClient::VolumeApi* | [**volumes_get**](docs/VolumeApi.md#volumes_get) | **GET** /volumes/ | 
+*AutosdeOpenapiClient::VolumeApi* | [**volumes_pk_delete**](docs/VolumeApi.md#volumes_pk_delete) | **DELETE** /volumes/{pk} | 
+*AutosdeOpenapiClient::VolumeApi* | [**volumes_pk_get**](docs/VolumeApi.md#volumes_pk_get) | **GET** /volumes/{pk} | 
+*AutosdeOpenapiClient::VolumeApi* | [**volumes_pk_put**](docs/VolumeApi.md#volumes_pk_put) | **PUT** /volumes/{pk} | 
+*AutosdeOpenapiClient::VolumeApi* | [**volumes_post**](docs/VolumeApi.md#volumes_post) | **POST** /volumes/ | 
+*AutosdeOpenapiClient::VolumeSafeDeleteApi* | [**safe_deletes_get**](docs/VolumeSafeDeleteApi.md#safe_deletes_get) | **GET** /safe-deletes/ | 
+*AutosdeOpenapiClient::VolumeSafeDeleteApi* | [**safe_deletes_pk_delete**](docs/VolumeSafeDeleteApi.md#safe_deletes_pk_delete) | **DELETE** /safe-deletes/{pk} | 
+*AutosdeOpenapiClient::VolumeSafeDeleteApi* | [**safe_deletes_pk_get**](docs/VolumeSafeDeleteApi.md#safe_deletes_pk_get) | **GET** /safe-deletes/{pk} | 
+*AutosdeOpenapiClient::VolumeSafeDeleteApi* | [**safe_deletes_post**](docs/VolumeSafeDeleteApi.md#safe_deletes_post) | **POST** /safe-deletes/ | 
 
 
 ## Documentation for Models
 
- - [OpenapiClient::AbstractCapability](docs/AbstractCapability.md)
- - [OpenapiClient::Account](docs/Account.md)
- - [OpenapiClient::AccountPostRequest](docs/AccountPostRequest.md)
- - [OpenapiClient::AccountPostResponse](docs/AccountPostResponse.md)
- - [OpenapiClient::Address](docs/Address.md)
- - [OpenapiClient::AddressCreate](docs/AddressCreate.md)
- - [OpenapiClient::AuthResponse](docs/AuthResponse.md)
- - [OpenapiClient::Authentication](docs/Authentication.md)
- - [OpenapiClient::AutoSDEProject](docs/AutoSDEProject.md)
- - [OpenapiClient::AutoSDERole](docs/AutoSDERole.md)
- - [OpenapiClient::CapabilityTranslation](docs/CapabilityTranslation.md)
- - [OpenapiClient::CapabilityTranslationCreate](docs/CapabilityTranslationCreate.md)
- - [OpenapiClient::Host](docs/Host.md)
- - [OpenapiClient::HostCreate](docs/HostCreate.md)
- - [OpenapiClient::HostVolumeConnection](docs/HostVolumeConnection.md)
- - [OpenapiClient::HostVolumeConnectionCreate](docs/HostVolumeConnectionCreate.md)
- - [OpenapiClient::Job](docs/Job.md)
- - [OpenapiClient::JobCreate](docs/JobCreate.md)
- - [OpenapiClient::NativeCapability](docs/NativeCapability.md)
- - [OpenapiClient::Profile](docs/Profile.md)
- - [OpenapiClient::ProvisioningStrategy](docs/ProvisioningStrategy.md)
- - [OpenapiClient::Service](docs/Service.md)
- - [OpenapiClient::ServiceAbstractCapabilityValue](docs/ServiceAbstractCapabilityValue.md)
- - [OpenapiClient::ServiceCreate](docs/ServiceCreate.md)
- - [OpenapiClient::ServiceResourceAttachment](docs/ServiceResourceAttachment.md)
- - [OpenapiClient::Snapshot](docs/Snapshot.md)
- - [OpenapiClient::SnapshotCreate](docs/SnapshotCreate.md)
- - [OpenapiClient::StorageHost](docs/StorageHost.md)
- - [OpenapiClient::StorageHostCreate](docs/StorageHostCreate.md)
- - [OpenapiClient::StorageHostResponse](docs/StorageHostResponse.md)
- - [OpenapiClient::StorageHostUpdate](docs/StorageHostUpdate.md)
- - [OpenapiClient::StorageHostVolumeMapping](docs/StorageHostVolumeMapping.md)
- - [OpenapiClient::StorageHostVolumeMappingCreate](docs/StorageHostVolumeMappingCreate.md)
- - [OpenapiClient::StorageResource](docs/StorageResource.md)
- - [OpenapiClient::StorageResourceCreate](docs/StorageResourceCreate.md)
- - [OpenapiClient::StorageResourceResponse](docs/StorageResourceResponse.md)
- - [OpenapiClient::StorageSystem](docs/StorageSystem.md)
- - [OpenapiClient::StorageSystemCreate](docs/StorageSystemCreate.md)
- - [OpenapiClient::SystemType](docs/SystemType.md)
- - [OpenapiClient::SystemTypeCreate](docs/SystemTypeCreate.md)
- - [OpenapiClient::Volume](docs/Volume.md)
- - [OpenapiClient::VolumeCreate](docs/VolumeCreate.md)
- - [OpenapiClient::VolumeResponse](docs/VolumeResponse.md)
- - [OpenapiClient::VolumeSafeDelete](docs/VolumeSafeDelete.md)
- - [OpenapiClient::VolumeSafeDeleteCreate](docs/VolumeSafeDeleteCreate.md)
- - [OpenapiClient::VolumeUpdate](docs/VolumeUpdate.md)
+ - [AutosdeOpenapiClient::AbstractCapability](docs/AbstractCapability.md)
+ - [AutosdeOpenapiClient::Account](docs/Account.md)
+ - [AutosdeOpenapiClient::AccountPostRequest](docs/AccountPostRequest.md)
+ - [AutosdeOpenapiClient::AccountPostResponse](docs/AccountPostResponse.md)
+ - [AutosdeOpenapiClient::Address](docs/Address.md)
+ - [AutosdeOpenapiClient::AddressCreate](docs/AddressCreate.md)
+ - [AutosdeOpenapiClient::AuthResponse](docs/AuthResponse.md)
+ - [AutosdeOpenapiClient::Authentication](docs/Authentication.md)
+ - [AutosdeOpenapiClient::AutoSDEProject](docs/AutoSDEProject.md)
+ - [AutosdeOpenapiClient::AutoSDERole](docs/AutoSDERole.md)
+ - [AutosdeOpenapiClient::CapabilityTranslation](docs/CapabilityTranslation.md)
+ - [AutosdeOpenapiClient::CapabilityTranslationCreate](docs/CapabilityTranslationCreate.md)
+ - [AutosdeOpenapiClient::Host](docs/Host.md)
+ - [AutosdeOpenapiClient::HostCreate](docs/HostCreate.md)
+ - [AutosdeOpenapiClient::HostVolumeConnection](docs/HostVolumeConnection.md)
+ - [AutosdeOpenapiClient::HostVolumeConnectionCreate](docs/HostVolumeConnectionCreate.md)
+ - [AutosdeOpenapiClient::Job](docs/Job.md)
+ - [AutosdeOpenapiClient::JobCreate](docs/JobCreate.md)
+ - [AutosdeOpenapiClient::NativeCapability](docs/NativeCapability.md)
+ - [AutosdeOpenapiClient::Profile](docs/Profile.md)
+ - [AutosdeOpenapiClient::ProvisioningStrategy](docs/ProvisioningStrategy.md)
+ - [AutosdeOpenapiClient::Service](docs/Service.md)
+ - [AutosdeOpenapiClient::ServiceAbstractCapabilityValue](docs/ServiceAbstractCapabilityValue.md)
+ - [AutosdeOpenapiClient::ServiceCreate](docs/ServiceCreate.md)
+ - [AutosdeOpenapiClient::ServiceResourceAttachment](docs/ServiceResourceAttachment.md)
+ - [AutosdeOpenapiClient::Snapshot](docs/Snapshot.md)
+ - [AutosdeOpenapiClient::SnapshotCreate](docs/SnapshotCreate.md)
+ - [AutosdeOpenapiClient::StorageHost](docs/StorageHost.md)
+ - [AutosdeOpenapiClient::StorageHostCreate](docs/StorageHostCreate.md)
+ - [AutosdeOpenapiClient::StorageHostResponse](docs/StorageHostResponse.md)
+ - [AutosdeOpenapiClient::StorageHostUpdate](docs/StorageHostUpdate.md)
+ - [AutosdeOpenapiClient::StorageHostVolumeMapping](docs/StorageHostVolumeMapping.md)
+ - [AutosdeOpenapiClient::StorageHostVolumeMappingCreate](docs/StorageHostVolumeMappingCreate.md)
+ - [AutosdeOpenapiClient::StorageResource](docs/StorageResource.md)
+ - [AutosdeOpenapiClient::StorageResourceCreate](docs/StorageResourceCreate.md)
+ - [AutosdeOpenapiClient::StorageResourceResponse](docs/StorageResourceResponse.md)
+ - [AutosdeOpenapiClient::StorageSystem](docs/StorageSystem.md)
+ - [AutosdeOpenapiClient::StorageSystemCreate](docs/StorageSystemCreate.md)
+ - [AutosdeOpenapiClient::SystemType](docs/SystemType.md)
+ - [AutosdeOpenapiClient::SystemTypeCreate](docs/SystemTypeCreate.md)
+ - [AutosdeOpenapiClient::Volume](docs/Volume.md)
+ - [AutosdeOpenapiClient::VolumeCreate](docs/VolumeCreate.md)
+ - [AutosdeOpenapiClient::VolumeResponse](docs/VolumeResponse.md)
+ - [AutosdeOpenapiClient::VolumeSafeDelete](docs/VolumeSafeDelete.md)
+ - [AutosdeOpenapiClient::VolumeSafeDeleteCreate](docs/VolumeSafeDeleteCreate.md)
+ - [AutosdeOpenapiClient::VolumeUpdate](docs/VolumeUpdate.md)
 
 
 ## Documentation for Authorization

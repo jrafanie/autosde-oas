@@ -10,6 +10,6 @@ OpenAPI Generator version: 5.0.1-SNAPSHOT
 
 =end
 
-module OpenapiClient
+module AutosdeOpenapiClient
   VERSION = '1.0.1'
 end

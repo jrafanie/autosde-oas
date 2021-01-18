@@ -1,4 +1,4 @@
-# OpenapiClient::Host
+# AutosdeOpenapiClient::Host
 
 ## Properties
 
@@ -17,7 +17,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::Host.new(
+instance = AutosdeOpenapiClient::Host.new(
   component_state: null,
   description: null,
   io_groups: null,

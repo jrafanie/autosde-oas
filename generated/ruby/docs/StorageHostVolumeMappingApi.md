@@ -1,4 +1,4 @@
-# OpenapiClient::StorageHostVolumeMappingApi
+# AutosdeOpenapiClient::StorageHostVolumeMappingApi
 
 All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
@@ -22,18 +22,18 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::StorageHostVolumeMappingApi.new
+api_instance = AutosdeOpenapiClient::StorageHostVolumeMappingApi.new
 
 begin
   
   result = api_instance.storage_hosts_mapping_get
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostVolumeMappingApi->storage_hosts_mapping_get: #{e}"
 end
 ```
@@ -51,7 +51,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<StorageHostVolumeMappingCreate>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostVolumeMappingApi->storage_hosts_mapping_get_with_http_info: #{e}"
 end
 ```
@@ -86,19 +86,19 @@ This endpoint does not need any parameter.
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::StorageHostVolumeMappingApi.new
+api_instance = AutosdeOpenapiClient::StorageHostVolumeMappingApi.new
 pk = 56 # Integer | 
 
 begin
   
   result = api_instance.storage_hosts_mapping_pk_delete(pk)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostVolumeMappingApi->storage_hosts_mapping_pk_delete: #{e}"
 end
 ```
@@ -116,7 +116,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<StorageHostVolumeMapping>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostVolumeMappingApi->storage_hosts_mapping_pk_delete_with_http_info: #{e}"
 end
 ```
@@ -153,19 +153,19 @@ end
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::StorageHostVolumeMappingApi.new
+api_instance = AutosdeOpenapiClient::StorageHostVolumeMappingApi.new
 pk = 56 # Integer | 
 
 begin
   
   result = api_instance.storage_hosts_mapping_pk_get(pk)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostVolumeMappingApi->storage_hosts_mapping_pk_get: #{e}"
 end
 ```
@@ -183,7 +183,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<StorageHostVolumeMapping>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostVolumeMappingApi->storage_hosts_mapping_pk_get_with_http_info: #{e}"
 end
 ```
@@ -220,19 +220,19 @@ end
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::StorageHostVolumeMappingApi.new
-storage_host_volume_mapping_create = OpenapiClient::StorageHostVolumeMappingCreate.new # StorageHostVolumeMappingCreate | 
+api_instance = AutosdeOpenapiClient::StorageHostVolumeMappingApi.new
+storage_host_volume_mapping_create = AutosdeOpenapiClient::StorageHostVolumeMappingCreate.new # StorageHostVolumeMappingCreate | 
 
 begin
   
   result = api_instance.storage_hosts_mapping_post(storage_host_volume_mapping_create)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostVolumeMappingApi->storage_hosts_mapping_post: #{e}"
 end
 ```
@@ -250,7 +250,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <StorageHostVolumeMappingCreate>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostVolumeMappingApi->storage_hosts_mapping_post_with_http_info: #{e}"
 end
 ```

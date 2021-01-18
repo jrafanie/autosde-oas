@@ -1,4 +1,4 @@
-# OpenapiClient::AddressCreate
+# AutosdeOpenapiClient::AddressCreate
 
 ## Properties
 
@@ -18,7 +18,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::AddressCreate.new(
+instance = AutosdeOpenapiClient::AddressCreate.new(
   chap_name: null,
   chap_secret: null,
   component_state: null,

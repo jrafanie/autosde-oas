@@ -12,14 +12,14 @@ OpenAPI Generator version: 5.0.1-SNAPSHOT
 
 require 'spec_helper'
 
-describe OpenapiClient::Configuration do
-  let(:config) { OpenapiClient::Configuration.default }
+describe AutosdeOpenapiClient::Configuration do
+  let(:config) { AutosdeOpenapiClient::Configuration.default }
 
   before(:each) do
     # uncomment below to setup host and base_path
     # require 'URI'
     # uri = URI.parse("http://localhost:9000/site-manager/api/v1/engine")
-    # OpenapiClient.configure do |c|
+    # AutosdeOpenapiClient.configure do |c|
     #   c.host = uri.host
     #   c.base_path = uri.path
     # end

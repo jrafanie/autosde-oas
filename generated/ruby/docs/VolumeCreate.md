@@ -1,4 +1,4 @@
-# OpenapiClient::VolumeCreate
+# AutosdeOpenapiClient::VolumeCreate
 
 ## Properties
 
@@ -17,7 +17,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::VolumeCreate.new(
+instance = AutosdeOpenapiClient::VolumeCreate.new(
   compliant: null,
   component_state: null,
   name: null,

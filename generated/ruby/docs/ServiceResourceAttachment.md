@@ -1,4 +1,4 @@
-# OpenapiClient::ServiceResourceAttachment
+# AutosdeOpenapiClient::ServiceResourceAttachment
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::ServiceResourceAttachment.new(
+instance = AutosdeOpenapiClient::ServiceResourceAttachment.new(
   compliant: null,
   service: null,
   storage_resource: null,

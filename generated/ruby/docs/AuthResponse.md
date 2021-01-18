@@ -1,4 +1,4 @@
-# OpenapiClient::AuthResponse
+# AutosdeOpenapiClient::AuthResponse
 
 ## Properties
 
@@ -11,7 +11,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::AuthResponse.new(
+instance = AutosdeOpenapiClient::AuthResponse.new(
   token: null
 )
 ```

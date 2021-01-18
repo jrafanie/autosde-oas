@@ -12,7 +12,7 @@ OpenAPI Generator version: 5.0.1-SNAPSHOT
 
 require 'cgi'
 
-module OpenapiClient
+module AutosdeOpenapiClient
   class StorageResourceApi
     attr_accessor :api_client
 

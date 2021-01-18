@@ -1,4 +1,4 @@
-# OpenapiClient::ProfileApi
+# AutosdeOpenapiClient::ProfileApi
 
 All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
@@ -22,18 +22,18 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::ProfileApi.new
+api_instance = AutosdeOpenapiClient::ProfileApi.new
 
 begin
   
   result = api_instance.profiles_get
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ProfileApi->profiles_get: #{e}"
 end
 ```
@@ -51,7 +51,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Profile>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ProfileApi->profiles_get_with_http_info: #{e}"
 end
 ```
@@ -86,19 +86,19 @@ This endpoint does not need any parameter.
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::ProfileApi.new
+api_instance = AutosdeOpenapiClient::ProfileApi.new
 pk = 56 # Integer | 
 
 begin
   
   result = api_instance.profiles_pk_delete(pk)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ProfileApi->profiles_pk_delete: #{e}"
 end
 ```
@@ -116,7 +116,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Profile>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ProfileApi->profiles_pk_delete_with_http_info: #{e}"
 end
 ```
@@ -153,19 +153,19 @@ end
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::ProfileApi.new
+api_instance = AutosdeOpenapiClient::ProfileApi.new
 pk = 56 # Integer | 
 
 begin
   
   result = api_instance.profiles_pk_get(pk)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ProfileApi->profiles_pk_get: #{e}"
 end
 ```
@@ -183,7 +183,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Profile>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ProfileApi->profiles_pk_get_with_http_info: #{e}"
 end
 ```
@@ -220,19 +220,19 @@ end
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::ProfileApi.new
-profile = OpenapiClient::Profile.new # Profile | 
+api_instance = AutosdeOpenapiClient::ProfileApi.new
+profile = AutosdeOpenapiClient::Profile.new # Profile | 
 
 begin
   
   result = api_instance.profiles_post(profile)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ProfileApi->profiles_post: #{e}"
 end
 ```
@@ -250,7 +250,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Profile>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ProfileApi->profiles_post_with_http_info: #{e}"
 end
 ```

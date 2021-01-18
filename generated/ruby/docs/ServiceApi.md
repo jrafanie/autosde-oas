@@ -1,4 +1,4 @@
-# OpenapiClient::ServiceApi
+# AutosdeOpenapiClient::ServiceApi
 
 All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
@@ -23,18 +23,18 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::ServiceApi.new
+api_instance = AutosdeOpenapiClient::ServiceApi.new
 
 begin
   
   result = api_instance.services_get
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceApi->services_get: #{e}"
 end
 ```
@@ -52,7 +52,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Service>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceApi->services_get_with_http_info: #{e}"
 end
 ```
@@ -87,19 +87,19 @@ This endpoint does not need any parameter.
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::ServiceApi.new
+api_instance = AutosdeOpenapiClient::ServiceApi.new
 pk = 56 # Integer | 
 
 begin
   
   result = api_instance.services_pk_delete(pk)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceApi->services_pk_delete: #{e}"
 end
 ```
@@ -117,7 +117,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Service>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceApi->services_pk_delete_with_http_info: #{e}"
 end
 ```
@@ -154,19 +154,19 @@ end
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::ServiceApi.new
+api_instance = AutosdeOpenapiClient::ServiceApi.new
 pk = 56 # Integer | 
 
 begin
   
   result = api_instance.services_pk_get(pk)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceApi->services_pk_get: #{e}"
 end
 ```
@@ -184,7 +184,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Service>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceApi->services_pk_get_with_http_info: #{e}"
 end
 ```
@@ -221,20 +221,20 @@ end
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::ServiceApi.new
+api_instance = AutosdeOpenapiClient::ServiceApi.new
 pk = 56 # Integer | 
-service = OpenapiClient::Service.new # Service | 
+service = AutosdeOpenapiClient::Service.new # Service | 
 
 begin
   
   result = api_instance.services_pk_put(pk, service)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceApi->services_pk_put: #{e}"
 end
 ```
@@ -252,7 +252,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Service>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceApi->services_pk_put_with_http_info: #{e}"
 end
 ```
@@ -290,19 +290,19 @@ end
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::ServiceApi.new
-service_create = OpenapiClient::ServiceCreate.new # ServiceCreate | 
+api_instance = AutosdeOpenapiClient::ServiceApi.new
+service_create = AutosdeOpenapiClient::ServiceCreate.new # ServiceCreate | 
 
 begin
   
   result = api_instance.services_post(service_create)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceApi->services_post: #{e}"
 end
 ```
@@ -320,7 +320,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Service>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceApi->services_post_with_http_info: #{e}"
 end
 ```

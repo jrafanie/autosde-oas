@@ -1,4 +1,4 @@
-# OpenapiClient::StorageResourceResponse
+# AutosdeOpenapiClient::StorageResourceResponse
 
 ## Properties
 
@@ -19,7 +19,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::StorageResourceResponse.new(
+instance = AutosdeOpenapiClient::StorageResourceResponse.new(
   advanced_attributes_map: null,
   component_state: null,
   logical_free: null,

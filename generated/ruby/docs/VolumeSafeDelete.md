@@ -1,4 +1,4 @@
-# OpenapiClient::VolumeSafeDelete
+# AutosdeOpenapiClient::VolumeSafeDelete
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::VolumeSafeDelete.new(
+instance = AutosdeOpenapiClient::VolumeSafeDelete.new(
   task_id: null,
   uuid: null,
   volume: null

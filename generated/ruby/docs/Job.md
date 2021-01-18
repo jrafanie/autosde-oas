@@ -1,4 +1,4 @@
-# OpenapiClient::Job
+# AutosdeOpenapiClient::Job
 
 ## Properties
 
@@ -17,7 +17,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::Job.new(
+instance = AutosdeOpenapiClient::Job.new(
   date_finished: null,
   date_started: null,
   status: null,

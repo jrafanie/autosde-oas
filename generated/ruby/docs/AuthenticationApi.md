@@ -1,4 +1,4 @@
-# OpenapiClient::AuthenticationApi
+# AutosdeOpenapiClient::AuthenticationApi
 
 All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
@@ -19,14 +19,14 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 require 'time'
 require 'autosde_openapi_client'
 
-api_instance = OpenapiClient::AuthenticationApi.new
-authentication = OpenapiClient::Authentication.new # Authentication | 
+api_instance = AutosdeOpenapiClient::AuthenticationApi.new
+authentication = AutosdeOpenapiClient::Authentication.new # Authentication | 
 
 begin
   
   result = api_instance.token_auth_post(authentication)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AuthenticationApi->token_auth_post: #{e}"
 end
 ```
@@ -44,7 +44,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AuthResponse>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AuthenticationApi->token_auth_post_with_http_info: #{e}"
 end
 ```

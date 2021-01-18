@@ -1,4 +1,4 @@
-# OpenapiClient::AutoSDEProjectApi
+# AutosdeOpenapiClient::AutoSDEProjectApi
 
 All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
@@ -22,18 +22,18 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::AutoSDEProjectApi.new
+api_instance = AutosdeOpenapiClient::AutoSDEProjectApi.new
 
 begin
   
   result = api_instance.autosde_projects_get
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AutoSDEProjectApi->autosde_projects_get: #{e}"
 end
 ```
@@ -51,7 +51,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<AutoSDEProject>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AutoSDEProjectApi->autosde_projects_get_with_http_info: #{e}"
 end
 ```
@@ -86,19 +86,19 @@ This endpoint does not need any parameter.
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::AutoSDEProjectApi.new
+api_instance = AutosdeOpenapiClient::AutoSDEProjectApi.new
 pk = 56 # Integer | 
 
 begin
   
   result = api_instance.autosde_projects_pk_delete(pk)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AutoSDEProjectApi->autosde_projects_pk_delete: #{e}"
 end
 ```
@@ -116,7 +116,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<AutoSDEProject>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AutoSDEProjectApi->autosde_projects_pk_delete_with_http_info: #{e}"
 end
 ```
@@ -153,19 +153,19 @@ end
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::AutoSDEProjectApi.new
+api_instance = AutosdeOpenapiClient::AutoSDEProjectApi.new
 pk = 56 # Integer | 
 
 begin
   
   result = api_instance.autosde_projects_pk_get(pk)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AutoSDEProjectApi->autosde_projects_pk_get: #{e}"
 end
 ```
@@ -183,7 +183,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<AutoSDEProject>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AutoSDEProjectApi->autosde_projects_pk_get_with_http_info: #{e}"
 end
 ```
@@ -220,19 +220,19 @@ end
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::AutoSDEProjectApi.new
-auto_sde_project = OpenapiClient::AutoSDEProject.new # AutoSDEProject | 
+api_instance = AutosdeOpenapiClient::AutoSDEProjectApi.new
+auto_sde_project = AutosdeOpenapiClient::AutoSDEProject.new # AutoSDEProject | 
 
 begin
   
   result = api_instance.autosde_projects_post(auto_sde_project)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AutoSDEProjectApi->autosde_projects_post: #{e}"
 end
 ```
@@ -250,7 +250,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AutoSDEProject>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AutoSDEProjectApi->autosde_projects_post_with_http_info: #{e}"
 end
 ```

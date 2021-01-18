@@ -1,4 +1,4 @@
-# OpenapiClient::ServiceAbstractCapabilityValue
+# AutosdeOpenapiClient::ServiceAbstractCapabilityValue
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::ServiceAbstractCapabilityValue.new(
+instance = AutosdeOpenapiClient::ServiceAbstractCapabilityValue.new(
   abstract_capability: null,
   uuid: null,
   value: null

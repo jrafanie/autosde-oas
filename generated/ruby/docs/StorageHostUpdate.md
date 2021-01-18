@@ -1,4 +1,4 @@
-# OpenapiClient::StorageHostUpdate
+# AutosdeOpenapiClient::StorageHostUpdate
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::StorageHostUpdate.new(
+instance = AutosdeOpenapiClient::StorageHostUpdate.new(
   operation: null,
   port: null,
   port_type: null

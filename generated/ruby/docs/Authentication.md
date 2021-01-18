@@ -1,4 +1,4 @@
-# OpenapiClient::Authentication
+# AutosdeOpenapiClient::Authentication
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::Authentication.new(
+instance = AutosdeOpenapiClient::Authentication.new(
   password: null,
   username: null
 )

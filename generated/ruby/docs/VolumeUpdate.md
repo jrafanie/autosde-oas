@@ -1,4 +1,4 @@
-# OpenapiClient::VolumeUpdate
+# AutosdeOpenapiClient::VolumeUpdate
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::VolumeUpdate.new(
+instance = AutosdeOpenapiClient::VolumeUpdate.new(
   name: null,
   size: null
 )

@@ -1,4 +1,4 @@
-# OpenapiClient::AutoSDERole
+# AutosdeOpenapiClient::AutoSDERole
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::AutoSDERole.new(
+instance = AutosdeOpenapiClient::AutoSDERole.new(
   name: null,
   uuid: null
 )

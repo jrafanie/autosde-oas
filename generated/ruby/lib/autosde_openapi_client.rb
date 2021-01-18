@@ -89,10 +89,10 @@ require 'autosde_openapi_client/api/system_type_api'
 require 'autosde_openapi_client/api/volume_api'
 require 'autosde_openapi_client/api/volume_safe_delete_api'
 
-module OpenapiClient
+module AutosdeOpenapiClient
   class << self
     # Customize default settings for the SDK using block.
-    #   OpenapiClient.configure do |config|
+    #   AutosdeOpenapiClient.configure do |config|
     #     config.username = "xxx"
     #     config.password = "xxx"
     #   end

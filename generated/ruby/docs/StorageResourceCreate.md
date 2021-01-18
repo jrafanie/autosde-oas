@@ -1,4 +1,4 @@
-# OpenapiClient::StorageResourceCreate
+# AutosdeOpenapiClient::StorageResourceCreate
 
 ## Properties
 
@@ -18,7 +18,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::StorageResourceCreate.new(
+instance = AutosdeOpenapiClient::StorageResourceCreate.new(
   advanced_attributes_map: null,
   component_state: null,
   logical_free: null,

@@ -1,4 +1,4 @@
-# OpenapiClient::HostVolumeConnectionCreate
+# AutosdeOpenapiClient::HostVolumeConnectionCreate
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::HostVolumeConnectionCreate.new(
+instance = AutosdeOpenapiClient::HostVolumeConnectionCreate.new(
   component_state: null,
   host: null,
   volume: null

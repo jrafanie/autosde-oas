@@ -1,4 +1,4 @@
-# OpenapiClient::SystemTypeCreate
+# AutosdeOpenapiClient::SystemTypeCreate
 
 ## Properties
 
@@ -16,7 +16,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::SystemTypeCreate.new(
+instance = AutosdeOpenapiClient::SystemTypeCreate.new(
   component_state: null,
   name: null,
   short_version: null,

@@ -1,4 +1,4 @@
-# OpenapiClient::AbstractCapability
+# AutosdeOpenapiClient::AbstractCapability
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::AbstractCapability.new(
+instance = AutosdeOpenapiClient::AbstractCapability.new(
   name: null,
   uuid: null
 )

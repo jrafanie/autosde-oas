@@ -1,4 +1,4 @@
-# OpenapiClient::JobCreate
+# AutosdeOpenapiClient::JobCreate
 
 ## Properties
 
@@ -12,7 +12,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::JobCreate.new(
+instance = AutosdeOpenapiClient::JobCreate.new(
   task_args: null,
   task_name: null
 )

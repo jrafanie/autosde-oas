@@ -1,4 +1,4 @@
-# OpenapiClient::AutoSDEProject
+# AutosdeOpenapiClient::AutoSDEProject
 
 ## Properties
 
@@ -30,7 +30,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::AutoSDEProject.new(
+instance = AutosdeOpenapiClient::AutoSDEProject.new(
   cores: null,
   description: null,
   fixed_ips: null,

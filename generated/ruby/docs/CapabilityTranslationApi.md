@@ -1,4 +1,4 @@
-# OpenapiClient::CapabilityTranslationApi
+# AutosdeOpenapiClient::CapabilityTranslationApi
 
 All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
@@ -22,18 +22,18 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::CapabilityTranslationApi.new
+api_instance = AutosdeOpenapiClient::CapabilityTranslationApi.new
 
 begin
   
   result = api_instance.capability_translations_get
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling CapabilityTranslationApi->capability_translations_get: #{e}"
 end
 ```
@@ -51,7 +51,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<CapabilityTranslation>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling CapabilityTranslationApi->capability_translations_get_with_http_info: #{e}"
 end
 ```
@@ -86,19 +86,19 @@ This endpoint does not need any parameter.
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::CapabilityTranslationApi.new
+api_instance = AutosdeOpenapiClient::CapabilityTranslationApi.new
 pk = 56 # Integer | 
 
 begin
   
   result = api_instance.capability_translations_pk_delete(pk)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling CapabilityTranslationApi->capability_translations_pk_delete: #{e}"
 end
 ```
@@ -116,7 +116,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<CapabilityTranslation>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling CapabilityTranslationApi->capability_translations_pk_delete_with_http_info: #{e}"
 end
 ```
@@ -153,19 +153,19 @@ end
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::CapabilityTranslationApi.new
+api_instance = AutosdeOpenapiClient::CapabilityTranslationApi.new
 pk = 56 # Integer | 
 
 begin
   
   result = api_instance.capability_translations_pk_get(pk)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling CapabilityTranslationApi->capability_translations_pk_get: #{e}"
 end
 ```
@@ -183,7 +183,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<CapabilityTranslation>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling CapabilityTranslationApi->capability_translations_pk_get_with_http_info: #{e}"
 end
 ```
@@ -220,19 +220,19 @@ end
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::CapabilityTranslationApi.new
-capability_translation_create = OpenapiClient::CapabilityTranslationCreate.new # CapabilityTranslationCreate | 
+api_instance = AutosdeOpenapiClient::CapabilityTranslationApi.new
+capability_translation_create = AutosdeOpenapiClient::CapabilityTranslationCreate.new # CapabilityTranslationCreate | 
 
 begin
   
   result = api_instance.capability_translations_post(capability_translation_create)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling CapabilityTranslationApi->capability_translations_post: #{e}"
 end
 ```
@@ -250,7 +250,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CapabilityTranslation>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling CapabilityTranslationApi->capability_translations_post_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::VolumeApi
+# AutosdeOpenapiClient::VolumeApi
 
 All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
@@ -23,18 +23,18 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::VolumeApi.new
+api_instance = AutosdeOpenapiClient::VolumeApi.new
 
 begin
   
   result = api_instance.volumes_get
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeApi->volumes_get: #{e}"
 end
 ```
@@ -52,7 +52,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<VolumeResponse>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeApi->volumes_get_with_http_info: #{e}"
 end
 ```
@@ -87,19 +87,19 @@ This endpoint does not need any parameter.
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::VolumeApi.new
+api_instance = AutosdeOpenapiClient::VolumeApi.new
 pk = 56 # Integer | 
 
 begin
   
   result = api_instance.volumes_pk_delete(pk)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeApi->volumes_pk_delete: #{e}"
 end
 ```
@@ -117,7 +117,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<Volume>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeApi->volumes_pk_delete_with_http_info: #{e}"
 end
 ```
@@ -154,19 +154,19 @@ end
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::VolumeApi.new
+api_instance = AutosdeOpenapiClient::VolumeApi.new
 pk = 56 # Integer | 
 
 begin
   
   result = api_instance.volumes_pk_get(pk)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeApi->volumes_pk_get: #{e}"
 end
 ```
@@ -184,7 +184,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<VolumeResponse>>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeApi->volumes_pk_get_with_http_info: #{e}"
 end
 ```
@@ -221,20 +221,20 @@ end
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::VolumeApi.new
+api_instance = AutosdeOpenapiClient::VolumeApi.new
 pk = 56 # Integer | 
-volume_update = OpenapiClient::VolumeUpdate.new # VolumeUpdate | 
+volume_update = AutosdeOpenapiClient::VolumeUpdate.new # VolumeUpdate | 
 
 begin
   
   result = api_instance.volumes_pk_put(pk, volume_update)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeApi->volumes_pk_put: #{e}"
 end
 ```
@@ -252,7 +252,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VolumeResponse>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeApi->volumes_pk_put_with_http_info: #{e}"
 end
 ```
@@ -290,19 +290,19 @@ end
 require 'time'
 require 'autosde_openapi_client'
 # setup authorization
-OpenapiClient.configure do |config|
+AutosdeOpenapiClient.configure do |config|
   # Configure Bearer authorization: bearerAuth
   config.access_token = 'YOUR_BEARER_TOKEN'
 end
 
-api_instance = OpenapiClient::VolumeApi.new
-volume_create = OpenapiClient::VolumeCreate.new # VolumeCreate | 
+api_instance = AutosdeOpenapiClient::VolumeApi.new
+volume_create = AutosdeOpenapiClient::VolumeCreate.new # VolumeCreate | 
 
 begin
   
   result = api_instance.volumes_post(volume_create)
   p result
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeApi->volumes_post: #{e}"
 end
 ```
@@ -320,7 +320,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <VolumeResponse>
-rescue OpenapiClient::ApiError => e
+rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeApi->volumes_post_with_http_info: #{e}"
 end
 ```

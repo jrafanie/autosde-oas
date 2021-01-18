@@ -1,4 +1,4 @@
-# OpenapiClient::StorageSystemCreate
+# AutosdeOpenapiClient::StorageSystemCreate
 
 ## Properties
 
@@ -27,7 +27,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::StorageSystemCreate.new(
+instance = AutosdeOpenapiClient::StorageSystemCreate.new(
   auto_add_pools: null,
   auto_setup: null,
   chap_name: null,

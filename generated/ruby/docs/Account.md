@@ -1,4 +1,4 @@
-# OpenapiClient::Account
+# AutosdeOpenapiClient::Account
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = OpenapiClient::Account.new(
+instance = AutosdeOpenapiClient::Account.new(
   description: null,
   name: null,
   uuid: null
