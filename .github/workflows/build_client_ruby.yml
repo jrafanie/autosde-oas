@@ -78,6 +78,7 @@ jobs:
           pwd
           ls -al
           sudo gem build autosde_openapi_client
+          ls -al
           echo "Setting up gem credentials..."
           set +x
           mkdir -p ~/.gem
@@ -91,4 +92,5 @@ jobs:
           chmod 0600 ~/.gem/credentials
           set -x
 
-          gem push
+          gem push autosde_openapi_client-1.0.7.gem
+
