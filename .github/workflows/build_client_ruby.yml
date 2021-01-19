@@ -51,46 +51,28 @@ jobs:
           --skip-validate-spec \
           --additional-properties=gemName=$GEM_NAME \
           --additional-properties=moduleName=AutosdeOpenapiClient
-          ls -al $GITHUB_WORKSPACE
-          pwd
-          cd  generated/ruby
-          ls -al .
-      - name: bump version 
+
+      - name: bump version (patch only)
         run: |
-          echo $NEXT_VERSION
-          cd  generated/ruby
-          echo "before bump"
-          ls -al
+          cd $GEM_FOLDER
           sudo gem install bump
           sudo bump  set $NEXT_VERSION --replace-in lib/autosde_openapi_client/version.rb
-          cat lib/autosde_openapi_client/version.rb
+
       - name: Commit files
         run: |
           git config --local user.email "inner-autosde@users.noreply.github.com"
           git config --local user.name "Autosde"
-          git status
-          git diff
           git add -A
-          git status
           git commit --allow-empty -m "update"
-      - name: Push changes
+      - name: Push changes to github
         run: |
           remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
-          echo "remote_repo $remote_repo"
           git push "${remote_repo}" -f
 
-#        uses: ad-m/github-push-action@master
-#        with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           branch: ${{ github.ref }}
-#           force: true
       - name: build and push gem
         run: |
-          cd  generated/ruby
-          pwd
-          ls -al
-          sudo gem build autosde_openapi_client
-          ls -al
+          cd $GEM_FOLDER
+          sudo gem build ${GEM_NAME}
           echo "Setting up gem credentials..."
           set +x
           mkdir -p ~/.gem
@@ -104,8 +86,4 @@ jobs:
           chmod 0600 ~/.gem/credentials
           set -x
 
-          ls -al ~/.gem
-          cat ~/.gem/credentials
-
-          gem push "autosde_openapi_client-${NEXT_VERSION}.gem"
-
+          gem push "${GEM_NAME}-${NEXT_VERSION}.gem"
