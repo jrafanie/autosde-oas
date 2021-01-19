@@ -33,7 +33,10 @@ jobs:
         run: |
           sudo gem install bump
           cd $GEM_FOLDER
+          current_version=$(bump current)
+          echo "current version: $current_version"
           next_version=$(bump show-next patch)
+          echo "next version: $next_version"
           echo "NEXT_VERSION=$next_version" >> $GITHUB_ENV
 
       - name: generate ruby oas client
@@ -45,7 +48,7 @@ jobs:
           --rm \
           openapitools/openapi-generator-cli generate -i /local/site_manager_oas.json -g ruby -o /local_out/ruby \
           --skip-validate-spec \
-          --additional-properties=gemName=autosde_openapi_client \
+          --additional-properties=gemName=$GEM_NAME \
           --additional-properties=moduleName=AutosdeOpenapiClient
           ls -al $GITHUB_WORKSPACE
           pwd
@@ -63,7 +66,9 @@ jobs:
         run: |
           git config --local user.email "inner-autosde@users.noreply.github.com"
           git config --local user.name "Autosde"
-          git add --all
+          git status
+          git add -A
+          git status
           git commit --allow-empty -m "update"
       - name: Push changes
         uses: ad-m/github-push-action@master
