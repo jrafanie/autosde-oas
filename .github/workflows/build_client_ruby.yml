@@ -92,5 +92,8 @@ jobs:
           chmod 0600 ~/.gem/credentials
           set -x
 
+          ls -al ~/.gem
+          cat ~/.gem/credentials
+
           gem push autosde_openapi_client-1.0.7.gem
 
