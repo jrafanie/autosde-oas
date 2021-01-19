@@ -43,10 +43,11 @@ jobs:
         run: |
           docker run \
           -v $GITHUB_WORKSPACE:/local \
-          -v $GITHUB_WORKSPACE/generated:/local_out \
+          -v $GITHUB_WORKSPACE/generated/ruby:/local_out \
           --name ruby-oas-generator \
           --rm \
-          openapitools/openapi-generator-cli generate -i /local/site_manager_oas.json -g ruby -o /local_out/ruby \
+          openapitools/openapi-generator-cli:v5.0.0 generate \
+          -i /local/site_manager_oas.json -g ruby -o /local_out \
           --skip-validate-spec \
           --additional-properties=gemName=$GEM_NAME \
           --additional-properties=moduleName=AutosdeOpenapiClient
@@ -73,11 +74,16 @@ jobs:
           git status
           git commit --allow-empty -m "update"
       - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-           github_token: ${{ secrets.GITHUB_TOKEN }}
-           branch: ${{ github.ref }}      
-           force: true
+        run: |
+          remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
+          echo "remote_repo $remote_repo"
+          git push "${remote_repo}" -f
+
+#        uses: ad-m/github-push-action@master
+#        with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           branch: ${{ github.ref }}
+#           force: true
       - name: build and push gem
         run: |
           cd  generated/ruby
