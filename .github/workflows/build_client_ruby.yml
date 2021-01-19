@@ -24,9 +24,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+#        with:
+#          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+#          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
       - name: extract version
         run: |
           sudo gem install bump
@@ -34,9 +34,6 @@ jobs:
           next_version=$(bump show-next patch)
           echo "NEXT_VERSION=$next_version" >> $GITHUB_ENV
           popd
-          rm -rf generated/ruby
-          echo "after removing generated"
-          ls -al
       - name: generate ruby oas client
         run: |
           docker run \
@@ -95,5 +92,5 @@ jobs:
           ls -al ~/.gem
           cat ~/.gem/credentials
 
-          gem push autosde_openapi_client-1.0.7.gem
+          gem push "autosde_openapi_client-${NEXT_VERSION}.gem"
 
