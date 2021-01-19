@@ -62,11 +62,13 @@ jobs:
           ls -al
           sudo gem install bump
           sudo bump  set $NEXT_VERSION --replace-in lib/autosde_openapi_client/version.rb
+          cat lib/autosde_openapi_client/version.rb
       - name: Commit files
         run: |
           git config --local user.email "inner-autosde@users.noreply.github.com"
           git config --local user.name "Autosde"
           git status
+          git diff
           git add -A
           git status
           git commit --allow-empty -m "update"
