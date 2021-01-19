@@ -30,9 +30,13 @@ jobs:
       - name: extract version
         run: |
           sudo gem install bump
-          cd generated/ruby
+          pushd generated/ruby
           next_version=$(bump show-next patch)
           echo "NEXT_VERSION=$next_version" >> $GITHUB_ENV
+          popd
+          rm -rf generated/ruby
+          echo "after removing generated"
+          ls -al
       - name: generate ruby oas client
         run: |
           docker run \
@@ -52,8 +56,10 @@ jobs:
         run: |
           echo $NEXT_VERSION
           cd  generated/ruby
+          echo "before bump"
+          ls -al
           sudo gem install bump
-          bump  set $NEXT_VERSION --replace-in lib/autosde_openapi_client/version.rb
+          sudo bump  set $NEXT_VERSION --replace-in lib/autosde_openapi_client/version.rb
       - name: Commit files
         run: |
           git config --local user.email "inner-autosde@users.noreply.github.com"
@@ -66,12 +72,23 @@ jobs:
            github_token: ${{ secrets.GITHUB_TOKEN }}
            branch: ${{ github.ref }}      
            force: true
-      - name: build gem
+      - name: build and push gem
         run: |
           cd  generated/ruby
           pwd
           ls -al
-          gem build autosde_openapi_client
-          
+          sudo gem build autosde_openapi_client
+          echo "Setting up gem credentials..."
+          set +x
+          mkdir -p ~/.gem
 
-          
+          cat << EOF > ~/.gem/credentials
+          ---
+          :github: Bearer ${{ secrets.GITHUB_TOKEN }}
+          :rubygems_api_key: ${{ secrets.RUBYGEMS_API_KEY }}
+          EOF
+
+          chmod 0600 ~/.gem/credentials
+          set -x
+
+          gem push
