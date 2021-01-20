@@ -2,7 +2,7 @@
    "components": {
       "schemas": {
          "AbstractCapability": {
-            "description": "Note:Abstract capabilities are the storage system feature capabilities, in general terminology.",
+            "description": "Abstract capabilities are the storage system feature capabilities, in general terminology.",
             "properties": {
                "name": {
                   "description": "name",
