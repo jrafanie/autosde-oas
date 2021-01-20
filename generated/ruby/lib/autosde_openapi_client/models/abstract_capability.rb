@@ -14,7 +14,7 @@ require 'date'
 require 'time'
 
 module AutosdeOpenapiClient
-  # Note:Abstract capabilities are the storage system feature capabilities, in general terminology.
+  # Abstract capabilities are the storage system feature capabilities, in general terminology.
   class AbstractCapability
     # name
     attr_accessor :name
