@@ -1595,6 +1595,59 @@
             },
             "x-serializer": "StorageHostVolumeMapping"
          },
+         "StorageHostVolumeMappingResponse": {
+            "description": "TODO add description",
+            "properties": {
+               "component_state": {
+                  "description": "component_state",
+                  "enum": [
+                     "PENDING_CREATION",
+                     "CREATED",
+                     "DELETED",
+                     "PENDING_DELETION",
+                     "MODIFICATION",
+                     "PENDING_MODIFICATION"
+                  ],
+                  "maxLength": 32,
+                  "type": "string"
+               },
+               "host": {
+                  "description": "!!uuid of host",
+                  "type": "string",
+                  "x-model": "#/components/schemas/StorageHost",
+                  "x-serializer": {
+                     "slug": "uuid"
+                  }
+               },
+               "lun": {
+                  "default": 0,
+                  "description": "lun",
+                  "type": "integer",
+                  "x-model": {
+                     "blank": true,
+                     "null": true
+                  }
+               },
+               "uuid": {
+                  "description": "uuid",
+                  "type": "string",
+                  "x-model": {
+                     "default": "generate_uuid",
+                     "editable": false,
+                     "unique": true
+                  }
+               },
+               "volume": {
+                  "description": "!!uuid of volume",
+                  "type": "string",
+                  "x-model": "#/components/schemas/Volume",
+                  "x-serializer": {
+                     "slug": "uuid"
+                  }
+               }
+            },
+            "x-serializer": "StorageHostVolumeMapping"
+         },
          "StorageResource": {
             "description": "StorageResource",
             "properties": {
@@ -4152,7 +4205,7 @@
                      "*/*": {
                         "schema": {
                            "items": {
-                              "$ref": "#/components/schemas/StorageHostVolumeMappingCreate"
+                              "$ref": "#/components/schemas/StorageHostVolumeMappingResponse"
                            },
                            "type": "array"
                         }
@@ -4181,7 +4234,7 @@
                   "content": {
                      "*/*": {
                         "schema": {
-                           "$ref": "#/components/schemas/StorageHostVolumeMappingCreate"
+                           "$ref": "#/components/schemas/StorageHostVolumeMapping"
                         }
                      }
                   },
@@ -4202,7 +4255,7 @@
                      "*/*": {
                         "schema": {
                            "items": {
-                              "$ref": "#/components/schemas/StorageHostVolumeMapping"
+                              "$ref": "#/components/schemas/StorageHostVolumeMappingResponse"
                            },
                            "type": "array"
                         }
@@ -4222,7 +4275,7 @@
                      "*/*": {
                         "schema": {
                            "items": {
-                              "$ref": "#/components/schemas/StorageHostVolumeMapping"
+                              "$ref": "#/components/schemas/StorageHostVolumeMappingResponse"
                            },
                            "type": "array"
                         }
