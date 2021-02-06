@@ -12,7 +12,7 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
 ## storage_hosts_mapping_get
 
-> <Array<StorageHostVolumeMappingCreate>> storage_hosts_mapping_get
+> <Array<StorageHostVolumeMappingResponse>> storage_hosts_mapping_get
 
 
 
@@ -42,7 +42,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<StorageHostVolumeMappingCreate>>, Integer, Hash)> storage_hosts_mapping_get_with_http_info
+> <Array(<Array<StorageHostVolumeMappingResponse>>, Integer, Hash)> storage_hosts_mapping_get_with_http_info
 
 ```ruby
 begin
@@ -50,7 +50,7 @@ begin
   data, status_code, headers = api_instance.storage_hosts_mapping_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<StorageHostVolumeMappingCreate>>
+  p data # => <Array<StorageHostVolumeMappingResponse>>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostVolumeMappingApi->storage_hosts_mapping_get_with_http_info: #{e}"
 end
@@ -62,7 +62,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;StorageHostVolumeMappingCreate&gt;**](StorageHostVolumeMappingCreate.md)
+[**Array&lt;StorageHostVolumeMappingResponse&gt;**](StorageHostVolumeMappingResponse.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ This endpoint does not need any parameter.
 
 ## storage_hosts_mapping_pk_delete
 
-> <Array<StorageHostVolumeMapping>> storage_hosts_mapping_pk_delete(pk)
+> <Array<StorageHostVolumeMappingResponse>> storage_hosts_mapping_pk_delete(pk)
 
 
 
@@ -107,7 +107,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<StorageHostVolumeMapping>>, Integer, Hash)> storage_hosts_mapping_pk_delete_with_http_info(pk)
+> <Array(<Array<StorageHostVolumeMappingResponse>>, Integer, Hash)> storage_hosts_mapping_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -115,7 +115,7 @@ begin
   data, status_code, headers = api_instance.storage_hosts_mapping_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<StorageHostVolumeMapping>>
+  p data # => <Array<StorageHostVolumeMappingResponse>>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostVolumeMappingApi->storage_hosts_mapping_pk_delete_with_http_info: #{e}"
 end
@@ -129,7 +129,7 @@ end
 
 ### Return type
 
-[**Array&lt;StorageHostVolumeMapping&gt;**](StorageHostVolumeMapping.md)
+[**Array&lt;StorageHostVolumeMappingResponse&gt;**](StorageHostVolumeMappingResponse.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ end
 
 ## storage_hosts_mapping_pk_get
 
-> <Array<StorageHostVolumeMapping>> storage_hosts_mapping_pk_get(pk)
+> <Array<StorageHostVolumeMappingResponse>> storage_hosts_mapping_pk_get(pk)
 
 
 
@@ -174,7 +174,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<StorageHostVolumeMapping>>, Integer, Hash)> storage_hosts_mapping_pk_get_with_http_info(pk)
+> <Array(<Array<StorageHostVolumeMappingResponse>>, Integer, Hash)> storage_hosts_mapping_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -182,7 +182,7 @@ begin
   data, status_code, headers = api_instance.storage_hosts_mapping_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<StorageHostVolumeMapping>>
+  p data # => <Array<StorageHostVolumeMappingResponse>>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostVolumeMappingApi->storage_hosts_mapping_pk_get_with_http_info: #{e}"
 end
@@ -196,7 +196,7 @@ end
 
 ### Return type
 
-[**Array&lt;StorageHostVolumeMapping&gt;**](StorageHostVolumeMapping.md)
+[**Array&lt;StorageHostVolumeMappingResponse&gt;**](StorageHostVolumeMappingResponse.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ end
 
 ## storage_hosts_mapping_post
 
-> <StorageHostVolumeMappingCreate> storage_hosts_mapping_post(storage_host_volume_mapping_create)
+> <StorageHostVolumeMapping> storage_hosts_mapping_post(storage_host_volume_mapping_create)
 
 
 
@@ -241,7 +241,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<StorageHostVolumeMappingCreate>, Integer, Hash)> storage_hosts_mapping_post_with_http_info(storage_host_volume_mapping_create)
+> <Array(<StorageHostVolumeMapping>, Integer, Hash)> storage_hosts_mapping_post_with_http_info(storage_host_volume_mapping_create)
 
 ```ruby
 begin
@@ -249,7 +249,7 @@ begin
   data, status_code, headers = api_instance.storage_hosts_mapping_post_with_http_info(storage_host_volume_mapping_create)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <StorageHostVolumeMappingCreate>
+  p data # => <StorageHostVolumeMapping>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostVolumeMappingApi->storage_hosts_mapping_post_with_http_info: #{e}"
 end
@@ -263,7 +263,7 @@ end
 
 ### Return type
 
-[**StorageHostVolumeMappingCreate**](StorageHostVolumeMappingCreate.md)
+[**StorageHostVolumeMapping**](StorageHostVolumeMapping.md)
 
 ### Authorization
 

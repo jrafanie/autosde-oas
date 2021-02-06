@@ -20,14 +20,14 @@ module AutosdeOpenapiClient
       @api_client = api_client
     end
     # @param [Hash] opts the optional parameters
-    # @return [Array<StorageHostVolumeMappingCreate>]
+    # @return [Array<StorageHostVolumeMappingResponse>]
     def storage_hosts_mapping_get(opts = {})
       data, _status_code, _headers = storage_hosts_mapping_get_with_http_info(opts)
       data
     end
 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<StorageHostVolumeMappingCreate>, Integer, Hash)>] Array<StorageHostVolumeMappingCreate> data, response status code and response headers
+    # @return [Array<(Array<StorageHostVolumeMappingResponse>, Integer, Hash)>] Array<StorageHostVolumeMappingResponse> data, response status code and response headers
     def storage_hosts_mapping_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: StorageHostVolumeMappingApi.storage_hosts_mapping_get ...'
@@ -50,7 +50,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<StorageHostVolumeMappingCreate>'
+      return_type = opts[:debug_return_type] || 'Array<StorageHostVolumeMappingResponse>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -74,7 +74,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<StorageHostVolumeMapping>]
+    # @return [Array<StorageHostVolumeMappingResponse>]
     def storage_hosts_mapping_pk_delete(pk, opts = {})
       data, _status_code, _headers = storage_hosts_mapping_pk_delete_with_http_info(pk, opts)
       data
@@ -82,7 +82,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<StorageHostVolumeMapping>, Integer, Hash)>] Array<StorageHostVolumeMapping> data, response status code and response headers
+    # @return [Array<(Array<StorageHostVolumeMappingResponse>, Integer, Hash)>] Array<StorageHostVolumeMappingResponse> data, response status code and response headers
     def storage_hosts_mapping_pk_delete_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: StorageHostVolumeMappingApi.storage_hosts_mapping_pk_delete ...'
@@ -109,7 +109,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<StorageHostVolumeMapping>'
+      return_type = opts[:debug_return_type] || 'Array<StorageHostVolumeMappingResponse>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -133,7 +133,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<StorageHostVolumeMapping>]
+    # @return [Array<StorageHostVolumeMappingResponse>]
     def storage_hosts_mapping_pk_get(pk, opts = {})
       data, _status_code, _headers = storage_hosts_mapping_pk_get_with_http_info(pk, opts)
       data
@@ -141,7 +141,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<StorageHostVolumeMapping>, Integer, Hash)>] Array<StorageHostVolumeMapping> data, response status code and response headers
+    # @return [Array<(Array<StorageHostVolumeMappingResponse>, Integer, Hash)>] Array<StorageHostVolumeMappingResponse> data, response status code and response headers
     def storage_hosts_mapping_pk_get_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: StorageHostVolumeMappingApi.storage_hosts_mapping_pk_get ...'
@@ -168,7 +168,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<StorageHostVolumeMapping>'
+      return_type = opts[:debug_return_type] || 'Array<StorageHostVolumeMappingResponse>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -192,7 +192,7 @@ module AutosdeOpenapiClient
 
     # @param storage_host_volume_mapping_create [StorageHostVolumeMappingCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [StorageHostVolumeMappingCreate]
+    # @return [StorageHostVolumeMapping]
     def storage_hosts_mapping_post(storage_host_volume_mapping_create, opts = {})
       data, _status_code, _headers = storage_hosts_mapping_post_with_http_info(storage_host_volume_mapping_create, opts)
       data
@@ -200,7 +200,7 @@ module AutosdeOpenapiClient
 
     # @param storage_host_volume_mapping_create [StorageHostVolumeMappingCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(StorageHostVolumeMappingCreate, Integer, Hash)>] StorageHostVolumeMappingCreate data, response status code and response headers
+    # @return [Array<(StorageHostVolumeMapping, Integer, Hash)>] StorageHostVolumeMapping data, response status code and response headers
     def storage_hosts_mapping_post_with_http_info(storage_host_volume_mapping_create, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: StorageHostVolumeMappingApi.storage_hosts_mapping_post ...'
@@ -229,7 +229,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(storage_host_volume_mapping_create)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'StorageHostVolumeMappingCreate'
+      return_type = opts[:debug_return_type] || 'StorageHostVolumeMapping'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

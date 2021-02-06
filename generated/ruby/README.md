@@ -208,6 +208,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::StorageHostUpdate](docs/StorageHostUpdate.md)
  - [AutosdeOpenapiClient::StorageHostVolumeMapping](docs/StorageHostVolumeMapping.md)
  - [AutosdeOpenapiClient::StorageHostVolumeMappingCreate](docs/StorageHostVolumeMappingCreate.md)
+ - [AutosdeOpenapiClient::StorageHostVolumeMappingResponse](docs/StorageHostVolumeMappingResponse.md)
  - [AutosdeOpenapiClient::StorageResource](docs/StorageResource.md)
  - [AutosdeOpenapiClient::StorageResourceCreate](docs/StorageResourceCreate.md)
  - [AutosdeOpenapiClient::StorageResourceResponse](docs/StorageResourceResponse.md)
