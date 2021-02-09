@@ -155,5 +155,4 @@ lib/autosde_openapi_client/models/volume_update.rb
 lib/autosde_openapi_client/version.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
-spec/models/storage_host_volume_mapping_response_spec.rb
 spec/spec_helper.rb
