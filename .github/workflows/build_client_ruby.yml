@@ -50,7 +50,8 @@ jobs:
           -i /local/site_manager_oas.json -g ruby -o /local_out \
           --skip-validate-spec \
           --additional-properties=gemName=$GEM_NAME \
-          --additional-properties=moduleName=AutosdeOpenapiClient
+          --additional-properties=moduleName=AutosdeOpenapiClient \
+          --additional-properties=gemLicense=Apache-V2 
 
       - name: bump version (patch only)
         run: |
