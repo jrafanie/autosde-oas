@@ -51,7 +51,8 @@ jobs:
           --skip-validate-spec \
           --additional-properties=gemName=$GEM_NAME \
           --additional-properties=moduleName=AutosdeOpenapiClient \
-          --additional-properties=gemLicense=Apache-2.0 
+          --additional-properties=gemLicense=Apache-2.0 \
+          --additional-properties=gemHomepage=https://github.com/Autosde/autosde-oas/blob/main/generated/ruby/autosde_openapi_client.gemspec#L24
 
       - name: bump version (patch only)
         run: |
