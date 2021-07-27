@@ -565,10 +565,7 @@
                },
                "name": {
                   "description": "The Virtual Host Name",
-                  "type": "string",
-                  "x-model": {
-                     "unique": true
-                  }
+                  "type": "string"
                },
                "os_type": {
                   "default": "Unknown",
@@ -658,10 +655,7 @@
                },
                "name": {
                   "description": "The Virtual Host Name",
-                  "type": "string",
-                  "x-model": {
-                     "unique": true
-                  }
+                  "type": "string"
                },
                "os_type": {
                   "default": "Unknown",
@@ -1230,7 +1224,7 @@
             "x-serializer": "Snapshot"
          },
          "StorageHost": {
-            "description": "Storage host",
+            "description": "StorageHost",
             "properties": {
                "component_state": {
                   "description": "component_state",
@@ -1263,10 +1257,7 @@
                },
                "name": {
                   "description": "The Storage Host Name",
-                  "type": "string",
-                  "x-model": {
-                     "unique": true
-                  }
+                  "type": "string"
                },
                "storage_system": {
                   "$ref": "#/components/schemas/StorageSystem",
@@ -1294,6 +1285,9 @@
                      "through": "'storageHostVolumeMapping'"
                   }
                }
+            },
+            "x-meta": {
+               "unique_together": "(\"name\", \"storage_system\",)"
             }
          },
          "StorageHostCreate": {
@@ -1354,10 +1348,7 @@
                },
                "name": {
                   "description": "The Storage Host Name",
-                  "type": "string",
-                  "x-model": {
-                     "unique": true
-                  }
+                  "type": "string"
                },
                "port_type": {
                   "description": "port_type",
@@ -1441,10 +1432,7 @@
                },
                "name": {
                   "description": "The Storage Host Name",
-                  "type": "string",
-                  "x-model": {
-                     "unique": true
-                  }
+                  "type": "string"
                },
                "storage_system": {
                   "description": "!!uuid of storage_system",
@@ -1885,6 +1873,11 @@
          "StorageSystem": {
             "description": "Use to define storage system properties.",
             "properties": {
+               "auto_add_pools": {
+                  "default": false,
+                  "description": "auto_add_pools",
+                  "type": "boolean"
+               },
                "component_state": {
                   "description": "component_state",
                   "enum": [
