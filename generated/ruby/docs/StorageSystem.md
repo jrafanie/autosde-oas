@@ -4,6 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **auto_add_pools** | **Boolean** | auto_add_pools | [optional][default to false] |
 | **component_state** | **String** | component_state | [optional] |
 | **management_ip** | **String** | management_ip | [optional] |
 | **name** | **String** | name | [optional] |
@@ -18,6 +19,7 @@
 require 'autosde_openapi_client'
 
 instance = AutosdeOpenapiClient::StorageSystem.new(
+  auto_add_pools: null,
   component_state: null,
   management_ip: null,
   name: null,

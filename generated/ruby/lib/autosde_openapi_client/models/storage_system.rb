@@ -16,6 +16,9 @@ require 'time'
 module AutosdeOpenapiClient
   # Use to define storage system properties.
   class StorageSystem
+    # auto_add_pools
+    attr_accessor :auto_add_pools
+
     # component_state
     attr_accessor :component_state
 
@@ -61,6 +64,7 @@ module AutosdeOpenapiClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'auto_add_pools' => :'auto_add_pools',
         :'component_state' => :'component_state',
         :'management_ip' => :'management_ip',
         :'name' => :'name',
@@ -79,6 +83,7 @@ module AutosdeOpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
+        :'auto_add_pools' => :'Boolean',
         :'component_state' => :'String',
         :'management_ip' => :'String',
         :'name' => :'String',
@@ -109,6 +114,12 @@ module AutosdeOpenapiClient
         end
         h[k.to_sym] = v
       }
+
+      if attributes.key?(:'auto_add_pools')
+        self.auto_add_pools = attributes[:'auto_add_pools']
+      else
+        self.auto_add_pools = false
+      end
 
       if attributes.key?(:'component_state')
         self.component_state = attributes[:'component_state']
@@ -201,6 +212,7 @@ module AutosdeOpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          auto_add_pools == o.auto_add_pools &&
           component_state == o.component_state &&
           management_ip == o.management_ip &&
           name == o.name &&
@@ -219,7 +231,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [component_state, management_ip, name, storage_array, storage_family, system_type, uuid].hash
+      [auto_add_pools, component_state, management_ip, name, storage_array, storage_family, system_type, uuid].hash
     end
 
     # Builds the object from hash
