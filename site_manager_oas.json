@@ -1247,6 +1247,14 @@
                      "null": true
                   }
                },
+               "host_cluster_name": {
+                  "description": "host_cluster_name",
+                  "type": "string",
+                  "x-model": {
+                     "blank": true,
+                     "null": true
+                  }
+               },
                "io_groups": {
                   "description": "io_groups",
                   "type": "string",
@@ -1258,6 +1266,14 @@
                "name": {
                   "description": "The Storage Host Name",
                   "type": "string"
+               },
+               "status": {
+                  "description": "status",
+                  "type": "string",
+                  "x-model": {
+                     "blank": true,
+                     "null": true
+                  }
                },
                "storage_system": {
                   "$ref": "#/components/schemas/StorageSystem",
@@ -1330,6 +1346,14 @@
                      "null": true
                   }
                },
+               "host_cluster_name": {
+                  "description": "host_cluster_name",
+                  "type": "string",
+                  "x-model": {
+                     "blank": true,
+                     "null": true
+                  }
+               },
                "io_groups": {
                   "description": "io_groups",
                   "type": "string",
@@ -1357,6 +1381,14 @@
                      "FC",
                      "NVMeFC"
                   ],
+                  "type": "string",
+                  "x-model": {
+                     "blank": true,
+                     "null": true
+                  }
+               },
+               "status": {
+                  "description": "status",
                   "type": "string",
                   "x-model": {
                      "blank": true,
@@ -1422,6 +1454,14 @@
                      "null": true
                   }
                },
+               "host_cluster_name": {
+                  "description": "host_cluster_name",
+                  "type": "string",
+                  "x-model": {
+                     "blank": true,
+                     "null": true
+                  }
+               },
                "io_groups": {
                   "description": "io_groups",
                   "type": "string",
@@ -1433,6 +1473,14 @@
                "name": {
                   "description": "The Storage Host Name",
                   "type": "string"
+               },
+               "status": {
+                  "description": "status",
+                  "type": "string",
+                  "x-model": {
+                     "blank": true,
+                     "null": true
+                  }
                },
                "storage_system": {
                   "description": "!!uuid of storage_system",
