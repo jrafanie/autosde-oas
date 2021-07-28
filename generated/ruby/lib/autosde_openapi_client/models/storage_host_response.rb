@@ -25,11 +25,17 @@ module AutosdeOpenapiClient
     # description
     attr_accessor :description
 
+    # host_cluster_name
+    attr_accessor :host_cluster_name
+
     # io_groups
     attr_accessor :io_groups
 
     # The Storage Host Name
     attr_accessor :name
+
+    # status
+    attr_accessor :status
 
     # !!uuid of storage_system
     attr_accessor :storage_system
@@ -68,8 +74,10 @@ module AutosdeOpenapiClient
         :'addresses' => :'addresses',
         :'component_state' => :'component_state',
         :'description' => :'description',
+        :'host_cluster_name' => :'host_cluster_name',
         :'io_groups' => :'io_groups',
         :'name' => :'name',
+        :'status' => :'status',
         :'storage_system' => :'storage_system',
         :'uuid' => :'uuid',
         :'volumes' => :'volumes'
@@ -87,8 +95,10 @@ module AutosdeOpenapiClient
         :'addresses' => :'Array<Address>',
         :'component_state' => :'String',
         :'description' => :'String',
+        :'host_cluster_name' => :'String',
         :'io_groups' => :'String',
         :'name' => :'String',
+        :'status' => :'String',
         :'storage_system' => :'String',
         :'uuid' => :'String',
         :'volumes' => :'Array<Volume>'
@@ -130,12 +140,20 @@ module AutosdeOpenapiClient
         self.description = attributes[:'description']
       end
 
+      if attributes.key?(:'host_cluster_name')
+        self.host_cluster_name = attributes[:'host_cluster_name']
+      end
+
       if attributes.key?(:'io_groups')
         self.io_groups = attributes[:'io_groups']
       end
 
       if attributes.key?(:'name')
         self.name = attributes[:'name']
+      end
+
+      if attributes.key?(:'status')
+        self.status = attributes[:'status']
       end
 
       if attributes.key?(:'storage_system')
@@ -191,8 +209,10 @@ module AutosdeOpenapiClient
           addresses == o.addresses &&
           component_state == o.component_state &&
           description == o.description &&
+          host_cluster_name == o.host_cluster_name &&
           io_groups == o.io_groups &&
           name == o.name &&
+          status == o.status &&
           storage_system == o.storage_system &&
           uuid == o.uuid &&
           volumes == o.volumes
@@ -207,7 +227,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [addresses, component_state, description, io_groups, name, storage_system, uuid, volumes].hash
+      [addresses, component_state, description, host_cluster_name, io_groups, name, status, storage_system, uuid, volumes].hash
     end
 
     # Builds the object from hash

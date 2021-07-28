@@ -28,6 +28,9 @@ module AutosdeOpenapiClient
     # description
     attr_accessor :description
 
+    # host_cluster_name
+    attr_accessor :host_cluster_name
+
     # io_groups
     attr_accessor :io_groups
 
@@ -38,6 +41,9 @@ module AutosdeOpenapiClient
 
     # port_type
     attr_accessor :port_type
+
+    # status
+    attr_accessor :status
 
     attr_accessor :storage_system
 
@@ -75,10 +81,12 @@ module AutosdeOpenapiClient
         :'chap_secret' => :'chap_secret',
         :'component_state' => :'component_state',
         :'description' => :'description',
+        :'host_cluster_name' => :'host_cluster_name',
         :'io_groups' => :'io_groups',
         :'iqn' => :'iqn',
         :'name' => :'name',
         :'port_type' => :'port_type',
+        :'status' => :'status',
         :'storage_system' => :'storage_system',
         :'volumes' => :'volumes',
         :'wwpn' => :'wwpn'
@@ -97,10 +105,12 @@ module AutosdeOpenapiClient
         :'chap_secret' => :'String',
         :'component_state' => :'String',
         :'description' => :'String',
+        :'host_cluster_name' => :'String',
         :'io_groups' => :'String',
         :'iqn' => :'String',
         :'name' => :'String',
         :'port_type' => :'String',
+        :'status' => :'String',
         :'storage_system' => :'StorageSystem',
         :'volumes' => :'Volume',
         :'wwpn' => :'String'
@@ -144,6 +154,10 @@ module AutosdeOpenapiClient
         self.description = attributes[:'description']
       end
 
+      if attributes.key?(:'host_cluster_name')
+        self.host_cluster_name = attributes[:'host_cluster_name']
+      end
+
       if attributes.key?(:'io_groups')
         self.io_groups = attributes[:'io_groups']
       end
@@ -158,6 +172,10 @@ module AutosdeOpenapiClient
 
       if attributes.key?(:'port_type')
         self.port_type = attributes[:'port_type']
+      end
+
+      if attributes.key?(:'status')
+        self.status = attributes[:'status']
       end
 
       if attributes.key?(:'storage_system')
@@ -224,10 +242,12 @@ module AutosdeOpenapiClient
           chap_secret == o.chap_secret &&
           component_state == o.component_state &&
           description == o.description &&
+          host_cluster_name == o.host_cluster_name &&
           io_groups == o.io_groups &&
           iqn == o.iqn &&
           name == o.name &&
           port_type == o.port_type &&
+          status == o.status &&
           storage_system == o.storage_system &&
           volumes == o.volumes &&
           wwpn == o.wwpn
@@ -242,7 +262,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [chap_name, chap_secret, component_state, description, io_groups, iqn, name, port_type, storage_system, volumes, wwpn].hash
+      [chap_name, chap_secret, component_state, description, host_cluster_name, io_groups, iqn, name, port_type, status, storage_system, volumes, wwpn].hash
     end
 
     # Builds the object from hash
