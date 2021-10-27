@@ -1,91 +1,79 @@
-# build ruby oas client from open file
+# support ruby autosde oas client gem
 
-name: Build client
+name: Build autosde ruby client gem
 
-# Controls when the action will run. 
+# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+  # run action when pushed event
+  push:
+    branches:
+    - master
+    # run only when this file changed
+    paths:
+    - '**/site_manager_oas.json'
 jobs:
   # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
     env:
+      # need for self-hosted runners
+      ImageOS: ubuntu20
       GEM_FOLDER: "generated/ruby"
       GEM_NAME: "autosde_openapi_client"
-    # Steps represent a sequence of tasks that will be executed as part of the job
+      SPEC_FILE_NAME: "site_manager_oas.json"
+    # The type of runner that the job will run on
+    runs-on: [self-hosted]
+
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-      - name: extract current gem version
-        run: |
-          sudo gem install bump
-          cd $GEM_FOLDER
-          current_version=$(bump current)
-          echo "current version: $current_version"
-          next_version=$(bump show-next patch)
-          echo "next version: $next_version"
-          echo "NEXT_VERSION=$next_version" >> $GITHUB_ENV
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+    # Runs  commands
+    - name: generate ruby oas client
+      run: |
+        echo $GITHUB_WORKSPACE
+        mkdir -p ${GITHUB_WORKSPACE}/${GEM_FOLDER}
+        docker run \
+        -v $GITHUB_WORKSPACE:/local \
+        -v ${GITHUB_WORKSPACE}/${GEM_FOLDER}:/local_out \
+        --name ruby-oas-generator \
+        --rm \
+        openapitools/openapi-generator-cli:v5.0.0 generate \
+        -i /local/autosde_site_manager/project_common/${SPEC_FILE_NAME} -g ruby -o /local_out \
+        --skip-validate-spec \
+        --additional-properties=gemName=$GEM_NAME \
+        --additional-properties=moduleName=AutosdeOpenapiClient \
+        --additional-properties=gemLicense=Apache-2.0 \
+        --additional-properties=gemHomepage=https://github.com/Autosde/autosde-oas/
 
-      - name: generate ruby oas client
-        run: |
-          docker run \
-          -v $GITHUB_WORKSPACE:/local \
-          -v $GITHUB_WORKSPACE/generated/ruby:/local_out \
-          --name ruby-oas-generator \
-          --rm \
-          openapitools/openapi-generator-cli:v5.0.0 generate \
-          -i /local/site_manager_oas.json -g ruby -o /local_out \
-          --skip-validate-spec \
-          --additional-properties=gemName=$GEM_NAME \
-          --additional-properties=moduleName=AutosdeOpenapiClient \
-          --additional-properties=gemLicense=Apache-2.0 \
-          --additional-properties=gemHomepage=https://github.com/Autosde/autosde-oas/
-
-      - name: bump version (patch only)
-        run: |
-          cd $GEM_FOLDER
-          sudo gem install bump
-          sudo bump  set $NEXT_VERSION --replace-in lib/autosde_openapi_client/version.rb
-
-      - name: Commit files
-        run: |
-          git config --local user.email "inner-autosde@users.noreply.github.com"
-          git config --local user.name "Autosde"
-          git add -A
-          git commit --allow-empty -m "update"
-      - name: Push changes to github
-        run: |
-          remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
-          git push "${remote_repo}" -f
-
-      - name: build and push gem
-        run: |
-          cd $GEM_FOLDER
-          sudo gem build ${GEM_NAME}
-          echo "Setting up gem credentials..."
-          set +x
-          mkdir -p ~/.gem
-
-          cat << EOF > ~/.gem/credentials
-          ---
-          :github: Bearer ${{ secrets.GITHUB_TOKEN }}
-          :rubygems_api_key: ${{ secrets.RUBYGEMS_API_KEY }}
-          EOF
-
-          chmod 0600 ~/.gem/credentials
-          set -x
-
-          gem push "${GEM_NAME}-${NEXT_VERSION}.gem"
+    # increase gem version
+    # get current version from last gem version at Rubygems
+    # and increase patch part of it, that is 0.1.23 -> 0.1.24
+    # update the version in relevant files
+    - name: bump version (patch only)
+      run: |
+        cd $GEM_FOLDER
+        gem install bump
+        current_version=$(ruby -e "v=%x(gem list -r ${GEM_NAME});ver=v.split()[-1].delete('()');puts ver")
+        echo $current_version
+        next_version=$(ruby -r bump -e "puts Bump::Bump.next_version('patch', '${current_version}')")
+        echo $next_version
+        sudo bump  set $next_version --replace-in lib/${GEM_NAME}/version.rb
+        echo "NEXT_VERSION=$next_version" >> $GITHUB_ENV
+    # build gem with new version and push to Rubygems
+    - name: build and push gem
+      run: |
+        cd $GEM_FOLDER
+        sudo gem build ${GEM_NAME}
+        echo "Setting up gem credentials..."
+        mkdir -p ~/.gem
+        cat << EOF > ~/.gem/credentials
+        ---
+        :github: Bearer ${{ secrets.GITHUB_TOKEN }}
+        :rubygems_api_key: ${{ secrets.RUBYGEMS_API_KEY }}
+        EOF
+        chmod 0600 ~/.gem/credentials
+#        gem push "${GEM_NAME}-${NEXT_VERSION}.gem"
