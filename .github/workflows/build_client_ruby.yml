@@ -23,7 +23,7 @@ jobs:
       GEM_NAME: "autosde_openapi_client"
       SPEC_FILE_NAME: "site_manager_oas.json"
     # The type of runner that the job will run on
-    runs-on: [self-hosted]
+    runs-on: ubuntu-latest
 
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
