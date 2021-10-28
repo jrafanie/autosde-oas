@@ -9,10 +9,10 @@ on:
   # run action when pushed event
   push:
     branches:
-    - master
+    - main
     # run only when this file changed
-    paths:
-    - '**/site_manager_oas.json'
+#    paths:
+#    - '**/site_manager_oas.json'
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -77,3 +77,7 @@ jobs:
         EOF
         chmod 0600 ~/.gem/credentials
 #        gem push "${GEM_NAME}-${NEXT_VERSION}.gem"
+    - name: push generated to autosde
+      run: |
+        cd $GEM_FOLDER
+        ls -al
