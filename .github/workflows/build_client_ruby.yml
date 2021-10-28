@@ -77,3 +77,7 @@ jobs:
         EOF
         chmod 0600 ~/.gem/credentials
 #        gem push "${GEM_NAME}-${NEXT_VERSION}.gem"
+    - name: push generated to autosde
+      run: |
+        cd $GEM_FOLDER
+        ls -al
