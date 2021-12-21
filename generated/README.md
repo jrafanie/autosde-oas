@@ -1,5 +1,4 @@
 # autosde_openapi_client
-# generated identical to previous version for testing pushing to guthub.com/Autosde/autosde-oas/generated
 
 AutosdeOpenapiClient - the Ruby gem for the Site Manager API
 
