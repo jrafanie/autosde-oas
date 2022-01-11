@@ -99,8 +99,8 @@ module AutosdeOpenapiClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if !@name.nil? && @name.to_s.length > 20
-        invalid_properties.push('invalid value for "name", the character length must be smaller than or equal to 20.')
+      if !@name.nil? && @name.to_s.length > 25
+        invalid_properties.push('invalid value for "name", the character length must be smaller than or equal to 25.')
       end
 
       invalid_properties
@@ -111,7 +111,7 @@ module AutosdeOpenapiClient
     def valid?
       name_validator = EnumAttributeValidator.new('String', ["logical_free_capacity"])
       return false unless name_validator.valid?(@name)
-      return false if !@name.nil? && @name.to_s.length > 20
+      return false if !@name.nil? && @name.to_s.length > 25
       true
     end
 
