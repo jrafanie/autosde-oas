@@ -176,6 +176,7 @@ Class | Method | HTTP request | Description
 *AutosdeOpenapiClient::SystemTypeApi* | [**system_types_pk_delete**](docs/SystemTypeApi.md#system_types_pk_delete) | **DELETE** /system-types/{pk} | 
 *AutosdeOpenapiClient::SystemTypeApi* | [**system_types_pk_get**](docs/SystemTypeApi.md#system_types_pk_get) | **GET** /system-types/{pk} | 
 *AutosdeOpenapiClient::SystemTypeApi* | [**system_types_post**](docs/SystemTypeApi.md#system_types_post) | **POST** /system-types | 
+*AutosdeOpenapiClient::UserChangePasswordApi* | [**change_user_password_post**](docs/UserChangePasswordApi.md#change_user_password_post) | **POST** /change-user-password | 
 *AutosdeOpenapiClient::VolumeApi* | [**volumes_get**](docs/VolumeApi.md#volumes_get) | **GET** /volumes | 
 *AutosdeOpenapiClient::VolumeApi* | [**volumes_pk_delete**](docs/VolumeApi.md#volumes_pk_delete) | **DELETE** /volumes/{pk} | 
 *AutosdeOpenapiClient::VolumeApi* | [**volumes_pk_get**](docs/VolumeApi.md#volumes_pk_get) | **GET** /volumes/{pk} | 
@@ -239,6 +240,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::StorageSystemUpdate](docs/StorageSystemUpdate.md)
  - [AutosdeOpenapiClient::SystemType](docs/SystemType.md)
  - [AutosdeOpenapiClient::SystemTypeCreate](docs/SystemTypeCreate.md)
+ - [AutosdeOpenapiClient::UserChangePassword](docs/UserChangePassword.md)
  - [AutosdeOpenapiClient::Volume](docs/Volume.md)
  - [AutosdeOpenapiClient::VolumeCreate](docs/VolumeCreate.md)
  - [AutosdeOpenapiClient::VolumeResponse](docs/VolumeResponse.md)

@@ -82,6 +82,8 @@ docs/StorageSystemUpdate.md
 docs/SystemType.md
 docs/SystemTypeApi.md
 docs/SystemTypeCreate.md
+docs/UserChangePassword.md
+docs/UserChangePasswordApi.md
 docs/Volume.md
 docs/VolumeApi.md
 docs/VolumeCreate.md
@@ -117,6 +119,7 @@ lib/autosde_openapi_client/api/storage_host_wwpn_candidates_api.rb
 lib/autosde_openapi_client/api/storage_resource_api.rb
 lib/autosde_openapi_client/api/storage_system_api.rb
 lib/autosde_openapi_client/api/system_type_api.rb
+lib/autosde_openapi_client/api/user_change_password_api.rb
 lib/autosde_openapi_client/api/volume_api.rb
 lib/autosde_openapi_client/api/volume_safe_delete_api.rb
 lib/autosde_openapi_client/api_client.rb
@@ -173,6 +176,7 @@ lib/autosde_openapi_client/models/storage_system_create.rb
 lib/autosde_openapi_client/models/storage_system_update.rb
 lib/autosde_openapi_client/models/system_type.rb
 lib/autosde_openapi_client/models/system_type_create.rb
+lib/autosde_openapi_client/models/user_change_password.rb
 lib/autosde_openapi_client/models/volume.rb
 lib/autosde_openapi_client/models/volume_create.rb
 lib/autosde_openapi_client/models/volume_response.rb
@@ -205,6 +209,7 @@ spec/api/storage_host_wwpn_candidates_api_spec.rb
 spec/api/storage_resource_api_spec.rb
 spec/api/storage_system_api_spec.rb
 spec/api/system_type_api_spec.rb
+spec/api/user_change_password_api_spec.rb
 spec/api/volume_api_spec.rb
 spec/api/volume_safe_delete_api_spec.rb
 spec/api_client_spec.rb
@@ -259,6 +264,7 @@ spec/models/storage_system_spec.rb
 spec/models/storage_system_update_spec.rb
 spec/models/system_type_create_spec.rb
 spec/models/system_type_spec.rb
+spec/models/user_change_password_spec.rb
 spec/models/volume_create_spec.rb
 spec/models/volume_response_spec.rb
 spec/models/volume_safe_delete_create_spec.rb
