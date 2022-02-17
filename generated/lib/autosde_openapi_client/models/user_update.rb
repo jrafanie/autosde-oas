@@ -14,15 +14,39 @@ require 'date'
 require 'time'
 
 module AutosdeOpenapiClient
-  # UserChangePassword
-  class UserChangePassword
-    # new_password
-    attr_accessor :new_password
+  # TODO add description
+  class UserUpdate
+    # email
+    attr_accessor :email
+
+    # first_name
+    attr_accessor :first_name
+
+    # is_active
+    attr_accessor :is_active
+
+    # is_staff
+    attr_accessor :is_staff
+
+    # last_name
+    attr_accessor :last_name
+
+    # password
+    attr_accessor :password
+
+    # username
+    attr_accessor :username
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'new_password' => :'new_password'
+        :'email' => :'email',
+        :'first_name' => :'first_name',
+        :'is_active' => :'is_active',
+        :'is_staff' => :'is_staff',
+        :'last_name' => :'last_name',
+        :'password' => :'password',
+        :'username' => :'username'
       }
     end
 
@@ -34,7 +58,13 @@ module AutosdeOpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'new_password' => :'String'
+        :'email' => :'String',
+        :'first_name' => :'String',
+        :'is_active' => :'Boolean',
+        :'is_staff' => :'Boolean',
+        :'last_name' => :'String',
+        :'password' => :'String',
+        :'username' => :'String'
       }
     end
 
@@ -48,19 +78,43 @@ module AutosdeOpenapiClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `AutosdeOpenapiClient::UserChangePassword` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `AutosdeOpenapiClient::UserUpdate` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `AutosdeOpenapiClient::UserChangePassword`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `AutosdeOpenapiClient::UserUpdate`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'new_password')
-        self.new_password = attributes[:'new_password']
+      if attributes.key?(:'email')
+        self.email = attributes[:'email']
+      end
+
+      if attributes.key?(:'first_name')
+        self.first_name = attributes[:'first_name']
+      end
+
+      if attributes.key?(:'is_active')
+        self.is_active = attributes[:'is_active']
+      end
+
+      if attributes.key?(:'is_staff')
+        self.is_staff = attributes[:'is_staff']
+      end
+
+      if attributes.key?(:'last_name')
+        self.last_name = attributes[:'last_name']
+      end
+
+      if attributes.key?(:'password')
+        self.password = attributes[:'password']
+      end
+
+      if attributes.key?(:'username')
+        self.username = attributes[:'username']
       end
     end
 
@@ -82,7 +136,13 @@ module AutosdeOpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          new_password == o.new_password
+          email == o.email &&
+          first_name == o.first_name &&
+          is_active == o.is_active &&
+          is_staff == o.is_staff &&
+          last_name == o.last_name &&
+          password == o.password &&
+          username == o.username
     end
 
     # @see the `==` method
@@ -94,7 +154,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [new_password].hash
+      [email, first_name, is_active, is_staff, last_name, password, username].hash
     end
 
     # Builds the object from hash
