@@ -66,7 +66,7 @@ jobs:
         sudo env | grep ^PATH
         which bump
         # end test code
-        sudo bump set $next_version --replace-in lib/${GEM_NAME}/version.rb
+        sudo $(which bump) set $next_version --replace-in lib/${GEM_NAME}/version.rb
         echo "NEXT_VERSION=$next_version" >> $GITHUB_ENV
     # build gem with new version and push to Rubygems
     - name: build and push gem
