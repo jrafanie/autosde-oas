@@ -61,9 +61,12 @@ jobs:
         echo $current_version
         next_version=$(ruby -r bump -e "puts Bump::Bump.next_version('patch', '${current_version}')")
         echo $next_version
-        bump --help
-        sudo ls
-        bump  set $next_version --replace-in lib/${GEM_NAME}/version.rb
+        # test code to be deleted
+        env | grep ^PATH
+        sudo env | grep ^PATH
+        which bump
+        # end test code
+        sudo bump set $next_version --replace-in lib/${GEM_NAME}/version.rb
         echo "NEXT_VERSION=$next_version" >> $GITHUB_ENV
     # build gem with new version and push to Rubygems
     - name: build and push gem
