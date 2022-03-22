@@ -113,7 +113,7 @@ module AutosdeOpenapiClient
       if attributes.key?(:'name')
         self.name = attributes[:'name']
       else
-        self.name = 'FlashSystems/SVC'
+        self.name = 'IBM_FlashSystems'
       end
 
       if attributes.key?(:'short_version')
@@ -160,7 +160,7 @@ module AutosdeOpenapiClient
       component_state_validator = EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION"])
       return false unless component_state_validator.valid?(@component_state)
       return false if !@component_state.nil? && @component_state.to_s.length > 32
-      name_validator = EnumAttributeValidator.new('String', ["a_line", "xiv", "ds8000", "vmax", "netapp", "ds8x00", "FlashSystems/SVC"])
+      name_validator = EnumAttributeValidator.new('String', ["IBM_FlashSystems", "a_line", "xiv", "ds8000", "vmax", "netapp", "ds8x00"])
       return false unless name_validator.valid?(@name)
       return false if !@name.nil? && @name.to_s.length > 255
       return false if !@short_version.nil? && @short_version.to_s.length > 255
@@ -180,7 +180,7 @@ module AutosdeOpenapiClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] name Object to be assigned
     def name=(name)
-      validator = EnumAttributeValidator.new('String', ["a_line", "xiv", "ds8000", "vmax", "netapp", "ds8x00", "FlashSystems/SVC"])
+      validator = EnumAttributeValidator.new('String', ["IBM_FlashSystems", "a_line", "xiv", "ds8000", "vmax", "netapp", "ds8x00"])
       unless validator.valid?(name)
         fail ArgumentError, "invalid value for \"name\", must be one of #{validator.allowable_values}."
       end

@@ -38,7 +38,7 @@ describe AutosdeOpenapiClient::SystemTypeCreate do
   describe 'test attribute "name"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["a_line", "xiv", "ds8000", "vmax", "netapp", "ds8x00", "FlashSystems/SVC"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["IBM_FlashSystems", "a_line", "xiv", "ds8000", "vmax", "netapp", "ds8x00"])
       # validator.allowable_values.each do |value|
       #   expect { instance.name = value }.not_to raise_error
       # end
