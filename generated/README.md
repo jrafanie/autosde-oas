@@ -181,6 +181,7 @@ Class | Method | HTTP request | Description
 *AutosdeOpenapiClient::UserApi* | [**autosde_users_pk_get**](docs/UserApi.md#autosde_users_pk_get) | **GET** /autosde-users/{pk} | 
 *AutosdeOpenapiClient::UserApi* | [**autosde_users_pk_put**](docs/UserApi.md#autosde_users_pk_put) | **PUT** /autosde-users/{pk} | 
 *AutosdeOpenapiClient::UserApi* | [**autosde_users_post**](docs/UserApi.md#autosde_users_post) | **POST** /autosde-users | 
+*AutosdeOpenapiClient::ValidateSystemApi* | [**validate_system_post**](docs/ValidateSystemApi.md#validate_system_post) | **POST** /validate-system | 
 *AutosdeOpenapiClient::VolumeApi* | [**volumes_get**](docs/VolumeApi.md#volumes_get) | **GET** /volumes | 
 *AutosdeOpenapiClient::VolumeApi* | [**volumes_pk_delete**](docs/VolumeApi.md#volumes_pk_delete) | **DELETE** /volumes/{pk} | 
 *AutosdeOpenapiClient::VolumeApi* | [**volumes_pk_get**](docs/VolumeApi.md#volumes_pk_get) | **GET** /volumes/{pk} | 
@@ -247,6 +248,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::User](docs/User.md)
  - [AutosdeOpenapiClient::UserCreate](docs/UserCreate.md)
  - [AutosdeOpenapiClient::UserUpdate](docs/UserUpdate.md)
+ - [AutosdeOpenapiClient::ValidateSystem](docs/ValidateSystem.md)
  - [AutosdeOpenapiClient::Volume](docs/Volume.md)
  - [AutosdeOpenapiClient::VolumeCreate](docs/VolumeCreate.md)
  - [AutosdeOpenapiClient::VolumeResponse](docs/VolumeResponse.md)

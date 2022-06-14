@@ -86,6 +86,8 @@ docs/User.md
 docs/UserApi.md
 docs/UserCreate.md
 docs/UserUpdate.md
+docs/ValidateSystem.md
+docs/ValidateSystemApi.md
 docs/Volume.md
 docs/VolumeApi.md
 docs/VolumeCreate.md
@@ -122,6 +124,7 @@ lib/autosde_openapi_client/api/storage_resource_api.rb
 lib/autosde_openapi_client/api/storage_system_api.rb
 lib/autosde_openapi_client/api/system_type_api.rb
 lib/autosde_openapi_client/api/user_api.rb
+lib/autosde_openapi_client/api/validate_system_api.rb
 lib/autosde_openapi_client/api/volume_api.rb
 lib/autosde_openapi_client/api/volume_safe_delete_api.rb
 lib/autosde_openapi_client/api_client.rb
@@ -181,6 +184,7 @@ lib/autosde_openapi_client/models/system_type_create.rb
 lib/autosde_openapi_client/models/user.rb
 lib/autosde_openapi_client/models/user_create.rb
 lib/autosde_openapi_client/models/user_update.rb
+lib/autosde_openapi_client/models/validate_system.rb
 lib/autosde_openapi_client/models/volume.rb
 lib/autosde_openapi_client/models/volume_create.rb
 lib/autosde_openapi_client/models/volume_response.rb
@@ -214,6 +218,7 @@ spec/api/storage_resource_api_spec.rb
 spec/api/storage_system_api_spec.rb
 spec/api/system_type_api_spec.rb
 spec/api/user_api_spec.rb
+spec/api/validate_system_api_spec.rb
 spec/api/volume_api_spec.rb
 spec/api/volume_safe_delete_api_spec.rb
 spec/api_client_spec.rb
@@ -271,6 +276,7 @@ spec/models/system_type_spec.rb
 spec/models/user_create_spec.rb
 spec/models/user_spec.rb
 spec/models/user_update_spec.rb
+spec/models/validate_system_spec.rb
 spec/models/volume_create_spec.rb
 spec/models/volume_response_spec.rb
 spec/models/volume_safe_delete_create_spec.rb
