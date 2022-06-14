@@ -105,6 +105,10 @@ Class | Method | HTTP request | Description
 *AutosdeOpenapiClient::CapabilityTranslationApi* | [**capability_translations_pk_delete**](docs/CapabilityTranslationApi.md#capability_translations_pk_delete) | **DELETE** /capability-translations/{pk} | 
 *AutosdeOpenapiClient::CapabilityTranslationApi* | [**capability_translations_pk_get**](docs/CapabilityTranslationApi.md#capability_translations_pk_get) | **GET** /capability-translations/{pk} | 
 *AutosdeOpenapiClient::CapabilityTranslationApi* | [**capability_translations_post**](docs/CapabilityTranslationApi.md#capability_translations_post) | **POST** /capability-translations | 
+*AutosdeOpenapiClient::EventApi* | [**events_get**](docs/EventApi.md#events_get) | **GET** /events | 
+*AutosdeOpenapiClient::EventApi* | [**events_pk_delete**](docs/EventApi.md#events_pk_delete) | **DELETE** /events/{pk} | 
+*AutosdeOpenapiClient::EventApi* | [**events_pk_get**](docs/EventApi.md#events_pk_get) | **GET** /events/{pk} | 
+*AutosdeOpenapiClient::EventApi* | [**events_post**](docs/EventApi.md#events_post) | **POST** /events | 
 *AutosdeOpenapiClient::HostApi* | [**hosts_get**](docs/HostApi.md#hosts_get) | **GET** /hosts | 
 *AutosdeOpenapiClient::HostApi* | [**hosts_pk_delete**](docs/HostApi.md#hosts_pk_delete) | **DELETE** /hosts/{pk} | 
 *AutosdeOpenapiClient::HostApi* | [**hosts_pk_get**](docs/HostApi.md#hosts_pk_get) | **GET** /hosts/{pk} | 
@@ -207,6 +211,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::AutoSDERole](docs/AutoSDERole.md)
  - [AutosdeOpenapiClient::CapabilityTranslation](docs/CapabilityTranslation.md)
  - [AutosdeOpenapiClient::CapabilityTranslationCreate](docs/CapabilityTranslationCreate.md)
+ - [AutosdeOpenapiClient::Event](docs/Event.md)
  - [AutosdeOpenapiClient::Host](docs/Host.md)
  - [AutosdeOpenapiClient::HostCluster](docs/HostCluster.md)
  - [AutosdeOpenapiClient::HostClusterCreate](docs/HostClusterCreate.md)
