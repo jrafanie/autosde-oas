@@ -31,8 +31,8 @@ module AutosdeOpenapiClient
     # component_state
     attr_accessor :component_state
 
-    # first_refresh_task
-    attr_accessor :first_refresh_task
+    # initial_refresh
+    attr_accessor :initial_refresh
 
     attr_accessor :iqn
 
@@ -101,7 +101,7 @@ module AutosdeOpenapiClient
         :'chap_name' => :'chap_name',
         :'chap_secret' => :'chap_secret',
         :'component_state' => :'component_state',
-        :'first_refresh_task' => :'first_refresh_task',
+        :'initial_refresh' => :'initial_refresh',
         :'iqn' => :'iqn',
         :'management_ip' => :'management_ip',
         :'name' => :'name',
@@ -131,7 +131,7 @@ module AutosdeOpenapiClient
         :'chap_name' => :'String',
         :'chap_secret' => :'String',
         :'component_state' => :'String',
-        :'first_refresh_task' => :'Boolean',
+        :'initial_refresh' => :'Boolean',
         :'iqn' => :'String',
         :'management_ip' => :'String',
         :'name' => :'String',
@@ -193,10 +193,10 @@ module AutosdeOpenapiClient
         self.component_state = attributes[:'component_state']
       end
 
-      if attributes.key?(:'first_refresh_task')
-        self.first_refresh_task = attributes[:'first_refresh_task']
+      if attributes.key?(:'initial_refresh')
+        self.initial_refresh = attributes[:'initial_refresh']
       else
-        self.first_refresh_task = true
+        self.initial_refresh = true
       end
 
       if attributes.key?(:'iqn')
@@ -316,7 +316,7 @@ module AutosdeOpenapiClient
           chap_name == o.chap_name &&
           chap_secret == o.chap_secret &&
           component_state == o.component_state &&
-          first_refresh_task == o.first_refresh_task &&
+          initial_refresh == o.initial_refresh &&
           iqn == o.iqn &&
           management_ip == o.management_ip &&
           name == o.name &&
@@ -341,7 +341,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [auto_add_pools, auto_setup, chap_name, chap_secret, component_state, first_refresh_task, iqn, management_ip, name, password, port_type, secondary_ip, status, storage_array, storage_driver, storage_family, system_type, user, wwpn].hash
+      [auto_add_pools, auto_setup, chap_name, chap_secret, component_state, initial_refresh, iqn, management_ip, name, password, port_type, secondary_ip, status, storage_array, storage_driver, storage_family, system_type, user, wwpn].hash
     end
 
     # Builds the object from hash
