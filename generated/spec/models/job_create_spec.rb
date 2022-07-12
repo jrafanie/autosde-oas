@@ -25,7 +25,7 @@ describe AutosdeOpenapiClient::JobCreate do
       expect(instance).to be_instance_of(AutosdeOpenapiClient::JobCreate)
     end
   end
-  describe 'test attribute "task_args"' do
+  describe 'test attribute "task_kwargs"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
