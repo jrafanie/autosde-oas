@@ -143,6 +143,7 @@ Class | Method | HTTP request | Description
 *AutosdeOpenapiClient::ProvisioningStrategyApi* | [**provisioning_strategy_pk_delete**](docs/ProvisioningStrategyApi.md#provisioning_strategy_pk_delete) | **DELETE** /provisioning-strategy/{pk} | 
 *AutosdeOpenapiClient::ProvisioningStrategyApi* | [**provisioning_strategy_pk_get**](docs/ProvisioningStrategyApi.md#provisioning_strategy_pk_get) | **GET** /provisioning-strategy/{pk} | 
 *AutosdeOpenapiClient::ProvisioningStrategyApi* | [**provisioning_strategy_post**](docs/ProvisioningStrategyApi.md#provisioning_strategy_post) | **POST** /provisioning-strategy | 
+*AutosdeOpenapiClient::RefreshSystemApi* | [**refresh_system_post**](docs/RefreshSystemApi.md#refresh_system_post) | **POST** /refresh-system | 
 *AutosdeOpenapiClient::ServiceApi* | [**services_get**](docs/ServiceApi.md#services_get) | **GET** /services | 
 *AutosdeOpenapiClient::ServiceApi* | [**services_pk_delete**](docs/ServiceApi.md#services_pk_delete) | **DELETE** /services/{pk} | 
 *AutosdeOpenapiClient::ServiceApi* | [**services_pk_get**](docs/ServiceApi.md#services_pk_get) | **GET** /services/{pk} | 
@@ -228,6 +229,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::NativeCapability](docs/NativeCapability.md)
  - [AutosdeOpenapiClient::Profile](docs/Profile.md)
  - [AutosdeOpenapiClient::ProvisioningStrategy](docs/ProvisioningStrategy.md)
+ - [AutosdeOpenapiClient::RefreshSystem](docs/RefreshSystem.md)
  - [AutosdeOpenapiClient::Service](docs/Service.md)
  - [AutosdeOpenapiClient::ServiceAbstractCapabilityValue](docs/ServiceAbstractCapabilityValue.md)
  - [AutosdeOpenapiClient::ServiceCreate](docs/ServiceCreate.md)
