@@ -130,8 +130,6 @@ Class | Method | HTTP request | Description
 *AutosdeOpenapiClient::HostVolumeConnectionApi* | [**host_volume_connection_pk_get**](docs/HostVolumeConnectionApi.md#host_volume_connection_pk_get) | **GET** /host-volume-connection/{pk} | 
 *AutosdeOpenapiClient::HostVolumeConnectionApi* | [**host_volume_connection_post**](docs/HostVolumeConnectionApi.md#host_volume_connection_post) | **POST** /host-volume-connection | 
 *AutosdeOpenapiClient::JobApi* | [**jobs_get**](docs/JobApi.md#jobs_get) | **GET** /jobs | 
-*AutosdeOpenapiClient::JobApi* | [**jobs_pk_delete**](docs/JobApi.md#jobs_pk_delete) | **DELETE** /jobs/{pk} | 
-*AutosdeOpenapiClient::JobApi* | [**jobs_pk_get**](docs/JobApi.md#jobs_pk_get) | **GET** /jobs/{pk} | 
 *AutosdeOpenapiClient::JobApi* | [**jobs_post**](docs/JobApi.md#jobs_post) | **POST** /jobs | 
 *AutosdeOpenapiClient::NativeCapabilityApi* | [**native_capabilities_get**](docs/NativeCapabilityApi.md#native_capabilities_get) | **GET** /native-capabilities | 
 *AutosdeOpenapiClient::NativeCapabilityApi* | [**native_capabilities_pk_delete**](docs/NativeCapabilityApi.md#native_capabilities_pk_delete) | **DELETE** /native-capabilities/{pk} | 
