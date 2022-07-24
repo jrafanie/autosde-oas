@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
 ## refresh_system_post
 
-> <RefreshSystem> refresh_system_post(storage_system_create)
+> <RefreshSystem> refresh_system_post(refresh_system)
 
 
 
@@ -25,11 +25,11 @@ AutosdeOpenapiClient.configure do |config|
 end
 
 api_instance = AutosdeOpenapiClient::RefreshSystemApi.new
-storage_system_create = AutosdeOpenapiClient::StorageSystemCreate.new # StorageSystemCreate | 
+refresh_system = AutosdeOpenapiClient::RefreshSystem.new # RefreshSystem | 
 
 begin
   
-  result = api_instance.refresh_system_post(storage_system_create)
+  result = api_instance.refresh_system_post(refresh_system)
   p result
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling RefreshSystemApi->refresh_system_post: #{e}"
@@ -40,12 +40,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<RefreshSystem>, Integer, Hash)> refresh_system_post_with_http_info(storage_system_create)
+> <Array(<RefreshSystem>, Integer, Hash)> refresh_system_post_with_http_info(refresh_system)
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.refresh_system_post_with_http_info(storage_system_create)
+  data, status_code, headers = api_instance.refresh_system_post_with_http_info(refresh_system)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <RefreshSystem>
@@ -58,7 +58,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **storage_system_create** | [**StorageSystemCreate**](StorageSystemCreate.md) |  |  |
+| **refresh_system** | [**RefreshSystem**](RefreshSystem.md) |  |  |
 
 ### Return type
 

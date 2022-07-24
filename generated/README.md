@@ -105,6 +105,8 @@ Class | Method | HTTP request | Description
 *AutosdeOpenapiClient::CapabilityTranslationApi* | [**capability_translations_pk_delete**](docs/CapabilityTranslationApi.md#capability_translations_pk_delete) | **DELETE** /capability-translations/{pk} | 
 *AutosdeOpenapiClient::CapabilityTranslationApi* | [**capability_translations_pk_get**](docs/CapabilityTranslationApi.md#capability_translations_pk_get) | **GET** /capability-translations/{pk} | 
 *AutosdeOpenapiClient::CapabilityTranslationApi* | [**capability_translations_post**](docs/CapabilityTranslationApi.md#capability_translations_post) | **POST** /capability-translations | 
+*AutosdeOpenapiClient::CeleryConfigApi* | [**celery_config_get**](docs/CeleryConfigApi.md#celery_config_get) | **GET** /celery-config | 
+*AutosdeOpenapiClient::CeleryConfigApi* | [**celery_config_post**](docs/CeleryConfigApi.md#celery_config_post) | **POST** /celery-config | 
 *AutosdeOpenapiClient::EventApi* | [**events_get**](docs/EventApi.md#events_get) | **GET** /events | 
 *AutosdeOpenapiClient::EventApi* | [**events_pk_delete**](docs/EventApi.md#events_pk_delete) | **DELETE** /events/{pk} | 
 *AutosdeOpenapiClient::EventApi* | [**events_pk_get**](docs/EventApi.md#events_pk_get) | **GET** /events/{pk} | 
@@ -214,6 +216,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::AutoSDERole](docs/AutoSDERole.md)
  - [AutosdeOpenapiClient::CapabilityTranslation](docs/CapabilityTranslation.md)
  - [AutosdeOpenapiClient::CapabilityTranslationCreate](docs/CapabilityTranslationCreate.md)
+ - [AutosdeOpenapiClient::CeleryConfig](docs/CeleryConfig.md)
  - [AutosdeOpenapiClient::Event](docs/Event.md)
  - [AutosdeOpenapiClient::Host](docs/Host.md)
  - [AutosdeOpenapiClient::HostCluster](docs/HostCluster.md)

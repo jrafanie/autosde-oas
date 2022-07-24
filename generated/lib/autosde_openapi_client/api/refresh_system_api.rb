@@ -19,24 +19,24 @@ module AutosdeOpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # @param storage_system_create [StorageSystemCreate] 
+    # @param refresh_system [RefreshSystem] 
     # @param [Hash] opts the optional parameters
     # @return [RefreshSystem]
-    def refresh_system_post(storage_system_create, opts = {})
-      data, _status_code, _headers = refresh_system_post_with_http_info(storage_system_create, opts)
+    def refresh_system_post(refresh_system, opts = {})
+      data, _status_code, _headers = refresh_system_post_with_http_info(refresh_system, opts)
       data
     end
 
-    # @param storage_system_create [StorageSystemCreate] 
+    # @param refresh_system [RefreshSystem] 
     # @param [Hash] opts the optional parameters
     # @return [Array<(RefreshSystem, Integer, Hash)>] RefreshSystem data, response status code and response headers
-    def refresh_system_post_with_http_info(storage_system_create, opts = {})
+    def refresh_system_post_with_http_info(refresh_system, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: RefreshSystemApi.refresh_system_post ...'
       end
-      # verify the required parameter 'storage_system_create' is set
-      if @api_client.config.client_side_validation && storage_system_create.nil?
-        fail ArgumentError, "Missing the required parameter 'storage_system_create' when calling RefreshSystemApi.refresh_system_post"
+      # verify the required parameter 'refresh_system' is set
+      if @api_client.config.client_side_validation && refresh_system.nil?
+        fail ArgumentError, "Missing the required parameter 'refresh_system' when calling RefreshSystemApi.refresh_system_post"
       end
       # resource path
       local_var_path = '/refresh-system'
@@ -55,7 +55,7 @@ module AutosdeOpenapiClient
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(storage_system_create)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(refresh_system)
 
       # return_type
       return_type = opts[:debug_return_type] || 'RefreshSystem'

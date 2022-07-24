@@ -33,7 +33,7 @@ describe 'RefreshSystemApi' do
   end
 
   # unit tests for refresh_system_post
-  # @param storage_system_create 
+  # @param refresh_system 
   # @param [Hash] opts the optional parameters
   # @return [RefreshSystem]
   describe 'refresh_system_post test' do

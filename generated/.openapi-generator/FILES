@@ -26,6 +26,8 @@ docs/AutoSDERoleApi.md
 docs/CapabilityTranslation.md
 docs/CapabilityTranslationApi.md
 docs/CapabilityTranslationCreate.md
+docs/CeleryConfig.md
+docs/CeleryConfigApi.md
 docs/Event.md
 docs/EventApi.md
 docs/Host.md
@@ -109,6 +111,7 @@ lib/autosde_openapi_client/api/authentication_api.rb
 lib/autosde_openapi_client/api/auto_sde_project_api.rb
 lib/autosde_openapi_client/api/auto_sde_role_api.rb
 lib/autosde_openapi_client/api/capability_translation_api.rb
+lib/autosde_openapi_client/api/celery_config_api.rb
 lib/autosde_openapi_client/api/event_api.rb
 lib/autosde_openapi_client/api/host_api.rb
 lib/autosde_openapi_client/api/host_cluster_api.rb
@@ -149,6 +152,7 @@ lib/autosde_openapi_client/models/auto_sde_project.rb
 lib/autosde_openapi_client/models/auto_sde_role.rb
 lib/autosde_openapi_client/models/capability_translation.rb
 lib/autosde_openapi_client/models/capability_translation_create.rb
+lib/autosde_openapi_client/models/celery_config.rb
 lib/autosde_openapi_client/models/event.rb
 lib/autosde_openapi_client/models/host.rb
 lib/autosde_openapi_client/models/host_cluster.rb
@@ -207,6 +211,7 @@ spec/api/authentication_api_spec.rb
 spec/api/auto_sde_project_api_spec.rb
 spec/api/auto_sde_role_api_spec.rb
 spec/api/capability_translation_api_spec.rb
+spec/api/celery_config_api_spec.rb
 spec/api/event_api_spec.rb
 spec/api/host_api_spec.rb
 spec/api/host_cluster_api_spec.rb
@@ -245,6 +250,7 @@ spec/models/auto_sde_project_spec.rb
 spec/models/auto_sde_role_spec.rb
 spec/models/capability_translation_create_spec.rb
 spec/models/capability_translation_spec.rb
+spec/models/celery_config_spec.rb
 spec/models/event_spec.rb
 spec/models/host_cluster_create_spec.rb
 spec/models/host_cluster_membership_spec.rb
