@@ -218,6 +218,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::CapabilityTranslationCreate](docs/CapabilityTranslationCreate.md)
  - [AutosdeOpenapiClient::CeleryConfig](docs/CeleryConfig.md)
  - [AutosdeOpenapiClient::Event](docs/Event.md)
+ - [AutosdeOpenapiClient::EventResponse](docs/EventResponse.md)
  - [AutosdeOpenapiClient::Host](docs/Host.md)
  - [AutosdeOpenapiClient::HostCluster](docs/HostCluster.md)
  - [AutosdeOpenapiClient::HostClusterCreate](docs/HostClusterCreate.md)

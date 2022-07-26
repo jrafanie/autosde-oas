@@ -14,8 +14,8 @@ require 'date'
 require 'time'
 
 module AutosdeOpenapiClient
-  # Event
-  class Event
+  # TODO add description
+  class EventResponse
     # created_at
     attr_accessor :created_at
 
@@ -40,6 +40,7 @@ module AutosdeOpenapiClient
     # refresh_interval
     attr_accessor :refresh_interval
 
+    # !!uuid of storage_system
     attr_accessor :storage_system
 
     # uuid
@@ -77,7 +78,7 @@ module AutosdeOpenapiClient
         :'fixed' => :'String',
         :'last_timestamp' => :'Time',
         :'refresh_interval' => :'Integer',
-        :'storage_system' => :'StorageSystem',
+        :'storage_system' => :'String',
         :'uuid' => :'String'
       }
     end
@@ -92,13 +93,13 @@ module AutosdeOpenapiClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `AutosdeOpenapiClient::Event` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `AutosdeOpenapiClient::EventResponse` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `AutosdeOpenapiClient::Event`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `AutosdeOpenapiClient::EventResponse`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
