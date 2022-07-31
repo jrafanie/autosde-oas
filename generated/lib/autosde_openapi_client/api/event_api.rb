@@ -190,24 +190,24 @@ module AutosdeOpenapiClient
       return data, status_code, headers
     end
 
-    # @param storage_resource_response [StorageResourceResponse] 
+    # @param event_response [EventResponse] 
     # @param [Hash] opts the optional parameters
     # @return [Event]
-    def events_post(storage_resource_response, opts = {})
-      data, _status_code, _headers = events_post_with_http_info(storage_resource_response, opts)
+    def events_post(event_response, opts = {})
+      data, _status_code, _headers = events_post_with_http_info(event_response, opts)
       data
     end
 
-    # @param storage_resource_response [StorageResourceResponse] 
+    # @param event_response [EventResponse] 
     # @param [Hash] opts the optional parameters
     # @return [Array<(Event, Integer, Hash)>] Event data, response status code and response headers
-    def events_post_with_http_info(storage_resource_response, opts = {})
+    def events_post_with_http_info(event_response, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: EventApi.events_post ...'
       end
-      # verify the required parameter 'storage_resource_response' is set
-      if @api_client.config.client_side_validation && storage_resource_response.nil?
-        fail ArgumentError, "Missing the required parameter 'storage_resource_response' when calling EventApi.events_post"
+      # verify the required parameter 'event_response' is set
+      if @api_client.config.client_side_validation && event_response.nil?
+        fail ArgumentError, "Missing the required parameter 'event_response' when calling EventApi.events_post"
       end
       # resource path
       local_var_path = '/events'
@@ -226,7 +226,7 @@ module AutosdeOpenapiClient
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(storage_resource_response)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(event_response)
 
       # return_type
       return_type = opts[:debug_return_type] || 'Event'

@@ -62,7 +62,7 @@ describe 'EventApi' do
   end
 
   # unit tests for events_post
-  # @param storage_resource_response 
+  # @param event_response 
   # @param [Hash] opts the optional parameters
   # @return [Event]
   describe 'events_post test' do

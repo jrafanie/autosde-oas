@@ -210,7 +210,7 @@ end
 
 ## events_post
 
-> <Event> events_post(storage_resource_response)
+> <Event> events_post(event_response)
 
 
 
@@ -226,11 +226,11 @@ AutosdeOpenapiClient.configure do |config|
 end
 
 api_instance = AutosdeOpenapiClient::EventApi.new
-storage_resource_response = AutosdeOpenapiClient::StorageResourceResponse.new # StorageResourceResponse | 
+event_response = AutosdeOpenapiClient::EventResponse.new # EventResponse | 
 
 begin
   
-  result = api_instance.events_post(storage_resource_response)
+  result = api_instance.events_post(event_response)
   p result
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling EventApi->events_post: #{e}"
@@ -241,12 +241,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Event>, Integer, Hash)> events_post_with_http_info(storage_resource_response)
+> <Array(<Event>, Integer, Hash)> events_post_with_http_info(event_response)
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.events_post_with_http_info(storage_resource_response)
+  data, status_code, headers = api_instance.events_post_with_http_info(event_response)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Event>
@@ -259,7 +259,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **storage_resource_response** | [**StorageResourceResponse**](StorageResourceResponse.md) |  |  |
+| **event_response** | [**EventResponse**](EventResponse.md) |  |  |
 
 ### Return type
 
