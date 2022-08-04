@@ -31,9 +31,6 @@ module AutosdeOpenapiClient
     # component_state
     attr_accessor :component_state
 
-    # initial_refresh
-    attr_accessor :initial_refresh
-
     attr_accessor :iqn
 
     # management_ip
@@ -101,7 +98,6 @@ module AutosdeOpenapiClient
         :'chap_name' => :'chap_name',
         :'chap_secret' => :'chap_secret',
         :'component_state' => :'component_state',
-        :'initial_refresh' => :'initial_refresh',
         :'iqn' => :'iqn',
         :'management_ip' => :'management_ip',
         :'name' => :'name',
@@ -131,7 +127,6 @@ module AutosdeOpenapiClient
         :'chap_name' => :'String',
         :'chap_secret' => :'String',
         :'component_state' => :'String',
-        :'initial_refresh' => :'Boolean',
         :'iqn' => :'String',
         :'management_ip' => :'String',
         :'name' => :'String',
@@ -191,12 +186,6 @@ module AutosdeOpenapiClient
 
       if attributes.key?(:'component_state')
         self.component_state = attributes[:'component_state']
-      end
-
-      if attributes.key?(:'initial_refresh')
-        self.initial_refresh = attributes[:'initial_refresh']
-      else
-        self.initial_refresh = true
       end
 
       if attributes.key?(:'iqn')
@@ -316,7 +305,6 @@ module AutosdeOpenapiClient
           chap_name == o.chap_name &&
           chap_secret == o.chap_secret &&
           component_state == o.component_state &&
-          initial_refresh == o.initial_refresh &&
           iqn == o.iqn &&
           management_ip == o.management_ip &&
           name == o.name &&
@@ -341,7 +329,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [auto_add_pools, auto_setup, chap_name, chap_secret, component_state, initial_refresh, iqn, management_ip, name, password, port_type, secondary_ip, status, storage_array, storage_driver, storage_family, system_type, user, wwpn].hash
+      [auto_add_pools, auto_setup, chap_name, chap_secret, component_state, iqn, management_ip, name, password, port_type, secondary_ip, status, storage_array, storage_driver, storage_family, system_type, user, wwpn].hash
     end
 
     # Builds the object from hash

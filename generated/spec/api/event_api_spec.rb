@@ -34,7 +34,7 @@ describe 'EventApi' do
 
   # unit tests for events_get
   # @param [Hash] opts the optional parameters
-  # @return [Array<EventResponse>]
+  # @return [Array<Event>]
   describe 'events_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -44,7 +44,7 @@ describe 'EventApi' do
   # unit tests for events_pk_delete
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<EventResponse>]
+  # @return [Array<Event>]
   describe 'events_pk_delete test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,7 +54,7 @@ describe 'EventApi' do
   # unit tests for events_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<EventResponse>]
+  # @return [Array<Event>]
   describe 'events_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -64,7 +64,7 @@ describe 'EventApi' do
   # unit tests for events_post
   # @param event 
   # @param [Hash] opts the optional parameters
-  # @return [EventResponse]
+  # @return [Event]
   describe 'events_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

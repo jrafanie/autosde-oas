@@ -25,12 +25,6 @@ describe AutosdeOpenapiClient::Event do
       expect(instance).to be_instance_of(AutosdeOpenapiClient::Event)
     end
   end
-  describe 'test attribute "created_at"' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   describe 'test attribute "description"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -62,12 +56,6 @@ describe AutosdeOpenapiClient::Event do
   end
 
   describe 'test attribute "last_timestamp"' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  describe 'test attribute "refresh_interval"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

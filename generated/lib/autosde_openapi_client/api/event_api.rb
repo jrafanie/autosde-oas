@@ -20,14 +20,14 @@ module AutosdeOpenapiClient
       @api_client = api_client
     end
     # @param [Hash] opts the optional parameters
-    # @return [Array<EventResponse>]
+    # @return [Array<Event>]
     def events_get(opts = {})
       data, _status_code, _headers = events_get_with_http_info(opts)
       data
     end
 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<EventResponse>, Integer, Hash)>] Array<EventResponse> data, response status code and response headers
+    # @return [Array<(Array<Event>, Integer, Hash)>] Array<Event> data, response status code and response headers
     def events_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: EventApi.events_get ...'
@@ -50,7 +50,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<EventResponse>'
+      return_type = opts[:debug_return_type] || 'Array<Event>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -74,7 +74,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<EventResponse>]
+    # @return [Array<Event>]
     def events_pk_delete(pk, opts = {})
       data, _status_code, _headers = events_pk_delete_with_http_info(pk, opts)
       data
@@ -82,7 +82,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<EventResponse>, Integer, Hash)>] Array<EventResponse> data, response status code and response headers
+    # @return [Array<(Array<Event>, Integer, Hash)>] Array<Event> data, response status code and response headers
     def events_pk_delete_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: EventApi.events_pk_delete ...'
@@ -109,7 +109,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<EventResponse>'
+      return_type = opts[:debug_return_type] || 'Array<Event>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -133,7 +133,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<EventResponse>]
+    # @return [Array<Event>]
     def events_pk_get(pk, opts = {})
       data, _status_code, _headers = events_pk_get_with_http_info(pk, opts)
       data
@@ -141,7 +141,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<EventResponse>, Integer, Hash)>] Array<EventResponse> data, response status code and response headers
+    # @return [Array<(Array<Event>, Integer, Hash)>] Array<Event> data, response status code and response headers
     def events_pk_get_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: EventApi.events_pk_get ...'
@@ -168,7 +168,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<EventResponse>'
+      return_type = opts[:debug_return_type] || 'Array<Event>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -192,7 +192,7 @@ module AutosdeOpenapiClient
 
     # @param event [Event] 
     # @param [Hash] opts the optional parameters
-    # @return [EventResponse]
+    # @return [Event]
     def events_post(event, opts = {})
       data, _status_code, _headers = events_post_with_http_info(event, opts)
       data
@@ -200,7 +200,7 @@ module AutosdeOpenapiClient
 
     # @param event [Event] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(EventResponse, Integer, Hash)>] EventResponse data, response status code and response headers
+    # @return [Array<(Event, Integer, Hash)>] Event data, response status code and response headers
     def events_post_with_http_info(event, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: EventApi.events_post ...'
@@ -229,7 +229,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(event)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'EventResponse'
+      return_type = opts[:debug_return_type] || 'Event'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

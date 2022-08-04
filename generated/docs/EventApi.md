@@ -12,7 +12,7 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
 ## events_get
 
-> <Array<EventResponse>> events_get
+> <Array<Event>> events_get
 
 
 
@@ -42,7 +42,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<EventResponse>>, Integer, Hash)> events_get_with_http_info
+> <Array(<Array<Event>>, Integer, Hash)> events_get_with_http_info
 
 ```ruby
 begin
@@ -50,7 +50,7 @@ begin
   data, status_code, headers = api_instance.events_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<EventResponse>>
+  p data # => <Array<Event>>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling EventApi->events_get_with_http_info: #{e}"
 end
@@ -62,7 +62,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;EventResponse&gt;**](EventResponse.md)
+[**Array&lt;Event&gt;**](Event.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ This endpoint does not need any parameter.
 
 ## events_pk_delete
 
-> <Array<EventResponse>> events_pk_delete(pk)
+> <Array<Event>> events_pk_delete(pk)
 
 
 
@@ -107,7 +107,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<EventResponse>>, Integer, Hash)> events_pk_delete_with_http_info(pk)
+> <Array(<Array<Event>>, Integer, Hash)> events_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -115,7 +115,7 @@ begin
   data, status_code, headers = api_instance.events_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<EventResponse>>
+  p data # => <Array<Event>>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling EventApi->events_pk_delete_with_http_info: #{e}"
 end
@@ -129,7 +129,7 @@ end
 
 ### Return type
 
-[**Array&lt;EventResponse&gt;**](EventResponse.md)
+[**Array&lt;Event&gt;**](Event.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ end
 
 ## events_pk_get
 
-> <Array<EventResponse>> events_pk_get(pk)
+> <Array<Event>> events_pk_get(pk)
 
 
 
@@ -174,7 +174,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<EventResponse>>, Integer, Hash)> events_pk_get_with_http_info(pk)
+> <Array(<Array<Event>>, Integer, Hash)> events_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -182,7 +182,7 @@ begin
   data, status_code, headers = api_instance.events_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<EventResponse>>
+  p data # => <Array<Event>>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling EventApi->events_pk_get_with_http_info: #{e}"
 end
@@ -196,7 +196,7 @@ end
 
 ### Return type
 
-[**Array&lt;EventResponse&gt;**](EventResponse.md)
+[**Array&lt;Event&gt;**](Event.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ end
 
 ## events_post
 
-> <EventResponse> events_post(event)
+> <Event> events_post(event)
 
 
 
@@ -241,7 +241,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<EventResponse>, Integer, Hash)> events_post_with_http_info(event)
+> <Array(<Event>, Integer, Hash)> events_post_with_http_info(event)
 
 ```ruby
 begin
@@ -249,7 +249,7 @@ begin
   data, status_code, headers = api_instance.events_post_with_http_info(event)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <EventResponse>
+  p data # => <Event>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling EventApi->events_post_with_http_info: #{e}"
 end
@@ -263,7 +263,7 @@ end
 
 ### Return type
 
-[**EventResponse**](EventResponse.md)
+[**Event**](Event.md)
 
 ### Authorization
 

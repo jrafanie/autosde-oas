@@ -105,8 +105,6 @@ Class | Method | HTTP request | Description
 *AutosdeOpenapiClient::CapabilityTranslationApi* | [**capability_translations_pk_delete**](docs/CapabilityTranslationApi.md#capability_translations_pk_delete) | **DELETE** /capability-translations/{pk} | 
 *AutosdeOpenapiClient::CapabilityTranslationApi* | [**capability_translations_pk_get**](docs/CapabilityTranslationApi.md#capability_translations_pk_get) | **GET** /capability-translations/{pk} | 
 *AutosdeOpenapiClient::CapabilityTranslationApi* | [**capability_translations_post**](docs/CapabilityTranslationApi.md#capability_translations_post) | **POST** /capability-translations | 
-*AutosdeOpenapiClient::CeleryConfigApi* | [**celery_config_get**](docs/CeleryConfigApi.md#celery_config_get) | **GET** /celery-config | 
-*AutosdeOpenapiClient::CeleryConfigApi* | [**celery_config_post**](docs/CeleryConfigApi.md#celery_config_post) | **POST** /celery-config | 
 *AutosdeOpenapiClient::EventApi* | [**events_get**](docs/EventApi.md#events_get) | **GET** /events | 
 *AutosdeOpenapiClient::EventApi* | [**events_pk_delete**](docs/EventApi.md#events_pk_delete) | **DELETE** /events/{pk} | 
 *AutosdeOpenapiClient::EventApi* | [**events_pk_get**](docs/EventApi.md#events_pk_get) | **GET** /events/{pk} | 
@@ -132,8 +130,6 @@ Class | Method | HTTP request | Description
 *AutosdeOpenapiClient::HostVolumeConnectionApi* | [**host_volume_connection_pk_get**](docs/HostVolumeConnectionApi.md#host_volume_connection_pk_get) | **GET** /host-volume-connection/{pk} | 
 *AutosdeOpenapiClient::HostVolumeConnectionApi* | [**host_volume_connection_post**](docs/HostVolumeConnectionApi.md#host_volume_connection_post) | **POST** /host-volume-connection | 
 *AutosdeOpenapiClient::JobApi* | [**jobs_get**](docs/JobApi.md#jobs_get) | **GET** /jobs | 
-*AutosdeOpenapiClient::JobApi* | [**jobs_pk_delete**](docs/JobApi.md#jobs_pk_delete) | **DELETE** /jobs/{pk} | 
-*AutosdeOpenapiClient::JobApi* | [**jobs_pk_get**](docs/JobApi.md#jobs_pk_get) | **GET** /jobs/{pk} | 
 *AutosdeOpenapiClient::JobApi* | [**jobs_post**](docs/JobApi.md#jobs_post) | **POST** /jobs | 
 *AutosdeOpenapiClient::NativeCapabilityApi* | [**native_capabilities_get**](docs/NativeCapabilityApi.md#native_capabilities_get) | **GET** /native-capabilities | 
 *AutosdeOpenapiClient::NativeCapabilityApi* | [**native_capabilities_pk_delete**](docs/NativeCapabilityApi.md#native_capabilities_pk_delete) | **DELETE** /native-capabilities/{pk} | 
@@ -147,7 +143,6 @@ Class | Method | HTTP request | Description
 *AutosdeOpenapiClient::ProvisioningStrategyApi* | [**provisioning_strategy_pk_delete**](docs/ProvisioningStrategyApi.md#provisioning_strategy_pk_delete) | **DELETE** /provisioning-strategy/{pk} | 
 *AutosdeOpenapiClient::ProvisioningStrategyApi* | [**provisioning_strategy_pk_get**](docs/ProvisioningStrategyApi.md#provisioning_strategy_pk_get) | **GET** /provisioning-strategy/{pk} | 
 *AutosdeOpenapiClient::ProvisioningStrategyApi* | [**provisioning_strategy_post**](docs/ProvisioningStrategyApi.md#provisioning_strategy_post) | **POST** /provisioning-strategy | 
-*AutosdeOpenapiClient::RefreshSystemApi* | [**refresh_system_post**](docs/RefreshSystemApi.md#refresh_system_post) | **POST** /refresh-system | 
 *AutosdeOpenapiClient::ServiceApi* | [**services_get**](docs/ServiceApi.md#services_get) | **GET** /services | 
 *AutosdeOpenapiClient::ServiceApi* | [**services_pk_delete**](docs/ServiceApi.md#services_pk_delete) | **DELETE** /services/{pk} | 
 *AutosdeOpenapiClient::ServiceApi* | [**services_pk_get**](docs/ServiceApi.md#services_pk_get) | **GET** /services/{pk} | 
@@ -216,9 +211,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::AutoSDERole](docs/AutoSDERole.md)
  - [AutosdeOpenapiClient::CapabilityTranslation](docs/CapabilityTranslation.md)
  - [AutosdeOpenapiClient::CapabilityTranslationCreate](docs/CapabilityTranslationCreate.md)
- - [AutosdeOpenapiClient::CeleryConfig](docs/CeleryConfig.md)
  - [AutosdeOpenapiClient::Event](docs/Event.md)
- - [AutosdeOpenapiClient::EventResponse](docs/EventResponse.md)
  - [AutosdeOpenapiClient::Host](docs/Host.md)
  - [AutosdeOpenapiClient::HostCluster](docs/HostCluster.md)
  - [AutosdeOpenapiClient::HostClusterCreate](docs/HostClusterCreate.md)
@@ -235,7 +228,6 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::NativeCapability](docs/NativeCapability.md)
  - [AutosdeOpenapiClient::Profile](docs/Profile.md)
  - [AutosdeOpenapiClient::ProvisioningStrategy](docs/ProvisioningStrategy.md)
- - [AutosdeOpenapiClient::RefreshSystem](docs/RefreshSystem.md)
  - [AutosdeOpenapiClient::Service](docs/Service.md)
  - [AutosdeOpenapiClient::ServiceAbstractCapabilityValue](docs/ServiceAbstractCapabilityValue.md)
  - [AutosdeOpenapiClient::ServiceCreate](docs/ServiceCreate.md)

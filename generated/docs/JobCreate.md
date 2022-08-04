@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **task_kwargs** | **String** | task_kwargs | [optional] |
+| **task_args** | **String** | task_args | [optional] |
 | **task_name** | **String** | task_name | [optional] |
 
 ## Example
@@ -13,7 +13,7 @@
 require 'autosde_openapi_client'
 
 instance = AutosdeOpenapiClient::JobCreate.new(
-  task_kwargs: null,
+  task_args: null,
   task_name: null
 )
 ```
