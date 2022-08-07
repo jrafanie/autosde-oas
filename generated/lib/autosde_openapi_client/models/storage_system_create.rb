@@ -16,11 +16,8 @@ require 'time'
 module AutosdeOpenapiClient
   # TODO add description
   class StorageSystemCreate
-    # auto_add_pools
-    attr_accessor :auto_add_pools
-
-    # auto_setup
-    attr_accessor :auto_setup
+    # auto_refresh
+    attr_accessor :auto_refresh
 
     # chap_name
     attr_accessor :chap_name
@@ -30,6 +27,9 @@ module AutosdeOpenapiClient
 
     # component_state
     attr_accessor :component_state
+
+    # initial_refresh
+    attr_accessor :initial_refresh
 
     attr_accessor :iqn
 
@@ -93,11 +93,11 @@ module AutosdeOpenapiClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'auto_add_pools' => :'auto_add_pools',
-        :'auto_setup' => :'auto_setup',
+        :'auto_refresh' => :'auto_refresh',
         :'chap_name' => :'chap_name',
         :'chap_secret' => :'chap_secret',
         :'component_state' => :'component_state',
+        :'initial_refresh' => :'initial_refresh',
         :'iqn' => :'iqn',
         :'management_ip' => :'management_ip',
         :'name' => :'name',
@@ -122,11 +122,11 @@ module AutosdeOpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'auto_add_pools' => :'Boolean',
-        :'auto_setup' => :'Boolean',
+        :'auto_refresh' => :'Boolean',
         :'chap_name' => :'String',
         :'chap_secret' => :'String',
         :'component_state' => :'String',
+        :'initial_refresh' => :'Boolean',
         :'iqn' => :'String',
         :'management_ip' => :'String',
         :'name' => :'String',
@@ -164,16 +164,10 @@ module AutosdeOpenapiClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'auto_add_pools')
-        self.auto_add_pools = attributes[:'auto_add_pools']
+      if attributes.key?(:'auto_refresh')
+        self.auto_refresh = attributes[:'auto_refresh']
       else
-        self.auto_add_pools = false
-      end
-
-      if attributes.key?(:'auto_setup')
-        self.auto_setup = attributes[:'auto_setup']
-      else
-        self.auto_setup = false
+        self.auto_refresh = true
       end
 
       if attributes.key?(:'chap_name')
@@ -186,6 +180,12 @@ module AutosdeOpenapiClient
 
       if attributes.key?(:'component_state')
         self.component_state = attributes[:'component_state']
+      end
+
+      if attributes.key?(:'initial_refresh')
+        self.initial_refresh = attributes[:'initial_refresh']
+      else
+        self.initial_refresh = true
       end
 
       if attributes.key?(:'iqn')
@@ -300,11 +300,11 @@ module AutosdeOpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          auto_add_pools == o.auto_add_pools &&
-          auto_setup == o.auto_setup &&
+          auto_refresh == o.auto_refresh &&
           chap_name == o.chap_name &&
           chap_secret == o.chap_secret &&
           component_state == o.component_state &&
+          initial_refresh == o.initial_refresh &&
           iqn == o.iqn &&
           management_ip == o.management_ip &&
           name == o.name &&
@@ -329,7 +329,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [auto_add_pools, auto_setup, chap_name, chap_secret, component_state, iqn, management_ip, name, password, port_type, secondary_ip, status, storage_array, storage_driver, storage_family, system_type, user, wwpn].hash
+      [auto_refresh, chap_name, chap_secret, component_state, initial_refresh, iqn, management_ip, name, password, port_type, secondary_ip, status, storage_array, storage_driver, storage_family, system_type, user, wwpn].hash
     end
 
     # Builds the object from hash

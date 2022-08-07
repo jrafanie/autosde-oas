@@ -25,13 +25,7 @@ describe AutosdeOpenapiClient::StorageSystemCreate do
       expect(instance).to be_instance_of(AutosdeOpenapiClient::StorageSystemCreate)
     end
   end
-  describe 'test attribute "auto_add_pools"' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  describe 'test attribute "auto_setup"' do
+  describe 'test attribute "auto_refresh"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -56,6 +50,12 @@ describe AutosdeOpenapiClient::StorageSystemCreate do
       # validator.allowable_values.each do |value|
       #   expect { instance.component_state = value }.not_to raise_error
       # end
+    end
+  end
+
+  describe 'test attribute "initial_refresh"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 

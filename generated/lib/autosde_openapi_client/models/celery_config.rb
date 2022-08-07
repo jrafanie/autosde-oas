@@ -14,68 +14,19 @@ require 'date'
 require 'time'
 
 module AutosdeOpenapiClient
-  # Use to define storage system properties.
-  class StorageSystem
-    # auto_refresh
-    attr_accessor :auto_refresh
+  # CeleryBeatConfig object represents celery-beat (refresh params
+  class CeleryConfig
+    # celery_beat_enabled
+    attr_accessor :celery_beat_enabled
 
-    # component_state
-    attr_accessor :component_state
-
-    # management_ip
-    attr_accessor :management_ip
-
-    # name
-    attr_accessor :name
-
-    # status
-    attr_accessor :status
-
-    # storage_array
-    attr_accessor :storage_array
-
-    # storage_family
-    attr_accessor :storage_family
-
-    attr_accessor :system_type
-
-    # uuid
-    attr_accessor :uuid
-
-    class EnumAttributeValidator
-      attr_reader :datatype
-      attr_reader :allowable_values
-
-      def initialize(datatype, allowable_values)
-        @allowable_values = allowable_values.map do |value|
-          case datatype.to_s
-          when /Integer/i
-            value.to_i
-          when /Float/i
-            value.to_f
-          else
-            value
-          end
-        end
-      end
-
-      def valid?(value)
-        !value || allowable_values.include?(value)
-      end
-    end
+    # interval_sec
+    attr_accessor :interval_sec
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'auto_refresh' => :'auto_refresh',
-        :'component_state' => :'component_state',
-        :'management_ip' => :'management_ip',
-        :'name' => :'name',
-        :'status' => :'status',
-        :'storage_array' => :'storage_array',
-        :'storage_family' => :'storage_family',
-        :'system_type' => :'system_type',
-        :'uuid' => :'uuid'
+        :'celery_beat_enabled' => :'celery_beat_enabled',
+        :'interval_sec' => :'interval_sec'
       }
     end
 
@@ -87,15 +38,8 @@ module AutosdeOpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'auto_refresh' => :'Boolean',
-        :'component_state' => :'String',
-        :'management_ip' => :'String',
-        :'name' => :'String',
-        :'status' => :'String',
-        :'storage_array' => :'String',
-        :'storage_family' => :'String',
-        :'system_type' => :'SystemType',
-        :'uuid' => :'String'
+        :'celery_beat_enabled' => :'Boolean',
+        :'interval_sec' => :'Integer'
       }
     end
 
@@ -109,53 +53,23 @@ module AutosdeOpenapiClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `AutosdeOpenapiClient::StorageSystem` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `AutosdeOpenapiClient::CeleryConfig` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `AutosdeOpenapiClient::StorageSystem`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `AutosdeOpenapiClient::CeleryConfig`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'auto_refresh')
-        self.auto_refresh = attributes[:'auto_refresh']
-      else
-        self.auto_refresh = true
+      if attributes.key?(:'celery_beat_enabled')
+        self.celery_beat_enabled = attributes[:'celery_beat_enabled']
       end
 
-      if attributes.key?(:'component_state')
-        self.component_state = attributes[:'component_state']
-      end
-
-      if attributes.key?(:'management_ip')
-        self.management_ip = attributes[:'management_ip']
-      end
-
-      if attributes.key?(:'name')
-        self.name = attributes[:'name']
-      end
-
-      if attributes.key?(:'status')
-        self.status = attributes[:'status']
-      end
-
-      if attributes.key?(:'storage_array')
-        self.storage_array = attributes[:'storage_array']
-      end
-
-      if attributes.key?(:'storage_family')
-        self.storage_family = attributes[:'storage_family']
-      end
-
-      if attributes.key?(:'system_type')
-        self.system_type = attributes[:'system_type']
-      end
-
-      if attributes.key?(:'uuid')
-        self.uuid = attributes[:'uuid']
+      if attributes.key?(:'interval_sec')
+        self.interval_sec = attributes[:'interval_sec']
       end
     end
 
@@ -163,42 +77,13 @@ module AutosdeOpenapiClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if !@component_state.nil? && @component_state.to_s.length > 32
-        invalid_properties.push('invalid value for "component_state", the character length must be smaller than or equal to 32.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      component_state_validator = EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION"])
-      return false unless component_state_validator.valid?(@component_state)
-      return false if !@component_state.nil? && @component_state.to_s.length > 32
-      storage_family_validator = EnumAttributeValidator.new('String', ["", "ontap_7mode", "ontap_cluster"])
-      return false unless storage_family_validator.valid?(@storage_family)
       true
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] component_state Object to be assigned
-    def component_state=(component_state)
-      validator = EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION"])
-      unless validator.valid?(component_state)
-        fail ArgumentError, "invalid value for \"component_state\", must be one of #{validator.allowable_values}."
-      end
-      @component_state = component_state
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] storage_family Object to be assigned
-    def storage_family=(storage_family)
-      validator = EnumAttributeValidator.new('String', ["", "ontap_7mode", "ontap_cluster"])
-      unless validator.valid?(storage_family)
-        fail ArgumentError, "invalid value for \"storage_family\", must be one of #{validator.allowable_values}."
-      end
-      @storage_family = storage_family
     end
 
     # Checks equality by comparing each attribute.
@@ -206,15 +91,8 @@ module AutosdeOpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          auto_refresh == o.auto_refresh &&
-          component_state == o.component_state &&
-          management_ip == o.management_ip &&
-          name == o.name &&
-          status == o.status &&
-          storage_array == o.storage_array &&
-          storage_family == o.storage_family &&
-          system_type == o.system_type &&
-          uuid == o.uuid
+          celery_beat_enabled == o.celery_beat_enabled &&
+          interval_sec == o.interval_sec
     end
 
     # @see the `==` method
@@ -226,7 +104,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [auto_refresh, component_state, management_ip, name, status, storage_array, storage_family, system_type, uuid].hash
+      [celery_beat_enabled, interval_sec].hash
     end
 
     # Builds the object from hash

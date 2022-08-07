@@ -4,11 +4,11 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **auto_add_pools** | **Boolean** | auto_add_pools | [optional][default to false] |
-| **auto_setup** | **Boolean** | auto_setup | [optional][default to false] |
+| **auto_refresh** | **Boolean** | auto_refresh | [optional][default to true] |
 | **chap_name** | **String** | chap_name | [optional] |
 | **chap_secret** | **String** | chap_secret | [optional] |
 | **component_state** | **String** | component_state | [optional] |
+| **initial_refresh** | **Boolean** | initial_refresh | [optional][default to true] |
 | **iqn** | **String** |  | [optional] |
 | **management_ip** | **String** | management_ip | [optional] |
 | **name** | **String** | name | [optional] |
@@ -29,11 +29,11 @@
 require 'autosde_openapi_client'
 
 instance = AutosdeOpenapiClient::StorageSystemCreate.new(
-  auto_add_pools: null,
-  auto_setup: null,
+  auto_refresh: null,
   chap_name: null,
   chap_secret: null,
   component_state: null,
+  initial_refresh: null,
   iqn: null,
   management_ip: null,
   name: null,
