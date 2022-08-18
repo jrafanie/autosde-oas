@@ -166,11 +166,11 @@ Class | Method | HTTP request | Description
 *AutosdeOpenapiClient::StorageHostApi* | [**storage_hosts_pk_get**](docs/StorageHostApi.md#storage_hosts_pk_get) | **GET** /storage-hosts/{pk} | 
 *AutosdeOpenapiClient::StorageHostApi* | [**storage_hosts_pk_put**](docs/StorageHostApi.md#storage_hosts_pk_put) | **PUT** /storage-hosts/{pk} | 
 *AutosdeOpenapiClient::StorageHostApi* | [**storage_hosts_post**](docs/StorageHostApi.md#storage_hosts_post) | **POST** /storage-hosts | 
-*AutosdeOpenapiClient::StorageHostVolumeMappingApi* | [**storage_hosts_mapping_get**](docs/StorageHostVolumeMappingApi.md#storage_hosts_mapping_get) | **GET** /storage-hosts-mapping | 
-*AutosdeOpenapiClient::StorageHostVolumeMappingApi* | [**storage_hosts_mapping_pk_delete**](docs/StorageHostVolumeMappingApi.md#storage_hosts_mapping_pk_delete) | **DELETE** /storage-hosts-mapping/{pk} | 
-*AutosdeOpenapiClient::StorageHostVolumeMappingApi* | [**storage_hosts_mapping_pk_get**](docs/StorageHostVolumeMappingApi.md#storage_hosts_mapping_pk_get) | **GET** /storage-hosts-mapping/{pk} | 
-*AutosdeOpenapiClient::StorageHostVolumeMappingApi* | [**storage_hosts_mapping_post**](docs/StorageHostVolumeMappingApi.md#storage_hosts_mapping_post) | **POST** /storage-hosts-mapping | 
 *AutosdeOpenapiClient::StorageHostWWPNCandidatesApi* | [**storage_hosts_wwpn_candidates_get**](docs/StorageHostWWPNCandidatesApi.md#storage_hosts_wwpn_candidates_get) | **GET** /storage-hosts-wwpn-candidates | 
+*AutosdeOpenapiClient::StorageHostsMappingApi* | [**storage_hosts_mapping_get**](docs/StorageHostsMappingApi.md#storage_hosts_mapping_get) | **GET** /storage-hosts-mapping | 
+*AutosdeOpenapiClient::StorageHostsMappingApi* | [**storage_hosts_mapping_pk_delete**](docs/StorageHostsMappingApi.md#storage_hosts_mapping_pk_delete) | **DELETE** /storage-hosts-mapping/{pk} | 
+*AutosdeOpenapiClient::StorageHostsMappingApi* | [**storage_hosts_mapping_pk_get**](docs/StorageHostsMappingApi.md#storage_hosts_mapping_pk_get) | **GET** /storage-hosts-mapping/{pk} | 
+*AutosdeOpenapiClient::StorageHostsMappingApi* | [**storage_hosts_mapping_post**](docs/StorageHostsMappingApi.md#storage_hosts_mapping_post) | **POST** /storage-hosts-mapping | 
 *AutosdeOpenapiClient::StorageResourceApi* | [**storage_resources_get**](docs/StorageResourceApi.md#storage_resources_get) | **GET** /storage-resources | 
 *AutosdeOpenapiClient::StorageResourceApi* | [**storage_resources_pk_delete**](docs/StorageResourceApi.md#storage_resources_pk_delete) | **DELETE** /storage-resources/{pk} | 
 *AutosdeOpenapiClient::StorageResourceApi* | [**storage_resources_pk_get**](docs/StorageResourceApi.md#storage_resources_pk_get) | **GET** /storage-resources/{pk} | 
@@ -246,10 +246,10 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::StorageHostCreate](docs/StorageHostCreate.md)
  - [AutosdeOpenapiClient::StorageHostResponse](docs/StorageHostResponse.md)
  - [AutosdeOpenapiClient::StorageHostUpdate](docs/StorageHostUpdate.md)
- - [AutosdeOpenapiClient::StorageHostVolumeMapping](docs/StorageHostVolumeMapping.md)
- - [AutosdeOpenapiClient::StorageHostVolumeMappingCreate](docs/StorageHostVolumeMappingCreate.md)
- - [AutosdeOpenapiClient::StorageHostVolumeMappingResponse](docs/StorageHostVolumeMappingResponse.md)
  - [AutosdeOpenapiClient::StorageHostWWPNCandidates](docs/StorageHostWWPNCandidates.md)
+ - [AutosdeOpenapiClient::StorageHostsMapping](docs/StorageHostsMapping.md)
+ - [AutosdeOpenapiClient::StorageHostsMappingCreate](docs/StorageHostsMappingCreate.md)
+ - [AutosdeOpenapiClient::StorageHostsMappingResponse](docs/StorageHostsMappingResponse.md)
  - [AutosdeOpenapiClient::StorageResource](docs/StorageResource.md)
  - [AutosdeOpenapiClient::StorageResourceCreate](docs/StorageResourceCreate.md)
  - [AutosdeOpenapiClient::StorageResourceResponse](docs/StorageResourceResponse.md)

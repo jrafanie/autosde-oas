@@ -13,24 +13,24 @@ OpenAPI Generator version: 5.0.0
 require 'cgi'
 
 module AutosdeOpenapiClient
-  class StorageHostVolumeMappingApi
+  class StorageHostsMappingApi
     attr_accessor :api_client
 
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
     # @param [Hash] opts the optional parameters
-    # @return [Array<StorageHostVolumeMappingResponse>]
+    # @return [Array<StorageHostsMappingResponse>]
     def storage_hosts_mapping_get(opts = {})
       data, _status_code, _headers = storage_hosts_mapping_get_with_http_info(opts)
       data
     end
 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<StorageHostVolumeMappingResponse>, Integer, Hash)>] Array<StorageHostVolumeMappingResponse> data, response status code and response headers
+    # @return [Array<(Array<StorageHostsMappingResponse>, Integer, Hash)>] Array<StorageHostsMappingResponse> data, response status code and response headers
     def storage_hosts_mapping_get_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: StorageHostVolumeMappingApi.storage_hosts_mapping_get ...'
+        @api_client.config.logger.debug 'Calling API: StorageHostsMappingApi.storage_hosts_mapping_get ...'
       end
       # resource path
       local_var_path = '/storage-hosts-mapping'
@@ -50,13 +50,13 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<StorageHostVolumeMappingResponse>'
+      return_type = opts[:debug_return_type] || 'Array<StorageHostsMappingResponse>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
 
       new_options = opts.merge(
-        :operation => :"StorageHostVolumeMappingApi.storage_hosts_mapping_get",
+        :operation => :"StorageHostsMappingApi.storage_hosts_mapping_get",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -67,14 +67,14 @@ module AutosdeOpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StorageHostVolumeMappingApi#storage_hosts_mapping_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StorageHostsMappingApi#storage_hosts_mapping_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<StorageHostVolumeMappingResponse>]
+    # @return [Array<StorageHostsMappingResponse>]
     def storage_hosts_mapping_pk_delete(pk, opts = {})
       data, _status_code, _headers = storage_hosts_mapping_pk_delete_with_http_info(pk, opts)
       data
@@ -82,14 +82,14 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<StorageHostVolumeMappingResponse>, Integer, Hash)>] Array<StorageHostVolumeMappingResponse> data, response status code and response headers
+    # @return [Array<(Array<StorageHostsMappingResponse>, Integer, Hash)>] Array<StorageHostsMappingResponse> data, response status code and response headers
     def storage_hosts_mapping_pk_delete_with_http_info(pk, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: StorageHostVolumeMappingApi.storage_hosts_mapping_pk_delete ...'
+        @api_client.config.logger.debug 'Calling API: StorageHostsMappingApi.storage_hosts_mapping_pk_delete ...'
       end
       # verify the required parameter 'pk' is set
       if @api_client.config.client_side_validation && pk.nil?
-        fail ArgumentError, "Missing the required parameter 'pk' when calling StorageHostVolumeMappingApi.storage_hosts_mapping_pk_delete"
+        fail ArgumentError, "Missing the required parameter 'pk' when calling StorageHostsMappingApi.storage_hosts_mapping_pk_delete"
       end
       # resource path
       local_var_path = '/storage-hosts-mapping/{pk}'.sub('{' + 'pk' + '}', CGI.escape(pk.to_s))
@@ -109,13 +109,13 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<StorageHostVolumeMappingResponse>'
+      return_type = opts[:debug_return_type] || 'Array<StorageHostsMappingResponse>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
 
       new_options = opts.merge(
-        :operation => :"StorageHostVolumeMappingApi.storage_hosts_mapping_pk_delete",
+        :operation => :"StorageHostsMappingApi.storage_hosts_mapping_pk_delete",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -126,14 +126,14 @@ module AutosdeOpenapiClient
 
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StorageHostVolumeMappingApi#storage_hosts_mapping_pk_delete\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StorageHostsMappingApi#storage_hosts_mapping_pk_delete\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<StorageHostVolumeMappingResponse>]
+    # @return [Array<StorageHostsMappingResponse>]
     def storage_hosts_mapping_pk_get(pk, opts = {})
       data, _status_code, _headers = storage_hosts_mapping_pk_get_with_http_info(pk, opts)
       data
@@ -141,14 +141,14 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<StorageHostVolumeMappingResponse>, Integer, Hash)>] Array<StorageHostVolumeMappingResponse> data, response status code and response headers
+    # @return [Array<(Array<StorageHostsMappingResponse>, Integer, Hash)>] Array<StorageHostsMappingResponse> data, response status code and response headers
     def storage_hosts_mapping_pk_get_with_http_info(pk, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: StorageHostVolumeMappingApi.storage_hosts_mapping_pk_get ...'
+        @api_client.config.logger.debug 'Calling API: StorageHostsMappingApi.storage_hosts_mapping_pk_get ...'
       end
       # verify the required parameter 'pk' is set
       if @api_client.config.client_side_validation && pk.nil?
-        fail ArgumentError, "Missing the required parameter 'pk' when calling StorageHostVolumeMappingApi.storage_hosts_mapping_pk_get"
+        fail ArgumentError, "Missing the required parameter 'pk' when calling StorageHostsMappingApi.storage_hosts_mapping_pk_get"
       end
       # resource path
       local_var_path = '/storage-hosts-mapping/{pk}'.sub('{' + 'pk' + '}', CGI.escape(pk.to_s))
@@ -168,13 +168,13 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<StorageHostVolumeMappingResponse>'
+      return_type = opts[:debug_return_type] || 'Array<StorageHostsMappingResponse>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
 
       new_options = opts.merge(
-        :operation => :"StorageHostVolumeMappingApi.storage_hosts_mapping_pk_get",
+        :operation => :"StorageHostsMappingApi.storage_hosts_mapping_pk_get",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -185,29 +185,29 @@ module AutosdeOpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StorageHostVolumeMappingApi#storage_hosts_mapping_pk_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StorageHostsMappingApi#storage_hosts_mapping_pk_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # @param storage_host_volume_mapping_create [StorageHostVolumeMappingCreate] 
+    # @param storage_hosts_mapping_create [StorageHostsMappingCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [StorageHostVolumeMapping]
-    def storage_hosts_mapping_post(storage_host_volume_mapping_create, opts = {})
-      data, _status_code, _headers = storage_hosts_mapping_post_with_http_info(storage_host_volume_mapping_create, opts)
+    # @return [StorageHostsMapping]
+    def storage_hosts_mapping_post(storage_hosts_mapping_create, opts = {})
+      data, _status_code, _headers = storage_hosts_mapping_post_with_http_info(storage_hosts_mapping_create, opts)
       data
     end
 
-    # @param storage_host_volume_mapping_create [StorageHostVolumeMappingCreate] 
+    # @param storage_hosts_mapping_create [StorageHostsMappingCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(StorageHostVolumeMapping, Integer, Hash)>] StorageHostVolumeMapping data, response status code and response headers
-    def storage_hosts_mapping_post_with_http_info(storage_host_volume_mapping_create, opts = {})
+    # @return [Array<(StorageHostsMapping, Integer, Hash)>] StorageHostsMapping data, response status code and response headers
+    def storage_hosts_mapping_post_with_http_info(storage_hosts_mapping_create, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: StorageHostVolumeMappingApi.storage_hosts_mapping_post ...'
+        @api_client.config.logger.debug 'Calling API: StorageHostsMappingApi.storage_hosts_mapping_post ...'
       end
-      # verify the required parameter 'storage_host_volume_mapping_create' is set
-      if @api_client.config.client_side_validation && storage_host_volume_mapping_create.nil?
-        fail ArgumentError, "Missing the required parameter 'storage_host_volume_mapping_create' when calling StorageHostVolumeMappingApi.storage_hosts_mapping_post"
+      # verify the required parameter 'storage_hosts_mapping_create' is set
+      if @api_client.config.client_side_validation && storage_hosts_mapping_create.nil?
+        fail ArgumentError, "Missing the required parameter 'storage_hosts_mapping_create' when calling StorageHostsMappingApi.storage_hosts_mapping_post"
       end
       # resource path
       local_var_path = '/storage-hosts-mapping'
@@ -226,16 +226,16 @@ module AutosdeOpenapiClient
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(storage_host_volume_mapping_create)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(storage_hosts_mapping_create)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'StorageHostVolumeMapping'
+      return_type = opts[:debug_return_type] || 'StorageHostsMapping'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
 
       new_options = opts.merge(
-        :operation => :"StorageHostVolumeMappingApi.storage_hosts_mapping_post",
+        :operation => :"StorageHostsMappingApi.storage_hosts_mapping_post",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -246,7 +246,7 @@ module AutosdeOpenapiClient
 
       data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: StorageHostVolumeMappingApi#storage_hosts_mapping_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: StorageHostsMappingApi#storage_hosts_mapping_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
