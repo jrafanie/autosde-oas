@@ -1,4 +1,4 @@
-# AutosdeOpenapiClient::StorageHostsMapping
+# AutosdeOpenapiClient::StorageHostVolumeMapping
 
 ## Properties
 
@@ -15,7 +15,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = AutosdeOpenapiClient::StorageHostsMapping.new(
+instance = AutosdeOpenapiClient::StorageHostVolumeMapping.new(
   component_state: null,
   host: null,
   lun: null,
