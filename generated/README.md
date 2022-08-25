@@ -153,10 +153,10 @@ Class | Method | HTTP request | Description
 *AutosdeOpenapiClient::ServiceApi* | [**services_pk_get**](docs/ServiceApi.md#services_pk_get) | **GET** /services/{pk} | 
 *AutosdeOpenapiClient::ServiceApi* | [**services_pk_put**](docs/ServiceApi.md#services_pk_put) | **PUT** /services/{pk} | 
 *AutosdeOpenapiClient::ServiceApi* | [**services_post**](docs/ServiceApi.md#services_post) | **POST** /services | 
-*AutosdeOpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attchment_get**](docs/ServiceResourceAttachmentApi.md#service_resource_attchment_get) | **GET** /service-resource-attchment | 
-*AutosdeOpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attchment_pk_delete**](docs/ServiceResourceAttachmentApi.md#service_resource_attchment_pk_delete) | **DELETE** /service-resource-attchment/{pk} | 
-*AutosdeOpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attchment_pk_get**](docs/ServiceResourceAttachmentApi.md#service_resource_attchment_pk_get) | **GET** /service-resource-attchment/{pk} | 
-*AutosdeOpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attchment_post**](docs/ServiceResourceAttachmentApi.md#service_resource_attchment_post) | **POST** /service-resource-attchment | 
+*AutosdeOpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attachment_get**](docs/ServiceResourceAttachmentApi.md#service_resource_attachment_get) | **GET** /service-resource-attachment | 
+*AutosdeOpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attachment_pk_delete**](docs/ServiceResourceAttachmentApi.md#service_resource_attachment_pk_delete) | **DELETE** /service-resource-attachment/{pk} | 
+*AutosdeOpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attachment_pk_get**](docs/ServiceResourceAttachmentApi.md#service_resource_attachment_pk_get) | **GET** /service-resource-attachment/{pk} | 
+*AutosdeOpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attachment_post**](docs/ServiceResourceAttachmentApi.md#service_resource_attachment_post) | **POST** /service-resource-attachment | 
 *AutosdeOpenapiClient::SnapshotApi* | [**snapshots_get**](docs/SnapshotApi.md#snapshots_get) | **GET** /snapshots | 
 *AutosdeOpenapiClient::SnapshotApi* | [**snapshots_pk_delete**](docs/SnapshotApi.md#snapshots_pk_delete) | **DELETE** /snapshots/{pk} | 
 *AutosdeOpenapiClient::SnapshotApi* | [**snapshots_pk_get**](docs/SnapshotApi.md#snapshots_pk_get) | **GET** /snapshots/{pk} | 

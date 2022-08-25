@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**service_resource_attchment_get**](ServiceResourceAttachmentApi.md#service_resource_attchment_get) | **GET** /service-resource-attchment |  |
-| [**service_resource_attchment_pk_delete**](ServiceResourceAttachmentApi.md#service_resource_attchment_pk_delete) | **DELETE** /service-resource-attchment/{pk} |  |
-| [**service_resource_attchment_pk_get**](ServiceResourceAttachmentApi.md#service_resource_attchment_pk_get) | **GET** /service-resource-attchment/{pk} |  |
-| [**service_resource_attchment_post**](ServiceResourceAttachmentApi.md#service_resource_attchment_post) | **POST** /service-resource-attchment |  |
+| [**service_resource_attachment_get**](ServiceResourceAttachmentApi.md#service_resource_attachment_get) | **GET** /service-resource-attachment |  |
+| [**service_resource_attachment_pk_delete**](ServiceResourceAttachmentApi.md#service_resource_attachment_pk_delete) | **DELETE** /service-resource-attachment/{pk} |  |
+| [**service_resource_attachment_pk_get**](ServiceResourceAttachmentApi.md#service_resource_attachment_pk_get) | **GET** /service-resource-attachment/{pk} |  |
+| [**service_resource_attachment_post**](ServiceResourceAttachmentApi.md#service_resource_attachment_post) | **POST** /service-resource-attachment |  |
 
 
-## service_resource_attchment_get
+## service_resource_attachment_get
 
-> <Array<ServiceResourceAttachment>> service_resource_attchment_get
+> <Array<ServiceResourceAttachment>> service_resource_attachment_get
 
 
 
@@ -31,28 +31,28 @@ api_instance = AutosdeOpenapiClient::ServiceResourceAttachmentApi.new
 
 begin
   
-  result = api_instance.service_resource_attchment_get
+  result = api_instance.service_resource_attachment_get
   p result
 rescue AutosdeOpenapiClient::ApiError => e
-  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attchment_get: #{e}"
+  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attachment_get: #{e}"
 end
 ```
 
-#### Using the service_resource_attchment_get_with_http_info variant
+#### Using the service_resource_attachment_get_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<ServiceResourceAttachment>>, Integer, Hash)> service_resource_attchment_get_with_http_info
+> <Array(<Array<ServiceResourceAttachment>>, Integer, Hash)> service_resource_attachment_get_with_http_info
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.service_resource_attchment_get_with_http_info
+  data, status_code, headers = api_instance.service_resource_attachment_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<ServiceResourceAttachment>>
 rescue AutosdeOpenapiClient::ApiError => e
-  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attchment_get_with_http_info: #{e}"
+  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attachment_get_with_http_info: #{e}"
 end
 ```
 
@@ -74,9 +74,9 @@ This endpoint does not need any parameter.
 - **Accept**: */*
 
 
-## service_resource_attchment_pk_delete
+## service_resource_attachment_pk_delete
 
-> <Array<ServiceResourceAttachment>> service_resource_attchment_pk_delete(pk)
+> <Array<ServiceResourceAttachment>> service_resource_attachment_pk_delete(pk)
 
 
 
@@ -96,28 +96,28 @@ pk = 56 # Integer |
 
 begin
   
-  result = api_instance.service_resource_attchment_pk_delete(pk)
+  result = api_instance.service_resource_attachment_pk_delete(pk)
   p result
 rescue AutosdeOpenapiClient::ApiError => e
-  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attchment_pk_delete: #{e}"
+  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attachment_pk_delete: #{e}"
 end
 ```
 
-#### Using the service_resource_attchment_pk_delete_with_http_info variant
+#### Using the service_resource_attachment_pk_delete_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<ServiceResourceAttachment>>, Integer, Hash)> service_resource_attchment_pk_delete_with_http_info(pk)
+> <Array(<Array<ServiceResourceAttachment>>, Integer, Hash)> service_resource_attachment_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.service_resource_attchment_pk_delete_with_http_info(pk)
+  data, status_code, headers = api_instance.service_resource_attachment_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<ServiceResourceAttachment>>
 rescue AutosdeOpenapiClient::ApiError => e
-  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attchment_pk_delete_with_http_info: #{e}"
+  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attachment_pk_delete_with_http_info: #{e}"
 end
 ```
 
@@ -141,9 +141,9 @@ end
 - **Accept**: */*
 
 
-## service_resource_attchment_pk_get
+## service_resource_attachment_pk_get
 
-> <Array<ServiceResourceAttachment>> service_resource_attchment_pk_get(pk)
+> <Array<ServiceResourceAttachment>> service_resource_attachment_pk_get(pk)
 
 
 
@@ -163,28 +163,28 @@ pk = 56 # Integer |
 
 begin
   
-  result = api_instance.service_resource_attchment_pk_get(pk)
+  result = api_instance.service_resource_attachment_pk_get(pk)
   p result
 rescue AutosdeOpenapiClient::ApiError => e
-  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attchment_pk_get: #{e}"
+  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attachment_pk_get: #{e}"
 end
 ```
 
-#### Using the service_resource_attchment_pk_get_with_http_info variant
+#### Using the service_resource_attachment_pk_get_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<ServiceResourceAttachment>>, Integer, Hash)> service_resource_attchment_pk_get_with_http_info(pk)
+> <Array(<Array<ServiceResourceAttachment>>, Integer, Hash)> service_resource_attachment_pk_get_with_http_info(pk)
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.service_resource_attchment_pk_get_with_http_info(pk)
+  data, status_code, headers = api_instance.service_resource_attachment_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<ServiceResourceAttachment>>
 rescue AutosdeOpenapiClient::ApiError => e
-  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attchment_pk_get_with_http_info: #{e}"
+  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attachment_pk_get_with_http_info: #{e}"
 end
 ```
 
@@ -208,9 +208,9 @@ end
 - **Accept**: */*
 
 
-## service_resource_attchment_post
+## service_resource_attachment_post
 
-> <ServiceResourceAttachment> service_resource_attchment_post(service_resource_attachment)
+> <ServiceResourceAttachment> service_resource_attachment_post(service_resource_attachment)
 
 
 
@@ -230,28 +230,28 @@ service_resource_attachment = AutosdeOpenapiClient::ServiceResourceAttachment.ne
 
 begin
   
-  result = api_instance.service_resource_attchment_post(service_resource_attachment)
+  result = api_instance.service_resource_attachment_post(service_resource_attachment)
   p result
 rescue AutosdeOpenapiClient::ApiError => e
-  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attchment_post: #{e}"
+  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attachment_post: #{e}"
 end
 ```
 
-#### Using the service_resource_attchment_post_with_http_info variant
+#### Using the service_resource_attachment_post_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ServiceResourceAttachment>, Integer, Hash)> service_resource_attchment_post_with_http_info(service_resource_attachment)
+> <Array(<ServiceResourceAttachment>, Integer, Hash)> service_resource_attachment_post_with_http_info(service_resource_attachment)
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.service_resource_attchment_post_with_http_info(service_resource_attachment)
+  data, status_code, headers = api_instance.service_resource_attachment_post_with_http_info(service_resource_attachment)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ServiceResourceAttachment>
 rescue AutosdeOpenapiClient::ApiError => e
-  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attchment_post_with_http_info: #{e}"
+  puts "Error when calling ServiceResourceAttachmentApi->service_resource_attachment_post_with_http_info: #{e}"
 end
 ```
 

@@ -21,19 +21,19 @@ module AutosdeOpenapiClient
     end
     # @param [Hash] opts the optional parameters
     # @return [Array<ServiceResourceAttachment>]
-    def service_resource_attchment_get(opts = {})
-      data, _status_code, _headers = service_resource_attchment_get_with_http_info(opts)
+    def service_resource_attachment_get(opts = {})
+      data, _status_code, _headers = service_resource_attachment_get_with_http_info(opts)
       data
     end
 
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<ServiceResourceAttachment>, Integer, Hash)>] Array<ServiceResourceAttachment> data, response status code and response headers
-    def service_resource_attchment_get_with_http_info(opts = {})
+    def service_resource_attachment_get_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: ServiceResourceAttachmentApi.service_resource_attchment_get ...'
+        @api_client.config.logger.debug 'Calling API: ServiceResourceAttachmentApi.service_resource_attachment_get ...'
       end
       # resource path
-      local_var_path = '/service-resource-attchment'
+      local_var_path = '/service-resource-attachment'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -56,7 +56,7 @@ module AutosdeOpenapiClient
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
 
       new_options = opts.merge(
-        :operation => :"ServiceResourceAttachmentApi.service_resource_attchment_get",
+        :operation => :"ServiceResourceAttachmentApi.service_resource_attachment_get",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -67,7 +67,7 @@ module AutosdeOpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ServiceResourceAttachmentApi#service_resource_attchment_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ServiceResourceAttachmentApi#service_resource_attachment_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -75,24 +75,24 @@ module AutosdeOpenapiClient
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
     # @return [Array<ServiceResourceAttachment>]
-    def service_resource_attchment_pk_delete(pk, opts = {})
-      data, _status_code, _headers = service_resource_attchment_pk_delete_with_http_info(pk, opts)
+    def service_resource_attachment_pk_delete(pk, opts = {})
+      data, _status_code, _headers = service_resource_attachment_pk_delete_with_http_info(pk, opts)
       data
     end
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<ServiceResourceAttachment>, Integer, Hash)>] Array<ServiceResourceAttachment> data, response status code and response headers
-    def service_resource_attchment_pk_delete_with_http_info(pk, opts = {})
+    def service_resource_attachment_pk_delete_with_http_info(pk, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: ServiceResourceAttachmentApi.service_resource_attchment_pk_delete ...'
+        @api_client.config.logger.debug 'Calling API: ServiceResourceAttachmentApi.service_resource_attachment_pk_delete ...'
       end
       # verify the required parameter 'pk' is set
       if @api_client.config.client_side_validation && pk.nil?
-        fail ArgumentError, "Missing the required parameter 'pk' when calling ServiceResourceAttachmentApi.service_resource_attchment_pk_delete"
+        fail ArgumentError, "Missing the required parameter 'pk' when calling ServiceResourceAttachmentApi.service_resource_attachment_pk_delete"
       end
       # resource path
-      local_var_path = '/service-resource-attchment/{pk}'.sub('{' + 'pk' + '}', CGI.escape(pk.to_s))
+      local_var_path = '/service-resource-attachment/{pk}'.sub('{' + 'pk' + '}', CGI.escape(pk.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -115,7 +115,7 @@ module AutosdeOpenapiClient
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
 
       new_options = opts.merge(
-        :operation => :"ServiceResourceAttachmentApi.service_resource_attchment_pk_delete",
+        :operation => :"ServiceResourceAttachmentApi.service_resource_attachment_pk_delete",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -126,7 +126,7 @@ module AutosdeOpenapiClient
 
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ServiceResourceAttachmentApi#service_resource_attchment_pk_delete\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ServiceResourceAttachmentApi#service_resource_attachment_pk_delete\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -134,24 +134,24 @@ module AutosdeOpenapiClient
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
     # @return [Array<ServiceResourceAttachment>]
-    def service_resource_attchment_pk_get(pk, opts = {})
-      data, _status_code, _headers = service_resource_attchment_pk_get_with_http_info(pk, opts)
+    def service_resource_attachment_pk_get(pk, opts = {})
+      data, _status_code, _headers = service_resource_attachment_pk_get_with_http_info(pk, opts)
       data
     end
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<ServiceResourceAttachment>, Integer, Hash)>] Array<ServiceResourceAttachment> data, response status code and response headers
-    def service_resource_attchment_pk_get_with_http_info(pk, opts = {})
+    def service_resource_attachment_pk_get_with_http_info(pk, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: ServiceResourceAttachmentApi.service_resource_attchment_pk_get ...'
+        @api_client.config.logger.debug 'Calling API: ServiceResourceAttachmentApi.service_resource_attachment_pk_get ...'
       end
       # verify the required parameter 'pk' is set
       if @api_client.config.client_side_validation && pk.nil?
-        fail ArgumentError, "Missing the required parameter 'pk' when calling ServiceResourceAttachmentApi.service_resource_attchment_pk_get"
+        fail ArgumentError, "Missing the required parameter 'pk' when calling ServiceResourceAttachmentApi.service_resource_attachment_pk_get"
       end
       # resource path
-      local_var_path = '/service-resource-attchment/{pk}'.sub('{' + 'pk' + '}', CGI.escape(pk.to_s))
+      local_var_path = '/service-resource-attachment/{pk}'.sub('{' + 'pk' + '}', CGI.escape(pk.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -174,7 +174,7 @@ module AutosdeOpenapiClient
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
 
       new_options = opts.merge(
-        :operation => :"ServiceResourceAttachmentApi.service_resource_attchment_pk_get",
+        :operation => :"ServiceResourceAttachmentApi.service_resource_attachment_pk_get",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -185,7 +185,7 @@ module AutosdeOpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ServiceResourceAttachmentApi#service_resource_attchment_pk_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ServiceResourceAttachmentApi#service_resource_attachment_pk_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -193,24 +193,24 @@ module AutosdeOpenapiClient
     # @param service_resource_attachment [ServiceResourceAttachment] 
     # @param [Hash] opts the optional parameters
     # @return [ServiceResourceAttachment]
-    def service_resource_attchment_post(service_resource_attachment, opts = {})
-      data, _status_code, _headers = service_resource_attchment_post_with_http_info(service_resource_attachment, opts)
+    def service_resource_attachment_post(service_resource_attachment, opts = {})
+      data, _status_code, _headers = service_resource_attachment_post_with_http_info(service_resource_attachment, opts)
       data
     end
 
     # @param service_resource_attachment [ServiceResourceAttachment] 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ServiceResourceAttachment, Integer, Hash)>] ServiceResourceAttachment data, response status code and response headers
-    def service_resource_attchment_post_with_http_info(service_resource_attachment, opts = {})
+    def service_resource_attachment_post_with_http_info(service_resource_attachment, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: ServiceResourceAttachmentApi.service_resource_attchment_post ...'
+        @api_client.config.logger.debug 'Calling API: ServiceResourceAttachmentApi.service_resource_attachment_post ...'
       end
       # verify the required parameter 'service_resource_attachment' is set
       if @api_client.config.client_side_validation && service_resource_attachment.nil?
-        fail ArgumentError, "Missing the required parameter 'service_resource_attachment' when calling ServiceResourceAttachmentApi.service_resource_attchment_post"
+        fail ArgumentError, "Missing the required parameter 'service_resource_attachment' when calling ServiceResourceAttachmentApi.service_resource_attachment_post"
       end
       # resource path
-      local_var_path = '/service-resource-attchment'
+      local_var_path = '/service-resource-attachment'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -235,7 +235,7 @@ module AutosdeOpenapiClient
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
 
       new_options = opts.merge(
-        :operation => :"ServiceResourceAttachmentApi.service_resource_attchment_post",
+        :operation => :"ServiceResourceAttachmentApi.service_resource_attachment_post",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -246,7 +246,7 @@ module AutosdeOpenapiClient
 
       data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: ServiceResourceAttachmentApi#service_resource_attchment_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: ServiceResourceAttachmentApi#service_resource_attachment_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -32,40 +32,40 @@ describe 'ServiceResourceAttachmentApi' do
     end
   end
 
-  # unit tests for service_resource_attchment_get
+  # unit tests for service_resource_attachment_get
   # @param [Hash] opts the optional parameters
   # @return [Array<ServiceResourceAttachment>]
-  describe 'service_resource_attchment_get test' do
+  describe 'service_resource_attachment_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for service_resource_attchment_pk_delete
+  # unit tests for service_resource_attachment_pk_delete
   # @param pk 
   # @param [Hash] opts the optional parameters
   # @return [Array<ServiceResourceAttachment>]
-  describe 'service_resource_attchment_pk_delete test' do
+  describe 'service_resource_attachment_pk_delete test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for service_resource_attchment_pk_get
+  # unit tests for service_resource_attachment_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
   # @return [Array<ServiceResourceAttachment>]
-  describe 'service_resource_attchment_pk_get test' do
+  describe 'service_resource_attachment_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for service_resource_attchment_post
+  # unit tests for service_resource_attachment_post
   # @param service_resource_attachment 
   # @param [Hash] opts the optional parameters
   # @return [ServiceResourceAttachment]
-  describe 'service_resource_attchment_post test' do
+  describe 'service_resource_attachment_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
