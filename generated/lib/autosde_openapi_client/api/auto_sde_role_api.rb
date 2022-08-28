@@ -74,7 +74,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<AutoSDERole>]
+    # @return [AutoSDERole]
     def autosde_roles_pk_delete(pk, opts = {})
       data, _status_code, _headers = autosde_roles_pk_delete_with_http_info(pk, opts)
       data
@@ -82,7 +82,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<AutoSDERole>, Integer, Hash)>] Array<AutoSDERole> data, response status code and response headers
+    # @return [Array<(AutoSDERole, Integer, Hash)>] AutoSDERole data, response status code and response headers
     def autosde_roles_pk_delete_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AutoSDERoleApi.autosde_roles_pk_delete ...'
@@ -109,7 +109,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<AutoSDERole>'
+      return_type = opts[:debug_return_type] || 'AutoSDERole'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -133,7 +133,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<AutoSDERole>]
+    # @return [AutoSDERole]
     def autosde_roles_pk_get(pk, opts = {})
       data, _status_code, _headers = autosde_roles_pk_get_with_http_info(pk, opts)
       data
@@ -141,7 +141,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<AutoSDERole>, Integer, Hash)>] Array<AutoSDERole> data, response status code and response headers
+    # @return [Array<(AutoSDERole, Integer, Hash)>] AutoSDERole data, response status code and response headers
     def autosde_roles_pk_get_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AutoSDERoleApi.autosde_roles_pk_get ...'
@@ -168,7 +168,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<AutoSDERole>'
+      return_type = opts[:debug_return_type] || 'AutoSDERole'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

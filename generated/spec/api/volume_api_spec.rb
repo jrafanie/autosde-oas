@@ -44,7 +44,7 @@ describe 'VolumeApi' do
   # unit tests for volumes_pk_delete
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<Volume>]
+  # @return [AsyncResponse]
   describe 'volumes_pk_delete test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,7 +54,7 @@ describe 'VolumeApi' do
   # unit tests for volumes_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<VolumeResponse>]
+  # @return [VolumeResponse]
   describe 'volumes_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -65,7 +65,7 @@ describe 'VolumeApi' do
   # @param pk 
   # @param volume_update 
   # @param [Hash] opts the optional parameters
-  # @return [VolumeResponse]
+  # @return [AsyncResponse]
   describe 'volumes_pk_put test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

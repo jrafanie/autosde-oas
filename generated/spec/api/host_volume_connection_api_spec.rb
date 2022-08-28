@@ -44,7 +44,7 @@ describe 'HostVolumeConnectionApi' do
   # unit tests for host_volume_connection_pk_delete
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<HostVolumeConnection>]
+  # @return [AsyncResponse]
   describe 'host_volume_connection_pk_delete test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,7 +54,7 @@ describe 'HostVolumeConnectionApi' do
   # unit tests for host_volume_connection_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<HostVolumeConnection>]
+  # @return [HostVolumeConnection]
   describe 'host_volume_connection_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

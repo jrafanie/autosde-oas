@@ -44,7 +44,7 @@ describe 'StorageResourceApi' do
   # unit tests for storage_resources_pk_delete
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<StorageResourceResponse>]
+  # @return [AsyncResponse]
   describe 'storage_resources_pk_delete test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,7 +54,7 @@ describe 'StorageResourceApi' do
   # unit tests for storage_resources_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<StorageResourceResponse>]
+  # @return [StorageResourceResponse]
   describe 'storage_resources_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -65,7 +65,7 @@ describe 'StorageResourceApi' do
   # @param pk 
   # @param storage_resource_create 
   # @param [Hash] opts the optional parameters
-  # @return [StorageResourceResponse]
+  # @return [AsyncResponse]
   describe 'storage_resources_pk_put test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

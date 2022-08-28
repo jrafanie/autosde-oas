@@ -76,7 +76,7 @@ This endpoint does not need any parameter.
 
 ## storage_hosts_mapping_pk_delete
 
-> <Array<StorageHostsMappingResponse>> storage_hosts_mapping_pk_delete(pk)
+> <AsyncResponse> storage_hosts_mapping_pk_delete(pk)
 
 
 
@@ -107,7 +107,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<StorageHostsMappingResponse>>, Integer, Hash)> storage_hosts_mapping_pk_delete_with_http_info(pk)
+> <Array(<AsyncResponse>, Integer, Hash)> storage_hosts_mapping_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -115,7 +115,7 @@ begin
   data, status_code, headers = api_instance.storage_hosts_mapping_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<StorageHostsMappingResponse>>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostsMappingApi->storage_hosts_mapping_pk_delete_with_http_info: #{e}"
 end
@@ -129,7 +129,7 @@ end
 
 ### Return type
 
-[**Array&lt;StorageHostsMappingResponse&gt;**](StorageHostsMappingResponse.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ end
 
 ## storage_hosts_mapping_pk_get
 
-> <Array<StorageHostsMappingResponse>> storage_hosts_mapping_pk_get(pk)
+> <StorageHostsMappingResponse> storage_hosts_mapping_pk_get(pk)
 
 
 
@@ -174,7 +174,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<StorageHostsMappingResponse>>, Integer, Hash)> storage_hosts_mapping_pk_get_with_http_info(pk)
+> <Array(<StorageHostsMappingResponse>, Integer, Hash)> storage_hosts_mapping_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -182,7 +182,7 @@ begin
   data, status_code, headers = api_instance.storage_hosts_mapping_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<StorageHostsMappingResponse>>
+  p data # => <StorageHostsMappingResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostsMappingApi->storage_hosts_mapping_pk_get_with_http_info: #{e}"
 end
@@ -196,7 +196,7 @@ end
 
 ### Return type
 
-[**Array&lt;StorageHostsMappingResponse&gt;**](StorageHostsMappingResponse.md)
+[**StorageHostsMappingResponse**](StorageHostsMappingResponse.md)
 
 ### Authorization
 

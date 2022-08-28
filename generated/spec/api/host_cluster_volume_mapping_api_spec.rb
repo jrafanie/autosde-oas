@@ -44,7 +44,7 @@ describe 'HostClusterVolumeMappingApi' do
   # unit tests for host_clusters_mapping_pk_delete
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<HostClusterVolumeMappingResponse>]
+  # @return [HostClusterVolumeMappingResponse]
   describe 'host_clusters_mapping_pk_delete test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,7 +54,7 @@ describe 'HostClusterVolumeMappingApi' do
   # unit tests for host_clusters_mapping_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<HostClusterVolumeMappingResponse>]
+  # @return [HostClusterVolumeMappingResponse]
   describe 'host_clusters_mapping_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

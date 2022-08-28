@@ -77,7 +77,7 @@ This endpoint does not need any parameter.
 
 ## accounts_pk_delete
 
-> <Array<AccountPostResponse>> accounts_pk_delete(pk)
+> <AccountPostResponse> accounts_pk_delete(pk)
 
 
 
@@ -108,7 +108,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<AccountPostResponse>>, Integer, Hash)> accounts_pk_delete_with_http_info(pk)
+> <Array(<AccountPostResponse>, Integer, Hash)> accounts_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -116,7 +116,7 @@ begin
   data, status_code, headers = api_instance.accounts_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<AccountPostResponse>>
+  p data # => <AccountPostResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AccountApi->accounts_pk_delete_with_http_info: #{e}"
 end
@@ -130,7 +130,7 @@ end
 
 ### Return type
 
-[**Array&lt;AccountPostResponse&gt;**](AccountPostResponse.md)
+[**AccountPostResponse**](AccountPostResponse.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ end
 
 ## accounts_pk_get
 
-> <Array<AccountPostResponse>> accounts_pk_get(pk)
+> <AccountPostResponse> accounts_pk_get(pk)
 
 
 
@@ -175,7 +175,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<AccountPostResponse>>, Integer, Hash)> accounts_pk_get_with_http_info(pk)
+> <Array(<AccountPostResponse>, Integer, Hash)> accounts_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -183,7 +183,7 @@ begin
   data, status_code, headers = api_instance.accounts_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<AccountPostResponse>>
+  p data # => <AccountPostResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AccountApi->accounts_pk_get_with_http_info: #{e}"
 end
@@ -197,7 +197,7 @@ end
 
 ### Return type
 
-[**Array&lt;AccountPostResponse&gt;**](AccountPostResponse.md)
+[**AccountPostResponse**](AccountPostResponse.md)
 
 ### Authorization
 

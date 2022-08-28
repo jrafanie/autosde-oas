@@ -77,7 +77,7 @@ This endpoint does not need any parameter.
 
 ## storage_resources_pk_delete
 
-> <Array<StorageResourceResponse>> storage_resources_pk_delete(pk)
+> <AsyncResponse> storage_resources_pk_delete(pk)
 
 
 
@@ -108,7 +108,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<StorageResourceResponse>>, Integer, Hash)> storage_resources_pk_delete_with_http_info(pk)
+> <Array(<AsyncResponse>, Integer, Hash)> storage_resources_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -116,7 +116,7 @@ begin
   data, status_code, headers = api_instance.storage_resources_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<StorageResourceResponse>>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageResourceApi->storage_resources_pk_delete_with_http_info: #{e}"
 end
@@ -130,7 +130,7 @@ end
 
 ### Return type
 
-[**Array&lt;StorageResourceResponse&gt;**](StorageResourceResponse.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ end
 
 ## storage_resources_pk_get
 
-> <Array<StorageResourceResponse>> storage_resources_pk_get(pk)
+> <StorageResourceResponse> storage_resources_pk_get(pk)
 
 
 
@@ -175,7 +175,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<StorageResourceResponse>>, Integer, Hash)> storage_resources_pk_get_with_http_info(pk)
+> <Array(<StorageResourceResponse>, Integer, Hash)> storage_resources_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -183,7 +183,7 @@ begin
   data, status_code, headers = api_instance.storage_resources_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<StorageResourceResponse>>
+  p data # => <StorageResourceResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageResourceApi->storage_resources_pk_get_with_http_info: #{e}"
 end
@@ -197,7 +197,7 @@ end
 
 ### Return type
 
-[**Array&lt;StorageResourceResponse&gt;**](StorageResourceResponse.md)
+[**StorageResourceResponse**](StorageResourceResponse.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ end
 
 ## storage_resources_pk_put
 
-> <StorageResourceResponse> storage_resources_pk_put(pk, storage_resource_create)
+> <AsyncResponse> storage_resources_pk_put(pk, storage_resource_create)
 
 
 
@@ -243,7 +243,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<StorageResourceResponse>, Integer, Hash)> storage_resources_pk_put_with_http_info(pk, storage_resource_create)
+> <Array(<AsyncResponse>, Integer, Hash)> storage_resources_pk_put_with_http_info(pk, storage_resource_create)
 
 ```ruby
 begin
@@ -251,7 +251,7 @@ begin
   data, status_code, headers = api_instance.storage_resources_pk_put_with_http_info(pk, storage_resource_create)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <StorageResourceResponse>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageResourceApi->storage_resources_pk_put_with_http_info: #{e}"
 end
@@ -266,7 +266,7 @@ end
 
 ### Return type
 
-[**StorageResourceResponse**](StorageResourceResponse.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

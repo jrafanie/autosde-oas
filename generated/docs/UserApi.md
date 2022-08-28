@@ -77,7 +77,7 @@ This endpoint does not need any parameter.
 
 ## autosde_users_pk_delete
 
-> <Array<User>> autosde_users_pk_delete(pk)
+> <User> autosde_users_pk_delete(pk)
 
 
 
@@ -108,7 +108,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<User>>, Integer, Hash)> autosde_users_pk_delete_with_http_info(pk)
+> <Array(<User>, Integer, Hash)> autosde_users_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -116,7 +116,7 @@ begin
   data, status_code, headers = api_instance.autosde_users_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<User>>
+  p data # => <User>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling UserApi->autosde_users_pk_delete_with_http_info: #{e}"
 end
@@ -130,7 +130,7 @@ end
 
 ### Return type
 
-[**Array&lt;User&gt;**](User.md)
+[**User**](User.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ end
 
 ## autosde_users_pk_get
 
-> <Array<UserCreate>> autosde_users_pk_get(pk)
+> <UserCreate> autosde_users_pk_get(pk)
 
 
 
@@ -175,7 +175,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UserCreate>>, Integer, Hash)> autosde_users_pk_get_with_http_info(pk)
+> <Array(<UserCreate>, Integer, Hash)> autosde_users_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -183,7 +183,7 @@ begin
   data, status_code, headers = api_instance.autosde_users_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<UserCreate>>
+  p data # => <UserCreate>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling UserApi->autosde_users_pk_get_with_http_info: #{e}"
 end
@@ -197,7 +197,7 @@ end
 
 ### Return type
 
-[**Array&lt;UserCreate&gt;**](UserCreate.md)
+[**UserCreate**](UserCreate.md)
 
 ### Authorization
 

@@ -77,7 +77,7 @@ This endpoint does not need any parameter.
 
 ## storage_systems_pk_delete
 
-> <Array<StorageSystem>> storage_systems_pk_delete(pk)
+> <AsyncResponse> storage_systems_pk_delete(pk)
 
 
 
@@ -108,7 +108,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<StorageSystem>>, Integer, Hash)> storage_systems_pk_delete_with_http_info(pk)
+> <Array(<AsyncResponse>, Integer, Hash)> storage_systems_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -116,7 +116,7 @@ begin
   data, status_code, headers = api_instance.storage_systems_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<StorageSystem>>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageSystemApi->storage_systems_pk_delete_with_http_info: #{e}"
 end
@@ -130,7 +130,7 @@ end
 
 ### Return type
 
-[**Array&lt;StorageSystem&gt;**](StorageSystem.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ end
 
 ## storage_systems_pk_get
 
-> <Array<StorageSystem>> storage_systems_pk_get(pk)
+> <StorageSystem> storage_systems_pk_get(pk)
 
 
 
@@ -175,7 +175,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<StorageSystem>>, Integer, Hash)> storage_systems_pk_get_with_http_info(pk)
+> <Array(<StorageSystem>, Integer, Hash)> storage_systems_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -183,7 +183,7 @@ begin
   data, status_code, headers = api_instance.storage_systems_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<StorageSystem>>
+  p data # => <StorageSystem>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageSystemApi->storage_systems_pk_get_with_http_info: #{e}"
 end
@@ -197,7 +197,7 @@ end
 
 ### Return type
 
-[**Array&lt;StorageSystem&gt;**](StorageSystem.md)
+[**StorageSystem**](StorageSystem.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ end
 
 ## storage_systems_pk_put
 
-> <StorageSystem> storage_systems_pk_put(pk, storage_system_update)
+> <AsyncResponse> storage_systems_pk_put(pk, storage_system_update)
 
 
 
@@ -243,7 +243,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<StorageSystem>, Integer, Hash)> storage_systems_pk_put_with_http_info(pk, storage_system_update)
+> <Array(<AsyncResponse>, Integer, Hash)> storage_systems_pk_put_with_http_info(pk, storage_system_update)
 
 ```ruby
 begin
@@ -251,7 +251,7 @@ begin
   data, status_code, headers = api_instance.storage_systems_pk_put_with_http_info(pk, storage_system_update)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <StorageSystem>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageSystemApi->storage_systems_pk_put_with_http_info: #{e}"
 end
@@ -266,7 +266,7 @@ end
 
 ### Return type
 
-[**StorageSystem**](StorageSystem.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

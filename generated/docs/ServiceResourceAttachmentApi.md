@@ -76,7 +76,7 @@ This endpoint does not need any parameter.
 
 ## service_resource_attachment_pk_delete
 
-> <Array<ServiceResourceAttachment>> service_resource_attachment_pk_delete(pk)
+> <AsyncResponse> service_resource_attachment_pk_delete(pk)
 
 
 
@@ -107,7 +107,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<ServiceResourceAttachment>>, Integer, Hash)> service_resource_attachment_pk_delete_with_http_info(pk)
+> <Array(<AsyncResponse>, Integer, Hash)> service_resource_attachment_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -115,7 +115,7 @@ begin
   data, status_code, headers = api_instance.service_resource_attachment_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<ServiceResourceAttachment>>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceResourceAttachmentApi->service_resource_attachment_pk_delete_with_http_info: #{e}"
 end
@@ -129,7 +129,7 @@ end
 
 ### Return type
 
-[**Array&lt;ServiceResourceAttachment&gt;**](ServiceResourceAttachment.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ end
 
 ## service_resource_attachment_pk_get
 
-> <Array<ServiceResourceAttachment>> service_resource_attachment_pk_get(pk)
+> <ServiceResourceAttachment> service_resource_attachment_pk_get(pk)
 
 
 
@@ -174,7 +174,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<ServiceResourceAttachment>>, Integer, Hash)> service_resource_attachment_pk_get_with_http_info(pk)
+> <Array(<ServiceResourceAttachment>, Integer, Hash)> service_resource_attachment_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -182,7 +182,7 @@ begin
   data, status_code, headers = api_instance.service_resource_attachment_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<ServiceResourceAttachment>>
+  p data # => <ServiceResourceAttachment>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceResourceAttachmentApi->service_resource_attachment_pk_get_with_http_info: #{e}"
 end
@@ -196,7 +196,7 @@ end
 
 ### Return type
 
-[**Array&lt;ServiceResourceAttachment&gt;**](ServiceResourceAttachment.md)
+[**ServiceResourceAttachment**](ServiceResourceAttachment.md)
 
 ### Authorization
 

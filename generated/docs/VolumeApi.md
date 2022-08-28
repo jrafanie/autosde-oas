@@ -77,7 +77,7 @@ This endpoint does not need any parameter.
 
 ## volumes_pk_delete
 
-> <Array<Volume>> volumes_pk_delete(pk)
+> <AsyncResponse> volumes_pk_delete(pk)
 
 
 
@@ -108,7 +108,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<Volume>>, Integer, Hash)> volumes_pk_delete_with_http_info(pk)
+> <Array(<AsyncResponse>, Integer, Hash)> volumes_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -116,7 +116,7 @@ begin
   data, status_code, headers = api_instance.volumes_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<Volume>>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeApi->volumes_pk_delete_with_http_info: #{e}"
 end
@@ -130,7 +130,7 @@ end
 
 ### Return type
 
-[**Array&lt;Volume&gt;**](Volume.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ end
 
 ## volumes_pk_get
 
-> <Array<VolumeResponse>> volumes_pk_get(pk)
+> <VolumeResponse> volumes_pk_get(pk)
 
 
 
@@ -175,7 +175,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<VolumeResponse>>, Integer, Hash)> volumes_pk_get_with_http_info(pk)
+> <Array(<VolumeResponse>, Integer, Hash)> volumes_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -183,7 +183,7 @@ begin
   data, status_code, headers = api_instance.volumes_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<VolumeResponse>>
+  p data # => <VolumeResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeApi->volumes_pk_get_with_http_info: #{e}"
 end
@@ -197,7 +197,7 @@ end
 
 ### Return type
 
-[**Array&lt;VolumeResponse&gt;**](VolumeResponse.md)
+[**VolumeResponse**](VolumeResponse.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ end
 
 ## volumes_pk_put
 
-> <VolumeResponse> volumes_pk_put(pk, volume_update)
+> <AsyncResponse> volumes_pk_put(pk, volume_update)
 
 
 
@@ -243,7 +243,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<VolumeResponse>, Integer, Hash)> volumes_pk_put_with_http_info(pk, volume_update)
+> <Array(<AsyncResponse>, Integer, Hash)> volumes_pk_put_with_http_info(pk, volume_update)
 
 ```ruby
 begin
@@ -251,7 +251,7 @@ begin
   data, status_code, headers = api_instance.volumes_pk_put_with_http_info(pk, volume_update)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <VolumeResponse>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeApi->volumes_pk_put_with_http_info: #{e}"
 end
@@ -266,7 +266,7 @@ end
 
 ### Return type
 
-[**VolumeResponse**](VolumeResponse.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

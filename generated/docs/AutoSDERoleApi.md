@@ -76,7 +76,7 @@ This endpoint does not need any parameter.
 
 ## autosde_roles_pk_delete
 
-> <Array<AutoSDERole>> autosde_roles_pk_delete(pk)
+> <AutoSDERole> autosde_roles_pk_delete(pk)
 
 
 
@@ -107,7 +107,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<AutoSDERole>>, Integer, Hash)> autosde_roles_pk_delete_with_http_info(pk)
+> <Array(<AutoSDERole>, Integer, Hash)> autosde_roles_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -115,7 +115,7 @@ begin
   data, status_code, headers = api_instance.autosde_roles_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<AutoSDERole>>
+  p data # => <AutoSDERole>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AutoSDERoleApi->autosde_roles_pk_delete_with_http_info: #{e}"
 end
@@ -129,7 +129,7 @@ end
 
 ### Return type
 
-[**Array&lt;AutoSDERole&gt;**](AutoSDERole.md)
+[**AutoSDERole**](AutoSDERole.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ end
 
 ## autosde_roles_pk_get
 
-> <Array<AutoSDERole>> autosde_roles_pk_get(pk)
+> <AutoSDERole> autosde_roles_pk_get(pk)
 
 
 
@@ -174,7 +174,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<AutoSDERole>>, Integer, Hash)> autosde_roles_pk_get_with_http_info(pk)
+> <Array(<AutoSDERole>, Integer, Hash)> autosde_roles_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -182,7 +182,7 @@ begin
   data, status_code, headers = api_instance.autosde_roles_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<AutoSDERole>>
+  p data # => <AutoSDERole>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AutoSDERoleApi->autosde_roles_pk_get_with_http_info: #{e}"
 end
@@ -196,7 +196,7 @@ end
 
 ### Return type
 
-[**Array&lt;AutoSDERole&gt;**](AutoSDERole.md)
+[**AutoSDERole**](AutoSDERole.md)
 
 ### Authorization
 

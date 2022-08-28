@@ -44,7 +44,7 @@ describe 'HostApi' do
   # unit tests for hosts_pk_delete
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<Host>]
+  # @return [AsyncResponse]
   describe 'hosts_pk_delete test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,7 +54,7 @@ describe 'HostApi' do
   # unit tests for hosts_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<Host>]
+  # @return [Host]
   describe 'hosts_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

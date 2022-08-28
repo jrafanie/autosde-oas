@@ -44,7 +44,7 @@ describe 'StorageHostsMappingApi' do
   # unit tests for storage_hosts_mapping_pk_delete
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<StorageHostsMappingResponse>]
+  # @return [AsyncResponse]
   describe 'storage_hosts_mapping_pk_delete test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,7 +54,7 @@ describe 'StorageHostsMappingApi' do
   # unit tests for storage_hosts_mapping_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<StorageHostsMappingResponse>]
+  # @return [StorageHostsMappingResponse]
   describe 'storage_hosts_mapping_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

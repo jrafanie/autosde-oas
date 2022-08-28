@@ -74,7 +74,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<AbstractCapability>]
+    # @return [AbstractCapability]
     def abstract_capabilities_pk_delete(pk, opts = {})
       data, _status_code, _headers = abstract_capabilities_pk_delete_with_http_info(pk, opts)
       data
@@ -82,7 +82,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<AbstractCapability>, Integer, Hash)>] Array<AbstractCapability> data, response status code and response headers
+    # @return [Array<(AbstractCapability, Integer, Hash)>] AbstractCapability data, response status code and response headers
     def abstract_capabilities_pk_delete_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AbstractCapabilityApi.abstract_capabilities_pk_delete ...'
@@ -109,7 +109,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<AbstractCapability>'
+      return_type = opts[:debug_return_type] || 'AbstractCapability'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -133,7 +133,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<AbstractCapability>]
+    # @return [AbstractCapability]
     def abstract_capabilities_pk_get(pk, opts = {})
       data, _status_code, _headers = abstract_capabilities_pk_get_with_http_info(pk, opts)
       data
@@ -141,7 +141,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<AbstractCapability>, Integer, Hash)>] Array<AbstractCapability> data, response status code and response headers
+    # @return [Array<(AbstractCapability, Integer, Hash)>] AbstractCapability data, response status code and response headers
     def abstract_capabilities_pk_get_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AbstractCapabilityApi.abstract_capabilities_pk_get ...'
@@ -168,7 +168,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<AbstractCapability>'
+      return_type = opts[:debug_return_type] || 'AbstractCapability'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

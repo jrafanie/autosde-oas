@@ -74,7 +74,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<AccountPostResponse>]
+    # @return [AccountPostResponse]
     def accounts_pk_delete(pk, opts = {})
       data, _status_code, _headers = accounts_pk_delete_with_http_info(pk, opts)
       data
@@ -82,7 +82,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<AccountPostResponse>, Integer, Hash)>] Array<AccountPostResponse> data, response status code and response headers
+    # @return [Array<(AccountPostResponse, Integer, Hash)>] AccountPostResponse data, response status code and response headers
     def accounts_pk_delete_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AccountApi.accounts_pk_delete ...'
@@ -109,7 +109,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<AccountPostResponse>'
+      return_type = opts[:debug_return_type] || 'AccountPostResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -133,7 +133,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<AccountPostResponse>]
+    # @return [AccountPostResponse]
     def accounts_pk_get(pk, opts = {})
       data, _status_code, _headers = accounts_pk_get_with_http_info(pk, opts)
       data
@@ -141,7 +141,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<AccountPostResponse>, Integer, Hash)>] Array<AccountPostResponse> data, response status code and response headers
+    # @return [Array<(AccountPostResponse, Integer, Hash)>] AccountPostResponse data, response status code and response headers
     def accounts_pk_get_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AccountApi.accounts_pk_get ...'
@@ -168,7 +168,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<AccountPostResponse>'
+      return_type = opts[:debug_return_type] || 'AccountPostResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

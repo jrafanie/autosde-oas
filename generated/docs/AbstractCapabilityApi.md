@@ -76,7 +76,7 @@ This endpoint does not need any parameter.
 
 ## abstract_capabilities_pk_delete
 
-> <Array<AbstractCapability>> abstract_capabilities_pk_delete(pk)
+> <AbstractCapability> abstract_capabilities_pk_delete(pk)
 
 
 
@@ -107,7 +107,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<AbstractCapability>>, Integer, Hash)> abstract_capabilities_pk_delete_with_http_info(pk)
+> <Array(<AbstractCapability>, Integer, Hash)> abstract_capabilities_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -115,7 +115,7 @@ begin
   data, status_code, headers = api_instance.abstract_capabilities_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<AbstractCapability>>
+  p data # => <AbstractCapability>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AbstractCapabilityApi->abstract_capabilities_pk_delete_with_http_info: #{e}"
 end
@@ -129,7 +129,7 @@ end
 
 ### Return type
 
-[**Array&lt;AbstractCapability&gt;**](AbstractCapability.md)
+[**AbstractCapability**](AbstractCapability.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ end
 
 ## abstract_capabilities_pk_get
 
-> <Array<AbstractCapability>> abstract_capabilities_pk_get(pk)
+> <AbstractCapability> abstract_capabilities_pk_get(pk)
 
 
 
@@ -174,7 +174,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<AbstractCapability>>, Integer, Hash)> abstract_capabilities_pk_get_with_http_info(pk)
+> <Array(<AbstractCapability>, Integer, Hash)> abstract_capabilities_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -182,7 +182,7 @@ begin
   data, status_code, headers = api_instance.abstract_capabilities_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<AbstractCapability>>
+  p data # => <AbstractCapability>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AbstractCapabilityApi->abstract_capabilities_pk_get_with_http_info: #{e}"
 end
@@ -196,7 +196,7 @@ end
 
 ### Return type
 
-[**Array&lt;AbstractCapability&gt;**](AbstractCapability.md)
+[**AbstractCapability**](AbstractCapability.md)
 
 ### Authorization
 

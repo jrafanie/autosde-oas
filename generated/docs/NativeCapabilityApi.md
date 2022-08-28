@@ -76,7 +76,7 @@ This endpoint does not need any parameter.
 
 ## native_capabilities_pk_delete
 
-> <Array<NativeCapability>> native_capabilities_pk_delete(pk)
+> <NativeCapability> native_capabilities_pk_delete(pk)
 
 
 
@@ -107,7 +107,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<NativeCapability>>, Integer, Hash)> native_capabilities_pk_delete_with_http_info(pk)
+> <Array(<NativeCapability>, Integer, Hash)> native_capabilities_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -115,7 +115,7 @@ begin
   data, status_code, headers = api_instance.native_capabilities_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<NativeCapability>>
+  p data # => <NativeCapability>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling NativeCapabilityApi->native_capabilities_pk_delete_with_http_info: #{e}"
 end
@@ -129,7 +129,7 @@ end
 
 ### Return type
 
-[**Array&lt;NativeCapability&gt;**](NativeCapability.md)
+[**NativeCapability**](NativeCapability.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ end
 
 ## native_capabilities_pk_get
 
-> <Array<NativeCapability>> native_capabilities_pk_get(pk)
+> <NativeCapability> native_capabilities_pk_get(pk)
 
 
 
@@ -174,7 +174,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<NativeCapability>>, Integer, Hash)> native_capabilities_pk_get_with_http_info(pk)
+> <Array(<NativeCapability>, Integer, Hash)> native_capabilities_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -182,7 +182,7 @@ begin
   data, status_code, headers = api_instance.native_capabilities_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<NativeCapability>>
+  p data # => <NativeCapability>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling NativeCapabilityApi->native_capabilities_pk_get_with_http_info: #{e}"
 end
@@ -196,7 +196,7 @@ end
 
 ### Return type
 
-[**Array&lt;NativeCapability&gt;**](NativeCapability.md)
+[**NativeCapability**](NativeCapability.md)
 
 ### Authorization
 

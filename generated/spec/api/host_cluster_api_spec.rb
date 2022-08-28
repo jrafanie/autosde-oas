@@ -44,7 +44,7 @@ describe 'HostClusterApi' do
   # unit tests for host_clusters_pk_delete
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<HostCluster>]
+  # @return [AsyncResponse]
   describe 'host_clusters_pk_delete test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,7 +54,7 @@ describe 'HostClusterApi' do
   # unit tests for host_clusters_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<HostCluster>]
+  # @return [HostCluster]
   describe 'host_clusters_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

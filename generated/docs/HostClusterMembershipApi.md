@@ -76,7 +76,7 @@ This endpoint does not need any parameter.
 
 ## host_cluster_membership_pk_delete
 
-> <Array<HostClusterMembership>> host_cluster_membership_pk_delete(pk)
+> <AsyncResponse> host_cluster_membership_pk_delete(pk)
 
 
 
@@ -107,7 +107,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<HostClusterMembership>>, Integer, Hash)> host_cluster_membership_pk_delete_with_http_info(pk)
+> <Array(<AsyncResponse>, Integer, Hash)> host_cluster_membership_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -115,7 +115,7 @@ begin
   data, status_code, headers = api_instance.host_cluster_membership_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<HostClusterMembership>>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling HostClusterMembershipApi->host_cluster_membership_pk_delete_with_http_info: #{e}"
 end
@@ -129,7 +129,7 @@ end
 
 ### Return type
 
-[**Array&lt;HostClusterMembership&gt;**](HostClusterMembership.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ end
 
 ## host_cluster_membership_pk_get
 
-> <Array<HostClusterMembership>> host_cluster_membership_pk_get(pk)
+> <HostClusterMembership> host_cluster_membership_pk_get(pk)
 
 
 
@@ -174,7 +174,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<HostClusterMembership>>, Integer, Hash)> host_cluster_membership_pk_get_with_http_info(pk)
+> <Array(<HostClusterMembership>, Integer, Hash)> host_cluster_membership_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -182,7 +182,7 @@ begin
   data, status_code, headers = api_instance.host_cluster_membership_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<HostClusterMembership>>
+  p data # => <HostClusterMembership>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling HostClusterMembershipApi->host_cluster_membership_pk_get_with_http_info: #{e}"
 end
@@ -196,7 +196,7 @@ end
 
 ### Return type
 
-[**Array&lt;HostClusterMembership&gt;**](HostClusterMembership.md)
+[**HostClusterMembership**](HostClusterMembership.md)
 
 ### Authorization
 

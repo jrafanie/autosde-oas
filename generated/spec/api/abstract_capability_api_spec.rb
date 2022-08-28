@@ -44,7 +44,7 @@ describe 'AbstractCapabilityApi' do
   # unit tests for abstract_capabilities_pk_delete
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<AbstractCapability>]
+  # @return [AbstractCapability]
   describe 'abstract_capabilities_pk_delete test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,7 +54,7 @@ describe 'AbstractCapabilityApi' do
   # unit tests for abstract_capabilities_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<AbstractCapability>]
+  # @return [AbstractCapability]
   describe 'abstract_capabilities_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

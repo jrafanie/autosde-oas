@@ -44,7 +44,7 @@ describe 'ProfileApi' do
   # unit tests for profiles_pk_delete
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<Profile>]
+  # @return [Profile]
   describe 'profiles_pk_delete test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,7 +54,7 @@ describe 'ProfileApi' do
   # unit tests for profiles_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<Profile>]
+  # @return [Profile]
   describe 'profiles_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

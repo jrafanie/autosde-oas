@@ -76,7 +76,7 @@ This endpoint does not need any parameter.
 
 ## safe_deletes_pk_delete
 
-> <Array<VolumeSafeDelete>> safe_deletes_pk_delete(pk)
+> <VolumeSafeDelete> safe_deletes_pk_delete(pk)
 
 
 
@@ -107,7 +107,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<VolumeSafeDelete>>, Integer, Hash)> safe_deletes_pk_delete_with_http_info(pk)
+> <Array(<VolumeSafeDelete>, Integer, Hash)> safe_deletes_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -115,7 +115,7 @@ begin
   data, status_code, headers = api_instance.safe_deletes_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<VolumeSafeDelete>>
+  p data # => <VolumeSafeDelete>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeSafeDeleteApi->safe_deletes_pk_delete_with_http_info: #{e}"
 end
@@ -129,7 +129,7 @@ end
 
 ### Return type
 
-[**Array&lt;VolumeSafeDelete&gt;**](VolumeSafeDelete.md)
+[**VolumeSafeDelete**](VolumeSafeDelete.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ end
 
 ## safe_deletes_pk_get
 
-> <Array<VolumeSafeDelete>> safe_deletes_pk_get(pk)
+> <VolumeSafeDelete> safe_deletes_pk_get(pk)
 
 
 
@@ -174,7 +174,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<VolumeSafeDelete>>, Integer, Hash)> safe_deletes_pk_get_with_http_info(pk)
+> <Array(<VolumeSafeDelete>, Integer, Hash)> safe_deletes_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -182,7 +182,7 @@ begin
   data, status_code, headers = api_instance.safe_deletes_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<VolumeSafeDelete>>
+  p data # => <VolumeSafeDelete>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeSafeDeleteApi->safe_deletes_pk_get_with_http_info: #{e}"
 end
@@ -196,7 +196,7 @@ end
 
 ### Return type
 
-[**Array&lt;VolumeSafeDelete&gt;**](VolumeSafeDelete.md)
+[**VolumeSafeDelete**](VolumeSafeDelete.md)
 
 ### Authorization
 

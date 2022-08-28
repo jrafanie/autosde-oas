@@ -44,7 +44,7 @@ describe 'AutoSDERoleApi' do
   # unit tests for autosde_roles_pk_delete
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<AutoSDERole>]
+  # @return [AutoSDERole]
   describe 'autosde_roles_pk_delete test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,7 +54,7 @@ describe 'AutoSDERoleApi' do
   # unit tests for autosde_roles_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<AutoSDERole>]
+  # @return [AutoSDERole]
   describe 'autosde_roles_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

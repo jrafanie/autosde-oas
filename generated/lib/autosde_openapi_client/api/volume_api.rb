@@ -74,7 +74,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<Volume>]
+    # @return [AsyncResponse]
     def volumes_pk_delete(pk, opts = {})
       data, _status_code, _headers = volumes_pk_delete_with_http_info(pk, opts)
       data
@@ -82,7 +82,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<Volume>, Integer, Hash)>] Array<Volume> data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def volumes_pk_delete_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: VolumeApi.volumes_pk_delete ...'
@@ -109,7 +109,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<Volume>'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -133,7 +133,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<VolumeResponse>]
+    # @return [VolumeResponse]
     def volumes_pk_get(pk, opts = {})
       data, _status_code, _headers = volumes_pk_get_with_http_info(pk, opts)
       data
@@ -141,7 +141,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<VolumeResponse>, Integer, Hash)>] Array<VolumeResponse> data, response status code and response headers
+    # @return [Array<(VolumeResponse, Integer, Hash)>] VolumeResponse data, response status code and response headers
     def volumes_pk_get_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: VolumeApi.volumes_pk_get ...'
@@ -168,7 +168,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<VolumeResponse>'
+      return_type = opts[:debug_return_type] || 'VolumeResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -193,7 +193,7 @@ module AutosdeOpenapiClient
     # @param pk [Integer] 
     # @param volume_update [VolumeUpdate] 
     # @param [Hash] opts the optional parameters
-    # @return [VolumeResponse]
+    # @return [AsyncResponse]
     def volumes_pk_put(pk, volume_update, opts = {})
       data, _status_code, _headers = volumes_pk_put_with_http_info(pk, volume_update, opts)
       data
@@ -202,7 +202,7 @@ module AutosdeOpenapiClient
     # @param pk [Integer] 
     # @param volume_update [VolumeUpdate] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(VolumeResponse, Integer, Hash)>] VolumeResponse data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def volumes_pk_put_with_http_info(pk, volume_update, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: VolumeApi.volumes_pk_put ...'
@@ -235,7 +235,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(volume_update)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'VolumeResponse'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

@@ -44,7 +44,7 @@ describe 'StorageSystemApi' do
   # unit tests for storage_systems_pk_delete
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<StorageSystem>]
+  # @return [AsyncResponse]
   describe 'storage_systems_pk_delete test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,7 +54,7 @@ describe 'StorageSystemApi' do
   # unit tests for storage_systems_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Array<StorageSystem>]
+  # @return [StorageSystem]
   describe 'storage_systems_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -65,7 +65,7 @@ describe 'StorageSystemApi' do
   # @param pk 
   # @param storage_system_update 
   # @param [Hash] opts the optional parameters
-  # @return [StorageSystem]
+  # @return [AsyncResponse]
   describe 'storage_systems_pk_put test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

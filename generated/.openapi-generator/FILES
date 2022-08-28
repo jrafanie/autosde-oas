@@ -16,6 +16,7 @@ docs/AccountPostResponse.md
 docs/Address.md
 docs/AddressApi.md
 docs/AddressCreate.md
+docs/AsyncResponse.md
 docs/AuthResponse.md
 docs/Authentication.md
 docs/AuthenticationApi.md
@@ -147,6 +148,7 @@ lib/autosde_openapi_client/models/account_post_request.rb
 lib/autosde_openapi_client/models/account_post_response.rb
 lib/autosde_openapi_client/models/address.rb
 lib/autosde_openapi_client/models/address_create.rb
+lib/autosde_openapi_client/models/async_response.rb
 lib/autosde_openapi_client/models/auth_response.rb
 lib/autosde_openapi_client/models/authentication.rb
 lib/autosde_openapi_client/models/auto_sde_project.rb
@@ -246,6 +248,7 @@ spec/models/account_post_response_spec.rb
 spec/models/account_spec.rb
 spec/models/address_create_spec.rb
 spec/models/address_spec.rb
+spec/models/async_response_spec.rb
 spec/models/auth_response_spec.rb
 spec/models/authentication_spec.rb
 spec/models/auto_sde_project_spec.rb

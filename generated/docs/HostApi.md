@@ -76,7 +76,7 @@ This endpoint does not need any parameter.
 
 ## hosts_pk_delete
 
-> <Array<Host>> hosts_pk_delete(pk)
+> <AsyncResponse> hosts_pk_delete(pk)
 
 
 
@@ -107,7 +107,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<Host>>, Integer, Hash)> hosts_pk_delete_with_http_info(pk)
+> <Array(<AsyncResponse>, Integer, Hash)> hosts_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -115,7 +115,7 @@ begin
   data, status_code, headers = api_instance.hosts_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<Host>>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling HostApi->hosts_pk_delete_with_http_info: #{e}"
 end
@@ -129,7 +129,7 @@ end
 
 ### Return type
 
-[**Array&lt;Host&gt;**](Host.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ end
 
 ## hosts_pk_get
 
-> <Array<Host>> hosts_pk_get(pk)
+> <Host> hosts_pk_get(pk)
 
 
 
@@ -174,7 +174,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<Host>>, Integer, Hash)> hosts_pk_get_with_http_info(pk)
+> <Array(<Host>, Integer, Hash)> hosts_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -182,7 +182,7 @@ begin
   data, status_code, headers = api_instance.hosts_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<Host>>
+  p data # => <Host>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling HostApi->hosts_pk_get_with_http_info: #{e}"
 end
@@ -196,7 +196,7 @@ end
 
 ### Return type
 
-[**Array&lt;Host&gt;**](Host.md)
+[**Host**](Host.md)
 
 ### Authorization
 

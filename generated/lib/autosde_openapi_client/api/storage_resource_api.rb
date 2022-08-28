@@ -74,7 +74,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<StorageResourceResponse>]
+    # @return [AsyncResponse]
     def storage_resources_pk_delete(pk, opts = {})
       data, _status_code, _headers = storage_resources_pk_delete_with_http_info(pk, opts)
       data
@@ -82,7 +82,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<StorageResourceResponse>, Integer, Hash)>] Array<StorageResourceResponse> data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def storage_resources_pk_delete_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: StorageResourceApi.storage_resources_pk_delete ...'
@@ -109,7 +109,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<StorageResourceResponse>'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -133,7 +133,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<StorageResourceResponse>]
+    # @return [StorageResourceResponse]
     def storage_resources_pk_get(pk, opts = {})
       data, _status_code, _headers = storage_resources_pk_get_with_http_info(pk, opts)
       data
@@ -141,7 +141,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<StorageResourceResponse>, Integer, Hash)>] Array<StorageResourceResponse> data, response status code and response headers
+    # @return [Array<(StorageResourceResponse, Integer, Hash)>] StorageResourceResponse data, response status code and response headers
     def storage_resources_pk_get_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: StorageResourceApi.storage_resources_pk_get ...'
@@ -168,7 +168,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<StorageResourceResponse>'
+      return_type = opts[:debug_return_type] || 'StorageResourceResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -193,7 +193,7 @@ module AutosdeOpenapiClient
     # @param pk [Integer] 
     # @param storage_resource_create [StorageResourceCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [StorageResourceResponse]
+    # @return [AsyncResponse]
     def storage_resources_pk_put(pk, storage_resource_create, opts = {})
       data, _status_code, _headers = storage_resources_pk_put_with_http_info(pk, storage_resource_create, opts)
       data
@@ -202,7 +202,7 @@ module AutosdeOpenapiClient
     # @param pk [Integer] 
     # @param storage_resource_create [StorageResourceCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(StorageResourceResponse, Integer, Hash)>] StorageResourceResponse data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def storage_resources_pk_put_with_http_info(pk, storage_resource_create, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: StorageResourceApi.storage_resources_pk_put ...'
@@ -235,7 +235,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(storage_resource_create)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'StorageResourceResponse'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

@@ -77,7 +77,7 @@ This endpoint does not need any parameter.
 
 ## storage_hosts_pk_delete
 
-> <Array<StorageHost>> storage_hosts_pk_delete(pk)
+> <AsyncResponse> storage_hosts_pk_delete(pk)
 
 
 
@@ -108,7 +108,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<StorageHost>>, Integer, Hash)> storage_hosts_pk_delete_with_http_info(pk)
+> <Array(<AsyncResponse>, Integer, Hash)> storage_hosts_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -116,7 +116,7 @@ begin
   data, status_code, headers = api_instance.storage_hosts_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<StorageHost>>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostApi->storage_hosts_pk_delete_with_http_info: #{e}"
 end
@@ -130,7 +130,7 @@ end
 
 ### Return type
 
-[**Array&lt;StorageHost&gt;**](StorageHost.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ end
 
 ## storage_hosts_pk_get
 
-> <Array<StorageHost>> storage_hosts_pk_get(pk)
+> <StorageHost> storage_hosts_pk_get(pk)
 
 
 
@@ -175,7 +175,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<StorageHost>>, Integer, Hash)> storage_hosts_pk_get_with_http_info(pk)
+> <Array(<StorageHost>, Integer, Hash)> storage_hosts_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -183,7 +183,7 @@ begin
   data, status_code, headers = api_instance.storage_hosts_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<StorageHost>>
+  p data # => <StorageHost>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostApi->storage_hosts_pk_get_with_http_info: #{e}"
 end
@@ -197,7 +197,7 @@ end
 
 ### Return type
 
-[**Array&lt;StorageHost&gt;**](StorageHost.md)
+[**StorageHost**](StorageHost.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ end
 
 ## storage_hosts_pk_put
 
-> <StorageHost> storage_hosts_pk_put(pk, storage_host_update)
+> <AsyncResponse> storage_hosts_pk_put(pk, storage_host_update)
 
 
 
@@ -243,7 +243,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<StorageHost>, Integer, Hash)> storage_hosts_pk_put_with_http_info(pk, storage_host_update)
+> <Array(<AsyncResponse>, Integer, Hash)> storage_hosts_pk_put_with_http_info(pk, storage_host_update)
 
 ```ruby
 begin
@@ -251,7 +251,7 @@ begin
   data, status_code, headers = api_instance.storage_hosts_pk_put_with_http_info(pk, storage_host_update)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <StorageHost>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostApi->storage_hosts_pk_put_with_http_info: #{e}"
 end
@@ -266,7 +266,7 @@ end
 
 ### Return type
 
-[**StorageHost**](StorageHost.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

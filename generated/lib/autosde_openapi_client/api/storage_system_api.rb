@@ -74,7 +74,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<StorageSystem>]
+    # @return [AsyncResponse]
     def storage_systems_pk_delete(pk, opts = {})
       data, _status_code, _headers = storage_systems_pk_delete_with_http_info(pk, opts)
       data
@@ -82,7 +82,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<StorageSystem>, Integer, Hash)>] Array<StorageSystem> data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def storage_systems_pk_delete_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: StorageSystemApi.storage_systems_pk_delete ...'
@@ -109,7 +109,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<StorageSystem>'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -133,7 +133,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<StorageSystem>]
+    # @return [StorageSystem]
     def storage_systems_pk_get(pk, opts = {})
       data, _status_code, _headers = storage_systems_pk_get_with_http_info(pk, opts)
       data
@@ -141,7 +141,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<StorageSystem>, Integer, Hash)>] Array<StorageSystem> data, response status code and response headers
+    # @return [Array<(StorageSystem, Integer, Hash)>] StorageSystem data, response status code and response headers
     def storage_systems_pk_get_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: StorageSystemApi.storage_systems_pk_get ...'
@@ -168,7 +168,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<StorageSystem>'
+      return_type = opts[:debug_return_type] || 'StorageSystem'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -193,7 +193,7 @@ module AutosdeOpenapiClient
     # @param pk [Integer] 
     # @param storage_system_update [StorageSystemUpdate] 
     # @param [Hash] opts the optional parameters
-    # @return [StorageSystem]
+    # @return [AsyncResponse]
     def storage_systems_pk_put(pk, storage_system_update, opts = {})
       data, _status_code, _headers = storage_systems_pk_put_with_http_info(pk, storage_system_update, opts)
       data
@@ -202,7 +202,7 @@ module AutosdeOpenapiClient
     # @param pk [Integer] 
     # @param storage_system_update [StorageSystemUpdate] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(StorageSystem, Integer, Hash)>] StorageSystem data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def storage_systems_pk_put_with_http_info(pk, storage_system_update, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: StorageSystemApi.storage_systems_pk_put ...'
@@ -235,7 +235,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(storage_system_update)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'StorageSystem'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
