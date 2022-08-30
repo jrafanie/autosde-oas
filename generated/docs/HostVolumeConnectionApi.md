@@ -210,7 +210,7 @@ end
 
 ## host_volume_connection_post
 
-> <HostVolumeConnection> host_volume_connection_post(host_volume_connection_create)
+> <AsyncResponse> host_volume_connection_post(host_volume_connection_create)
 
 
 
@@ -241,7 +241,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<HostVolumeConnection>, Integer, Hash)> host_volume_connection_post_with_http_info(host_volume_connection_create)
+> <Array(<AsyncResponse>, Integer, Hash)> host_volume_connection_post_with_http_info(host_volume_connection_create)
 
 ```ruby
 begin
@@ -249,7 +249,7 @@ begin
   data, status_code, headers = api_instance.host_volume_connection_post_with_http_info(host_volume_connection_create)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <HostVolumeConnection>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling HostVolumeConnectionApi->host_volume_connection_post_with_http_info: #{e}"
 end
@@ -263,7 +263,7 @@ end
 
 ### Return type
 
-[**HostVolumeConnection**](HostVolumeConnection.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

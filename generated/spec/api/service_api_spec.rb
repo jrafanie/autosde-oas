@@ -75,7 +75,7 @@ describe 'ServiceApi' do
   # unit tests for services_post
   # @param service_create 
   # @param [Hash] opts the optional parameters
-  # @return [Service]
+  # @return [AsyncResponse]
   describe 'services_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

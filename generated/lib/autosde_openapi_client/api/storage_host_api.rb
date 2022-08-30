@@ -259,7 +259,7 @@ module AutosdeOpenapiClient
 
     # @param storage_host_create [StorageHostCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [StorageHostResponse]
+    # @return [AsyncResponse]
     def storage_hosts_post(storage_host_create, opts = {})
       data, _status_code, _headers = storage_hosts_post_with_http_info(storage_host_create, opts)
       data
@@ -267,7 +267,7 @@ module AutosdeOpenapiClient
 
     # @param storage_host_create [StorageHostCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(StorageHostResponse, Integer, Hash)>] StorageHostResponse data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def storage_hosts_post_with_http_info(storage_host_create, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: StorageHostApi.storage_hosts_post ...'
@@ -296,7 +296,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(storage_host_create)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'StorageHostResponse'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

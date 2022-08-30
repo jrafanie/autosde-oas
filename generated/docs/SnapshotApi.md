@@ -210,7 +210,7 @@ end
 
 ## snapshots_post
 
-> <Snapshot> snapshots_post(snapshot_create)
+> <AsyncResponse> snapshots_post(snapshot_create)
 
 
 
@@ -241,7 +241,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Snapshot>, Integer, Hash)> snapshots_post_with_http_info(snapshot_create)
+> <Array(<AsyncResponse>, Integer, Hash)> snapshots_post_with_http_info(snapshot_create)
 
 ```ruby
 begin
@@ -249,7 +249,7 @@ begin
   data, status_code, headers = api_instance.snapshots_post_with_http_info(snapshot_create)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Snapshot>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling SnapshotApi->snapshots_post_with_http_info: #{e}"
 end
@@ -263,7 +263,7 @@ end
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

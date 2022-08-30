@@ -64,7 +64,7 @@ describe 'ServiceResourceAttachmentApi' do
   # unit tests for service_resource_attachment_post
   # @param service_resource_attachment 
   # @param [Hash] opts the optional parameters
-  # @return [ServiceResourceAttachment]
+  # @return [AsyncResponse]
   describe 'service_resource_attachment_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

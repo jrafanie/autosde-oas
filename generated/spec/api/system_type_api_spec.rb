@@ -64,7 +64,7 @@ describe 'SystemTypeApi' do
   # unit tests for system_types_post
   # @param system_type_create 
   # @param [Hash] opts the optional parameters
-  # @return [SystemType]
+  # @return [AsyncResponse]
   describe 'system_types_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

@@ -64,7 +64,7 @@ describe 'HostClusterMembershipApi' do
   # unit tests for host_cluster_membership_post
   # @param host_cluster_membership 
   # @param [Hash] opts the optional parameters
-  # @return [HostClusterMembership]
+  # @return [AsyncResponse]
   describe 'host_cluster_membership_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

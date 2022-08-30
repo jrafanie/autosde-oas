@@ -75,7 +75,7 @@ describe 'VolumeApi' do
   # unit tests for volumes_post
   # @param volume_create 
   # @param [Hash] opts the optional parameters
-  # @return [VolumeResponse]
+  # @return [AsyncResponse]
   describe 'volumes_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

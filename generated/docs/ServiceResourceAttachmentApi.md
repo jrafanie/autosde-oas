@@ -210,7 +210,7 @@ end
 
 ## service_resource_attachment_post
 
-> <ServiceResourceAttachment> service_resource_attachment_post(service_resource_attachment)
+> <AsyncResponse> service_resource_attachment_post(service_resource_attachment)
 
 
 
@@ -241,7 +241,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ServiceResourceAttachment>, Integer, Hash)> service_resource_attachment_post_with_http_info(service_resource_attachment)
+> <Array(<AsyncResponse>, Integer, Hash)> service_resource_attachment_post_with_http_info(service_resource_attachment)
 
 ```ruby
 begin
@@ -249,7 +249,7 @@ begin
   data, status_code, headers = api_instance.service_resource_attachment_post_with_http_info(service_resource_attachment)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ServiceResourceAttachment>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceResourceAttachmentApi->service_resource_attachment_post_with_http_info: #{e}"
 end
@@ -263,7 +263,7 @@ end
 
 ### Return type
 
-[**ServiceResourceAttachment**](ServiceResourceAttachment.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

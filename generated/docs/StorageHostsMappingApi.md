@@ -210,7 +210,7 @@ end
 
 ## storage_hosts_mapping_post
 
-> <StorageHostsMapping> storage_hosts_mapping_post(storage_hosts_mapping_create)
+> <AsyncResponse> storage_hosts_mapping_post(storage_hosts_mapping_create)
 
 
 
@@ -241,7 +241,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<StorageHostsMapping>, Integer, Hash)> storage_hosts_mapping_post_with_http_info(storage_hosts_mapping_create)
+> <Array(<AsyncResponse>, Integer, Hash)> storage_hosts_mapping_post_with_http_info(storage_hosts_mapping_create)
 
 ```ruby
 begin
@@ -249,7 +249,7 @@ begin
   data, status_code, headers = api_instance.storage_hosts_mapping_post_with_http_info(storage_hosts_mapping_create)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <StorageHostsMapping>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageHostsMappingApi->storage_hosts_mapping_post_with_http_info: #{e}"
 end
@@ -263,7 +263,7 @@ end
 
 ### Return type
 
-[**StorageHostsMapping**](StorageHostsMapping.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

@@ -259,7 +259,7 @@ module AutosdeOpenapiClient
 
     # @param volume_create [VolumeCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [VolumeResponse]
+    # @return [AsyncResponse]
     def volumes_post(volume_create, opts = {})
       data, _status_code, _headers = volumes_post_with_http_info(volume_create, opts)
       data
@@ -267,7 +267,7 @@ module AutosdeOpenapiClient
 
     # @param volume_create [VolumeCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(VolumeResponse, Integer, Hash)>] VolumeResponse data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def volumes_post_with_http_info(volume_create, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: VolumeApi.volumes_post ...'
@@ -296,7 +296,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(volume_create)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'VolumeResponse'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

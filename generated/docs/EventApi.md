@@ -210,7 +210,7 @@ end
 
 ## events_post
 
-> <EventResponse> events_post(event)
+> <AsyncResponse> events_post(event)
 
 
 
@@ -241,7 +241,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<EventResponse>, Integer, Hash)> events_post_with_http_info(event)
+> <Array(<AsyncResponse>, Integer, Hash)> events_post_with_http_info(event)
 
 ```ruby
 begin
@@ -249,7 +249,7 @@ begin
   data, status_code, headers = api_instance.events_post_with_http_info(event)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <EventResponse>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling EventApi->events_post_with_http_info: #{e}"
 end
@@ -263,7 +263,7 @@ end
 
 ### Return type
 
-[**EventResponse**](EventResponse.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

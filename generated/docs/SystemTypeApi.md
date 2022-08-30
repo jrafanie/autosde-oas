@@ -210,7 +210,7 @@ end
 
 ## system_types_post
 
-> <SystemType> system_types_post(system_type_create)
+> <AsyncResponse> system_types_post(system_type_create)
 
 
 
@@ -241,7 +241,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<SystemType>, Integer, Hash)> system_types_post_with_http_info(system_type_create)
+> <Array(<AsyncResponse>, Integer, Hash)> system_types_post_with_http_info(system_type_create)
 
 ```ruby
 begin
@@ -249,7 +249,7 @@ begin
   data, status_code, headers = api_instance.system_types_post_with_http_info(system_type_create)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <SystemType>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling SystemTypeApi->system_types_post_with_http_info: #{e}"
 end
@@ -263,7 +263,7 @@ end
 
 ### Return type
 
-[**SystemType**](SystemType.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

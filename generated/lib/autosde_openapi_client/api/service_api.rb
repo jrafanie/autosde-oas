@@ -259,7 +259,7 @@ module AutosdeOpenapiClient
 
     # @param service_create [ServiceCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [Service]
+    # @return [AsyncResponse]
     def services_post(service_create, opts = {})
       data, _status_code, _headers = services_post_with_http_info(service_create, opts)
       data
@@ -267,7 +267,7 @@ module AutosdeOpenapiClient
 
     # @param service_create [ServiceCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Service, Integer, Hash)>] Service data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def services_post_with_http_info(service_create, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ServiceApi.services_post ...'
@@ -296,7 +296,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(service_create)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Service'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

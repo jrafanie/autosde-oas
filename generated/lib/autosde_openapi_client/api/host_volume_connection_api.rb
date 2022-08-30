@@ -192,7 +192,7 @@ module AutosdeOpenapiClient
 
     # @param host_volume_connection_create [HostVolumeConnectionCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [HostVolumeConnection]
+    # @return [AsyncResponse]
     def host_volume_connection_post(host_volume_connection_create, opts = {})
       data, _status_code, _headers = host_volume_connection_post_with_http_info(host_volume_connection_create, opts)
       data
@@ -200,7 +200,7 @@ module AutosdeOpenapiClient
 
     # @param host_volume_connection_create [HostVolumeConnectionCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(HostVolumeConnection, Integer, Hash)>] HostVolumeConnection data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def host_volume_connection_post_with_http_info(host_volume_connection_create, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: HostVolumeConnectionApi.host_volume_connection_post ...'
@@ -229,7 +229,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(host_volume_connection_create)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'HostVolumeConnection'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

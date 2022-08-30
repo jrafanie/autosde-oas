@@ -192,7 +192,7 @@ module AutosdeOpenapiClient
 
     # @param host_cluster_membership [HostClusterMembership] 
     # @param [Hash] opts the optional parameters
-    # @return [HostClusterMembership]
+    # @return [AsyncResponse]
     def host_cluster_membership_post(host_cluster_membership, opts = {})
       data, _status_code, _headers = host_cluster_membership_post_with_http_info(host_cluster_membership, opts)
       data
@@ -200,7 +200,7 @@ module AutosdeOpenapiClient
 
     # @param host_cluster_membership [HostClusterMembership] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(HostClusterMembership, Integer, Hash)>] HostClusterMembership data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def host_cluster_membership_post_with_http_info(host_cluster_membership, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: HostClusterMembershipApi.host_cluster_membership_post ...'
@@ -229,7 +229,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(host_cluster_membership)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'HostClusterMembership'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

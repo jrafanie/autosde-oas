@@ -64,7 +64,7 @@ describe 'SnapshotApi' do
   # unit tests for snapshots_post
   # @param snapshot_create 
   # @param [Hash] opts the optional parameters
-  # @return [Snapshot]
+  # @return [AsyncResponse]
   describe 'snapshots_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

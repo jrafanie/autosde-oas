@@ -75,7 +75,7 @@ describe 'StorageHostApi' do
   # unit tests for storage_hosts_post
   # @param storage_host_create 
   # @param [Hash] opts the optional parameters
-  # @return [StorageHostResponse]
+  # @return [AsyncResponse]
   describe 'storage_hosts_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

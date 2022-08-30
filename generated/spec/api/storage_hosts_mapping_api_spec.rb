@@ -64,7 +64,7 @@ describe 'StorageHostsMappingApi' do
   # unit tests for storage_hosts_mapping_post
   # @param storage_hosts_mapping_create 
   # @param [Hash] opts the optional parameters
-  # @return [StorageHostsMapping]
+  # @return [AsyncResponse]
   describe 'storage_hosts_mapping_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

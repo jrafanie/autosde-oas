@@ -210,7 +210,7 @@ end
 
 ## hosts_post
 
-> <Host> hosts_post(host_create)
+> <AsyncResponse> hosts_post(host_create)
 
 
 
@@ -241,7 +241,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Host>, Integer, Hash)> hosts_post_with_http_info(host_create)
+> <Array(<AsyncResponse>, Integer, Hash)> hosts_post_with_http_info(host_create)
 
 ```ruby
 begin
@@ -249,7 +249,7 @@ begin
   data, status_code, headers = api_instance.hosts_post_with_http_info(host_create)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Host>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling HostApi->hosts_post_with_http_info: #{e}"
 end
@@ -263,7 +263,7 @@ end
 
 ### Return type
 
-[**Host**](Host.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

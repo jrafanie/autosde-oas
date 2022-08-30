@@ -192,7 +192,7 @@ module AutosdeOpenapiClient
 
     # @param snapshot_create [SnapshotCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [Snapshot]
+    # @return [AsyncResponse]
     def snapshots_post(snapshot_create, opts = {})
       data, _status_code, _headers = snapshots_post_with_http_info(snapshot_create, opts)
       data
@@ -200,7 +200,7 @@ module AutosdeOpenapiClient
 
     # @param snapshot_create [SnapshotCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Snapshot, Integer, Hash)>] Snapshot data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def snapshots_post_with_http_info(snapshot_create, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SnapshotApi.snapshots_post ...'
@@ -229,7 +229,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(snapshot_create)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Snapshot'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

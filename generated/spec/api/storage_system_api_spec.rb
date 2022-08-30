@@ -75,7 +75,7 @@ describe 'StorageSystemApi' do
   # unit tests for storage_systems_post
   # @param storage_system_create 
   # @param [Hash] opts the optional parameters
-  # @return [StorageSystem]
+  # @return [AsyncResponse]
   describe 'storage_systems_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

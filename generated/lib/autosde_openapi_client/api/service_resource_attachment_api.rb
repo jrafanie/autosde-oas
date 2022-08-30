@@ -192,7 +192,7 @@ module AutosdeOpenapiClient
 
     # @param service_resource_attachment [ServiceResourceAttachment] 
     # @param [Hash] opts the optional parameters
-    # @return [ServiceResourceAttachment]
+    # @return [AsyncResponse]
     def service_resource_attachment_post(service_resource_attachment, opts = {})
       data, _status_code, _headers = service_resource_attachment_post_with_http_info(service_resource_attachment, opts)
       data
@@ -200,7 +200,7 @@ module AutosdeOpenapiClient
 
     # @param service_resource_attachment [ServiceResourceAttachment] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ServiceResourceAttachment, Integer, Hash)>] ServiceResourceAttachment data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def service_resource_attachment_post_with_http_info(service_resource_attachment, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ServiceResourceAttachmentApi.service_resource_attachment_post ...'
@@ -229,7 +229,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(service_resource_attachment)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ServiceResourceAttachment'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

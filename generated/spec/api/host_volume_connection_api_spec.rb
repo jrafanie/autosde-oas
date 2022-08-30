@@ -64,7 +64,7 @@ describe 'HostVolumeConnectionApi' do
   # unit tests for host_volume_connection_post
   # @param host_volume_connection_create 
   # @param [Hash] opts the optional parameters
-  # @return [HostVolumeConnection]
+  # @return [AsyncResponse]
   describe 'host_volume_connection_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

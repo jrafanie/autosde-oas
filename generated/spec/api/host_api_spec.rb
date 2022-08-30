@@ -64,7 +64,7 @@ describe 'HostApi' do
   # unit tests for hosts_post
   # @param host_create 
   # @param [Hash] opts the optional parameters
-  # @return [Host]
+  # @return [AsyncResponse]
   describe 'hosts_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

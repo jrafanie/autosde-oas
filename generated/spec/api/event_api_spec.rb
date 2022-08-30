@@ -64,7 +64,7 @@ describe 'EventApi' do
   # unit tests for events_post
   # @param event 
   # @param [Hash] opts the optional parameters
-  # @return [EventResponse]
+  # @return [AsyncResponse]
   describe 'events_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

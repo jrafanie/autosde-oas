@@ -192,7 +192,7 @@ module AutosdeOpenapiClient
 
     # @param address_create [AddressCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [Address]
+    # @return [AsyncResponse]
     def addresses_post(address_create, opts = {})
       data, _status_code, _headers = addresses_post_with_http_info(address_create, opts)
       data
@@ -200,7 +200,7 @@ module AutosdeOpenapiClient
 
     # @param address_create [AddressCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Address, Integer, Hash)>] Address data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def addresses_post_with_http_info(address_create, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AddressApi.addresses_post ...'
@@ -229,7 +229,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(address_create)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Address'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

@@ -280,7 +280,7 @@ end
 
 ## storage_systems_post
 
-> <StorageSystem> storage_systems_post(storage_system_create)
+> <AsyncResponse> storage_systems_post(storage_system_create)
 
 
 
@@ -311,7 +311,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<StorageSystem>, Integer, Hash)> storage_systems_post_with_http_info(storage_system_create)
+> <Array(<AsyncResponse>, Integer, Hash)> storage_systems_post_with_http_info(storage_system_create)
 
 ```ruby
 begin
@@ -319,7 +319,7 @@ begin
   data, status_code, headers = api_instance.storage_systems_post_with_http_info(storage_system_create)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <StorageSystem>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageSystemApi->storage_systems_post_with_http_info: #{e}"
 end
@@ -333,7 +333,7 @@ end
 
 ### Return type
 
-[**StorageSystem**](StorageSystem.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

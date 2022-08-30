@@ -210,7 +210,7 @@ end
 
 ## addresses_post
 
-> <Address> addresses_post(address_create)
+> <AsyncResponse> addresses_post(address_create)
 
 
 
@@ -241,7 +241,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Address>, Integer, Hash)> addresses_post_with_http_info(address_create)
+> <Array(<AsyncResponse>, Integer, Hash)> addresses_post_with_http_info(address_create)
 
 ```ruby
 begin
@@ -249,7 +249,7 @@ begin
   data, status_code, headers = api_instance.addresses_post_with_http_info(address_create)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Address>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AddressApi->addresses_post_with_http_info: #{e}"
 end
@@ -263,7 +263,7 @@ end
 
 ### Return type
 
-[**Address**](Address.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

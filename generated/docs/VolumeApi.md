@@ -280,7 +280,7 @@ end
 
 ## volumes_post
 
-> <VolumeResponse> volumes_post(volume_create)
+> <AsyncResponse> volumes_post(volume_create)
 
 
 
@@ -311,7 +311,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<VolumeResponse>, Integer, Hash)> volumes_post_with_http_info(volume_create)
+> <Array(<AsyncResponse>, Integer, Hash)> volumes_post_with_http_info(volume_create)
 
 ```ruby
 begin
@@ -319,7 +319,7 @@ begin
   data, status_code, headers = api_instance.volumes_post_with_http_info(volume_create)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <VolumeResponse>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeApi->volumes_post_with_http_info: #{e}"
 end
@@ -333,7 +333,7 @@ end
 
 ### Return type
 
-[**VolumeResponse**](VolumeResponse.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

@@ -210,7 +210,7 @@ end
 
 ## host_cluster_membership_post
 
-> <HostClusterMembership> host_cluster_membership_post(host_cluster_membership)
+> <AsyncResponse> host_cluster_membership_post(host_cluster_membership)
 
 
 
@@ -241,7 +241,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<HostClusterMembership>, Integer, Hash)> host_cluster_membership_post_with_http_info(host_cluster_membership)
+> <Array(<AsyncResponse>, Integer, Hash)> host_cluster_membership_post_with_http_info(host_cluster_membership)
 
 ```ruby
 begin
@@ -249,7 +249,7 @@ begin
   data, status_code, headers = api_instance.host_cluster_membership_post_with_http_info(host_cluster_membership)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <HostClusterMembership>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling HostClusterMembershipApi->host_cluster_membership_post_with_http_info: #{e}"
 end
@@ -263,7 +263,7 @@ end
 
 ### Return type
 
-[**HostClusterMembership**](HostClusterMembership.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 
