@@ -254,6 +254,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::StorageResource](docs/StorageResource.md)
  - [AutosdeOpenapiClient::StorageResourceCreate](docs/StorageResourceCreate.md)
  - [AutosdeOpenapiClient::StorageResourceResponse](docs/StorageResourceResponse.md)
+ - [AutosdeOpenapiClient::StorageResourceUpdate](docs/StorageResourceUpdate.md)
  - [AutosdeOpenapiClient::StorageSystem](docs/StorageSystem.md)
  - [AutosdeOpenapiClient::StorageSystemCreate](docs/StorageSystemCreate.md)
  - [AutosdeOpenapiClient::StorageSystemUpdate](docs/StorageSystemUpdate.md)

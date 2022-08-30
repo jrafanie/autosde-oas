@@ -63,7 +63,7 @@ describe 'StorageResourceApi' do
 
   # unit tests for storage_resources_pk_put
   # @param pk 
-  # @param storage_resource_create 
+  # @param storage_resource_update 
   # @param [Hash] opts the optional parameters
   # @return [AsyncResponse]
   describe 'storage_resources_pk_put test' do

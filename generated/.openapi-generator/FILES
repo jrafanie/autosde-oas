@@ -83,6 +83,7 @@ docs/StorageResource.md
 docs/StorageResourceApi.md
 docs/StorageResourceCreate.md
 docs/StorageResourceResponse.md
+docs/StorageResourceUpdate.md
 docs/StorageSystem.md
 docs/StorageSystemApi.md
 docs/StorageSystemCreate.md
@@ -192,6 +193,7 @@ lib/autosde_openapi_client/models/storage_hosts_mapping_response.rb
 lib/autosde_openapi_client/models/storage_resource.rb
 lib/autosde_openapi_client/models/storage_resource_create.rb
 lib/autosde_openapi_client/models/storage_resource_response.rb
+lib/autosde_openapi_client/models/storage_resource_update.rb
 lib/autosde_openapi_client/models/storage_system.rb
 lib/autosde_openapi_client/models/storage_system_create.rb
 lib/autosde_openapi_client/models/storage_system_update.rb
@@ -292,6 +294,7 @@ spec/models/storage_hosts_mapping_spec.rb
 spec/models/storage_resource_create_spec.rb
 spec/models/storage_resource_response_spec.rb
 spec/models/storage_resource_spec.rb
+spec/models/storage_resource_update_spec.rb
 spec/models/storage_system_create_spec.rb
 spec/models/storage_system_spec.rb
 spec/models/storage_system_update_spec.rb

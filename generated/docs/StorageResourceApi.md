@@ -211,7 +211,7 @@ end
 
 ## storage_resources_pk_put
 
-> <AsyncResponse> storage_resources_pk_put(pk, storage_resource_create)
+> <AsyncResponse> storage_resources_pk_put(pk, storage_resource_update)
 
 
 
@@ -228,11 +228,11 @@ end
 
 api_instance = AutosdeOpenapiClient::StorageResourceApi.new
 pk = 56 # Integer | 
-storage_resource_create = AutosdeOpenapiClient::StorageResourceCreate.new # StorageResourceCreate | 
+storage_resource_update = AutosdeOpenapiClient::StorageResourceUpdate.new # StorageResourceUpdate | 
 
 begin
   
-  result = api_instance.storage_resources_pk_put(pk, storage_resource_create)
+  result = api_instance.storage_resources_pk_put(pk, storage_resource_update)
   p result
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageResourceApi->storage_resources_pk_put: #{e}"
@@ -243,12 +243,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<AsyncResponse>, Integer, Hash)> storage_resources_pk_put_with_http_info(pk, storage_resource_create)
+> <Array(<AsyncResponse>, Integer, Hash)> storage_resources_pk_put_with_http_info(pk, storage_resource_update)
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.storage_resources_pk_put_with_http_info(pk, storage_resource_create)
+  data, status_code, headers = api_instance.storage_resources_pk_put_with_http_info(pk, storage_resource_update)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AsyncResponse>
@@ -262,7 +262,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **pk** | **Integer** |  |  |
-| **storage_resource_create** | [**StorageResourceCreate**](StorageResourceCreate.md) |  |  |
+| **storage_resource_update** | [**StorageResourceUpdate**](StorageResourceUpdate.md) |  |  |
 
 ### Return type
 

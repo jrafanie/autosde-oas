@@ -191,19 +191,19 @@ module AutosdeOpenapiClient
     end
 
     # @param pk [Integer] 
-    # @param storage_resource_create [StorageResourceCreate] 
+    # @param storage_resource_update [StorageResourceUpdate] 
     # @param [Hash] opts the optional parameters
     # @return [AsyncResponse]
-    def storage_resources_pk_put(pk, storage_resource_create, opts = {})
-      data, _status_code, _headers = storage_resources_pk_put_with_http_info(pk, storage_resource_create, opts)
+    def storage_resources_pk_put(pk, storage_resource_update, opts = {})
+      data, _status_code, _headers = storage_resources_pk_put_with_http_info(pk, storage_resource_update, opts)
       data
     end
 
     # @param pk [Integer] 
-    # @param storage_resource_create [StorageResourceCreate] 
+    # @param storage_resource_update [StorageResourceUpdate] 
     # @param [Hash] opts the optional parameters
     # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
-    def storage_resources_pk_put_with_http_info(pk, storage_resource_create, opts = {})
+    def storage_resources_pk_put_with_http_info(pk, storage_resource_update, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: StorageResourceApi.storage_resources_pk_put ...'
       end
@@ -211,9 +211,9 @@ module AutosdeOpenapiClient
       if @api_client.config.client_side_validation && pk.nil?
         fail ArgumentError, "Missing the required parameter 'pk' when calling StorageResourceApi.storage_resources_pk_put"
       end
-      # verify the required parameter 'storage_resource_create' is set
-      if @api_client.config.client_side_validation && storage_resource_create.nil?
-        fail ArgumentError, "Missing the required parameter 'storage_resource_create' when calling StorageResourceApi.storage_resources_pk_put"
+      # verify the required parameter 'storage_resource_update' is set
+      if @api_client.config.client_side_validation && storage_resource_update.nil?
+        fail ArgumentError, "Missing the required parameter 'storage_resource_update' when calling StorageResourceApi.storage_resources_pk_put"
       end
       # resource path
       local_var_path = '/storage-resources/{pk}'.sub('{' + 'pk' + '}', CGI.escape(pk.to_s))
@@ -232,7 +232,7 @@ module AutosdeOpenapiClient
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(storage_resource_create)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(storage_resource_update)
 
       # return_type
       return_type = opts[:debug_return_type] || 'AsyncResponse'
