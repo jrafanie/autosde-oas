@@ -25,6 +25,9 @@ module AutosdeOpenapiClient
     # extra
     attr_accessor :extra
 
+    # object_id
+    attr_accessor :object_id
+
     # result
     attr_accessor :result
 
@@ -49,6 +52,7 @@ module AutosdeOpenapiClient
         :'date_finished' => :'date_finished',
         :'date_started' => :'date_started',
         :'extra' => :'extra',
+        :'object_id' => :'object_id',
         :'result' => :'result',
         :'status' => :'status',
         :'task_args' => :'task_args',
@@ -69,6 +73,7 @@ module AutosdeOpenapiClient
         :'date_finished' => :'Time',
         :'date_started' => :'Time',
         :'extra' => :'String',
+        :'object_id' => :'String',
         :'result' => :'String',
         :'status' => :'String',
         :'task_args' => :'String',
@@ -109,6 +114,12 @@ module AutosdeOpenapiClient
 
       if attributes.key?(:'extra')
         self.extra = attributes[:'extra']
+      end
+
+      if attributes.key?(:'object_id')
+        self.object_id = attributes[:'object_id']
+      else
+        self.object_id = 'null'
       end
 
       if attributes.key?(:'result')
@@ -157,6 +168,7 @@ module AutosdeOpenapiClient
           date_finished == o.date_finished &&
           date_started == o.date_started &&
           extra == o.extra &&
+          object_id == o.object_id &&
           result == o.result &&
           status == o.status &&
           task_args == o.task_args &&
@@ -174,7 +186,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [date_finished, date_started, extra, result, status, task_args, task_id, task_kwargs, task_name].hash
+      [date_finished, date_started, extra, object_id, result, status, task_args, task_id, task_kwargs, task_name].hash
     end
 
     # Builds the object from hash

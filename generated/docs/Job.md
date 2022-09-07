@@ -7,6 +7,7 @@
 | **date_finished** | **Time** | date_finished | [optional] |
 | **date_started** | **Time** | date_started | [optional] |
 | **extra** | **String** | extra | [optional] |
+| **object_id** | **String** | object_id | [optional][default to &#39;null&#39;] |
 | **result** | **String** | result | [optional] |
 | **status** | **String** | status | [optional] |
 | **task_args** | **String** | task_args | [optional] |
@@ -23,6 +24,7 @@ instance = AutosdeOpenapiClient::Job.new(
   date_finished: null,
   date_started: null,
   extra: null,
+  object_id: null,
   result: null,
   status: null,
   task_args: null,
