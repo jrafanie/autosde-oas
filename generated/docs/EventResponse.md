@@ -4,7 +4,6 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **created_at** | **Time** | created_at | [optional] |
 | **description** | **String** | description | [optional] |
 | **error_code** | **String** | error_code | [optional] |
 | **event_id** | **Integer** | event_id | [optional] |
@@ -21,7 +20,6 @@
 require 'autosde_openapi_client'
 
 instance = AutosdeOpenapiClient::EventResponse.new(
-  created_at: null,
   description: null,
   error_code: null,
   event_id: null,

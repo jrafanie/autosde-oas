@@ -16,9 +16,6 @@ require 'time'
 module AutosdeOpenapiClient
   # Event
   class Event
-    # created_at
-    attr_accessor :created_at
-
     # description
     attr_accessor :description
 
@@ -48,7 +45,6 @@ module AutosdeOpenapiClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'created_at' => :'created_at',
         :'description' => :'description',
         :'error_code' => :'error_code',
         :'event_id' => :'event_id',
@@ -69,7 +65,6 @@ module AutosdeOpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'created_at' => :'Time',
         :'description' => :'String',
         :'error_code' => :'String',
         :'event_id' => :'Integer',
@@ -102,10 +97,6 @@ module AutosdeOpenapiClient
         end
         h[k.to_sym] = v
       }
-
-      if attributes.key?(:'created_at')
-        self.created_at = attributes[:'created_at']
-      end
 
       if attributes.key?(:'description')
         self.description = attributes[:'description']
@@ -162,7 +153,6 @@ module AutosdeOpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          created_at == o.created_at &&
           description == o.description &&
           error_code == o.error_code &&
           event_id == o.event_id &&
@@ -183,7 +173,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [created_at, description, error_code, event_id, event_type, fixed, last_timestamp, refresh_interval, storage_system, uuid].hash
+      [description, error_code, event_id, event_type, fixed, last_timestamp, refresh_interval, storage_system, uuid].hash
     end
 
     # Builds the object from hash
