@@ -16,7 +16,6 @@ require 'time'
 module AutosdeOpenapiClient
   # RefreshSystem object represents refreshing of the storage system.
   class RefreshSystem
-    # uuid
     attr_accessor :uuid
 
     # Attribute mapping from ruby-style variable name to JSON key.
@@ -34,7 +33,7 @@ module AutosdeOpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'uuid' => :'String'
+        :'uuid' => :'StorageSystem'
       }
     end
 

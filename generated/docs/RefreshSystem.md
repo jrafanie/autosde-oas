@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **uuid** | **String** | uuid | [optional] |
+| **uuid** | [**StorageSystem**](StorageSystem.md) |  | [optional] |
 
 ## Example
 
