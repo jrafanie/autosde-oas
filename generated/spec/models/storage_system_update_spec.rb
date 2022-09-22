@@ -25,6 +25,12 @@ describe AutosdeOpenapiClient::StorageSystemUpdate do
       expect(instance).to be_instance_of(AutosdeOpenapiClient::StorageSystemUpdate)
     end
   end
+  describe 'test attribute "enabled_capability_values"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   describe 'test attribute "management_ip"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

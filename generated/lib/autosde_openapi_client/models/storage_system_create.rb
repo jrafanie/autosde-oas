@@ -28,6 +28,8 @@ module AutosdeOpenapiClient
     # component_state
     attr_accessor :component_state
 
+    attr_accessor :enabled_capability_values
+
     # initial_refresh
     attr_accessor :initial_refresh
 
@@ -97,6 +99,7 @@ module AutosdeOpenapiClient
         :'chap_name' => :'chap_name',
         :'chap_secret' => :'chap_secret',
         :'component_state' => :'component_state',
+        :'enabled_capability_values' => :'enabled_capability_values',
         :'initial_refresh' => :'initial_refresh',
         :'iqn' => :'iqn',
         :'management_ip' => :'management_ip',
@@ -126,6 +129,7 @@ module AutosdeOpenapiClient
         :'chap_name' => :'String',
         :'chap_secret' => :'String',
         :'component_state' => :'String',
+        :'enabled_capability_values' => :'ServiceAbstractCapabilityValue',
         :'initial_refresh' => :'Boolean',
         :'iqn' => :'String',
         :'management_ip' => :'String',
@@ -180,6 +184,10 @@ module AutosdeOpenapiClient
 
       if attributes.key?(:'component_state')
         self.component_state = attributes[:'component_state']
+      end
+
+      if attributes.key?(:'enabled_capability_values')
+        self.enabled_capability_values = attributes[:'enabled_capability_values']
       end
 
       if attributes.key?(:'initial_refresh')
@@ -304,6 +312,7 @@ module AutosdeOpenapiClient
           chap_name == o.chap_name &&
           chap_secret == o.chap_secret &&
           component_state == o.component_state &&
+          enabled_capability_values == o.enabled_capability_values &&
           initial_refresh == o.initial_refresh &&
           iqn == o.iqn &&
           management_ip == o.management_ip &&
@@ -329,7 +338,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [auto_refresh, chap_name, chap_secret, component_state, initial_refresh, iqn, management_ip, name, password, port_type, secondary_ip, status, storage_array, storage_driver, storage_family, system_type, user, wwpn].hash
+      [auto_refresh, chap_name, chap_secret, component_state, enabled_capability_values, initial_refresh, iqn, management_ip, name, password, port_type, secondary_ip, status, storage_array, storage_driver, storage_family, system_type, user, wwpn].hash
     end
 
     # Builds the object from hash
