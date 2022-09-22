@@ -22,8 +22,6 @@ module AutosdeOpenapiClient
     # component_state
     attr_accessor :component_state
 
-    attr_accessor :enabled_capability_values
-
     # management_ip
     attr_accessor :management_ip
 
@@ -71,7 +69,6 @@ module AutosdeOpenapiClient
       {
         :'auto_refresh' => :'auto_refresh',
         :'component_state' => :'component_state',
-        :'enabled_capability_values' => :'enabled_capability_values',
         :'management_ip' => :'management_ip',
         :'name' => :'name',
         :'status' => :'status',
@@ -92,7 +89,6 @@ module AutosdeOpenapiClient
       {
         :'auto_refresh' => :'Boolean',
         :'component_state' => :'String',
-        :'enabled_capability_values' => :'ServiceAbstractCapabilityValue',
         :'management_ip' => :'String',
         :'name' => :'String',
         :'status' => :'String',
@@ -132,10 +128,6 @@ module AutosdeOpenapiClient
 
       if attributes.key?(:'component_state')
         self.component_state = attributes[:'component_state']
-      end
-
-      if attributes.key?(:'enabled_capability_values')
-        self.enabled_capability_values = attributes[:'enabled_capability_values']
       end
 
       if attributes.key?(:'management_ip')
@@ -216,7 +208,6 @@ module AutosdeOpenapiClient
       self.class == o.class &&
           auto_refresh == o.auto_refresh &&
           component_state == o.component_state &&
-          enabled_capability_values == o.enabled_capability_values &&
           management_ip == o.management_ip &&
           name == o.name &&
           status == o.status &&
@@ -235,7 +226,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [auto_refresh, component_state, enabled_capability_values, management_ip, name, status, storage_array, storage_family, system_type, uuid].hash
+      [auto_refresh, component_state, management_ip, name, status, storage_array, storage_family, system_type, uuid].hash
     end
 
     # Builds the object from hash

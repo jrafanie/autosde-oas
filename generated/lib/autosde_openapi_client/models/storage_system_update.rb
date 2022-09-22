@@ -16,8 +16,6 @@ require 'time'
 module AutosdeOpenapiClient
   # TODO add description
   class StorageSystemUpdate
-    attr_accessor :enabled_capability_values
-
     # management_ip
     attr_accessor :management_ip
 
@@ -33,7 +31,6 @@ module AutosdeOpenapiClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'enabled_capability_values' => :'enabled_capability_values',
         :'management_ip' => :'management_ip',
         :'name' => :'name',
         :'password' => :'password',
@@ -49,7 +46,6 @@ module AutosdeOpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'enabled_capability_values' => :'ServiceAbstractCapabilityValue',
         :'management_ip' => :'String',
         :'name' => :'String',
         :'password' => :'String',
@@ -77,10 +73,6 @@ module AutosdeOpenapiClient
         end
         h[k.to_sym] = v
       }
-
-      if attributes.key?(:'enabled_capability_values')
-        self.enabled_capability_values = attributes[:'enabled_capability_values']
-      end
 
       if attributes.key?(:'management_ip')
         self.management_ip = attributes[:'management_ip']
@@ -132,7 +124,6 @@ module AutosdeOpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          enabled_capability_values == o.enabled_capability_values &&
           management_ip == o.management_ip &&
           name == o.name &&
           password == o.password &&
@@ -148,7 +139,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [enabled_capability_values, management_ip, name, password, user].hash
+      [management_ip, name, password, user].hash
     end
 
     # Builds the object from hash

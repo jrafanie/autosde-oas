@@ -8,7 +8,6 @@
 | **chap_name** | **String** | chap_name | [optional] |
 | **chap_secret** | **String** | chap_secret | [optional] |
 | **component_state** | **String** | component_state | [optional] |
-| **enabled_capability_values** | [**ServiceAbstractCapabilityValue**](ServiceAbstractCapabilityValue.md) |  | [optional] |
 | **initial_refresh** | **Boolean** | initial_refresh | [optional][default to true] |
 | **iqn** | **String** |  | [optional] |
 | **management_ip** | **String** | management_ip | [optional] |
@@ -34,7 +33,6 @@ instance = AutosdeOpenapiClient::StorageSystemCreate.new(
   chap_name: null,
   chap_secret: null,
   component_state: null,
-  enabled_capability_values: null,
   initial_refresh: null,
   iqn: null,
   management_ip: null,

@@ -4,7 +4,6 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **enabled_capability_values** | [**ServiceAbstractCapabilityValue**](ServiceAbstractCapabilityValue.md) |  | [optional] |
 | **management_ip** | **String** | management_ip | [optional] |
 | **name** | **String** | name | [optional] |
 | **password** | **String** | password | [optional] |
@@ -16,7 +15,6 @@
 require 'autosde_openapi_client'
 
 instance = AutosdeOpenapiClient::StorageSystemUpdate.new(
-  enabled_capability_values: null,
   management_ip: null,
   name: null,
   password: null,
