@@ -5,8 +5,8 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **abstract_capability_name** | **String** | abstract_capability_name | [optional] |
-| **default_value** | **String** | default_value | [optional][default to &#39; &#39;] |
 | **native_capability_name** | **String** | native_capability_name | [optional] |
+| **native_default_value** | **String** | native_default_value | [optional][default to &#39; &#39;] |
 | **published** | **Boolean** | published | [optional] |
 | **system_type_id** | **String** | system_type_id | [optional] |
 | **to_abstract_value_mapper** | **String** | Maximum value length is 32 characters. | [optional] |
@@ -20,8 +20,8 @@ require 'autosde_openapi_client'
 
 instance = AutosdeOpenapiClient::CapabilityTranslationCreate.new(
   abstract_capability_name: null,
-  default_value: null,
   native_capability_name: null,
+  native_default_value: null,
   published: null,
   system_type_id: null,
   to_abstract_value_mapper: null,

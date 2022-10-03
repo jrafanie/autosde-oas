@@ -31,13 +31,13 @@ describe AutosdeOpenapiClient::CapabilityTranslationCreate do
     end
   end
 
-  describe 'test attribute "default_value"' do
+  describe 'test attribute "native_capability_name"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  describe 'test attribute "native_capability_name"' do
+  describe 'test attribute "native_default_value"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

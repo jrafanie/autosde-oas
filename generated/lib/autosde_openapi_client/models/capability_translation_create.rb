@@ -19,11 +19,11 @@ module AutosdeOpenapiClient
     # abstract_capability_name
     attr_accessor :abstract_capability_name
 
-    # default_value
-    attr_accessor :default_value
-
     # native_capability_name
     attr_accessor :native_capability_name
+
+    # native_default_value
+    attr_accessor :native_default_value
 
     # published
     attr_accessor :published
@@ -44,8 +44,8 @@ module AutosdeOpenapiClient
     def self.attribute_map
       {
         :'abstract_capability_name' => :'abstract_capability_name',
-        :'default_value' => :'default_value',
         :'native_capability_name' => :'native_capability_name',
+        :'native_default_value' => :'native_default_value',
         :'published' => :'published',
         :'system_type_id' => :'system_type_id',
         :'to_abstract_value_mapper' => :'to_abstract_value_mapper',
@@ -63,8 +63,8 @@ module AutosdeOpenapiClient
     def self.openapi_types
       {
         :'abstract_capability_name' => :'String',
-        :'default_value' => :'String',
         :'native_capability_name' => :'String',
+        :'native_default_value' => :'String',
         :'published' => :'Boolean',
         :'system_type_id' => :'String',
         :'to_abstract_value_mapper' => :'String',
@@ -98,14 +98,14 @@ module AutosdeOpenapiClient
         self.abstract_capability_name = attributes[:'abstract_capability_name']
       end
 
-      if attributes.key?(:'default_value')
-        self.default_value = attributes[:'default_value']
-      else
-        self.default_value = ' '
-      end
-
       if attributes.key?(:'native_capability_name')
         self.native_capability_name = attributes[:'native_capability_name']
+      end
+
+      if attributes.key?(:'native_default_value')
+        self.native_default_value = attributes[:'native_default_value']
+      else
+        self.native_default_value = ' '
       end
 
       if attributes.key?(:'published')
@@ -178,8 +178,8 @@ module AutosdeOpenapiClient
       return true if self.equal?(o)
       self.class == o.class &&
           abstract_capability_name == o.abstract_capability_name &&
-          default_value == o.default_value &&
           native_capability_name == o.native_capability_name &&
+          native_default_value == o.native_default_value &&
           published == o.published &&
           system_type_id == o.system_type_id &&
           to_abstract_value_mapper == o.to_abstract_value_mapper &&
@@ -196,7 +196,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [abstract_capability_name, default_value, native_capability_name, published, system_type_id, to_abstract_value_mapper, to_native_value_mapper, uuid].hash
+      [abstract_capability_name, native_capability_name, native_default_value, published, system_type_id, to_abstract_value_mapper, to_native_value_mapper, uuid].hash
     end
 
     # Builds the object from hash
