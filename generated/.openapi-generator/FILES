@@ -9,6 +9,7 @@ Rakefile
 autosde_openapi_client.gemspec
 docs/AbstractCapability.md
 docs/AbstractCapabilityApi.md
+docs/AbstractCapabilityResponse.md
 docs/Account.md
 docs/AccountApi.md
 docs/AccountPostRequest.md
@@ -61,6 +62,8 @@ docs/RefreshSystem.md
 docs/RefreshSystemApi.md
 docs/Service.md
 docs/ServiceAbstractCapabilityValue.md
+docs/ServiceAbstractCapabilityValueApi.md
+docs/ServiceAbstractCapabilityValueResponse.md
 docs/ServiceApi.md
 docs/ServiceCreate.md
 docs/ServiceResourceAttachment.md
@@ -126,6 +129,7 @@ lib/autosde_openapi_client/api/native_capability_api.rb
 lib/autosde_openapi_client/api/profile_api.rb
 lib/autosde_openapi_client/api/provisioning_strategy_api.rb
 lib/autosde_openapi_client/api/refresh_system_api.rb
+lib/autosde_openapi_client/api/service_abstract_capability_value_api.rb
 lib/autosde_openapi_client/api/service_api.rb
 lib/autosde_openapi_client/api/service_resource_attachment_api.rb
 lib/autosde_openapi_client/api/snapshot_api.rb
@@ -144,6 +148,7 @@ lib/autosde_openapi_client/api_error.rb
 lib/autosde_openapi_client/configuration.rb
 lib/autosde_openapi_client/configuration.rb
 lib/autosde_openapi_client/models/abstract_capability.rb
+lib/autosde_openapi_client/models/abstract_capability_response.rb
 lib/autosde_openapi_client/models/account.rb
 lib/autosde_openapi_client/models/account_post_request.rb
 lib/autosde_openapi_client/models/account_post_response.rb
@@ -178,6 +183,7 @@ lib/autosde_openapi_client/models/provisioning_strategy.rb
 lib/autosde_openapi_client/models/refresh_system.rb
 lib/autosde_openapi_client/models/service.rb
 lib/autosde_openapi_client/models/service_abstract_capability_value.rb
+lib/autosde_openapi_client/models/service_abstract_capability_value_response.rb
 lib/autosde_openapi_client/models/service_create.rb
 lib/autosde_openapi_client/models/service_resource_attachment.rb
 lib/autosde_openapi_client/models/snapshot.rb
@@ -229,6 +235,7 @@ spec/api/native_capability_api_spec.rb
 spec/api/profile_api_spec.rb
 spec/api/provisioning_strategy_api_spec.rb
 spec/api/refresh_system_api_spec.rb
+spec/api/service_abstract_capability_value_api_spec.rb
 spec/api/service_api_spec.rb
 spec/api/service_resource_attachment_api_spec.rb
 spec/api/snapshot_api_spec.rb
@@ -244,6 +251,7 @@ spec/api/volume_api_spec.rb
 spec/api/volume_safe_delete_api_spec.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
+spec/models/abstract_capability_response_spec.rb
 spec/models/abstract_capability_spec.rb
 spec/models/account_post_request_spec.rb
 spec/models/account_post_response_spec.rb
@@ -277,6 +285,7 @@ spec/models/native_capability_spec.rb
 spec/models/profile_spec.rb
 spec/models/provisioning_strategy_spec.rb
 spec/models/refresh_system_spec.rb
+spec/models/service_abstract_capability_value_response_spec.rb
 spec/models/service_abstract_capability_value_spec.rb
 spec/models/service_create_spec.rb
 spec/models/service_resource_attachment_spec.rb

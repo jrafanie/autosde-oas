@@ -153,6 +153,10 @@ Class | Method | HTTP request | Description
 *AutosdeOpenapiClient::ServiceApi* | [**services_pk_get**](docs/ServiceApi.md#services_pk_get) | **GET** /services/{pk} | 
 *AutosdeOpenapiClient::ServiceApi* | [**services_pk_put**](docs/ServiceApi.md#services_pk_put) | **PUT** /services/{pk} | 
 *AutosdeOpenapiClient::ServiceApi* | [**services_post**](docs/ServiceApi.md#services_post) | **POST** /services | 
+*AutosdeOpenapiClient::ServiceAbstractCapabilityValueApi* | [**service_abstract_capability_values_get**](docs/ServiceAbstractCapabilityValueApi.md#service_abstract_capability_values_get) | **GET** /service-abstract-capability-values | 
+*AutosdeOpenapiClient::ServiceAbstractCapabilityValueApi* | [**service_abstract_capability_values_pk_delete**](docs/ServiceAbstractCapabilityValueApi.md#service_abstract_capability_values_pk_delete) | **DELETE** /service-abstract-capability-values/{pk} | 
+*AutosdeOpenapiClient::ServiceAbstractCapabilityValueApi* | [**service_abstract_capability_values_pk_get**](docs/ServiceAbstractCapabilityValueApi.md#service_abstract_capability_values_pk_get) | **GET** /service-abstract-capability-values/{pk} | 
+*AutosdeOpenapiClient::ServiceAbstractCapabilityValueApi* | [**service_abstract_capability_values_post**](docs/ServiceAbstractCapabilityValueApi.md#service_abstract_capability_values_post) | **POST** /service-abstract-capability-values | 
 *AutosdeOpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attachment_get**](docs/ServiceResourceAttachmentApi.md#service_resource_attachment_get) | **GET** /service-resource-attachment | 
 *AutosdeOpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attachment_pk_delete**](docs/ServiceResourceAttachmentApi.md#service_resource_attachment_pk_delete) | **DELETE** /service-resource-attachment/{pk} | 
 *AutosdeOpenapiClient::ServiceResourceAttachmentApi* | [**service_resource_attachment_pk_get**](docs/ServiceResourceAttachmentApi.md#service_resource_attachment_pk_get) | **GET** /service-resource-attachment/{pk} | 
@@ -205,6 +209,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [AutosdeOpenapiClient::AbstractCapability](docs/AbstractCapability.md)
+ - [AutosdeOpenapiClient::AbstractCapabilityResponse](docs/AbstractCapabilityResponse.md)
  - [AutosdeOpenapiClient::Account](docs/Account.md)
  - [AutosdeOpenapiClient::AccountPostRequest](docs/AccountPostRequest.md)
  - [AutosdeOpenapiClient::AccountPostResponse](docs/AccountPostResponse.md)
@@ -239,6 +244,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::RefreshSystem](docs/RefreshSystem.md)
  - [AutosdeOpenapiClient::Service](docs/Service.md)
  - [AutosdeOpenapiClient::ServiceAbstractCapabilityValue](docs/ServiceAbstractCapabilityValue.md)
+ - [AutosdeOpenapiClient::ServiceAbstractCapabilityValueResponse](docs/ServiceAbstractCapabilityValueResponse.md)
  - [AutosdeOpenapiClient::ServiceCreate](docs/ServiceCreate.md)
  - [AutosdeOpenapiClient::ServiceResourceAttachment](docs/ServiceResourceAttachment.md)
  - [AutosdeOpenapiClient::Snapshot](docs/Snapshot.md)

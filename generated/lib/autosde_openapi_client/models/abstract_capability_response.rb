@@ -15,29 +15,18 @@ require 'time'
 
 module AutosdeOpenapiClient
   # TODO add description
-  class StorageSystemUpdate
-    attr_accessor :enabled_capability_values
-
-    # management_ip
-    attr_accessor :management_ip
-
+  class AbstractCapabilityResponse
     # name
     attr_accessor :name
 
-    # password
-    attr_accessor :password
-
-    # user
-    attr_accessor :user
+    # uuid
+    attr_accessor :uuid
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'enabled_capability_values' => :'enabled_capability_values',
-        :'management_ip' => :'management_ip',
         :'name' => :'name',
-        :'password' => :'password',
-        :'user' => :'user'
+        :'uuid' => :'uuid'
       }
     end
 
@@ -49,11 +38,8 @@ module AutosdeOpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'enabled_capability_values' => :'ServiceAbstractCapabilityValue',
-        :'management_ip' => :'String',
         :'name' => :'String',
-        :'password' => :'String',
-        :'user' => :'String'
+        :'uuid' => :'String'
       }
     end
 
@@ -67,35 +53,23 @@ module AutosdeOpenapiClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `AutosdeOpenapiClient::StorageSystemUpdate` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `AutosdeOpenapiClient::AbstractCapabilityResponse` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `AutosdeOpenapiClient::StorageSystemUpdate`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `AutosdeOpenapiClient::AbstractCapabilityResponse`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
-
-      if attributes.key?(:'enabled_capability_values')
-        self.enabled_capability_values = attributes[:'enabled_capability_values']
-      end
-
-      if attributes.key?(:'management_ip')
-        self.management_ip = attributes[:'management_ip']
-      end
 
       if attributes.key?(:'name')
         self.name = attributes[:'name']
       end
 
-      if attributes.key?(:'password')
-        self.password = attributes[:'password']
-      end
-
-      if attributes.key?(:'user')
-        self.user = attributes[:'user']
+      if attributes.key?(:'uuid')
+        self.uuid = attributes[:'uuid']
       end
     end
 
@@ -103,28 +77,13 @@ module AutosdeOpenapiClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if !@name.nil? && @name.to_s.length > 15
-        invalid_properties.push('invalid value for "name", the character length must be smaller than or equal to 15.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if !@name.nil? && @name.to_s.length > 15
       true
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] name Value to be assigned
-    def name=(name)
-      if !name.nil? && name.to_s.length > 15
-        fail ArgumentError, 'invalid value for "name", the character length must be smaller than or equal to 15.'
-      end
-
-      @name = name
     end
 
     # Checks equality by comparing each attribute.
@@ -132,11 +91,8 @@ module AutosdeOpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          enabled_capability_values == o.enabled_capability_values &&
-          management_ip == o.management_ip &&
           name == o.name &&
-          password == o.password &&
-          user == o.user
+          uuid == o.uuid
     end
 
     # @see the `==` method
@@ -148,7 +104,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [enabled_capability_values, management_ip, name, password, user].hash
+      [name, uuid].hash
     end
 
     # Builds the object from hash

@@ -12,7 +12,7 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
 ## abstract_capabilities_get
 
-> <Array<AbstractCapability>> abstract_capabilities_get
+> <Array<AbstractCapabilityResponse>> abstract_capabilities_get
 
 
 
@@ -42,7 +42,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<AbstractCapability>>, Integer, Hash)> abstract_capabilities_get_with_http_info
+> <Array(<Array<AbstractCapabilityResponse>>, Integer, Hash)> abstract_capabilities_get_with_http_info
 
 ```ruby
 begin
@@ -50,7 +50,7 @@ begin
   data, status_code, headers = api_instance.abstract_capabilities_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<AbstractCapability>>
+  p data # => <Array<AbstractCapabilityResponse>>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AbstractCapabilityApi->abstract_capabilities_get_with_http_info: #{e}"
 end
@@ -62,7 +62,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;AbstractCapability&gt;**](AbstractCapability.md)
+[**Array&lt;AbstractCapabilityResponse&gt;**](AbstractCapabilityResponse.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ end
 
 ## abstract_capabilities_pk_get
 
-> <AbstractCapability> abstract_capabilities_pk_get(pk)
+> <AbstractCapabilityResponse> abstract_capabilities_pk_get(pk)
 
 
 
@@ -174,7 +174,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<AbstractCapability>, Integer, Hash)> abstract_capabilities_pk_get_with_http_info(pk)
+> <Array(<AbstractCapabilityResponse>, Integer, Hash)> abstract_capabilities_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -182,7 +182,7 @@ begin
   data, status_code, headers = api_instance.abstract_capabilities_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <AbstractCapability>
+  p data # => <AbstractCapabilityResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling AbstractCapabilityApi->abstract_capabilities_pk_get_with_http_info: #{e}"
 end
@@ -196,7 +196,7 @@ end
 
 ### Return type
 
-[**AbstractCapability**](AbstractCapability.md)
+[**AbstractCapabilityResponse**](AbstractCapabilityResponse.md)
 
 ### Authorization
 
