@@ -54,7 +54,7 @@ describe 'StorageSystemApi' do
   # unit tests for storage_systems_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [StorageSystem]
+  # @return [StorageSystemResponse]
   describe 'storage_systems_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

@@ -263,6 +263,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::StorageResourceUpdate](docs/StorageResourceUpdate.md)
  - [AutosdeOpenapiClient::StorageSystem](docs/StorageSystem.md)
  - [AutosdeOpenapiClient::StorageSystemCreate](docs/StorageSystemCreate.md)
+ - [AutosdeOpenapiClient::StorageSystemResponse](docs/StorageSystemResponse.md)
  - [AutosdeOpenapiClient::StorageSystemUpdate](docs/StorageSystemUpdate.md)
  - [AutosdeOpenapiClient::SystemType](docs/SystemType.md)
  - [AutosdeOpenapiClient::SystemTypeCreate](docs/SystemTypeCreate.md)

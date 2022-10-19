@@ -144,7 +144,7 @@ end
 
 ## storage_systems_pk_get
 
-> <StorageSystem> storage_systems_pk_get(pk)
+> <StorageSystemResponse> storage_systems_pk_get(pk)
 
 
 
@@ -175,7 +175,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<StorageSystem>, Integer, Hash)> storage_systems_pk_get_with_http_info(pk)
+> <Array(<StorageSystemResponse>, Integer, Hash)> storage_systems_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -183,7 +183,7 @@ begin
   data, status_code, headers = api_instance.storage_systems_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <StorageSystem>
+  p data # => <StorageSystemResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageSystemApi->storage_systems_pk_get_with_http_info: #{e}"
 end
@@ -197,7 +197,7 @@ end
 
 ### Return type
 
-[**StorageSystem**](StorageSystem.md)
+[**StorageSystemResponse**](StorageSystemResponse.md)
 
 ### Authorization
 
