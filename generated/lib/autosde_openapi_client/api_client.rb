@@ -70,7 +70,25 @@ module AutosdeOpenapiClient
       end
 
       if opts[:return_type]
-        data = deserialize(response, opts[:return_type])
+          content = JSON(response.body)
+          new_body=response.body
+          if content.include? 'results'
+            res = content['results']
+            next_url = content['next']
+
+            while next_url
+              uri    = URI.parse(next_url)
+              opts[:query_params] = Rack::Utils.parse_query(URI(uri).query)
+              request = build_request(http_method, path, opts)
+              response = request.run
+              content = JSON(response.body)
+
+              res.concat(content['results'])
+              next_url = content['next']
+            end
+            new_body = (JSON.dump(res)).encode()
+          end
+          data = deserialize(response,new_body, opts[:return_type])
       else
         data = nil
       end
@@ -93,6 +111,7 @@ module AutosdeOpenapiClient
       header_params = @default_headers.merge(opts[:header_params] || {})
       query_params = opts[:query_params] || {}
       form_params = opts[:form_params] || {}
+      follow_location = opts[:follow_location] || true
 
       update_params_for_auth! header_params, query_params, opts[:auth_names]
 
@@ -109,7 +128,8 @@ module AutosdeOpenapiClient
         :ssl_verifyhost => _verify_ssl_host,
         :sslcert => @config.cert_file,
         :sslkey => @config.key_file,
-        :verbose => @config.debugging
+        :verbose => @config.debugging,
+        :followlocation => follow_location
       }
 
       # set custom cert, if provided
@@ -210,8 +230,7 @@ module AutosdeOpenapiClient
     #
     # @param [Response] response HTTP response
     # @param [String] return_type some examples: "User", "Array<User>", "Hash<String, Integer>"
-    def deserialize(response, return_type)
-      body = response.body
+    def deserialize(response, body, return_type)
 
       # handle file downloading - return the File instance processed in request callbacks
       # note that response body is empty when the file is written in chunks in request on_body callback
@@ -296,7 +315,7 @@ module AutosdeOpenapiClient
       @config.base_url(opts[:operation]) + path
     end
 
-    # Update hearder and query params based on authentication settings.
+    # Update header and query params based on authentication settings.
     #
     # @param [Hash] header_params Header parameters
     # @param [Hash] query_params Query parameters
@@ -308,7 +327,7 @@ module AutosdeOpenapiClient
         case auth_setting[:in]
         when 'header' then header_params[auth_setting[:key]] = auth_setting[:value]
         when 'query'  then query_params[auth_setting[:key]] = auth_setting[:value]
-        else fail ArgumentError, 'Authentication token must be in `query` of `header`'
+        else fail ArgumentError, 'Authentication token must be in `query` or `header`'
         end
       end
     end
@@ -335,8 +354,8 @@ module AutosdeOpenapiClient
     # @param [Array] content_types array for Content-Type
     # @return [String] the Content-Type header  (e.g. application/json)
     def select_header_content_type(content_types)
-      # use application/json by default
-      return 'application/json' if content_types.nil? || content_types.empty?
+      # return nil by default
+      return if content_types.nil? || content_types.empty?
       # use JSON when present, otherwise use the first one
       json_content_type = content_types.find { |s| json_mime?(s) }
       json_content_type || content_types.first
