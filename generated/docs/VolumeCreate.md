@@ -13,6 +13,7 @@
 | **status** | **String** | status | [optional] |
 | **unmapped_since** | **Time** | unmapped_since | [optional] |
 | **uuid** | **String** | uuid | [optional] |
+| **volume_name** | **String** | volume_name | [optional] |
 
 ## Example
 
@@ -28,7 +29,8 @@ instance = AutosdeOpenapiClient::VolumeCreate.new(
   size: null,
   status: null,
   unmapped_since: null,
-  uuid: null
+  uuid: null,
+  volume_name: null
 )
 ```
 

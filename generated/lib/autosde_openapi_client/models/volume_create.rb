@@ -43,6 +43,9 @@ module AutosdeOpenapiClient
     # uuid
     attr_accessor :uuid
 
+    # volume_name
+    attr_accessor :volume_name
+
     class EnumAttributeValidator
       attr_reader :datatype
       attr_reader :allowable_values
@@ -76,7 +79,8 @@ module AutosdeOpenapiClient
         :'size' => :'size',
         :'status' => :'status',
         :'unmapped_since' => :'unmapped_since',
-        :'uuid' => :'uuid'
+        :'uuid' => :'uuid',
+        :'volume_name' => :'volume_name'
       }
     end
 
@@ -96,7 +100,8 @@ module AutosdeOpenapiClient
         :'size' => :'Integer',
         :'status' => :'String',
         :'unmapped_since' => :'Time',
-        :'uuid' => :'String'
+        :'uuid' => :'String',
+        :'volume_name' => :'String'
       }
     end
 
@@ -160,6 +165,10 @@ module AutosdeOpenapiClient
       if attributes.key?(:'uuid')
         self.uuid = attributes[:'uuid']
       end
+
+      if attributes.key?(:'volume_name')
+        self.volume_name = attributes[:'volume_name']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -205,7 +214,8 @@ module AutosdeOpenapiClient
           size == o.size &&
           status == o.status &&
           unmapped_since == o.unmapped_since &&
-          uuid == o.uuid
+          uuid == o.uuid &&
+          volume_name == o.volume_name
     end
 
     # @see the `==` method
@@ -217,7 +227,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [compliant, component_state, count, name, service, size, status, unmapped_since, uuid].hash
+      [compliant, component_state, count, name, service, size, status, unmapped_since, uuid, volume_name].hash
     end
 
     # Builds the object from hash
