@@ -210,7 +210,7 @@ end
 
 ## host_clusters_post
 
-> <HostClusterResponse> host_clusters_post(host_cluster_create)
+> <AsyncResponse> host_clusters_post(host_cluster_create)
 
 
 
@@ -241,7 +241,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<HostClusterResponse>, Integer, Hash)> host_clusters_post_with_http_info(host_cluster_create)
+> <Array(<AsyncResponse>, Integer, Hash)> host_clusters_post_with_http_info(host_cluster_create)
 
 ```ruby
 begin
@@ -249,7 +249,7 @@ begin
   data, status_code, headers = api_instance.host_clusters_post_with_http_info(host_cluster_create)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <HostClusterResponse>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling HostClusterApi->host_clusters_post_with_http_info: #{e}"
 end
@@ -263,7 +263,7 @@ end
 
 ### Return type
 
-[**HostClusterResponse**](HostClusterResponse.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

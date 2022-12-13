@@ -192,7 +192,7 @@ module AutosdeOpenapiClient
 
     # @param host_cluster_create [HostClusterCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [HostClusterResponse]
+    # @return [AsyncResponse]
     def host_clusters_post(host_cluster_create, opts = {})
       data, _status_code, _headers = host_clusters_post_with_http_info(host_cluster_create, opts)
       data
@@ -200,7 +200,7 @@ module AutosdeOpenapiClient
 
     # @param host_cluster_create [HostClusterCreate] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(HostClusterResponse, Integer, Hash)>] HostClusterResponse data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def host_clusters_post_with_http_info(host_cluster_create, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: HostClusterApi.host_clusters_post ...'
@@ -229,7 +229,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(host_cluster_create)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'HostClusterResponse'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
