@@ -200,10 +200,6 @@ Class | Method | HTTP request | Description
 *AutosdeOpenapiClient::VolumeApi* | [**volumes_pk_get**](docs/VolumeApi.md#volumes_pk_get) | **GET** /volumes/{pk} | 
 *AutosdeOpenapiClient::VolumeApi* | [**volumes_pk_put**](docs/VolumeApi.md#volumes_pk_put) | **PUT** /volumes/{pk} | 
 *AutosdeOpenapiClient::VolumeApi* | [**volumes_post**](docs/VolumeApi.md#volumes_post) | **POST** /volumes | 
-*AutosdeOpenapiClient::VolumeSafeDeleteApi* | [**safe_deletes_get**](docs/VolumeSafeDeleteApi.md#safe_deletes_get) | **GET** /safe-deletes | 
-*AutosdeOpenapiClient::VolumeSafeDeleteApi* | [**safe_deletes_pk_delete**](docs/VolumeSafeDeleteApi.md#safe_deletes_pk_delete) | **DELETE** /safe-deletes/{pk} | 
-*AutosdeOpenapiClient::VolumeSafeDeleteApi* | [**safe_deletes_pk_get**](docs/VolumeSafeDeleteApi.md#safe_deletes_pk_get) | **GET** /safe-deletes/{pk} | 
-*AutosdeOpenapiClient::VolumeSafeDeleteApi* | [**safe_deletes_post**](docs/VolumeSafeDeleteApi.md#safe_deletes_post) | **POST** /safe-deletes | 
 
 
 ## Documentation for Models
@@ -274,8 +270,6 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::Volume](docs/Volume.md)
  - [AutosdeOpenapiClient::VolumeCreate](docs/VolumeCreate.md)
  - [AutosdeOpenapiClient::VolumeResponse](docs/VolumeResponse.md)
- - [AutosdeOpenapiClient::VolumeSafeDelete](docs/VolumeSafeDelete.md)
- - [AutosdeOpenapiClient::VolumeSafeDeleteCreate](docs/VolumeSafeDeleteCreate.md)
  - [AutosdeOpenapiClient::VolumeUpdate](docs/VolumeUpdate.md)
 
 

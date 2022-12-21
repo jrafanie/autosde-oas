@@ -83,8 +83,6 @@ require 'autosde_openapi_client/models/validate_system'
 require 'autosde_openapi_client/models/volume'
 require 'autosde_openapi_client/models/volume_create'
 require 'autosde_openapi_client/models/volume_response'
-require 'autosde_openapi_client/models/volume_safe_delete'
-require 'autosde_openapi_client/models/volume_safe_delete_create'
 require 'autosde_openapi_client/models/volume_update'
 
 # APIs
@@ -120,7 +118,6 @@ require 'autosde_openapi_client/api/system_type_api'
 require 'autosde_openapi_client/api/user_api'
 require 'autosde_openapi_client/api/validate_system_api'
 require 'autosde_openapi_client/api/volume_api'
-require 'autosde_openapi_client/api/volume_safe_delete_api'
 
 module AutosdeOpenapiClient
   class << self
