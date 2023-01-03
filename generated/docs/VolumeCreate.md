@@ -8,7 +8,9 @@
 | **component_state** | **String** | component_state | [optional] |
 | **count** | **Integer** | count | [optional][default to 1] |
 | **name** | **String** | name | [optional] |
-| **service** | **String** | !!uuid of service | [optional] |
+| **resources** | **Array&lt;String&gt;** | resources | [optional] |
+| **service** | [**Service**](Service.md) |  | [optional] |
+| **service_name** | **String** | service_name | [optional][default to &#39;null&#39;] |
 | **size** | **Integer** | size | [optional] |
 | **status** | **String** | status | [optional] |
 | **unmapped_since** | **Time** | unmapped_since | [optional] |
@@ -25,7 +27,9 @@ instance = AutosdeOpenapiClient::VolumeCreate.new(
   component_state: null,
   count: null,
   name: null,
+  resources: null,
   service: null,
+  service_name: null,
   size: null,
   status: null,
   unmapped_since: null,

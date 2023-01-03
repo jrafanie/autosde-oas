@@ -4,7 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **uuid** | [**StorageSystem**](StorageSystem.md) |  | [optional] |
+| **resource_type** | **String** | resource_type | [optional] |
+| **storage_system** | [**StorageSystem**](StorageSystem.md) |  | [optional] |
 
 ## Example
 
@@ -12,7 +13,8 @@
 require 'autosde_openapi_client'
 
 instance = AutosdeOpenapiClient::RefreshSystem.new(
-  uuid: null
+  resource_type: null,
+  storage_system: null
 )
 ```
 

@@ -25,7 +25,17 @@ describe AutosdeOpenapiClient::RefreshSystem do
       expect(instance).to be_instance_of(AutosdeOpenapiClient::RefreshSystem)
     end
   end
-  describe 'test attribute "uuid"' do
+  describe 'test attribute "resource_type"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["system_resources", "volumes", "hosts", "events"])
+      # validator.allowable_values.each do |value|
+      #   expect { instance.resource_type = value }.not_to raise_error
+      # end
+    end
+  end
+
+  describe 'test attribute "storage_system"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

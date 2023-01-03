@@ -19,6 +19,9 @@ module AutosdeOpenapiClient
     # advanced_attributes_map
     attr_accessor :advanced_attributes_map
 
+    # capability_values_json
+    attr_accessor :capability_values_json
+
     # component_state
     attr_accessor :component_state
 
@@ -69,6 +72,7 @@ module AutosdeOpenapiClient
     def self.attribute_map
       {
         :'advanced_attributes_map' => :'advanced_attributes_map',
+        :'capability_values_json' => :'capability_values_json',
         :'component_state' => :'component_state',
         :'logical_free' => :'logical_free',
         :'logical_total' => :'logical_total',
@@ -89,6 +93,7 @@ module AutosdeOpenapiClient
     def self.openapi_types
       {
         :'advanced_attributes_map' => :'String',
+        :'capability_values_json' => :'String',
         :'component_state' => :'String',
         :'logical_free' => :'Integer',
         :'logical_total' => :'Integer',
@@ -123,6 +128,10 @@ module AutosdeOpenapiClient
 
       if attributes.key?(:'advanced_attributes_map')
         self.advanced_attributes_map = attributes[:'advanced_attributes_map']
+      end
+
+      if attributes.key?(:'capability_values_json')
+        self.capability_values_json = attributes[:'capability_values_json']
       end
 
       if attributes.key?(:'component_state')
@@ -210,6 +219,7 @@ module AutosdeOpenapiClient
       return true if self.equal?(o)
       self.class == o.class &&
           advanced_attributes_map == o.advanced_attributes_map &&
+          capability_values_json == o.capability_values_json &&
           component_state == o.component_state &&
           logical_free == o.logical_free &&
           logical_total == o.logical_total &&
@@ -229,7 +239,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [advanced_attributes_map, component_state, logical_free, logical_total, name, pool_name, protocol, storage_system, uuid].hash
+      [advanced_attributes_map, capability_values_json, component_state, logical_free, logical_total, name, pool_name, protocol, storage_system, uuid].hash
     end
 
     # Builds the object from hash

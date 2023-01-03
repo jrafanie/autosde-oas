@@ -16,12 +16,38 @@ require 'time'
 module AutosdeOpenapiClient
   # RefreshSystem object represents refreshing of the storage system.
   class RefreshSystem
-    attr_accessor :uuid
+    # resource_type
+    attr_accessor :resource_type
+
+    attr_accessor :storage_system
+
+    class EnumAttributeValidator
+      attr_reader :datatype
+      attr_reader :allowable_values
+
+      def initialize(datatype, allowable_values)
+        @allowable_values = allowable_values.map do |value|
+          case datatype.to_s
+          when /Integer/i
+            value.to_i
+          when /Float/i
+            value.to_f
+          else
+            value
+          end
+        end
+      end
+
+      def valid?(value)
+        !value || allowable_values.include?(value)
+      end
+    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'uuid' => :'uuid'
+        :'resource_type' => :'resource_type',
+        :'storage_system' => :'storage_system'
       }
     end
 
@@ -33,7 +59,8 @@ module AutosdeOpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'uuid' => :'StorageSystem'
+        :'resource_type' => :'String',
+        :'storage_system' => :'StorageSystem'
       }
     end
 
@@ -58,8 +85,12 @@ module AutosdeOpenapiClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'uuid')
-        self.uuid = attributes[:'uuid']
+      if attributes.key?(:'resource_type')
+        self.resource_type = attributes[:'resource_type']
+      end
+
+      if attributes.key?(:'storage_system')
+        self.storage_system = attributes[:'storage_system']
       end
     end
 
@@ -73,7 +104,19 @@ module AutosdeOpenapiClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
+      resource_type_validator = EnumAttributeValidator.new('String', ["system_resources", "volumes", "hosts", "events"])
+      return false unless resource_type_validator.valid?(@resource_type)
       true
+    end
+
+    # Custom attribute writer method checking allowed values (enum).
+    # @param [Object] resource_type Object to be assigned
+    def resource_type=(resource_type)
+      validator = EnumAttributeValidator.new('String', ["system_resources", "volumes", "hosts", "events"])
+      unless validator.valid?(resource_type)
+        fail ArgumentError, "invalid value for \"resource_type\", must be one of #{validator.allowable_values}."
+      end
+      @resource_type = resource_type
     end
 
     # Checks equality by comparing each attribute.
@@ -81,7 +124,8 @@ module AutosdeOpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          uuid == o.uuid
+          resource_type == o.resource_type &&
+          storage_system == o.storage_system
     end
 
     # @see the `==` method
@@ -93,7 +137,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [uuid].hash
+      [resource_type, storage_system].hash
     end
 
     # Builds the object from hash

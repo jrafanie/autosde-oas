@@ -15,41 +15,38 @@ require 'time'
 
 module AutosdeOpenapiClient
   # TODO add description
-  class VolumeCreate
-    # compliant
-    attr_accessor :compliant
+  class ServiceResponse
+    attr_accessor :capability_values
+
+    # capability_values_json
+    attr_accessor :capability_values_json
 
     # component_state
     attr_accessor :component_state
 
-    # count
-    attr_accessor :count
+    # description
+    attr_accessor :description
 
     # name
     attr_accessor :name
 
-    # resources
-    attr_accessor :resources
+    # !!uuid of profile
+    attr_accessor :profile
 
-    attr_accessor :service
+    # !!uuid of project
+    attr_accessor :project
 
-    # service_name
-    attr_accessor :service_name
+    # !!uuid of provisioning_strategy
+    attr_accessor :provisioning_strategy
 
-    # size
-    attr_accessor :size
-
-    # status
-    attr_accessor :status
-
-    # unmapped_since
-    attr_accessor :unmapped_since
+    # resource_service
+    attr_accessor :resource_service
 
     # uuid
     attr_accessor :uuid
 
-    # volume_name
-    attr_accessor :volume_name
+    # The version of the service
+    attr_accessor :version
 
     class EnumAttributeValidator
       attr_reader :datatype
@@ -76,18 +73,17 @@ module AutosdeOpenapiClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'compliant' => :'compliant',
+        :'capability_values' => :'capability_values',
+        :'capability_values_json' => :'capability_values_json',
         :'component_state' => :'component_state',
-        :'count' => :'count',
+        :'description' => :'description',
         :'name' => :'name',
-        :'resources' => :'resources',
-        :'service' => :'service',
-        :'service_name' => :'service_name',
-        :'size' => :'size',
-        :'status' => :'status',
-        :'unmapped_since' => :'unmapped_since',
+        :'profile' => :'profile',
+        :'project' => :'project',
+        :'provisioning_strategy' => :'provisioning_strategy',
+        :'resource_service' => :'resource_service',
         :'uuid' => :'uuid',
-        :'volume_name' => :'volume_name'
+        :'version' => :'version'
       }
     end
 
@@ -99,18 +95,17 @@ module AutosdeOpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'compliant' => :'Boolean',
+        :'capability_values' => :'ServiceAbstractCapabilityValue',
+        :'capability_values_json' => :'String',
         :'component_state' => :'String',
-        :'count' => :'Integer',
+        :'description' => :'String',
         :'name' => :'String',
-        :'resources' => :'Array<String>',
-        :'service' => :'Service',
-        :'service_name' => :'String',
-        :'size' => :'Integer',
-        :'status' => :'String',
-        :'unmapped_since' => :'Time',
+        :'profile' => :'String',
+        :'project' => :'String',
+        :'provisioning_strategy' => :'String',
+        :'resource_service' => :'Boolean',
         :'uuid' => :'String',
-        :'volume_name' => :'String'
+        :'version' => :'Integer'
       }
     end
 
@@ -124,71 +119,65 @@ module AutosdeOpenapiClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `AutosdeOpenapiClient::VolumeCreate` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `AutosdeOpenapiClient::ServiceResponse` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `AutosdeOpenapiClient::VolumeCreate`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `AutosdeOpenapiClient::ServiceResponse`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'compliant')
-        self.compliant = attributes[:'compliant']
-      else
-        self.compliant = false
+      if attributes.key?(:'capability_values')
+        self.capability_values = attributes[:'capability_values']
+      end
+
+      if attributes.key?(:'capability_values_json')
+        self.capability_values_json = attributes[:'capability_values_json']
       end
 
       if attributes.key?(:'component_state')
         self.component_state = attributes[:'component_state']
       end
 
-      if attributes.key?(:'count')
-        self.count = attributes[:'count']
+      if attributes.key?(:'description')
+        self.description = attributes[:'description']
       else
-        self.count = 1
+        self.description = ''
       end
 
       if attributes.key?(:'name')
         self.name = attributes[:'name']
       end
 
-      if attributes.key?(:'resources')
-        if (value = attributes[:'resources']).is_a?(Array)
-          self.resources = value
-        end
+      if attributes.key?(:'profile')
+        self.profile = attributes[:'profile']
       end
 
-      if attributes.key?(:'service')
-        self.service = attributes[:'service']
+      if attributes.key?(:'project')
+        self.project = attributes[:'project']
       end
 
-      if attributes.key?(:'service_name')
-        self.service_name = attributes[:'service_name']
+      if attributes.key?(:'provisioning_strategy')
+        self.provisioning_strategy = attributes[:'provisioning_strategy']
+      end
+
+      if attributes.key?(:'resource_service')
+        self.resource_service = attributes[:'resource_service']
       else
-        self.service_name = 'null'
-      end
-
-      if attributes.key?(:'size')
-        self.size = attributes[:'size']
-      end
-
-      if attributes.key?(:'status')
-        self.status = attributes[:'status']
-      end
-
-      if attributes.key?(:'unmapped_since')
-        self.unmapped_since = attributes[:'unmapped_since']
+        self.resource_service = false
       end
 
       if attributes.key?(:'uuid')
         self.uuid = attributes[:'uuid']
       end
 
-      if attributes.key?(:'volume_name')
-        self.volume_name = attributes[:'volume_name']
+      if attributes.key?(:'version')
+        self.version = attributes[:'version']
+      else
+        self.version = 1
       end
     end
 
@@ -227,18 +216,17 @@ module AutosdeOpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          compliant == o.compliant &&
+          capability_values == o.capability_values &&
+          capability_values_json == o.capability_values_json &&
           component_state == o.component_state &&
-          count == o.count &&
+          description == o.description &&
           name == o.name &&
-          resources == o.resources &&
-          service == o.service &&
-          service_name == o.service_name &&
-          size == o.size &&
-          status == o.status &&
-          unmapped_since == o.unmapped_since &&
+          profile == o.profile &&
+          project == o.project &&
+          provisioning_strategy == o.provisioning_strategy &&
+          resource_service == o.resource_service &&
           uuid == o.uuid &&
-          volume_name == o.volume_name
+          version == o.version
     end
 
     # @see the `==` method
@@ -250,7 +238,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [compliant, component_state, count, name, resources, service, service_name, size, status, unmapped_since, uuid, volume_name].hash
+      [capability_values, capability_values_json, component_state, description, name, profile, project, provisioning_strategy, resource_service, uuid, version].hash
     end
 
     # Builds the object from hash
