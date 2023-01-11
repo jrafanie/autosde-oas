@@ -67,6 +67,12 @@ describe AutosdeOpenapiClient::EventResponse do
     end
   end
 
+  describe 'test attribute "sequence_number"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   describe 'test attribute "storage_system"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

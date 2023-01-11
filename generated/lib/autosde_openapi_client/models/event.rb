@@ -37,6 +37,9 @@ module AutosdeOpenapiClient
     # refresh_interval
     attr_accessor :refresh_interval
 
+    # sequence_number
+    attr_accessor :sequence_number
+
     attr_accessor :storage_system
 
     # uuid
@@ -52,6 +55,7 @@ module AutosdeOpenapiClient
         :'fixed' => :'fixed',
         :'last_timestamp' => :'last_timestamp',
         :'refresh_interval' => :'refresh_interval',
+        :'sequence_number' => :'sequence_number',
         :'storage_system' => :'storage_system',
         :'uuid' => :'uuid'
       }
@@ -72,6 +76,7 @@ module AutosdeOpenapiClient
         :'fixed' => :'String',
         :'last_timestamp' => :'Time',
         :'refresh_interval' => :'Integer',
+        :'sequence_number' => :'Integer',
         :'storage_system' => :'StorageSystem',
         :'uuid' => :'String'
       }
@@ -126,6 +131,10 @@ module AutosdeOpenapiClient
         self.refresh_interval = attributes[:'refresh_interval']
       end
 
+      if attributes.key?(:'sequence_number')
+        self.sequence_number = attributes[:'sequence_number']
+      end
+
       if attributes.key?(:'storage_system')
         self.storage_system = attributes[:'storage_system']
       end
@@ -160,6 +169,7 @@ module AutosdeOpenapiClient
           fixed == o.fixed &&
           last_timestamp == o.last_timestamp &&
           refresh_interval == o.refresh_interval &&
+          sequence_number == o.sequence_number &&
           storage_system == o.storage_system &&
           uuid == o.uuid
     end
@@ -173,7 +183,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [description, error_code, event_id, event_type, fixed, last_timestamp, refresh_interval, storage_system, uuid].hash
+      [description, error_code, event_id, event_type, fixed, last_timestamp, refresh_interval, sequence_number, storage_system, uuid].hash
     end
 
     # Builds the object from hash
