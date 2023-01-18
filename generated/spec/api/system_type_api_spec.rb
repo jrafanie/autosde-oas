@@ -34,7 +34,7 @@ describe 'SystemTypeApi' do
 
   # unit tests for system_types_get
   # @param [Hash] opts the optional parameters
-  # @return [Array<SystemType>]
+  # @return [Array<SystemTypeResponse>]
   describe 'system_types_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

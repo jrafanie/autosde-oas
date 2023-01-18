@@ -264,6 +264,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::StorageSystemUpdate](docs/StorageSystemUpdate.md)
  - [AutosdeOpenapiClient::SystemType](docs/SystemType.md)
  - [AutosdeOpenapiClient::SystemTypeCreate](docs/SystemTypeCreate.md)
+ - [AutosdeOpenapiClient::SystemTypeResponse](docs/SystemTypeResponse.md)
  - [AutosdeOpenapiClient::User](docs/User.md)
  - [AutosdeOpenapiClient::UserCreate](docs/UserCreate.md)
  - [AutosdeOpenapiClient::UserUpdate](docs/UserUpdate.md)

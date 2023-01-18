@@ -12,7 +12,7 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
 ## system_types_get
 
-> <Array<SystemType>> system_types_get
+> <Array<SystemTypeResponse>> system_types_get
 
 
 
@@ -42,7 +42,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SystemType>>, Integer, Hash)> system_types_get_with_http_info
+> <Array(<Array<SystemTypeResponse>>, Integer, Hash)> system_types_get_with_http_info
 
 ```ruby
 begin
@@ -50,7 +50,7 @@ begin
   data, status_code, headers = api_instance.system_types_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<SystemType>>
+  p data # => <Array<SystemTypeResponse>>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling SystemTypeApi->system_types_get_with_http_info: #{e}"
 end
@@ -62,7 +62,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;SystemType&gt;**](SystemType.md)
+[**Array&lt;SystemTypeResponse&gt;**](SystemTypeResponse.md)
 
 ### Authorization
 

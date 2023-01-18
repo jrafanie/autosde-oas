@@ -96,6 +96,7 @@ docs/StorageSystemUpdate.md
 docs/SystemType.md
 docs/SystemTypeApi.md
 docs/SystemTypeCreate.md
+docs/SystemTypeResponse.md
 docs/User.md
 docs/UserApi.md
 docs/UserCreate.md
@@ -205,6 +206,7 @@ lib/autosde_openapi_client/models/storage_system_response.rb
 lib/autosde_openapi_client/models/storage_system_update.rb
 lib/autosde_openapi_client/models/system_type.rb
 lib/autosde_openapi_client/models/system_type_create.rb
+lib/autosde_openapi_client/models/system_type_response.rb
 lib/autosde_openapi_client/models/user.rb
 lib/autosde_openapi_client/models/user_create.rb
 lib/autosde_openapi_client/models/user_update.rb
@@ -307,6 +309,7 @@ spec/models/storage_system_response_spec.rb
 spec/models/storage_system_spec.rb
 spec/models/storage_system_update_spec.rb
 spec/models/system_type_create_spec.rb
+spec/models/system_type_response_spec.rb
 spec/models/system_type_spec.rb
 spec/models/user_create_spec.rb
 spec/models/user_spec.rb

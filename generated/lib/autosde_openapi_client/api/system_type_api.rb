@@ -20,14 +20,14 @@ module AutosdeOpenapiClient
       @api_client = api_client
     end
     # @param [Hash] opts the optional parameters
-    # @return [Array<SystemType>]
+    # @return [Array<SystemTypeResponse>]
     def system_types_get(opts = {})
       data, _status_code, _headers = system_types_get_with_http_info(opts)
       data
     end
 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<SystemType>, Integer, Hash)>] Array<SystemType> data, response status code and response headers
+    # @return [Array<(Array<SystemTypeResponse>, Integer, Hash)>] Array<SystemTypeResponse> data, response status code and response headers
     def system_types_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SystemTypeApi.system_types_get ...'
@@ -50,7 +50,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<SystemType>'
+      return_type = opts[:debug_return_type] || 'Array<SystemTypeResponse>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
