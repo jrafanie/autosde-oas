@@ -4,6 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **addresses** | [**Address**](Address.md) |  | [optional] |
 | **component_state** | **String** | component_state | [optional] |
 | **description** | **String** | description | [optional] |
 | **host_cluster** | [**HostCluster**](HostCluster.md) |  | [optional] |
@@ -21,6 +22,7 @@
 require 'autosde_openapi_client'
 
 instance = AutosdeOpenapiClient::StorageHost.new(
+  addresses: null,
   component_state: null,
   description: null,
   host_cluster: null,

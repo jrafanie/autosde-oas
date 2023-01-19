@@ -25,6 +25,12 @@ describe AutosdeOpenapiClient::StorageHost do
       expect(instance).to be_instance_of(AutosdeOpenapiClient::StorageHost)
     end
   end
+  describe 'test attribute "addresses"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   describe 'test attribute "component_state"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

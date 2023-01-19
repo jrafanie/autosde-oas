@@ -16,6 +16,8 @@ require 'time'
 module AutosdeOpenapiClient
   # StorageHost
   class StorageHost
+    attr_accessor :addresses
+
     # component_state
     attr_accessor :component_state
 
@@ -68,6 +70,7 @@ module AutosdeOpenapiClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'addresses' => :'addresses',
         :'component_state' => :'component_state',
         :'description' => :'description',
         :'host_cluster' => :'host_cluster',
@@ -89,6 +92,7 @@ module AutosdeOpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
+        :'addresses' => :'Address',
         :'component_state' => :'String',
         :'description' => :'String',
         :'host_cluster' => :'HostCluster',
@@ -122,6 +126,10 @@ module AutosdeOpenapiClient
         end
         h[k.to_sym] = v
       }
+
+      if attributes.key?(:'addresses')
+        self.addresses = attributes[:'addresses']
+      end
 
       if attributes.key?(:'component_state')
         self.component_state = attributes[:'component_state']
@@ -199,6 +207,7 @@ module AutosdeOpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          addresses == o.addresses &&
           component_state == o.component_state &&
           description == o.description &&
           host_cluster == o.host_cluster &&
@@ -220,7 +229,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [component_state, description, host_cluster, host_cluster_name, io_groups, name, status, storage_system, uuid, volumes].hash
+      [addresses, component_state, description, host_cluster, host_cluster_name, io_groups, name, status, storage_system, uuid, volumes].hash
     end
 
     # Builds the object from hash

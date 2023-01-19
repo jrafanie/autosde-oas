@@ -79,7 +79,7 @@ module AutosdeOpenapiClient
         :'component_state' => :'String',
         :'name' => :'String',
         :'short_version' => :'String',
-        :'super_type' => :'String',
+        :'super_type' => :'Integer',
         :'uuid' => :'String',
         :'version' => :'String'
       }
@@ -112,8 +112,6 @@ module AutosdeOpenapiClient
 
       if attributes.key?(:'name')
         self.name = attributes[:'name']
-      else
-        self.name = 'IBM_FlashSystems'
       end
 
       if attributes.key?(:'short_version')
@@ -122,8 +120,6 @@ module AutosdeOpenapiClient
 
       if attributes.key?(:'super_type')
         self.super_type = attributes[:'super_type']
-      else
-        self.super_type = 'null'
       end
 
       if attributes.key?(:'uuid')
@@ -143,10 +139,6 @@ module AutosdeOpenapiClient
         invalid_properties.push('invalid value for "component_state", the character length must be smaller than or equal to 32.')
       end
 
-      if !@name.nil? && @name.to_s.length > 255
-        invalid_properties.push('invalid value for "name", the character length must be smaller than or equal to 255.')
-      end
-
       if !@short_version.nil? && @short_version.to_s.length > 255
         invalid_properties.push('invalid value for "short_version", the character length must be smaller than or equal to 255.')
       end
@@ -160,9 +152,6 @@ module AutosdeOpenapiClient
       component_state_validator = EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION"])
       return false unless component_state_validator.valid?(@component_state)
       return false if !@component_state.nil? && @component_state.to_s.length > 32
-      name_validator = EnumAttributeValidator.new('String', ["IBM_FlashSystems", "a_line", "xiv", "ds8000", "vmax", "netapp", "ds8x00"])
-      return false unless name_validator.valid?(@name)
-      return false if !@name.nil? && @name.to_s.length > 255
       return false if !@short_version.nil? && @short_version.to_s.length > 255
       true
     end
@@ -175,16 +164,6 @@ module AutosdeOpenapiClient
         fail ArgumentError, "invalid value for \"component_state\", must be one of #{validator.allowable_values}."
       end
       @component_state = component_state
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] name Object to be assigned
-    def name=(name)
-      validator = EnumAttributeValidator.new('String', ["IBM_FlashSystems", "a_line", "xiv", "ds8000", "vmax", "netapp", "ds8x00"])
-      unless validator.valid?(name)
-        fail ArgumentError, "invalid value for \"name\", must be one of #{validator.allowable_values}."
-      end
-      @name = name
     end
 
     # Custom attribute writer method with validation
