@@ -44,7 +44,7 @@ describe 'ServiceApi' do
   # unit tests for services_pk_delete
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Service]
+  # @return [AsyncResponse]
   describe 'services_pk_delete test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,7 +54,7 @@ describe 'ServiceApi' do
   # unit tests for services_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Service]
+  # @return [ServiceResponse]
   describe 'services_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -75,7 +75,7 @@ describe 'ServiceApi' do
   # unit tests for services_post
   # @param service_create 
   # @param [Hash] opts the optional parameters
-  # @return [ServiceResponse]
+  # @return [AsyncResponse]
   describe 'services_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

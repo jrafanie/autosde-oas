@@ -77,7 +77,7 @@ This endpoint does not need any parameter.
 
 ## services_pk_delete
 
-> <Service> services_pk_delete(pk)
+> <AsyncResponse> services_pk_delete(pk)
 
 
 
@@ -108,7 +108,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Service>, Integer, Hash)> services_pk_delete_with_http_info(pk)
+> <Array(<AsyncResponse>, Integer, Hash)> services_pk_delete_with_http_info(pk)
 
 ```ruby
 begin
@@ -116,7 +116,7 @@ begin
   data, status_code, headers = api_instance.services_pk_delete_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Service>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceApi->services_pk_delete_with_http_info: #{e}"
 end
@@ -130,7 +130,7 @@ end
 
 ### Return type
 
-[**Service**](Service.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ end
 
 ## services_pk_get
 
-> <Service> services_pk_get(pk)
+> <ServiceResponse> services_pk_get(pk)
 
 
 
@@ -175,7 +175,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Service>, Integer, Hash)> services_pk_get_with_http_info(pk)
+> <Array(<ServiceResponse>, Integer, Hash)> services_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -183,7 +183,7 @@ begin
   data, status_code, headers = api_instance.services_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Service>
+  p data # => <ServiceResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceApi->services_pk_get_with_http_info: #{e}"
 end
@@ -197,7 +197,7 @@ end
 
 ### Return type
 
-[**Service**](Service.md)
+[**ServiceResponse**](ServiceResponse.md)
 
 ### Authorization
 
@@ -280,7 +280,7 @@ end
 
 ## services_post
 
-> <ServiceResponse> services_post(service_create)
+> <AsyncResponse> services_post(service_create)
 
 
 
@@ -311,7 +311,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ServiceResponse>, Integer, Hash)> services_post_with_http_info(service_create)
+> <Array(<AsyncResponse>, Integer, Hash)> services_post_with_http_info(service_create)
 
 ```ruby
 begin
@@ -319,7 +319,7 @@ begin
   data, status_code, headers = api_instance.services_post_with_http_info(service_create)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ServiceResponse>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceApi->services_post_with_http_info: #{e}"
 end
@@ -333,7 +333,7 @@ end
 
 ### Return type
 
-[**ServiceResponse**](ServiceResponse.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 
