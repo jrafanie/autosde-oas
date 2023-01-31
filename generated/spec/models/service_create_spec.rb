@@ -25,7 +25,7 @@ describe AutosdeOpenapiClient::ServiceCreate do
       expect(instance).to be_instance_of(AutosdeOpenapiClient::ServiceCreate)
     end
   end
-  describe 'test attribute "capability_values"' do
+  describe 'test attribute "capability_value_list"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
