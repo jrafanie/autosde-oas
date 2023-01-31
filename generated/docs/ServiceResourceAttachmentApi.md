@@ -12,7 +12,7 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
 ## service_resource_attachment_get
 
-> <Array<ServiceResourceAttachment>> service_resource_attachment_get
+> <Array<ServiceResourceAttachmentResponse>> service_resource_attachment_get
 
 
 
@@ -42,7 +42,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<ServiceResourceAttachment>>, Integer, Hash)> service_resource_attachment_get_with_http_info
+> <Array(<Array<ServiceResourceAttachmentResponse>>, Integer, Hash)> service_resource_attachment_get_with_http_info
 
 ```ruby
 begin
@@ -50,7 +50,7 @@ begin
   data, status_code, headers = api_instance.service_resource_attachment_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<ServiceResourceAttachment>>
+  p data # => <Array<ServiceResourceAttachmentResponse>>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceResourceAttachmentApi->service_resource_attachment_get_with_http_info: #{e}"
 end
@@ -62,7 +62,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;ServiceResourceAttachment&gt;**](ServiceResourceAttachment.md)
+[**Array&lt;ServiceResourceAttachmentResponse&gt;**](ServiceResourceAttachmentResponse.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ end
 
 ## service_resource_attachment_pk_get
 
-> <ServiceResourceAttachment> service_resource_attachment_pk_get(pk)
+> <ServiceResourceAttachmentResponse> service_resource_attachment_pk_get(pk)
 
 
 
@@ -174,7 +174,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ServiceResourceAttachment>, Integer, Hash)> service_resource_attachment_pk_get_with_http_info(pk)
+> <Array(<ServiceResourceAttachmentResponse>, Integer, Hash)> service_resource_attachment_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -182,7 +182,7 @@ begin
   data, status_code, headers = api_instance.service_resource_attachment_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <ServiceResourceAttachment>
+  p data # => <ServiceResourceAttachmentResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceResourceAttachmentApi->service_resource_attachment_pk_get_with_http_info: #{e}"
 end
@@ -196,7 +196,7 @@ end
 
 ### Return type
 
-[**ServiceResourceAttachment**](ServiceResourceAttachment.md)
+[**ServiceResourceAttachmentResponse**](ServiceResourceAttachmentResponse.md)
 
 ### Authorization
 

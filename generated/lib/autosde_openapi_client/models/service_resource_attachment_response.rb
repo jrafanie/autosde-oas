@@ -14,13 +14,15 @@ require 'date'
 require 'time'
 
 module AutosdeOpenapiClient
-  # A Service Resource Attachment is a many2many mapping between services and resources
-  class ServiceResourceAttachment
+  # TODO add description
+  class ServiceResourceAttachmentResponse
     # compliant
     attr_accessor :compliant
 
+    # !!uuid of service
     attr_accessor :service
 
+    # !!uuid of storage_resource
     attr_accessor :storage_resource
 
     # uuid
@@ -45,8 +47,8 @@ module AutosdeOpenapiClient
     def self.openapi_types
       {
         :'compliant' => :'Boolean',
-        :'service' => :'Service',
-        :'storage_resource' => :'StorageResource',
+        :'service' => :'String',
+        :'storage_resource' => :'String',
         :'uuid' => :'String'
       }
     end
@@ -61,13 +63,13 @@ module AutosdeOpenapiClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `AutosdeOpenapiClient::ServiceResourceAttachment` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `AutosdeOpenapiClient::ServiceResourceAttachmentResponse` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `AutosdeOpenapiClient::ServiceResourceAttachment`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `AutosdeOpenapiClient::ServiceResourceAttachmentResponse`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }

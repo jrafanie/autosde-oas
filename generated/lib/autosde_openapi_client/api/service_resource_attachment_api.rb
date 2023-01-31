@@ -20,14 +20,14 @@ module AutosdeOpenapiClient
       @api_client = api_client
     end
     # @param [Hash] opts the optional parameters
-    # @return [Array<ServiceResourceAttachment>]
+    # @return [Array<ServiceResourceAttachmentResponse>]
     def service_resource_attachment_get(opts = {})
       data, _status_code, _headers = service_resource_attachment_get_with_http_info(opts)
       data
     end
 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<ServiceResourceAttachment>, Integer, Hash)>] Array<ServiceResourceAttachment> data, response status code and response headers
+    # @return [Array<(Array<ServiceResourceAttachmentResponse>, Integer, Hash)>] Array<ServiceResourceAttachmentResponse> data, response status code and response headers
     def service_resource_attachment_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ServiceResourceAttachmentApi.service_resource_attachment_get ...'
@@ -50,7 +50,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<ServiceResourceAttachment>'
+      return_type = opts[:debug_return_type] || 'Array<ServiceResourceAttachmentResponse>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -133,7 +133,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [ServiceResourceAttachment]
+    # @return [ServiceResourceAttachmentResponse]
     def service_resource_attachment_pk_get(pk, opts = {})
       data, _status_code, _headers = service_resource_attachment_pk_get_with_http_info(pk, opts)
       data
@@ -141,7 +141,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(ServiceResourceAttachment, Integer, Hash)>] ServiceResourceAttachment data, response status code and response headers
+    # @return [Array<(ServiceResourceAttachmentResponse, Integer, Hash)>] ServiceResourceAttachmentResponse data, response status code and response headers
     def service_resource_attachment_pk_get_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ServiceResourceAttachmentApi.service_resource_attachment_pk_get ...'
@@ -168,7 +168,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'ServiceResourceAttachment'
+      return_type = opts[:debug_return_type] || 'ServiceResourceAttachmentResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
