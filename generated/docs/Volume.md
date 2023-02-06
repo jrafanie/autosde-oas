@@ -6,6 +6,7 @@
 | ---- | ---- | ----------- | ----- |
 | **compliant** | **Boolean** | compliant | [optional][default to false] |
 | **component_state** | **String** | component_state | [optional] |
+| **fc_map_count** | **Integer** | fc_map_count | [optional][default to 0] |
 | **historical_service** | [**Service**](Service.md) |  | [optional] |
 | **name** | **String** | name | [optional] |
 | **service** | [**Service**](Service.md) |  | [optional] |
@@ -24,6 +25,7 @@ require 'autosde_openapi_client'
 instance = AutosdeOpenapiClient::Volume.new(
   compliant: null,
   component_state: null,
+  fc_map_count: null,
   historical_service: null,
   name: null,
   service: null,

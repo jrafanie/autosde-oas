@@ -22,6 +22,9 @@ module AutosdeOpenapiClient
     # component_state
     attr_accessor :component_state
 
+    # fc_map_count
+    attr_accessor :fc_map_count
+
     attr_accessor :historical_service
 
     # name
@@ -73,6 +76,7 @@ module AutosdeOpenapiClient
       {
         :'compliant' => :'compliant',
         :'component_state' => :'component_state',
+        :'fc_map_count' => :'fc_map_count',
         :'historical_service' => :'historical_service',
         :'name' => :'name',
         :'service' => :'service',
@@ -95,6 +99,7 @@ module AutosdeOpenapiClient
       {
         :'compliant' => :'Boolean',
         :'component_state' => :'String',
+        :'fc_map_count' => :'Integer',
         :'historical_service' => :'Service',
         :'name' => :'String',
         :'service' => :'Service',
@@ -136,6 +141,12 @@ module AutosdeOpenapiClient
 
       if attributes.key?(:'component_state')
         self.component_state = attributes[:'component_state']
+      end
+
+      if attributes.key?(:'fc_map_count')
+        self.fc_map_count = attributes[:'fc_map_count']
+      else
+        self.fc_map_count = 0
       end
 
       if attributes.key?(:'historical_service')
@@ -212,6 +223,7 @@ module AutosdeOpenapiClient
       self.class == o.class &&
           compliant == o.compliant &&
           component_state == o.component_state &&
+          fc_map_count == o.fc_map_count &&
           historical_service == o.historical_service &&
           name == o.name &&
           service == o.service &&
@@ -232,7 +244,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [compliant, component_state, historical_service, name, service, size, status, storage_resource, unmapped_since, uuid, volume_name].hash
+      [compliant, component_state, fc_map_count, historical_service, name, service, size, status, storage_resource, unmapped_since, uuid, volume_name].hash
     end
 
     # Builds the object from hash

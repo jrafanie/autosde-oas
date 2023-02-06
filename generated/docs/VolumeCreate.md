@@ -7,6 +7,7 @@
 | **compliant** | **Boolean** | compliant | [optional][default to false] |
 | **component_state** | **String** | component_state | [optional] |
 | **count** | **Integer** | count | [optional][default to 1] |
+| **fc_map_count** | **Integer** | fc_map_count | [optional][default to 0] |
 | **name** | **String** | name | [optional] |
 | **resources** | **Array&lt;String&gt;** | resources | [optional] |
 | **service** | [**Service**](Service.md) |  | [optional] |
@@ -26,6 +27,7 @@ instance = AutosdeOpenapiClient::VolumeCreate.new(
   compliant: null,
   component_state: null,
   count: null,
+  fc_map_count: null,
   name: null,
   resources: null,
   service: null,

@@ -104,7 +104,7 @@ module AutosdeOpenapiClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      resource_type_validator = EnumAttributeValidator.new('String', ["system_resources", "volumes", "hosts", "events"])
+      resource_type_validator = EnumAttributeValidator.new('String', ["system_resources", "volumes_and_snapshots", "hosts", "events"])
       return false unless resource_type_validator.valid?(@resource_type)
       true
     end
@@ -112,7 +112,7 @@ module AutosdeOpenapiClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] resource_type Object to be assigned
     def resource_type=(resource_type)
-      validator = EnumAttributeValidator.new('String', ["system_resources", "volumes", "hosts", "events"])
+      validator = EnumAttributeValidator.new('String', ["system_resources", "volumes_and_snapshots", "hosts", "events"])
       unless validator.valid?(resource_type)
         fail ArgumentError, "invalid value for \"resource_type\", must be one of #{validator.allowable_values}."
       end

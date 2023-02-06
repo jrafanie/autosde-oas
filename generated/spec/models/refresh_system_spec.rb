@@ -28,7 +28,7 @@ describe AutosdeOpenapiClient::RefreshSystem do
   describe 'test attribute "resource_type"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["system_resources", "volumes", "hosts", "events"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["system_resources", "volumes_and_snapshots", "hosts", "events"])
       # validator.allowable_values.each do |value|
       #   expect { instance.resource_type = value }.not_to raise_error
       # end
