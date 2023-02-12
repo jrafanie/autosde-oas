@@ -34,7 +34,7 @@ describe AutosdeOpenapiClient::VolumeCreate do
   describe 'test attribute "component_state"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION", "CLONING"])
       # validator.allowable_values.each do |value|
       #   expect { instance.component_state = value }.not_to raise_error
       # end

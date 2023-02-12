@@ -202,7 +202,7 @@ module AutosdeOpenapiClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      component_state_validator = EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION"])
+      component_state_validator = EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION", "CLONING"])
       return false unless component_state_validator.valid?(@component_state)
       return false if !@component_state.nil? && @component_state.to_s.length > 32
       true
@@ -211,7 +211,7 @@ module AutosdeOpenapiClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] component_state Object to be assigned
     def component_state=(component_state)
-      validator = EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION"])
+      validator = EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION", "CLONING"])
       unless validator.valid?(component_state)
         fail ArgumentError, "invalid value for \"component_state\", must be one of #{validator.allowable_values}."
       end
