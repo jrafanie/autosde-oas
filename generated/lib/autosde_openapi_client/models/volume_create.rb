@@ -36,6 +36,9 @@ module AutosdeOpenapiClient
 
     attr_accessor :service
 
+    # service_capabilities
+    attr_accessor :service_capabilities
+
     # service_name
     attr_accessor :service_name
 
@@ -86,6 +89,7 @@ module AutosdeOpenapiClient
         :'name' => :'name',
         :'resources' => :'resources',
         :'service' => :'service',
+        :'service_capabilities' => :'service_capabilities',
         :'service_name' => :'service_name',
         :'size' => :'size',
         :'status' => :'status',
@@ -110,6 +114,7 @@ module AutosdeOpenapiClient
         :'name' => :'String',
         :'resources' => :'Array<String>',
         :'service' => :'Service',
+        :'service_capabilities' => :'Array<String>',
         :'service_name' => :'String',
         :'size' => :'Integer',
         :'status' => :'String',
@@ -174,6 +179,12 @@ module AutosdeOpenapiClient
 
       if attributes.key?(:'service')
         self.service = attributes[:'service']
+      end
+
+      if attributes.key?(:'service_capabilities')
+        if (value = attributes[:'service_capabilities']).is_a?(Array)
+          self.service_capabilities = value
+        end
       end
 
       if attributes.key?(:'service_name')
@@ -245,6 +256,7 @@ module AutosdeOpenapiClient
           name == o.name &&
           resources == o.resources &&
           service == o.service &&
+          service_capabilities == o.service_capabilities &&
           service_name == o.service_name &&
           size == o.size &&
           status == o.status &&
@@ -262,7 +274,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [compliant, component_state, count, fc_map_count, name, resources, service, service_name, size, status, unmapped_since, uuid, volume_name].hash
+      [compliant, component_state, count, fc_map_count, name, resources, service, service_capabilities, service_name, size, status, unmapped_since, uuid, volume_name].hash
     end
 
     # Builds the object from hash

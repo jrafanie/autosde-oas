@@ -11,6 +11,7 @@
 | **name** | **String** | name | [optional] |
 | **resources** | **Array&lt;String&gt;** | resources | [optional] |
 | **service** | [**Service**](Service.md) |  | [optional] |
+| **service_capabilities** | **Array&lt;String&gt;** | service_capabilities | [optional] |
 | **service_name** | **String** | service_name | [optional][default to &#39;null&#39;] |
 | **size** | **Integer** | size | [optional] |
 | **status** | **String** | status | [optional] |
@@ -31,6 +32,7 @@ instance = AutosdeOpenapiClient::VolumeCreate.new(
   name: null,
   resources: null,
   service: null,
+  service_capabilities: null,
   service_name: null,
   size: null,
   status: null,
