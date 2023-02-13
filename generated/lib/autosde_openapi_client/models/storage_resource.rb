@@ -14,7 +14,7 @@ require 'date'
 require 'time'
 
 module AutosdeOpenapiClient
-  # StorageResource
+  # doc-todo: is storage resource the type of pool resources that a specific storage system has
   class StorageResource
     # advanced_attributes_map
     attr_accessor :advanced_attributes_map

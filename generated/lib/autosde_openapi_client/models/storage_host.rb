@@ -14,7 +14,7 @@ require 'date'
 require 'time'
 
 module AutosdeOpenapiClient
-  # StorageHost
+  # Storage host
   class StorageHost
     attr_accessor :addresses
 

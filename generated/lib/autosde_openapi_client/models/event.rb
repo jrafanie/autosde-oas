@@ -14,7 +14,7 @@ require 'date'
 require 'time'
 
 module AutosdeOpenapiClient
-  # Event
+  # Event object represents storage system alerts and messages.
   class Event
     # description
     attr_accessor :description

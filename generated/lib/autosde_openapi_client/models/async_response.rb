@@ -14,7 +14,7 @@ require 'date'
 require 'time'
 
 module AutosdeOpenapiClient
-  # response from async operations
+  # Response from async operations
   class AsyncResponse
     # info
     attr_accessor :info

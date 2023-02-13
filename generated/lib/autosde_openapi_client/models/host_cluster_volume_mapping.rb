@@ -14,7 +14,7 @@ require 'date'
 require 'time'
 
 module AutosdeOpenapiClient
-  # HostClusterVolumeMapping
+  # connects storage host cluster and volume .
   class HostClusterVolumeMapping
     attr_accessor :cluster
 

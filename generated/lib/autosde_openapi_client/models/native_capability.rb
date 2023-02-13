@@ -14,7 +14,7 @@ require 'date'
 require 'time'
 
 module AutosdeOpenapiClient
-  # NativeCapability
+  # Native capabilities are the storage system feature capabilities, in the vendor-specific terminology.
   class NativeCapability
     # name
     attr_accessor :name

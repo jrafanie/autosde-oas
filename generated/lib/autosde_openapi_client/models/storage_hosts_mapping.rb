@@ -14,7 +14,7 @@ require 'date'
 require 'time'
 
 module AutosdeOpenapiClient
-  # StorageHostsMapping
+  # Connects storage host and volume .
   class StorageHostsMapping
     # component_state
     attr_accessor :component_state

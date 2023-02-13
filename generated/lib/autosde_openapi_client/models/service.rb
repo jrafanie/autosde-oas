@@ -14,7 +14,7 @@ require 'date'
 require 'time'
 
 module AutosdeOpenapiClient
-  # Service
+  # doc-todo: what type of service exactly?
   class Service
     attr_accessor :capability_values
 
