@@ -248,6 +248,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::ServiceResponse](docs/ServiceResponse.md)
  - [AutosdeOpenapiClient::Snapshot](docs/Snapshot.md)
  - [AutosdeOpenapiClient::SnapshotCreate](docs/SnapshotCreate.md)
+ - [AutosdeOpenapiClient::SnapshotResponse](docs/SnapshotResponse.md)
  - [AutosdeOpenapiClient::StorageHost](docs/StorageHost.md)
  - [AutosdeOpenapiClient::StorageHostCreate](docs/StorageHostCreate.md)
  - [AutosdeOpenapiClient::StorageHostResponse](docs/StorageHostResponse.md)

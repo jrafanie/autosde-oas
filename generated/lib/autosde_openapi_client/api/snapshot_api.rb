@@ -20,14 +20,14 @@ module AutosdeOpenapiClient
       @api_client = api_client
     end
     # @param [Hash] opts the optional parameters
-    # @return [Array<Snapshot>]
+    # @return [Array<SnapshotResponse>]
     def snapshots_get(opts = {})
       data, _status_code, _headers = snapshots_get_with_http_info(opts)
       data
     end
 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<Snapshot>, Integer, Hash)>] Array<Snapshot> data, response status code and response headers
+    # @return [Array<(Array<SnapshotResponse>, Integer, Hash)>] Array<SnapshotResponse> data, response status code and response headers
     def snapshots_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SnapshotApi.snapshots_get ...'
@@ -50,7 +50,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<Snapshot>'
+      return_type = opts[:debug_return_type] || 'Array<SnapshotResponse>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
@@ -133,7 +133,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Snapshot]
+    # @return [SnapshotResponse]
     def snapshots_pk_get(pk, opts = {})
       data, _status_code, _headers = snapshots_pk_get_with_http_info(pk, opts)
       data
@@ -141,7 +141,7 @@ module AutosdeOpenapiClient
 
     # @param pk [Integer] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Snapshot, Integer, Hash)>] Snapshot data, response status code and response headers
+    # @return [Array<(SnapshotResponse, Integer, Hash)>] SnapshotResponse data, response status code and response headers
     def snapshots_pk_get_with_http_info(pk, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: SnapshotApi.snapshots_pk_get ...'
@@ -168,7 +168,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Snapshot'
+      return_type = opts[:debug_return_type] || 'SnapshotResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

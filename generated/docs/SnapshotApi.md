@@ -12,7 +12,7 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
 ## snapshots_get
 
-> <Array<Snapshot>> snapshots_get
+> <Array<SnapshotResponse>> snapshots_get
 
 
 
@@ -42,7 +42,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<Snapshot>>, Integer, Hash)> snapshots_get_with_http_info
+> <Array(<Array<SnapshotResponse>>, Integer, Hash)> snapshots_get_with_http_info
 
 ```ruby
 begin
@@ -50,7 +50,7 @@ begin
   data, status_code, headers = api_instance.snapshots_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<Snapshot>>
+  p data # => <Array<SnapshotResponse>>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling SnapshotApi->snapshots_get_with_http_info: #{e}"
 end
@@ -62,7 +62,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;Snapshot&gt;**](Snapshot.md)
+[**Array&lt;SnapshotResponse&gt;**](SnapshotResponse.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ end
 
 ## snapshots_pk_get
 
-> <Snapshot> snapshots_pk_get(pk)
+> <SnapshotResponse> snapshots_pk_get(pk)
 
 
 
@@ -174,7 +174,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Snapshot>, Integer, Hash)> snapshots_pk_get_with_http_info(pk)
+> <Array(<SnapshotResponse>, Integer, Hash)> snapshots_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -182,7 +182,7 @@ begin
   data, status_code, headers = api_instance.snapshots_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Snapshot>
+  p data # => <SnapshotResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling SnapshotApi->snapshots_pk_get_with_http_info: #{e}"
 end
@@ -196,7 +196,7 @@ end
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**SnapshotResponse**](SnapshotResponse.md)
 
 ### Authorization
 

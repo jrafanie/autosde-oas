@@ -34,7 +34,7 @@ describe 'SnapshotApi' do
 
   # unit tests for snapshots_get
   # @param [Hash] opts the optional parameters
-  # @return [Array<Snapshot>]
+  # @return [Array<SnapshotResponse>]
   describe 'snapshots_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -54,7 +54,7 @@ describe 'SnapshotApi' do
   # unit tests for snapshots_pk_get
   # @param pk 
   # @param [Hash] opts the optional parameters
-  # @return [Snapshot]
+  # @return [SnapshotResponse]
   describe 'snapshots_pk_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
