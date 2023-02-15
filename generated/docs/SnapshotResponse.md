@@ -7,6 +7,7 @@
 | **component_state** | **String** | component_state | [optional] |
 | **description** | **String** | description | [optional] |
 | **name** | **String** | name | [optional] |
+| **uuid** | **String** | uuid | [optional] |
 | **volume** | **String** | !!uuid of volume | [optional] |
 
 ## Example
@@ -18,6 +19,7 @@ instance = AutosdeOpenapiClient::SnapshotResponse.new(
   component_state: null,
   description: null,
   name: null,
+  uuid: null,
   volume: null
 )
 ```

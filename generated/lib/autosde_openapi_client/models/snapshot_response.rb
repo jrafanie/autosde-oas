@@ -25,6 +25,9 @@ module AutosdeOpenapiClient
     # name
     attr_accessor :name
 
+    # uuid
+    attr_accessor :uuid
+
     # !!uuid of volume
     attr_accessor :volume
 
@@ -56,6 +59,7 @@ module AutosdeOpenapiClient
         :'component_state' => :'component_state',
         :'description' => :'description',
         :'name' => :'name',
+        :'uuid' => :'uuid',
         :'volume' => :'volume'
       }
     end
@@ -71,6 +75,7 @@ module AutosdeOpenapiClient
         :'component_state' => :'String',
         :'description' => :'String',
         :'name' => :'String',
+        :'uuid' => :'String',
         :'volume' => :'String'
       }
     end
@@ -106,6 +111,10 @@ module AutosdeOpenapiClient
 
       if attributes.key?(:'name')
         self.name = attributes[:'name']
+      end
+
+      if attributes.key?(:'uuid')
+        self.uuid = attributes[:'uuid']
       end
 
       if attributes.key?(:'volume')
@@ -151,6 +160,7 @@ module AutosdeOpenapiClient
           component_state == o.component_state &&
           description == o.description &&
           name == o.name &&
+          uuid == o.uuid &&
           volume == o.volume
     end
 
@@ -163,7 +173,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [component_state, description, name, volume].hash
+      [component_state, description, name, uuid, volume].hash
     end
 
     # Builds the object from hash
