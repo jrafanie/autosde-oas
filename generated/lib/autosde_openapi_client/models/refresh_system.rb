@@ -16,6 +16,9 @@ require 'time'
 module AutosdeOpenapiClient
   # RefreshSystem object represents refreshing of the storage system.
   class RefreshSystem
+    # refresh_all_storage_systems
+    attr_accessor :refresh_all_storage_systems
+
     # resource_type
     attr_accessor :resource_type
 
@@ -46,6 +49,7 @@ module AutosdeOpenapiClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'refresh_all_storage_systems' => :'refresh_all_storage_systems',
         :'resource_type' => :'resource_type',
         :'storage_system' => :'storage_system'
       }
@@ -59,6 +63,7 @@ module AutosdeOpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
+        :'refresh_all_storage_systems' => :'Boolean',
         :'resource_type' => :'String',
         :'storage_system' => :'StorageSystem'
       }
@@ -85,6 +90,12 @@ module AutosdeOpenapiClient
         h[k.to_sym] = v
       }
 
+      if attributes.key?(:'refresh_all_storage_systems')
+        self.refresh_all_storage_systems = attributes[:'refresh_all_storage_systems']
+      else
+        self.refresh_all_storage_systems = false
+      end
+
       if attributes.key?(:'resource_type')
         self.resource_type = attributes[:'resource_type']
       end
@@ -104,7 +115,7 @@ module AutosdeOpenapiClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      resource_type_validator = EnumAttributeValidator.new('String', ["system_resources", "volumes_and_snapshots", "hosts", "events"])
+      resource_type_validator = EnumAttributeValidator.new('String', ["all_system_components", "system_resources", "volumes", "hosts", "events"])
       return false unless resource_type_validator.valid?(@resource_type)
       true
     end
@@ -112,7 +123,7 @@ module AutosdeOpenapiClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] resource_type Object to be assigned
     def resource_type=(resource_type)
-      validator = EnumAttributeValidator.new('String', ["system_resources", "volumes_and_snapshots", "hosts", "events"])
+      validator = EnumAttributeValidator.new('String', ["all_system_components", "system_resources", "volumes", "hosts", "events"])
       unless validator.valid?(resource_type)
         fail ArgumentError, "invalid value for \"resource_type\", must be one of #{validator.allowable_values}."
       end
@@ -124,6 +135,7 @@ module AutosdeOpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          refresh_all_storage_systems == o.refresh_all_storage_systems &&
           resource_type == o.resource_type &&
           storage_system == o.storage_system
     end
@@ -137,7 +149,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [resource_type, storage_system].hash
+      [refresh_all_storage_systems, resource_type, storage_system].hash
     end
 
     # Builds the object from hash
