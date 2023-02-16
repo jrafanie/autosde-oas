@@ -34,6 +34,9 @@ module AutosdeOpenapiClient
 
     attr_accessor :provisioning_strategy
 
+    # resources
+    attr_accessor :resources
+
     # uuid
     attr_accessor :uuid
 
@@ -72,6 +75,7 @@ module AutosdeOpenapiClient
         :'profile' => :'profile',
         :'project' => :'project',
         :'provisioning_strategy' => :'provisioning_strategy',
+        :'resources' => :'resources',
         :'uuid' => :'uuid',
         :'version' => :'version'
       }
@@ -92,6 +96,7 @@ module AutosdeOpenapiClient
         :'profile' => :'Profile',
         :'project' => :'AutoSDEProject',
         :'provisioning_strategy' => :'ProvisioningStrategy',
+        :'resources' => :'Array<String>',
         :'uuid' => :'String',
         :'version' => :'Integer'
       }
@@ -150,6 +155,12 @@ module AutosdeOpenapiClient
         self.provisioning_strategy = attributes[:'provisioning_strategy']
       end
 
+      if attributes.key?(:'resources')
+        if (value = attributes[:'resources']).is_a?(Array)
+          self.resources = value
+        end
+      end
+
       if attributes.key?(:'uuid')
         self.uuid = attributes[:'uuid']
       end
@@ -203,6 +214,7 @@ module AutosdeOpenapiClient
           profile == o.profile &&
           project == o.project &&
           provisioning_strategy == o.provisioning_strategy &&
+          resources == o.resources &&
           uuid == o.uuid &&
           version == o.version
     end
@@ -216,7 +228,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [capability_value_list, component_state, description, name, profile, project, provisioning_strategy, uuid, version].hash
+      [capability_value_list, component_state, description, name, profile, project, provisioning_strategy, resources, uuid, version].hash
     end
 
     # Builds the object from hash

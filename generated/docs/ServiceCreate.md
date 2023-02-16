@@ -11,6 +11,7 @@
 | **profile** | [**Profile**](Profile.md) |  | [optional] |
 | **project** | [**AutoSDEProject**](AutoSDEProject.md) |  | [optional] |
 | **provisioning_strategy** | [**ProvisioningStrategy**](ProvisioningStrategy.md) |  | [optional] |
+| **resources** | **Array&lt;String&gt;** | resources | [optional] |
 | **uuid** | **String** | uuid | [optional] |
 | **version** | **Integer** | The version of the service | [optional][default to 1] |
 
@@ -27,6 +28,7 @@ instance = AutosdeOpenapiClient::ServiceCreate.new(
   profile: null,
   project: null,
   provisioning_strategy: null,
+  resources: null,
   uuid: null,
   version: null
 )
