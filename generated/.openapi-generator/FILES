@@ -110,6 +110,8 @@ docs/VolumeApi.md
 docs/VolumeClone.md
 docs/VolumeCloneApi.md
 docs/VolumeCreate.md
+docs/VolumeMigration.md
+docs/VolumeMigrationApi.md
 docs/VolumeResponse.md
 docs/VolumeUpdate.md
 git_push.sh
@@ -147,6 +149,7 @@ lib/autosde_openapi_client/api/user_api.rb
 lib/autosde_openapi_client/api/validate_system_api.rb
 lib/autosde_openapi_client/api/volume_api.rb
 lib/autosde_openapi_client/api/volume_clone_api.rb
+lib/autosde_openapi_client/api/volume_migration_api.rb
 lib/autosde_openapi_client/api_client.rb
 lib/autosde_openapi_client/api_error.rb
 lib/autosde_openapi_client/configuration.rb
@@ -221,6 +224,7 @@ lib/autosde_openapi_client/models/validate_system.rb
 lib/autosde_openapi_client/models/volume.rb
 lib/autosde_openapi_client/models/volume_clone.rb
 lib/autosde_openapi_client/models/volume_create.rb
+lib/autosde_openapi_client/models/volume_migration.rb
 lib/autosde_openapi_client/models/volume_response.rb
 lib/autosde_openapi_client/models/volume_update.rb
 lib/autosde_openapi_client/version.rb
@@ -257,6 +261,7 @@ spec/api/user_api_spec.rb
 spec/api/validate_system_api_spec.rb
 spec/api/volume_api_spec.rb
 spec/api/volume_clone_api_spec.rb
+spec/api/volume_migration_api_spec.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
 spec/models/abstract_capability_response_spec.rb
@@ -328,6 +333,7 @@ spec/models/user_update_spec.rb
 spec/models/validate_system_spec.rb
 spec/models/volume_clone_spec.rb
 spec/models/volume_create_spec.rb
+spec/models/volume_migration_spec.rb
 spec/models/volume_response_spec.rb
 spec/models/volume_spec.rb
 spec/models/volume_update_spec.rb

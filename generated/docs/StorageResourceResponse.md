@@ -7,6 +7,8 @@
 | **advanced_attributes_map** | **String** | advanced_attributes_map | [optional] |
 | **capability_values_json** | **String** | capability_values_json | [optional] |
 | **component_state** | **String** | component_state | [optional] |
+| **data_reduction** | **Boolean** | data_reduction | [optional][default to false] |
+| **extent_size** | **Integer** | extent_size | [optional][default to 1024] |
 | **logical_free** | **Integer** | logical_free | [optional][default to 0] |
 | **logical_total** | **Integer** | The Total logical capacity of this resource (gb) | [optional][default to 0] |
 | **name** | **String** | name | [optional] |
@@ -24,6 +26,8 @@ instance = AutosdeOpenapiClient::StorageResourceResponse.new(
   advanced_attributes_map: null,
   capability_values_json: null,
   component_state: null,
+  data_reduction: null,
+  extent_size: null,
   logical_free: null,
   logical_total: null,
   name: null,

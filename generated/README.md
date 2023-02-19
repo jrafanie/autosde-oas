@@ -201,6 +201,7 @@ Class | Method | HTTP request | Description
 *AutosdeOpenapiClient::VolumeApi* | [**volumes_pk_put**](docs/VolumeApi.md#volumes_pk_put) | **PUT** /volumes/{pk} | 
 *AutosdeOpenapiClient::VolumeApi* | [**volumes_post**](docs/VolumeApi.md#volumes_post) | **POST** /volumes | 
 *AutosdeOpenapiClient::VolumeCloneApi* | [**volume_clone_post**](docs/VolumeCloneApi.md#volume_clone_post) | **POST** /volume-clone | 
+*AutosdeOpenapiClient::VolumeMigrationApi* | [**volume_migration_post**](docs/VolumeMigrationApi.md#volume_migration_post) | **POST** /volume-migration | 
 
 
 ## Documentation for Models
@@ -275,6 +276,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::Volume](docs/Volume.md)
  - [AutosdeOpenapiClient::VolumeClone](docs/VolumeClone.md)
  - [AutosdeOpenapiClient::VolumeCreate](docs/VolumeCreate.md)
+ - [AutosdeOpenapiClient::VolumeMigration](docs/VolumeMigration.md)
  - [AutosdeOpenapiClient::VolumeResponse](docs/VolumeResponse.md)
  - [AutosdeOpenapiClient::VolumeUpdate](docs/VolumeUpdate.md)
 
