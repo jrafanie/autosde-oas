@@ -75,7 +75,7 @@ describe 'StorageResourceApi' do
   # unit tests for storage_resources_post
   # @param storage_resource_create 
   # @param [Hash] opts the optional parameters
-  # @return [StorageResourceResponse]
+  # @return [AsyncResponse]
   describe 'storage_resources_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
