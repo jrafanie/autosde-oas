@@ -236,6 +236,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::HostVolumeConnectionCreate](docs/HostVolumeConnectionCreate.md)
  - [AutosdeOpenapiClient::Job](docs/Job.md)
  - [AutosdeOpenapiClient::JobCreate](docs/JobCreate.md)
+ - [AutosdeOpenapiClient::JobResponse](docs/JobResponse.md)
  - [AutosdeOpenapiClient::NativeCapability](docs/NativeCapability.md)
  - [AutosdeOpenapiClient::Profile](docs/Profile.md)
  - [AutosdeOpenapiClient::ProvisioningStrategy](docs/ProvisioningStrategy.md)

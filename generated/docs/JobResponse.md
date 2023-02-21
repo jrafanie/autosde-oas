@@ -1,4 +1,4 @@
-# AutosdeOpenapiClient::Job
+# AutosdeOpenapiClient::JobResponse
 
 ## Properties
 
@@ -20,7 +20,7 @@
 ```ruby
 require 'autosde_openapi_client'
 
-instance = AutosdeOpenapiClient::Job.new(
+instance = AutosdeOpenapiClient::JobResponse.new(
   date_finished: null,
   date_started: null,
   extra: null,

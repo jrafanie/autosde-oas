@@ -14,7 +14,7 @@ require 'date'
 require 'time'
 
 module AutosdeOpenapiClient
-  # hostClusterMembership
+  # HostClusterMembership
   class HostClusterMembership
     attr_accessor :cluster
 

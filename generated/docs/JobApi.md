@@ -143,7 +143,7 @@ end
 
 ## jobs_pk_get
 
-> <Job> jobs_pk_get(pk)
+> <JobResponse> jobs_pk_get(pk)
 
 
 
@@ -174,7 +174,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Job>, Integer, Hash)> jobs_pk_get_with_http_info(pk)
+> <Array(<JobResponse>, Integer, Hash)> jobs_pk_get_with_http_info(pk)
 
 ```ruby
 begin
@@ -182,7 +182,7 @@ begin
   data, status_code, headers = api_instance.jobs_pk_get_with_http_info(pk)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Job>
+  p data # => <JobResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling JobApi->jobs_pk_get_with_http_info: #{e}"
 end
@@ -196,7 +196,7 @@ end
 
 ### Return type
 
-[**Job**](Job.md)
+[**JobResponse**](JobResponse.md)
 
 ### Authorization
 
