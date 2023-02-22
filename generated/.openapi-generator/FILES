@@ -71,6 +71,7 @@ docs/ServiceResourceAttachment.md
 docs/ServiceResourceAttachmentApi.md
 docs/ServiceResourceAttachmentResponse.md
 docs/ServiceResponse.md
+docs/ServiceUpdate.md
 docs/Snapshot.md
 docs/SnapshotApi.md
 docs/SnapshotCreate.md
@@ -197,6 +198,7 @@ lib/autosde_openapi_client/models/service_create.rb
 lib/autosde_openapi_client/models/service_resource_attachment.rb
 lib/autosde_openapi_client/models/service_resource_attachment_response.rb
 lib/autosde_openapi_client/models/service_response.rb
+lib/autosde_openapi_client/models/service_update.rb
 lib/autosde_openapi_client/models/snapshot.rb
 lib/autosde_openapi_client/models/snapshot_create.rb
 lib/autosde_openapi_client/models/snapshot_response.rb
@@ -308,6 +310,7 @@ spec/models/service_resource_attachment_response_spec.rb
 spec/models/service_resource_attachment_spec.rb
 spec/models/service_response_spec.rb
 spec/models/service_spec.rb
+spec/models/service_update_spec.rb
 spec/models/snapshot_create_spec.rb
 spec/models/snapshot_response_spec.rb
 spec/models/snapshot_spec.rb

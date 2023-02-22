@@ -191,19 +191,19 @@ module AutosdeOpenapiClient
     end
 
     # @param pk [Integer] 
-    # @param service [Service] 
+    # @param service_update [ServiceUpdate] 
     # @param [Hash] opts the optional parameters
-    # @return [Service]
-    def services_pk_put(pk, service, opts = {})
-      data, _status_code, _headers = services_pk_put_with_http_info(pk, service, opts)
+    # @return [AsyncResponse]
+    def services_pk_put(pk, service_update, opts = {})
+      data, _status_code, _headers = services_pk_put_with_http_info(pk, service_update, opts)
       data
     end
 
     # @param pk [Integer] 
-    # @param service [Service] 
+    # @param service_update [ServiceUpdate] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Service, Integer, Hash)>] Service data, response status code and response headers
-    def services_pk_put_with_http_info(pk, service, opts = {})
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
+    def services_pk_put_with_http_info(pk, service_update, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ServiceApi.services_pk_put ...'
       end
@@ -211,9 +211,9 @@ module AutosdeOpenapiClient
       if @api_client.config.client_side_validation && pk.nil?
         fail ArgumentError, "Missing the required parameter 'pk' when calling ServiceApi.services_pk_put"
       end
-      # verify the required parameter 'service' is set
-      if @api_client.config.client_side_validation && service.nil?
-        fail ArgumentError, "Missing the required parameter 'service' when calling ServiceApi.services_pk_put"
+      # verify the required parameter 'service_update' is set
+      if @api_client.config.client_side_validation && service_update.nil?
+        fail ArgumentError, "Missing the required parameter 'service_update' when calling ServiceApi.services_pk_put"
       end
       # resource path
       local_var_path = '/services/{pk}'.sub('{' + 'pk' + '}', CGI.escape(pk.to_s))
@@ -232,10 +232,10 @@ module AutosdeOpenapiClient
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(service)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(service_update)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Service'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

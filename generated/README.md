@@ -248,6 +248,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::ServiceResourceAttachment](docs/ServiceResourceAttachment.md)
  - [AutosdeOpenapiClient::ServiceResourceAttachmentResponse](docs/ServiceResourceAttachmentResponse.md)
  - [AutosdeOpenapiClient::ServiceResponse](docs/ServiceResponse.md)
+ - [AutosdeOpenapiClient::ServiceUpdate](docs/ServiceUpdate.md)
  - [AutosdeOpenapiClient::Snapshot](docs/Snapshot.md)
  - [AutosdeOpenapiClient::SnapshotCreate](docs/SnapshotCreate.md)
  - [AutosdeOpenapiClient::SnapshotResponse](docs/SnapshotResponse.md)

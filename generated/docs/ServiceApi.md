@@ -211,7 +211,7 @@ end
 
 ## services_pk_put
 
-> <Service> services_pk_put(pk, service)
+> <AsyncResponse> services_pk_put(pk, service_update)
 
 
 
@@ -228,11 +228,11 @@ end
 
 api_instance = AutosdeOpenapiClient::ServiceApi.new
 pk = 56 # Integer | 
-service = AutosdeOpenapiClient::Service.new # Service | 
+service_update = AutosdeOpenapiClient::ServiceUpdate.new # ServiceUpdate | 
 
 begin
   
-  result = api_instance.services_pk_put(pk, service)
+  result = api_instance.services_pk_put(pk, service_update)
   p result
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceApi->services_pk_put: #{e}"
@@ -243,15 +243,15 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Service>, Integer, Hash)> services_pk_put_with_http_info(pk, service)
+> <Array(<AsyncResponse>, Integer, Hash)> services_pk_put_with_http_info(pk, service_update)
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.services_pk_put_with_http_info(pk, service)
+  data, status_code, headers = api_instance.services_pk_put_with_http_info(pk, service_update)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Service>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceApi->services_pk_put_with_http_info: #{e}"
 end
@@ -262,11 +262,11 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **pk** | **Integer** |  |  |
-| **service** | [**Service**](Service.md) |  |  |
+| **service_update** | [**ServiceUpdate**](ServiceUpdate.md) |  |  |
 
 ### Return type
 
-[**Service**](Service.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 
