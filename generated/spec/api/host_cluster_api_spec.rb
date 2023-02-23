@@ -61,6 +61,17 @@ describe 'HostClusterApi' do
     end
   end
 
+  # unit tests for host_clusters_pk_put
+  # @param pk 
+  # @param host_cluster_update 
+  # @param [Hash] opts the optional parameters
+  # @return [AsyncResponse]
+  describe 'host_clusters_pk_put test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for host_clusters_post
   # @param host_cluster_create 
   # @param [Hash] opts the optional parameters

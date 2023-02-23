@@ -41,6 +41,7 @@ docs/HostClusterCreate.md
 docs/HostClusterMembership.md
 docs/HostClusterMembershipApi.md
 docs/HostClusterResponse.md
+docs/HostClusterUpdate.md
 docs/HostClusterVolumeMapping.md
 docs/HostClusterVolumeMappingApi.md
 docs/HostClusterVolumeMappingCreate.md
@@ -178,6 +179,7 @@ lib/autosde_openapi_client/models/host_cluster.rb
 lib/autosde_openapi_client/models/host_cluster_create.rb
 lib/autosde_openapi_client/models/host_cluster_membership.rb
 lib/autosde_openapi_client/models/host_cluster_response.rb
+lib/autosde_openapi_client/models/host_cluster_update.rb
 lib/autosde_openapi_client/models/host_cluster_volume_mapping.rb
 lib/autosde_openapi_client/models/host_cluster_volume_mapping_create.rb
 lib/autosde_openapi_client/models/host_cluster_volume_mapping_response.rb
@@ -289,6 +291,7 @@ spec/models/host_cluster_create_spec.rb
 spec/models/host_cluster_membership_spec.rb
 spec/models/host_cluster_response_spec.rb
 spec/models/host_cluster_spec.rb
+spec/models/host_cluster_update_spec.rb
 spec/models/host_cluster_volume_mapping_create_spec.rb
 spec/models/host_cluster_volume_mapping_response_spec.rb
 spec/models/host_cluster_volume_mapping_spec.rb

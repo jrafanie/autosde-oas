@@ -118,6 +118,7 @@ Class | Method | HTTP request | Description
 *AutosdeOpenapiClient::HostClusterApi* | [**host_clusters_get**](docs/HostClusterApi.md#host_clusters_get) | **GET** /host-clusters | 
 *AutosdeOpenapiClient::HostClusterApi* | [**host_clusters_pk_delete**](docs/HostClusterApi.md#host_clusters_pk_delete) | **DELETE** /host-clusters/{pk} | 
 *AutosdeOpenapiClient::HostClusterApi* | [**host_clusters_pk_get**](docs/HostClusterApi.md#host_clusters_pk_get) | **GET** /host-clusters/{pk} | 
+*AutosdeOpenapiClient::HostClusterApi* | [**host_clusters_pk_put**](docs/HostClusterApi.md#host_clusters_pk_put) | **PUT** /host-clusters/{pk} | 
 *AutosdeOpenapiClient::HostClusterApi* | [**host_clusters_post**](docs/HostClusterApi.md#host_clusters_post) | **POST** /host-clusters | 
 *AutosdeOpenapiClient::HostClusterMembershipApi* | [**host_cluster_membership_get**](docs/HostClusterMembershipApi.md#host_cluster_membership_get) | **GET** /host-cluster-membership | 
 *AutosdeOpenapiClient::HostClusterMembershipApi* | [**host_cluster_membership_pk_delete**](docs/HostClusterMembershipApi.md#host_cluster_membership_pk_delete) | **DELETE** /host-cluster-membership/{pk} | 
@@ -228,6 +229,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::HostClusterCreate](docs/HostClusterCreate.md)
  - [AutosdeOpenapiClient::HostClusterMembership](docs/HostClusterMembership.md)
  - [AutosdeOpenapiClient::HostClusterResponse](docs/HostClusterResponse.md)
+ - [AutosdeOpenapiClient::HostClusterUpdate](docs/HostClusterUpdate.md)
  - [AutosdeOpenapiClient::HostClusterVolumeMapping](docs/HostClusterVolumeMapping.md)
  - [AutosdeOpenapiClient::HostClusterVolumeMappingCreate](docs/HostClusterVolumeMappingCreate.md)
  - [AutosdeOpenapiClient::HostClusterVolumeMappingResponse](docs/HostClusterVolumeMappingResponse.md)

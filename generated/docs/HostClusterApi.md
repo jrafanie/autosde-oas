@@ -7,6 +7,7 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 | [**host_clusters_get**](HostClusterApi.md#host_clusters_get) | **GET** /host-clusters |  |
 | [**host_clusters_pk_delete**](HostClusterApi.md#host_clusters_pk_delete) | **DELETE** /host-clusters/{pk} |  |
 | [**host_clusters_pk_get**](HostClusterApi.md#host_clusters_pk_get) | **GET** /host-clusters/{pk} |  |
+| [**host_clusters_pk_put**](HostClusterApi.md#host_clusters_pk_put) | **PUT** /host-clusters/{pk} |  |
 | [**host_clusters_post**](HostClusterApi.md#host_clusters_post) | **POST** /host-clusters |  |
 
 
@@ -205,6 +206,75 @@ end
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: */*
+
+
+## host_clusters_pk_put
+
+> <AsyncResponse> host_clusters_pk_put(pk, host_cluster_update)
+
+
+
+### Examples
+
+```ruby
+require 'time'
+require 'autosde_openapi_client'
+# setup authorization
+AutosdeOpenapiClient.configure do |config|
+  # Configure Bearer authorization: bearerAuth
+  config.access_token = 'YOUR_BEARER_TOKEN'
+end
+
+api_instance = AutosdeOpenapiClient::HostClusterApi.new
+pk = 56 # Integer | 
+host_cluster_update = AutosdeOpenapiClient::HostClusterUpdate.new # HostClusterUpdate | 
+
+begin
+  
+  result = api_instance.host_clusters_pk_put(pk, host_cluster_update)
+  p result
+rescue AutosdeOpenapiClient::ApiError => e
+  puts "Error when calling HostClusterApi->host_clusters_pk_put: #{e}"
+end
+```
+
+#### Using the host_clusters_pk_put_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<AsyncResponse>, Integer, Hash)> host_clusters_pk_put_with_http_info(pk, host_cluster_update)
+
+```ruby
+begin
+  
+  data, status_code, headers = api_instance.host_clusters_pk_put_with_http_info(pk, host_cluster_update)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <AsyncResponse>
+rescue AutosdeOpenapiClient::ApiError => e
+  puts "Error when calling HostClusterApi->host_clusters_pk_put_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **pk** | **Integer** |  |  |
+| **host_cluster_update** | [**HostClusterUpdate**](HostClusterUpdate.md) |  |  |
+
+### Return type
+
+[**AsyncResponse**](AsyncResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: */*
 
 
