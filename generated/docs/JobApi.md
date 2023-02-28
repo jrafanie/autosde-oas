@@ -12,7 +12,7 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
 ## jobs_get
 
-> <Array<Job>> jobs_get
+> <Array<JobResponse>> jobs_get
 
 
 
@@ -42,7 +42,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<Job>>, Integer, Hash)> jobs_get_with_http_info
+> <Array(<Array<JobResponse>>, Integer, Hash)> jobs_get_with_http_info
 
 ```ruby
 begin
@@ -50,7 +50,7 @@ begin
   data, status_code, headers = api_instance.jobs_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<Job>>
+  p data # => <Array<JobResponse>>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling JobApi->jobs_get_with_http_info: #{e}"
 end
@@ -62,7 +62,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;Job&gt;**](Job.md)
+[**Array&lt;JobResponse&gt;**](JobResponse.md)
 
 ### Authorization
 

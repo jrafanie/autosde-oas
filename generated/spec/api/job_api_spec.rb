@@ -34,7 +34,7 @@ describe 'JobApi' do
 
   # unit tests for jobs_get
   # @param [Hash] opts the optional parameters
-  # @return [Array<Job>]
+  # @return [Array<JobResponse>]
   describe 'jobs_get test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

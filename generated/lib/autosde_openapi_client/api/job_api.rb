@@ -20,14 +20,14 @@ module AutosdeOpenapiClient
       @api_client = api_client
     end
     # @param [Hash] opts the optional parameters
-    # @return [Array<Job>]
+    # @return [Array<JobResponse>]
     def jobs_get(opts = {})
       data, _status_code, _headers = jobs_get_with_http_info(opts)
       data
     end
 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<Job>, Integer, Hash)>] Array<Job> data, response status code and response headers
+    # @return [Array<(Array<JobResponse>, Integer, Hash)>] Array<JobResponse> data, response status code and response headers
     def jobs_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: JobApi.jobs_get ...'
@@ -50,7 +50,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<Job>'
+      return_type = opts[:debug_return_type] || 'Array<JobResponse>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
