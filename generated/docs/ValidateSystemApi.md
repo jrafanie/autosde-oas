@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
 ## validate_system_post
 
-> <ValidateSystem> validate_system_post(storage_system_create)
+> <ValidateSystem> validate_system_post(validate_system_data)
 
 
 
@@ -25,11 +25,11 @@ AutosdeOpenapiClient.configure do |config|
 end
 
 api_instance = AutosdeOpenapiClient::ValidateSystemApi.new
-storage_system_create = AutosdeOpenapiClient::StorageSystemCreate.new # StorageSystemCreate | 
+validate_system_data = AutosdeOpenapiClient::ValidateSystemData.new # ValidateSystemData | 
 
 begin
   
-  result = api_instance.validate_system_post(storage_system_create)
+  result = api_instance.validate_system_post(validate_system_data)
   p result
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ValidateSystemApi->validate_system_post: #{e}"
@@ -40,12 +40,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<ValidateSystem>, Integer, Hash)> validate_system_post_with_http_info(storage_system_create)
+> <Array(<ValidateSystem>, Integer, Hash)> validate_system_post_with_http_info(validate_system_data)
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.validate_system_post_with_http_info(storage_system_create)
+  data, status_code, headers = api_instance.validate_system_post_with_http_info(validate_system_data)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <ValidateSystem>
@@ -58,7 +58,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **storage_system_create** | [**StorageSystemCreate**](StorageSystemCreate.md) |  |  |
+| **validate_system_data** | [**ValidateSystemData**](ValidateSystemData.md) |  |  |
 
 ### Return type
 

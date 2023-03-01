@@ -14,78 +14,30 @@ require 'date'
 require 'time'
 
 module AutosdeOpenapiClient
-  # Define volume properties on a specific storage resource.
-  class Volume
-    # compliant
-    attr_accessor :compliant
-
-    # component_state
-    attr_accessor :component_state
-
-    # fc_map_count
-    attr_accessor :fc_map_count
-
-    attr_accessor :historical_service
+  # TODO add description
+  class ValidateSystemData
+    # management_ip
+    attr_accessor :management_ip
 
     # name
     attr_accessor :name
 
-    attr_accessor :service
+    # password
+    attr_accessor :password
 
-    # size
-    attr_accessor :size
+    attr_accessor :system_type
 
-    # status
-    attr_accessor :status
-
-    attr_accessor :storage_resource
-
-    # unmapped_since
-    attr_accessor :unmapped_since
-
-    # uuid
-    attr_accessor :uuid
-
-    # volume_name
-    attr_accessor :volume_name
-
-    class EnumAttributeValidator
-      attr_reader :datatype
-      attr_reader :allowable_values
-
-      def initialize(datatype, allowable_values)
-        @allowable_values = allowable_values.map do |value|
-          case datatype.to_s
-          when /Integer/i
-            value.to_i
-          when /Float/i
-            value.to_f
-          else
-            value
-          end
-        end
-      end
-
-      def valid?(value)
-        !value || allowable_values.include?(value)
-      end
-    end
+    # user
+    attr_accessor :user
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'compliant' => :'compliant',
-        :'component_state' => :'component_state',
-        :'fc_map_count' => :'fc_map_count',
-        :'historical_service' => :'historical_service',
+        :'management_ip' => :'management_ip',
         :'name' => :'name',
-        :'service' => :'service',
-        :'size' => :'size',
-        :'status' => :'status',
-        :'storage_resource' => :'storage_resource',
-        :'unmapped_since' => :'unmapped_since',
-        :'uuid' => :'uuid',
-        :'volume_name' => :'volume_name'
+        :'password' => :'password',
+        :'system_type' => :'system_type',
+        :'user' => :'user'
       }
     end
 
@@ -97,18 +49,11 @@ module AutosdeOpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'compliant' => :'Boolean',
-        :'component_state' => :'String',
-        :'fc_map_count' => :'Integer',
-        :'historical_service' => :'Service',
+        :'management_ip' => :'String',
         :'name' => :'String',
-        :'service' => :'Service',
-        :'size' => :'Integer',
-        :'status' => :'String',
-        :'storage_resource' => :'StorageResource',
-        :'unmapped_since' => :'Time',
-        :'uuid' => :'String',
-        :'volume_name' => :'String'
+        :'password' => :'String',
+        :'system_type' => :'SystemType',
+        :'user' => :'String'
       }
     end
 
@@ -122,67 +67,35 @@ module AutosdeOpenapiClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `AutosdeOpenapiClient::Volume` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `AutosdeOpenapiClient::ValidateSystemData` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `AutosdeOpenapiClient::Volume`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `AutosdeOpenapiClient::ValidateSystemData`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'compliant')
-        self.compliant = attributes[:'compliant']
-      else
-        self.compliant = false
-      end
-
-      if attributes.key?(:'component_state')
-        self.component_state = attributes[:'component_state']
-      end
-
-      if attributes.key?(:'fc_map_count')
-        self.fc_map_count = attributes[:'fc_map_count']
-      else
-        self.fc_map_count = 0
-      end
-
-      if attributes.key?(:'historical_service')
-        self.historical_service = attributes[:'historical_service']
+      if attributes.key?(:'management_ip')
+        self.management_ip = attributes[:'management_ip']
       end
 
       if attributes.key?(:'name')
         self.name = attributes[:'name']
       end
 
-      if attributes.key?(:'service')
-        self.service = attributes[:'service']
+      if attributes.key?(:'password')
+        self.password = attributes[:'password']
       end
 
-      if attributes.key?(:'size')
-        self.size = attributes[:'size']
+      if attributes.key?(:'system_type')
+        self.system_type = attributes[:'system_type']
       end
 
-      if attributes.key?(:'status')
-        self.status = attributes[:'status']
-      end
-
-      if attributes.key?(:'storage_resource')
-        self.storage_resource = attributes[:'storage_resource']
-      end
-
-      if attributes.key?(:'unmapped_since')
-        self.unmapped_since = attributes[:'unmapped_since']
-      end
-
-      if attributes.key?(:'uuid')
-        self.uuid = attributes[:'uuid']
-      end
-
-      if attributes.key?(:'volume_name')
-        self.volume_name = attributes[:'volume_name']
+      if attributes.key?(:'user')
+        self.user = attributes[:'user']
       end
     end
 
@@ -190,30 +103,13 @@ module AutosdeOpenapiClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if !@component_state.nil? && @component_state.to_s.length > 32
-        invalid_properties.push('invalid value for "component_state", the character length must be smaller than or equal to 32.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      component_state_validator = EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION", "CLONING"])
-      return false unless component_state_validator.valid?(@component_state)
-      return false if !@component_state.nil? && @component_state.to_s.length > 32
       true
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] component_state Object to be assigned
-    def component_state=(component_state)
-      validator = EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION", "CLONING"])
-      unless validator.valid?(component_state)
-        fail ArgumentError, "invalid value for \"component_state\", must be one of #{validator.allowable_values}."
-      end
-      @component_state = component_state
     end
 
     # Checks equality by comparing each attribute.
@@ -221,18 +117,11 @@ module AutosdeOpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          compliant == o.compliant &&
-          component_state == o.component_state &&
-          fc_map_count == o.fc_map_count &&
-          historical_service == o.historical_service &&
+          management_ip == o.management_ip &&
           name == o.name &&
-          service == o.service &&
-          size == o.size &&
-          status == o.status &&
-          storage_resource == o.storage_resource &&
-          unmapped_since == o.unmapped_since &&
-          uuid == o.uuid &&
-          volume_name == o.volume_name
+          password == o.password &&
+          system_type == o.system_type &&
+          user == o.user
     end
 
     # @see the `==` method
@@ -244,7 +133,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [compliant, component_state, fc_map_count, historical_service, name, service, size, status, storage_resource, unmapped_since, uuid, volume_name].hash
+      [management_ip, name, password, system_type, user].hash
     end
 
     # Builds the object from hash

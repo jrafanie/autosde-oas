@@ -31,6 +31,12 @@ describe AutosdeOpenapiClient::StorageSystemResponse do
     end
   end
 
+  describe 'test attribute "capability_values_json"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   describe 'test attribute "component_state"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

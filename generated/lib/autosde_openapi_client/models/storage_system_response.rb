@@ -19,10 +19,12 @@ module AutosdeOpenapiClient
     # auto_refresh
     attr_accessor :auto_refresh
 
+    # capability_values_json
+    attr_accessor :capability_values_json
+
     # component_state
     attr_accessor :component_state
 
-    # enabled_capability_values
     attr_accessor :enabled_capability_values
 
     # management_ip
@@ -71,6 +73,7 @@ module AutosdeOpenapiClient
     def self.attribute_map
       {
         :'auto_refresh' => :'auto_refresh',
+        :'capability_values_json' => :'capability_values_json',
         :'component_state' => :'component_state',
         :'enabled_capability_values' => :'enabled_capability_values',
         :'management_ip' => :'management_ip',
@@ -92,8 +95,9 @@ module AutosdeOpenapiClient
     def self.openapi_types
       {
         :'auto_refresh' => :'Boolean',
+        :'capability_values_json' => :'String',
         :'component_state' => :'String',
-        :'enabled_capability_values' => :'Array<ServiceAbstractCapabilityValue>',
+        :'enabled_capability_values' => :'ServiceAbstractCapabilityValue',
         :'management_ip' => :'String',
         :'name' => :'String',
         :'status' => :'String',
@@ -131,14 +135,16 @@ module AutosdeOpenapiClient
         self.auto_refresh = true
       end
 
+      if attributes.key?(:'capability_values_json')
+        self.capability_values_json = attributes[:'capability_values_json']
+      end
+
       if attributes.key?(:'component_state')
         self.component_state = attributes[:'component_state']
       end
 
       if attributes.key?(:'enabled_capability_values')
-        if (value = attributes[:'enabled_capability_values']).is_a?(Array)
-          self.enabled_capability_values = value
-        end
+        self.enabled_capability_values = attributes[:'enabled_capability_values']
       end
 
       if attributes.key?(:'management_ip')
@@ -218,6 +224,7 @@ module AutosdeOpenapiClient
       return true if self.equal?(o)
       self.class == o.class &&
           auto_refresh == o.auto_refresh &&
+          capability_values_json == o.capability_values_json &&
           component_state == o.component_state &&
           enabled_capability_values == o.enabled_capability_values &&
           management_ip == o.management_ip &&
@@ -238,7 +245,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [auto_refresh, component_state, enabled_capability_values, management_ip, name, status, storage_array, storage_family, system_type, uuid].hash
+      [auto_refresh, capability_values_json, component_state, enabled_capability_values, management_ip, name, status, storage_array, storage_family, system_type, uuid].hash
     end
 
     # Builds the object from hash

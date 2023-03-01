@@ -277,6 +277,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::UserCreate](docs/UserCreate.md)
  - [AutosdeOpenapiClient::UserUpdate](docs/UserUpdate.md)
  - [AutosdeOpenapiClient::ValidateSystem](docs/ValidateSystem.md)
+ - [AutosdeOpenapiClient::ValidateSystemData](docs/ValidateSystemData.md)
  - [AutosdeOpenapiClient::Volume](docs/Volume.md)
  - [AutosdeOpenapiClient::VolumeClone](docs/VolumeClone.md)
  - [AutosdeOpenapiClient::VolumeCreate](docs/VolumeCreate.md)

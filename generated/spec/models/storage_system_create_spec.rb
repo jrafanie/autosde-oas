@@ -53,7 +53,7 @@ describe AutosdeOpenapiClient::StorageSystemCreate do
     end
   end
 
-  describe 'test attribute "enabled_capability_values"' do
+  describe 'test attribute "enabled_capability_values_list"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

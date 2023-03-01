@@ -108,6 +108,7 @@ docs/UserCreate.md
 docs/UserUpdate.md
 docs/ValidateSystem.md
 docs/ValidateSystemApi.md
+docs/ValidateSystemData.md
 docs/Volume.md
 docs/VolumeApi.md
 docs/VolumeClone.md
@@ -227,6 +228,7 @@ lib/autosde_openapi_client/models/user.rb
 lib/autosde_openapi_client/models/user_create.rb
 lib/autosde_openapi_client/models/user_update.rb
 lib/autosde_openapi_client/models/validate_system.rb
+lib/autosde_openapi_client/models/validate_system_data.rb
 lib/autosde_openapi_client/models/volume.rb
 lib/autosde_openapi_client/models/volume_clone.rb
 lib/autosde_openapi_client/models/volume_create.rb
@@ -339,6 +341,7 @@ spec/models/system_type_spec.rb
 spec/models/user_create_spec.rb
 spec/models/user_spec.rb
 spec/models/user_update_spec.rb
+spec/models/validate_system_data_spec.rb
 spec/models/validate_system_spec.rb
 spec/models/volume_clone_spec.rb
 spec/models/volume_create_spec.rb

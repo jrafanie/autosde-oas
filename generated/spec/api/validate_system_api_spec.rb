@@ -33,7 +33,7 @@ describe 'ValidateSystemApi' do
   end
 
   # unit tests for validate_system_post
-  # @param storage_system_create 
+  # @param validate_system_data 
   # @param [Hash] opts the optional parameters
   # @return [ValidateSystem]
   describe 'validate_system_post test' do

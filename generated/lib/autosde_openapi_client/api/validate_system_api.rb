@@ -19,24 +19,24 @@ module AutosdeOpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # @param storage_system_create [StorageSystemCreate] 
+    # @param validate_system_data [ValidateSystemData] 
     # @param [Hash] opts the optional parameters
     # @return [ValidateSystem]
-    def validate_system_post(storage_system_create, opts = {})
-      data, _status_code, _headers = validate_system_post_with_http_info(storage_system_create, opts)
+    def validate_system_post(validate_system_data, opts = {})
+      data, _status_code, _headers = validate_system_post_with_http_info(validate_system_data, opts)
       data
     end
 
-    # @param storage_system_create [StorageSystemCreate] 
+    # @param validate_system_data [ValidateSystemData] 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ValidateSystem, Integer, Hash)>] ValidateSystem data, response status code and response headers
-    def validate_system_post_with_http_info(storage_system_create, opts = {})
+    def validate_system_post_with_http_info(validate_system_data, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ValidateSystemApi.validate_system_post ...'
       end
-      # verify the required parameter 'storage_system_create' is set
-      if @api_client.config.client_side_validation && storage_system_create.nil?
-        fail ArgumentError, "Missing the required parameter 'storage_system_create' when calling ValidateSystemApi.validate_system_post"
+      # verify the required parameter 'validate_system_data' is set
+      if @api_client.config.client_side_validation && validate_system_data.nil?
+        fail ArgumentError, "Missing the required parameter 'validate_system_data' when calling ValidateSystemApi.validate_system_post"
       end
       # resource path
       local_var_path = '/validate-system'
@@ -55,7 +55,7 @@ module AutosdeOpenapiClient
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(storage_system_create)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(validate_system_data)
 
       # return_type
       return_type = opts[:debug_return_type] || 'ValidateSystem'
