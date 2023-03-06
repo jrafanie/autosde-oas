@@ -120,10 +120,6 @@ module AutosdeOpenapiClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if !@name.nil? && @name.to_s.length > 15
-        invalid_properties.push('invalid value for "name", the character length must be smaller than or equal to 15.')
-      end
-
       if !@owner_id.nil? && @owner_id.to_s.length > 15
         invalid_properties.push('invalid value for "owner_id", the character length must be smaller than or equal to 15.')
       end
@@ -142,21 +138,10 @@ module AutosdeOpenapiClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if !@name.nil? && @name.to_s.length > 15
       return false if !@owner_id.nil? && @owner_id.to_s.length > 15
       return false if !@owner_name.nil? && @owner_name.to_s.length > 15
       return false if !@protocol.nil? && @protocol.to_s.length > 15
       true
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] name Value to be assigned
-    def name=(name)
-      if !name.nil? && name.to_s.length > 15
-        fail ArgumentError, 'invalid value for "name", the character length must be smaller than or equal to 15.'
-      end
-
-      @name = name
     end
 
     # Custom attribute writer method with validation

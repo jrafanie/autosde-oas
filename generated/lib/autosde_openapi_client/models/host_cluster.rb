@@ -164,10 +164,6 @@ module AutosdeOpenapiClient
         invalid_properties.push('invalid value for "component_state", the character length must be smaller than or equal to 32.')
       end
 
-      if !@name.nil? && @name.to_s.length > 15
-        invalid_properties.push('invalid value for "name", the character length must be smaller than or equal to 15.')
-      end
-
       if !@owner_id.nil? && @owner_id.to_s.length > 15
         invalid_properties.push('invalid value for "owner_id", the character length must be smaller than or equal to 15.')
       end
@@ -189,7 +185,6 @@ module AutosdeOpenapiClient
       component_state_validator = EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION"])
       return false unless component_state_validator.valid?(@component_state)
       return false if !@component_state.nil? && @component_state.to_s.length > 32
-      return false if !@name.nil? && @name.to_s.length > 15
       return false if !@owner_id.nil? && @owner_id.to_s.length > 15
       return false if !@owner_name.nil? && @owner_name.to_s.length > 15
       return false if !@protocol.nil? && @protocol.to_s.length > 15
@@ -204,16 +199,6 @@ module AutosdeOpenapiClient
         fail ArgumentError, "invalid value for \"component_state\", must be one of #{validator.allowable_values}."
       end
       @component_state = component_state
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] name Value to be assigned
-    def name=(name)
-      if !name.nil? && name.to_s.length > 15
-        fail ArgumentError, 'invalid value for "name", the character length must be smaller than or equal to 15.'
-      end
-
-      @name = name
     end
 
     # Custom attribute writer method with validation
