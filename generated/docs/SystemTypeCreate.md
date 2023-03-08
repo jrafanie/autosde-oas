@@ -4,7 +4,6 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **component_state** | **String** | component_state | [optional] |
 | **name** | **String** | name | [optional] |
 | **short_version** | **String** | short_version | [optional] |
 | **super_type** | **Integer** | super_type | [optional] |
@@ -17,7 +16,6 @@
 require 'autosde_openapi_client'
 
 instance = AutosdeOpenapiClient::SystemTypeCreate.new(
-  component_state: null,
   name: null,
   short_version: null,
   super_type: null,

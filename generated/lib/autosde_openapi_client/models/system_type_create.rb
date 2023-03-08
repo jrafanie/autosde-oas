@@ -16,9 +16,6 @@ require 'time'
 module AutosdeOpenapiClient
   # TODO add description
   class SystemTypeCreate
-    # component_state
-    attr_accessor :component_state
-
     # name
     attr_accessor :name
 
@@ -34,32 +31,9 @@ module AutosdeOpenapiClient
     # SystemType version
     attr_accessor :version
 
-    class EnumAttributeValidator
-      attr_reader :datatype
-      attr_reader :allowable_values
-
-      def initialize(datatype, allowable_values)
-        @allowable_values = allowable_values.map do |value|
-          case datatype.to_s
-          when /Integer/i
-            value.to_i
-          when /Float/i
-            value.to_f
-          else
-            value
-          end
-        end
-      end
-
-      def valid?(value)
-        !value || allowable_values.include?(value)
-      end
-    end
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'component_state' => :'component_state',
         :'name' => :'name',
         :'short_version' => :'short_version',
         :'super_type' => :'super_type',
@@ -76,7 +50,6 @@ module AutosdeOpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'component_state' => :'String',
         :'name' => :'String',
         :'short_version' => :'String',
         :'super_type' => :'Integer',
@@ -106,10 +79,6 @@ module AutosdeOpenapiClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'component_state')
-        self.component_state = attributes[:'component_state']
-      end
-
       if attributes.key?(:'name')
         self.name = attributes[:'name']
       end
@@ -135,10 +104,6 @@ module AutosdeOpenapiClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if !@component_state.nil? && @component_state.to_s.length > 32
-        invalid_properties.push('invalid value for "component_state", the character length must be smaller than or equal to 32.')
-      end
-
       if !@short_version.nil? && @short_version.to_s.length > 255
         invalid_properties.push('invalid value for "short_version", the character length must be smaller than or equal to 255.')
       end
@@ -149,21 +114,8 @@ module AutosdeOpenapiClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      component_state_validator = EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION"])
-      return false unless component_state_validator.valid?(@component_state)
-      return false if !@component_state.nil? && @component_state.to_s.length > 32
       return false if !@short_version.nil? && @short_version.to_s.length > 255
       true
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] component_state Object to be assigned
-    def component_state=(component_state)
-      validator = EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION"])
-      unless validator.valid?(component_state)
-        fail ArgumentError, "invalid value for \"component_state\", must be one of #{validator.allowable_values}."
-      end
-      @component_state = component_state
     end
 
     # Custom attribute writer method with validation
@@ -181,7 +133,6 @@ module AutosdeOpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          component_state == o.component_state &&
           name == o.name &&
           short_version == o.short_version &&
           super_type == o.super_type &&
@@ -198,7 +149,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [component_state, name, short_version, super_type, uuid, version].hash
+      [name, short_version, super_type, uuid, version].hash
     end
 
     # Builds the object from hash

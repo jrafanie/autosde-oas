@@ -25,16 +25,6 @@ describe AutosdeOpenapiClient::SystemTypeCreate do
       expect(instance).to be_instance_of(AutosdeOpenapiClient::SystemTypeCreate)
     end
   end
-  describe 'test attribute "component_state"' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION"])
-      # validator.allowable_values.each do |value|
-      #   expect { instance.component_state = value }.not_to raise_error
-      # end
-    end
-  end
-
   describe 'test attribute "name"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
