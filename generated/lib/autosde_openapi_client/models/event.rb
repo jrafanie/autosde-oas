@@ -34,6 +34,9 @@ module AutosdeOpenapiClient
     # last_timestamp
     attr_accessor :last_timestamp
 
+    # object_name
+    attr_accessor :object_name
+
     # refresh_interval
     attr_accessor :refresh_interval
 
@@ -54,6 +57,7 @@ module AutosdeOpenapiClient
         :'event_type' => :'event_type',
         :'fixed' => :'fixed',
         :'last_timestamp' => :'last_timestamp',
+        :'object_name' => :'object_name',
         :'refresh_interval' => :'refresh_interval',
         :'sequence_number' => :'sequence_number',
         :'storage_system' => :'storage_system',
@@ -75,6 +79,7 @@ module AutosdeOpenapiClient
         :'event_type' => :'String',
         :'fixed' => :'String',
         :'last_timestamp' => :'Time',
+        :'object_name' => :'String',
         :'refresh_interval' => :'Integer',
         :'sequence_number' => :'Integer',
         :'storage_system' => :'StorageSystem',
@@ -127,6 +132,10 @@ module AutosdeOpenapiClient
         self.last_timestamp = attributes[:'last_timestamp']
       end
 
+      if attributes.key?(:'object_name')
+        self.object_name = attributes[:'object_name']
+      end
+
       if attributes.key?(:'refresh_interval')
         self.refresh_interval = attributes[:'refresh_interval']
       end
@@ -168,6 +177,7 @@ module AutosdeOpenapiClient
           event_type == o.event_type &&
           fixed == o.fixed &&
           last_timestamp == o.last_timestamp &&
+          object_name == o.object_name &&
           refresh_interval == o.refresh_interval &&
           sequence_number == o.sequence_number &&
           storage_system == o.storage_system &&
@@ -183,7 +193,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [description, error_code, event_id, event_type, fixed, last_timestamp, refresh_interval, sequence_number, storage_system, uuid].hash
+      [description, error_code, event_id, event_type, fixed, last_timestamp, object_name, refresh_interval, sequence_number, storage_system, uuid].hash
     end
 
     # Builds the object from hash

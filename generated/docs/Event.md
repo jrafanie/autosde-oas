@@ -10,6 +10,7 @@
 | **event_type** | **String** | event_type | [optional] |
 | **fixed** | **String** | fixed | [optional] |
 | **last_timestamp** | **Time** | last_timestamp | [optional] |
+| **object_name** | **String** | object_name | [optional] |
 | **refresh_interval** | **Integer** | refresh_interval | [optional] |
 | **sequence_number** | **Integer** | sequence_number | [optional] |
 | **storage_system** | [**StorageSystem**](StorageSystem.md) |  | [optional] |
@@ -27,6 +28,7 @@ instance = AutosdeOpenapiClient::Event.new(
   event_type: null,
   fixed: null,
   last_timestamp: null,
+  object_name: null,
   refresh_interval: null,
   sequence_number: null,
   storage_system: null,
