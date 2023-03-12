@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
 ## volume_migration_post
 
-> <VolumeMigration> volume_migration_post(volume_migration)
+> <AsyncResponse> volume_migration_post(volume_migration)
 
 
 
@@ -40,7 +40,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<VolumeMigration>, Integer, Hash)> volume_migration_post_with_http_info(volume_migration)
+> <Array(<AsyncResponse>, Integer, Hash)> volume_migration_post_with_http_info(volume_migration)
 
 ```ruby
 begin
@@ -48,7 +48,7 @@ begin
   data, status_code, headers = api_instance.volume_migration_post_with_http_info(volume_migration)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <VolumeMigration>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeMigrationApi->volume_migration_post_with_http_info: #{e}"
 end
@@ -62,7 +62,7 @@ end
 
 ### Return type
 
-[**VolumeMigration**](VolumeMigration.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

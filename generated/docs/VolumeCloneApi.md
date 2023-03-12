@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
 ## volume_clone_post
 
-> <VolumeClone> volume_clone_post(volume_clone)
+> <AsyncResponse> volume_clone_post(volume_clone)
 
 
 
@@ -40,7 +40,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<VolumeClone>, Integer, Hash)> volume_clone_post_with_http_info(volume_clone)
+> <Array(<AsyncResponse>, Integer, Hash)> volume_clone_post_with_http_info(volume_clone)
 
 ```ruby
 begin
@@ -48,7 +48,7 @@ begin
   data, status_code, headers = api_instance.volume_clone_post_with_http_info(volume_clone)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <VolumeClone>
+  p data # => <AsyncResponse>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling VolumeCloneApi->volume_clone_post_with_http_info: #{e}"
 end
@@ -62,7 +62,7 @@ end
 
 ### Return type
 
-[**VolumeClone**](VolumeClone.md)
+[**AsyncResponse**](AsyncResponse.md)
 
 ### Authorization
 

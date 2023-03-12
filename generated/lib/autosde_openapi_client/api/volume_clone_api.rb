@@ -21,7 +21,7 @@ module AutosdeOpenapiClient
     end
     # @param volume_clone [VolumeClone] 
     # @param [Hash] opts the optional parameters
-    # @return [VolumeClone]
+    # @return [AsyncResponse]
     def volume_clone_post(volume_clone, opts = {})
       data, _status_code, _headers = volume_clone_post_with_http_info(volume_clone, opts)
       data
@@ -29,7 +29,7 @@ module AutosdeOpenapiClient
 
     # @param volume_clone [VolumeClone] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(VolumeClone, Integer, Hash)>] VolumeClone data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def volume_clone_post_with_http_info(volume_clone, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: VolumeCloneApi.volume_clone_post ...'
@@ -58,7 +58,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(volume_clone)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'VolumeClone'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

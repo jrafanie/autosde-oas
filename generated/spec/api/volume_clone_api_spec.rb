@@ -35,7 +35,7 @@ describe 'VolumeCloneApi' do
   # unit tests for volume_clone_post
   # @param volume_clone 
   # @param [Hash] opts the optional parameters
-  # @return [VolumeClone]
+  # @return [AsyncResponse]
   describe 'volume_clone_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

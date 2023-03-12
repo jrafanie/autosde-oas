@@ -21,7 +21,7 @@ module AutosdeOpenapiClient
     end
     # @param volume_migration [VolumeMigration] 
     # @param [Hash] opts the optional parameters
-    # @return [VolumeMigration]
+    # @return [AsyncResponse]
     def volume_migration_post(volume_migration, opts = {})
       data, _status_code, _headers = volume_migration_post_with_http_info(volume_migration, opts)
       data
@@ -29,7 +29,7 @@ module AutosdeOpenapiClient
 
     # @param volume_migration [VolumeMigration] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(VolumeMigration, Integer, Hash)>] VolumeMigration data, response status code and response headers
+    # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
     def volume_migration_post_with_http_info(volume_migration, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: VolumeMigrationApi.volume_migration_post ...'
@@ -58,7 +58,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body] || @api_client.object_to_http_body(volume_migration)
 
       # return_type
-      return_type = opts[:debug_return_type] || 'VolumeMigration'
+      return_type = opts[:debug_return_type] || 'AsyncResponse'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']

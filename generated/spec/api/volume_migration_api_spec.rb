@@ -35,7 +35,7 @@ describe 'VolumeMigrationApi' do
   # unit tests for volume_migration_post
   # @param volume_migration 
   # @param [Hash] opts the optional parameters
-  # @return [VolumeMigration]
+  # @return [AsyncResponse]
   describe 'volume_migration_post test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
