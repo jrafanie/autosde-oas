@@ -16,8 +16,8 @@ require 'time'
 module AutosdeOpenapiClient
   # TODO add description
   class ServiceUpdate
-    # capability_value_list
-    attr_accessor :capability_value_list
+    # capability_id_list
+    attr_accessor :capability_id_list
 
     # component_state
     attr_accessor :component_state
@@ -65,7 +65,7 @@ module AutosdeOpenapiClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'capability_value_list' => :'capability_value_list',
+        :'capability_id_list' => :'capability_id_list',
         :'component_state' => :'component_state',
         :'description' => :'description',
         :'name' => :'name',
@@ -85,7 +85,7 @@ module AutosdeOpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'capability_value_list' => :'Array<String>',
+        :'capability_id_list' => :'Array<String>',
         :'component_state' => :'String',
         :'description' => :'String',
         :'name' => :'String',
@@ -118,9 +118,9 @@ module AutosdeOpenapiClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'capability_value_list')
-        if (value = attributes[:'capability_value_list']).is_a?(Array)
-          self.capability_value_list = value
+      if attributes.key?(:'capability_id_list')
+        if (value = attributes[:'capability_id_list']).is_a?(Array)
+          self.capability_id_list = value
         end
       end
 
@@ -196,7 +196,7 @@ module AutosdeOpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          capability_value_list == o.capability_value_list &&
+          capability_id_list == o.capability_id_list &&
           component_state == o.component_state &&
           description == o.description &&
           name == o.name &&
@@ -216,7 +216,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [capability_value_list, component_state, description, name, profile, project, provisioning_strategy, uuid, version].hash
+      [capability_id_list, component_state, description, name, profile, project, provisioning_strategy, uuid, version].hash
     end
 
     # Builds the object from hash

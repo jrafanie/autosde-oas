@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **capability_value_list** | **Array&lt;String&gt;** | capability_value_list | [optional] |
+| **capability_id_list** | **Array&lt;String&gt;** | capability_id_list | [optional] |
 | **component_state** | **String** | component_state | [optional] |
 | **description** | **String** | description | [optional][default to &#39;&#39;] |
 | **name** | **String** | name | [optional] |
@@ -20,7 +20,7 @@
 require 'autosde_openapi_client'
 
 instance = AutosdeOpenapiClient::ServiceUpdate.new(
-  capability_value_list: null,
+  capability_id_list: null,
   component_state: null,
   description: null,
   name: null,
