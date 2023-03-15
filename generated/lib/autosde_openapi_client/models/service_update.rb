@@ -19,61 +19,18 @@ module AutosdeOpenapiClient
     # capability_id_list
     attr_accessor :capability_id_list
 
-    # component_state
-    attr_accessor :component_state
-
     # description
     attr_accessor :description
 
     # name
     attr_accessor :name
 
-    attr_accessor :profile
-
-    attr_accessor :project
-
-    attr_accessor :provisioning_strategy
-
-    # uuid
-    attr_accessor :uuid
-
-    # The version of the service
-    attr_accessor :version
-
-    class EnumAttributeValidator
-      attr_reader :datatype
-      attr_reader :allowable_values
-
-      def initialize(datatype, allowable_values)
-        @allowable_values = allowable_values.map do |value|
-          case datatype.to_s
-          when /Integer/i
-            value.to_i
-          when /Float/i
-            value.to_f
-          else
-            value
-          end
-        end
-      end
-
-      def valid?(value)
-        !value || allowable_values.include?(value)
-      end
-    end
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'capability_id_list' => :'capability_id_list',
-        :'component_state' => :'component_state',
         :'description' => :'description',
-        :'name' => :'name',
-        :'profile' => :'profile',
-        :'project' => :'project',
-        :'provisioning_strategy' => :'provisioning_strategy',
-        :'uuid' => :'uuid',
-        :'version' => :'version'
+        :'name' => :'name'
       }
     end
 
@@ -86,14 +43,8 @@ module AutosdeOpenapiClient
     def self.openapi_types
       {
         :'capability_id_list' => :'Array<String>',
-        :'component_state' => :'String',
         :'description' => :'String',
-        :'name' => :'String',
-        :'profile' => :'Profile',
-        :'project' => :'AutoSDEProject',
-        :'provisioning_strategy' => :'ProvisioningStrategy',
-        :'uuid' => :'String',
-        :'version' => :'Integer'
+        :'name' => :'String'
       }
     end
 
@@ -124,40 +75,16 @@ module AutosdeOpenapiClient
         end
       end
 
-      if attributes.key?(:'component_state')
-        self.component_state = attributes[:'component_state']
-      end
-
       if attributes.key?(:'description')
         self.description = attributes[:'description']
       else
-        self.description = ''
+        self.description = 'null'
       end
 
       if attributes.key?(:'name')
         self.name = attributes[:'name']
-      end
-
-      if attributes.key?(:'profile')
-        self.profile = attributes[:'profile']
-      end
-
-      if attributes.key?(:'project')
-        self.project = attributes[:'project']
-      end
-
-      if attributes.key?(:'provisioning_strategy')
-        self.provisioning_strategy = attributes[:'provisioning_strategy']
-      end
-
-      if attributes.key?(:'uuid')
-        self.uuid = attributes[:'uuid']
-      end
-
-      if attributes.key?(:'version')
-        self.version = attributes[:'version']
       else
-        self.version = 1
+        self.name = 'null'
       end
     end
 
@@ -165,30 +92,13 @@ module AutosdeOpenapiClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if !@component_state.nil? && @component_state.to_s.length > 32
-        invalid_properties.push('invalid value for "component_state", the character length must be smaller than or equal to 32.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      component_state_validator = EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION"])
-      return false unless component_state_validator.valid?(@component_state)
-      return false if !@component_state.nil? && @component_state.to_s.length > 32
       true
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] component_state Object to be assigned
-    def component_state=(component_state)
-      validator = EnumAttributeValidator.new('String', ["PENDING_CREATION", "CREATED", "DELETED", "PENDING_DELETION", "MODIFICATION", "PENDING_MODIFICATION"])
-      unless validator.valid?(component_state)
-        fail ArgumentError, "invalid value for \"component_state\", must be one of #{validator.allowable_values}."
-      end
-      @component_state = component_state
     end
 
     # Checks equality by comparing each attribute.
@@ -197,14 +107,8 @@ module AutosdeOpenapiClient
       return true if self.equal?(o)
       self.class == o.class &&
           capability_id_list == o.capability_id_list &&
-          component_state == o.component_state &&
           description == o.description &&
-          name == o.name &&
-          profile == o.profile &&
-          project == o.project &&
-          provisioning_strategy == o.provisioning_strategy &&
-          uuid == o.uuid &&
-          version == o.version
+          name == o.name
     end
 
     # @see the `==` method
@@ -216,7 +120,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [capability_id_list, component_state, description, name, profile, project, provisioning_strategy, uuid, version].hash
+      [capability_id_list, description, name].hash
     end
 
     # Builds the object from hash
