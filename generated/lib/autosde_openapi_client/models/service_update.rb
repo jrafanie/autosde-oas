@@ -25,12 +25,16 @@ module AutosdeOpenapiClient
     # name
     attr_accessor :name
 
+    # resources
+    attr_accessor :resources
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'capability_id_list' => :'capability_id_list',
         :'description' => :'description',
-        :'name' => :'name'
+        :'name' => :'name',
+        :'resources' => :'resources'
       }
     end
 
@@ -44,7 +48,8 @@ module AutosdeOpenapiClient
       {
         :'capability_id_list' => :'Array<String>',
         :'description' => :'String',
-        :'name' => :'String'
+        :'name' => :'String',
+        :'resources' => :'Array<String>'
       }
     end
 
@@ -86,6 +91,12 @@ module AutosdeOpenapiClient
       else
         self.name = 'null'
       end
+
+      if attributes.key?(:'resources')
+        if (value = attributes[:'resources']).is_a?(Array)
+          self.resources = value
+        end
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -108,7 +119,8 @@ module AutosdeOpenapiClient
       self.class == o.class &&
           capability_id_list == o.capability_id_list &&
           description == o.description &&
-          name == o.name
+          name == o.name &&
+          resources == o.resources
     end
 
     # @see the `==` method
@@ -120,7 +132,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [capability_id_list, description, name].hash
+      [capability_id_list, description, name, resources].hash
     end
 
     # Builds the object from hash
