@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost:9000/site-manager/api/v1/engine*
 
 ## storage_systems_get
 
-> <Array<StorageSystem>> storage_systems_get
+> <Array<StorageSystemResponse>> storage_systems_get
 
 
 
@@ -43,7 +43,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<StorageSystem>>, Integer, Hash)> storage_systems_get_with_http_info
+> <Array(<Array<StorageSystemResponse>>, Integer, Hash)> storage_systems_get_with_http_info
 
 ```ruby
 begin
@@ -51,7 +51,7 @@ begin
   data, status_code, headers = api_instance.storage_systems_get_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <Array<StorageSystem>>
+  p data # => <Array<StorageSystemResponse>>
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling StorageSystemApi->storage_systems_get_with_http_info: #{e}"
 end
@@ -63,7 +63,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;StorageSystem&gt;**](StorageSystem.md)
+[**Array&lt;StorageSystemResponse&gt;**](StorageSystemResponse.md)
 
 ### Authorization
 

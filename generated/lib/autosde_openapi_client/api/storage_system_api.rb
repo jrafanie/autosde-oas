@@ -20,14 +20,14 @@ module AutosdeOpenapiClient
       @api_client = api_client
     end
     # @param [Hash] opts the optional parameters
-    # @return [Array<StorageSystem>]
+    # @return [Array<StorageSystemResponse>]
     def storage_systems_get(opts = {})
       data, _status_code, _headers = storage_systems_get_with_http_info(opts)
       data
     end
 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<StorageSystem>, Integer, Hash)>] Array<StorageSystem> data, response status code and response headers
+    # @return [Array<(Array<StorageSystemResponse>, Integer, Hash)>] Array<StorageSystemResponse> data, response status code and response headers
     def storage_systems_get_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: StorageSystemApi.storage_systems_get ...'
@@ -50,7 +50,7 @@ module AutosdeOpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type] || 'Array<StorageSystem>'
+      return_type = opts[:debug_return_type] || 'Array<StorageSystemResponse>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || ['bearerAuth']
