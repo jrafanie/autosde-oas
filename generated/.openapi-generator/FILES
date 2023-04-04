@@ -71,6 +71,9 @@ docs/ServiceCreate.md
 docs/ServiceResourceAttachment.md
 docs/ServiceResourceAttachmentApi.md
 docs/ServiceResourceAttachmentResponse.md
+docs/ServiceResourcesCompliance.md
+docs/ServiceResourcesComplianceApi.md
+docs/ServiceResourcesComplianceResponse.md
 docs/ServiceResponse.md
 docs/ServiceUpdate.md
 docs/Snapshot.md
@@ -142,6 +145,7 @@ lib/autosde_openapi_client/api/refresh_system_api.rb
 lib/autosde_openapi_client/api/service_abstract_capability_value_api.rb
 lib/autosde_openapi_client/api/service_api.rb
 lib/autosde_openapi_client/api/service_resource_attachment_api.rb
+lib/autosde_openapi_client/api/service_resources_compliance_api.rb
 lib/autosde_openapi_client/api/snapshot_api.rb
 lib/autosde_openapi_client/api/storage_host_api.rb
 lib/autosde_openapi_client/api/storage_host_wwpn_candidates_api.rb
@@ -200,6 +204,8 @@ lib/autosde_openapi_client/models/service_abstract_capability_value_response.rb
 lib/autosde_openapi_client/models/service_create.rb
 lib/autosde_openapi_client/models/service_resource_attachment.rb
 lib/autosde_openapi_client/models/service_resource_attachment_response.rb
+lib/autosde_openapi_client/models/service_resources_compliance.rb
+lib/autosde_openapi_client/models/service_resources_compliance_response.rb
 lib/autosde_openapi_client/models/service_response.rb
 lib/autosde_openapi_client/models/service_update.rb
 lib/autosde_openapi_client/models/snapshot.rb
@@ -258,6 +264,7 @@ spec/api/refresh_system_api_spec.rb
 spec/api/service_abstract_capability_value_api_spec.rb
 spec/api/service_api_spec.rb
 spec/api/service_resource_attachment_api_spec.rb
+spec/api/service_resources_compliance_api_spec.rb
 spec/api/snapshot_api_spec.rb
 spec/api/storage_host_api_spec.rb
 spec/api/storage_host_wwpn_candidates_api_spec.rb
@@ -313,6 +320,8 @@ spec/models/service_abstract_capability_value_spec.rb
 spec/models/service_create_spec.rb
 spec/models/service_resource_attachment_response_spec.rb
 spec/models/service_resource_attachment_spec.rb
+spec/models/service_resources_compliance_response_spec.rb
+spec/models/service_resources_compliance_spec.rb
 spec/models/service_response_spec.rb
 spec/models/service_spec.rb
 spec/models/service_update_spec.rb
