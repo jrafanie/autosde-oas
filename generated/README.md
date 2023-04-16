@@ -249,6 +249,7 @@ Class | Method | HTTP request | Description
  - [AutosdeOpenapiClient::ServiceAbstractCapabilityValueResponse](docs/ServiceAbstractCapabilityValueResponse.md)
  - [AutosdeOpenapiClient::ServiceCreate](docs/ServiceCreate.md)
  - [AutosdeOpenapiClient::ServiceResourceAttachment](docs/ServiceResourceAttachment.md)
+ - [AutosdeOpenapiClient::ServiceResourceAttachmentCreate](docs/ServiceResourceAttachmentCreate.md)
  - [AutosdeOpenapiClient::ServiceResourceAttachmentResponse](docs/ServiceResourceAttachmentResponse.md)
  - [AutosdeOpenapiClient::ServiceResourcesCompliance](docs/ServiceResourcesCompliance.md)
  - [AutosdeOpenapiClient::ServiceResourcesComplianceResponse](docs/ServiceResourcesComplianceResponse.md)

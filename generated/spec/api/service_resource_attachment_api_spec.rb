@@ -62,7 +62,7 @@ describe 'ServiceResourceAttachmentApi' do
   end
 
   # unit tests for service_resource_attachment_post
-  # @param service_resource_attachment 
+  # @param service_resource_attachment_create 
   # @param [Hash] opts the optional parameters
   # @return [AsyncResponse]
   describe 'service_resource_attachment_post test' do

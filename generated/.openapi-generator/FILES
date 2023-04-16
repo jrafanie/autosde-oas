@@ -70,6 +70,7 @@ docs/ServiceApi.md
 docs/ServiceCreate.md
 docs/ServiceResourceAttachment.md
 docs/ServiceResourceAttachmentApi.md
+docs/ServiceResourceAttachmentCreate.md
 docs/ServiceResourceAttachmentResponse.md
 docs/ServiceResourcesCompliance.md
 docs/ServiceResourcesComplianceApi.md
@@ -203,6 +204,7 @@ lib/autosde_openapi_client/models/service_abstract_capability_value.rb
 lib/autosde_openapi_client/models/service_abstract_capability_value_response.rb
 lib/autosde_openapi_client/models/service_create.rb
 lib/autosde_openapi_client/models/service_resource_attachment.rb
+lib/autosde_openapi_client/models/service_resource_attachment_create.rb
 lib/autosde_openapi_client/models/service_resource_attachment_response.rb
 lib/autosde_openapi_client/models/service_resources_compliance.rb
 lib/autosde_openapi_client/models/service_resources_compliance_response.rb
@@ -318,6 +320,7 @@ spec/models/refresh_system_spec.rb
 spec/models/service_abstract_capability_value_response_spec.rb
 spec/models/service_abstract_capability_value_spec.rb
 spec/models/service_create_spec.rb
+spec/models/service_resource_attachment_create_spec.rb
 spec/models/service_resource_attachment_response_spec.rb
 spec/models/service_resource_attachment_spec.rb
 spec/models/service_resources_compliance_response_spec.rb

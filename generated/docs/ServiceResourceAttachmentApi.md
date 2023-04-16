@@ -210,7 +210,7 @@ end
 
 ## service_resource_attachment_post
 
-> <AsyncResponse> service_resource_attachment_post(service_resource_attachment)
+> <AsyncResponse> service_resource_attachment_post(service_resource_attachment_create)
 
 
 
@@ -226,11 +226,11 @@ AutosdeOpenapiClient.configure do |config|
 end
 
 api_instance = AutosdeOpenapiClient::ServiceResourceAttachmentApi.new
-service_resource_attachment = AutosdeOpenapiClient::ServiceResourceAttachment.new # ServiceResourceAttachment | 
+service_resource_attachment_create = AutosdeOpenapiClient::ServiceResourceAttachmentCreate.new # ServiceResourceAttachmentCreate | 
 
 begin
   
-  result = api_instance.service_resource_attachment_post(service_resource_attachment)
+  result = api_instance.service_resource_attachment_post(service_resource_attachment_create)
   p result
 rescue AutosdeOpenapiClient::ApiError => e
   puts "Error when calling ServiceResourceAttachmentApi->service_resource_attachment_post: #{e}"
@@ -241,12 +241,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<AsyncResponse>, Integer, Hash)> service_resource_attachment_post_with_http_info(service_resource_attachment)
+> <Array(<AsyncResponse>, Integer, Hash)> service_resource_attachment_post_with_http_info(service_resource_attachment_create)
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.service_resource_attachment_post_with_http_info(service_resource_attachment)
+  data, status_code, headers = api_instance.service_resource_attachment_post_with_http_info(service_resource_attachment_create)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <AsyncResponse>
@@ -259,7 +259,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **service_resource_attachment** | [**ServiceResourceAttachment**](ServiceResourceAttachment.md) |  |  |
+| **service_resource_attachment_create** | [**ServiceResourceAttachmentCreate**](ServiceResourceAttachmentCreate.md) |  |  |
 
 ### Return type
 

@@ -190,24 +190,24 @@ module AutosdeOpenapiClient
       return data, status_code, headers
     end
 
-    # @param service_resource_attachment [ServiceResourceAttachment] 
+    # @param service_resource_attachment_create [ServiceResourceAttachmentCreate] 
     # @param [Hash] opts the optional parameters
     # @return [AsyncResponse]
-    def service_resource_attachment_post(service_resource_attachment, opts = {})
-      data, _status_code, _headers = service_resource_attachment_post_with_http_info(service_resource_attachment, opts)
+    def service_resource_attachment_post(service_resource_attachment_create, opts = {})
+      data, _status_code, _headers = service_resource_attachment_post_with_http_info(service_resource_attachment_create, opts)
       data
     end
 
-    # @param service_resource_attachment [ServiceResourceAttachment] 
+    # @param service_resource_attachment_create [ServiceResourceAttachmentCreate] 
     # @param [Hash] opts the optional parameters
     # @return [Array<(AsyncResponse, Integer, Hash)>] AsyncResponse data, response status code and response headers
-    def service_resource_attachment_post_with_http_info(service_resource_attachment, opts = {})
+    def service_resource_attachment_post_with_http_info(service_resource_attachment_create, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ServiceResourceAttachmentApi.service_resource_attachment_post ...'
       end
-      # verify the required parameter 'service_resource_attachment' is set
-      if @api_client.config.client_side_validation && service_resource_attachment.nil?
-        fail ArgumentError, "Missing the required parameter 'service_resource_attachment' when calling ServiceResourceAttachmentApi.service_resource_attachment_post"
+      # verify the required parameter 'service_resource_attachment_create' is set
+      if @api_client.config.client_side_validation && service_resource_attachment_create.nil?
+        fail ArgumentError, "Missing the required parameter 'service_resource_attachment_create' when calling ServiceResourceAttachmentApi.service_resource_attachment_post"
       end
       # resource path
       local_var_path = '/service-resource-attachment'
@@ -226,7 +226,7 @@ module AutosdeOpenapiClient
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(service_resource_attachment)
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(service_resource_attachment_create)
 
       # return_type
       return_type = opts[:debug_return_type] || 'AsyncResponse'
