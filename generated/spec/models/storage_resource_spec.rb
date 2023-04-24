@@ -41,12 +41,6 @@ describe AutosdeOpenapiClient::StorageResource do
     end
   end
 
-  describe 'test attribute "data_reduction"' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   describe 'test attribute "extent_size"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

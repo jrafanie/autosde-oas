@@ -22,9 +22,6 @@ module AutosdeOpenapiClient
     # component_state
     attr_accessor :component_state
 
-    # data_reduction
-    attr_accessor :data_reduction
-
     # extent_size
     attr_accessor :extent_size
 
@@ -75,7 +72,6 @@ module AutosdeOpenapiClient
       {
         :'advanced_attributes_map' => :'advanced_attributes_map',
         :'component_state' => :'component_state',
-        :'data_reduction' => :'data_reduction',
         :'extent_size' => :'extent_size',
         :'logical_free' => :'logical_free',
         :'logical_total' => :'logical_total',
@@ -97,7 +93,6 @@ module AutosdeOpenapiClient
       {
         :'advanced_attributes_map' => :'String',
         :'component_state' => :'String',
-        :'data_reduction' => :'Boolean',
         :'extent_size' => :'Integer',
         :'logical_free' => :'Integer',
         :'logical_total' => :'Integer',
@@ -136,12 +131,6 @@ module AutosdeOpenapiClient
 
       if attributes.key?(:'component_state')
         self.component_state = attributes[:'component_state']
-      end
-
-      if attributes.key?(:'data_reduction')
-        self.data_reduction = attributes[:'data_reduction']
-      else
-        self.data_reduction = false
       end
 
       if attributes.key?(:'extent_size')
@@ -232,7 +221,6 @@ module AutosdeOpenapiClient
       self.class == o.class &&
           advanced_attributes_map == o.advanced_attributes_map &&
           component_state == o.component_state &&
-          data_reduction == o.data_reduction &&
           extent_size == o.extent_size &&
           logical_free == o.logical_free &&
           logical_total == o.logical_total &&
@@ -252,7 +240,7 @@ module AutosdeOpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [advanced_attributes_map, component_state, data_reduction, extent_size, logical_free, logical_total, name, pool_name, protocol, storage_system, uuid].hash
+      [advanced_attributes_map, component_state, extent_size, logical_free, logical_total, name, pool_name, protocol, storage_system, uuid].hash
     end
 
     # Builds the object from hash
